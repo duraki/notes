@@ -1,5 +1,5 @@
 +++
-title = "Index"
+title = "duraki notes"
 lastmod = 2022-04-29
 type = "index"
 +++
