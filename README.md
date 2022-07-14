@@ -28,5 +28,6 @@ $ hugo -D --config config.toml -d docs/ --enableGitInfo --minify
 ### Release
 
 ```
-$ git add . && git commit -m "Release :party:" && git push origin master
+# => one-liner (compile, commit, deploy) ...
+$ hugo -D --config config.toml -d docs/ --enableGitInfo --minify && git add . && git commit -m "Update" && git push origin master
 ``` 
