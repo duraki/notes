@@ -2,150 +2,150 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://notes.durakiconsulting.com/</loc>
+    <loc>/</loc>
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/search/</loc>
+    <loc>/search/</loc>
     <lastmod>2021-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/~-ideas/</loc>
+    <loc>/~-ideas/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/android-recompilation/</loc>
+    <loc>/android-recompilation/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/android-reverse-engineering/</loc>
+    <loc>/android-reverse-engineering/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/api-penetration-test-checklist/</loc>
+    <loc>/api-penetration-test-checklist/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/automotive/</loc>
+    <loc>/automotive/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/automotive-cybersecurity-videos/</loc>
+    <loc>/automotive-cybersecurity-videos/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/automotive-hacking/</loc>
+    <loc>/automotive-hacking/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/bash-in-simple-words/</loc>
+    <loc>/bash-in-simple-words/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/blog-setup/</loc>
+    <loc>/blog-setup/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/building-kali-linux-for-banana-pro/</loc>
+    <loc>/building-kali-linux-for-banana-pro/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/bypass-403-on-nginx/</loc>
+    <loc>/bypass-403-on-nginx/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/byteman/</loc>
+    <loc>/byteman/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/byteman-scripts/</loc>
+    <loc>/byteman-scripts/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/canfd-specifications/</loc>
+    <loc>/canfd-specifications/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/captcha-bypass-tricks/</loc>
+    <loc>/captcha-bypass-tricks/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/classical/</loc>
+    <loc>/classical/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/classical-api-abuse/</loc>
+    <loc>/classical-api-abuse/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/cloud-metadata/</loc>
+    <loc>/cloud-metadata/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/cycript/</loc>
+    <loc>/cycript/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/decrypt-ipa-from-appstore/</loc>
+    <loc>/decrypt-ipa-from-appstore/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/dev/</loc>
+    <loc>/dev/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ecu-calibration/</loc>
+    <loc>/ecu-calibration/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ecu-foundations/</loc>
+    <loc>/ecu-foundations/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ethernet-specifications/</loc>
+    <loc>/ethernet-specifications/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/firewall-engagements/</loc>
+    <loc>/firewall-engagements/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/frida-objection-tutorial/</loc>
+    <loc>/frida-objection-tutorial/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/frida-gadget-injection/</loc>
+    <loc>/frida-gadget-injection/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ghidra-and-related/</loc>
+    <loc>/ghidra-and-related/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/how-to-compromise-ecu/</loc>
+    <loc>/how-to-compromise-ecu/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/how-to-write-notes/</loc>
+    <loc>/how-to-write-notes/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ios-reverse-engineering/</loc>
+    <loc>/ios-reverse-engineering/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/ios-static-analysis/</loc>
+    <loc>/ios-static-analysis/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/jailbreak-bypass/</loc>
+    <loc>/jailbreak-bypass/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/linux-notes/</loc>
+    <loc>/linux-notes/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/list-of-tools/</loc>
+    <loc>/list-of-tools/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/list-of-topics/</loc>
+    <loc>/list-of-topics/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/lldb/</loc>
+    <loc>/lldb/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/macos-notes/</loc>
+    <loc>/macos-notes/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/metasploit-framework/</loc>
+    <loc>/metasploit-framework/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/mitm_intercept/</loc>
+    <loc>/mitm_intercept/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/modding-uplink-by-introversion/</loc>
+    <loc>/modding-uplink-by-introversion/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/netcat-tricks/</loc>
+    <loc>/netcat-tricks/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/network/</loc>
+    <loc>/network/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/network-lab/</loc>
+    <loc>/network-lab/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/network-recon/</loc>
+    <loc>/network-recon/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/network-reverse-engineering/</loc>
+    <loc>/network-reverse-engineering/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/opcrouter-research/</loc>
+    <loc>/opcrouter-research/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/osint/</loc>
+    <loc>/osint/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/php-filesystem-functions/</loc>
+    <loc>/php-filesystem-functions/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/php-source-code-analysis/</loc>
+    <loc>/php-source-code-analysis/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/posts/</loc>
+    <loc>/posts/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/pure-reverse-engineering/</loc>
+    <loc>/pure-reverse-engineering/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/re/</loc>
+    <loc>/re/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/reverse-engineering-tricks-and-tips/</loc>
+    <loc>/reverse-engineering-tricks-and-tips/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/server-anywhere/</loc>
+    <loc>/server-anywhere/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/sqli-payloads/</loc>
+    <loc>/sqli-payloads/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/svg-payloads/</loc>
+    <loc>/svg-payloads/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/tags/</loc>
+    <loc>/tags/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/troubleshoot/</loc>
+    <loc>/troubleshoot/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/vehicle-graybox-security-testing/</loc>
+    <loc>/vehicle-graybox-security-testing/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/vehicle-hacking-environment/</loc>
+    <loc>/vehicle-hacking-environment/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/vhost-enumeration/</loc>
+    <loc>/vhost-enumeration/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/web-application-penetration-test-checklist/</loc>
+    <loc>/web-application-penetration-test-checklist/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/web-fuzzing-technqiues/</loc>
+    <loc>/web-fuzzing-technqiues/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/web-penetration-testing-oneliners/</loc>
+    <loc>/web-penetration-testing-oneliners/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/wifi-cracking-via-aircrack/</loc>
+    <loc>/wifi-cracking-via-aircrack/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/windbg-cheatsheets/</loc>
+    <loc>/windbg-cheatsheets/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/windows-notes/</loc>
+    <loc>/windows-notes/</loc>
   </url><url>
-    <loc>https://notes.durakiconsulting.com/xss-payloads/</loc>
+    <loc>/xss-payloads/</loc>
   </url>
 </urlset>
