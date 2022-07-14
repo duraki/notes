@@ -15,7 +15,7 @@ $ hugo version
 
 ```
 # => serves at http://127.0.0.1:8880 ...
-$ hugo server --minify --bind 127.0.0.1 --port 8800 --baseURL="http://127.0.0.1:8800/"
+$ hugo server --minify --bind 127.0.0.1 --port 8800 --baseURL="http://127.0.0.1:8800/ -d docs/"
 ```
 
 ### Production Environment
