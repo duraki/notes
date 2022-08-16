@@ -83,6 +83,16 @@ You can start exploring from the [List of Topics](/list-of-topics), [List of Too
 
 ### Development [§dev](/dev)
 
+**.files**
+
+My `.dotfiles` are available [on my GitHub](https://github.com/duraki/dotfiles). At the time of writing, this repository is private due to confidential information.
+
+In particular, I use:
+
+* ssh, git, iterm, zsh, tmux
+* macos, neovim+nvchad, karabiner, 60%mkb,
+* lldb+voltron, amass, binwalk, nmap, burp
+
 **blog**
 
 Mockup for my minimal blog and notes publishing app called `art` (visible in [blog setup](/blog-setup)).
