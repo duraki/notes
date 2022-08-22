@@ -8,6 +8,12 @@ title: "Troubleshoot"
 
 {{< gist duraki 177b820df217deaa5a563200eca9c152 >}}
 
+## MacOS
+
+In case you get error, such is **stderr: 0:137: execution error: dd: /dev/rdisk4: Operation not permitted**, during the Raspberry Pi installation, or mounting of SD Cards, do the following:
+
+> If the command reports dd: /dev/rdiskN: Operation not permitted, go to System Preferences -> Security & Privacy -> Privacy -> Files and Folders -> Give Removable Volumes access to Terminal.
+
 ## Linux
 
 **Fix RHEL SD Card Reader** (Red Hat Enterprise Linux)
