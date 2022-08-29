@@ -114,6 +114,28 @@ $ cat /tmp/debug_entitlements.plist
 $ codesign --force --options runtime --sign - --entitlements /tmp/debug_entitlements.plist /Apps/MyApp.app
 ```
 
+### Attach Failed (cont.)
+
+This is only for stand-alone binaries such is `ls` or `cat`. 
+
+**Solution:**
+
+```
+$ cat /tmp/debug-ent.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+ <dict>
+  <key>com.apple.security.get-task-allow</key>
+  <true/>
+ </dict>
+</plist>
+
+$ sudo codesign --sign "signature" -f --timestamp --entitlements ./debug-ent.xml WriteActivationData.bin
+```
+
+You are required to create `signature` certificate from the `Keychain.app`.
+
 ### Terminated due to code signing error
 
 Happens when codesign is not put in place. Need to codesign a Macho binary:
