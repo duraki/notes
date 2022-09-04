@@ -5,9 +5,35 @@ title: "How to write Notes"
 ### TL;DR
 
 * Use Markdown for everything
-* Use shortcodes
+* Use shortcodes, 
+	- **NOTE**: shortcodes are commented-out, 
+	- **NOTE**: the correct syntax is `{{ <..> }}` without spaces between `{}` & `<>`
 * Clear and consistent
 * Integrate well with `art` CLI
+
+### Including Images
+
+To include images, copy the image to `/content/posts/images/*`. Then when you want to include it, use either of:
+
+``` 
+# => like this
+![Image Caption](/posts/images/image-of-choice.png)
+
+# => or
+{{ < imgcap title="Image Caption" src="/posts/images/image-of-choice.png" > }}
+```
+
+The folder `images` in `content/posts` is created to index those files/images in the final build or deploy, and therefore removes the overhead of the Hugo processing. Some more [documentation](https://gohugo.io/content-management/image-processing/) on Hugo website.
+
+### Including Files
+
+To include files of any type, ready to be downloaded, copy the file to `/content/posts/files/*`. Then include it in your post as instructed below:
+
+```
+[File to Download](/posts/files/some_file_to_download-example.pdf)
+```
+
+The folder `files` in `content/posts` is created to index those files in the final build/deploy.
 
 ### Markdown
 
@@ -32,6 +58,19 @@ Use quotes markdown block:
 ```
 
 **FontAwesome Icons**
+
+**Wikipedia Insertion**
+
+*You can either use named parameters:*
+
+```
+{{ < wikipedia tag="VIC_cipher" > }}
+{{ < wikipedia tag="VIC_cipher" lang="fr" > }}
+{{ < wikipedia tag="VIC_cipher" lang="fr" title="" > }}
+{{ < wikipedia tag="VIC_cipher" title="VIC Cipher" > }}
+{{ < wikipedia tag="VIC_cipher" lang="en" title="VIC Cipher" > }}
+```
+
 
 Use `FontAwesome` [Icon Library]():
 
@@ -113,6 +152,10 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 
 {{ < details > }}
 This website is provided for free educational purposes. Knowledge shared here can be used for personal gain and experience.
+{{ < /details > }}
+
+{{ < details "Read More" > }}
+Note: Some <read more> note for further details, or hidden image/text/component.
 {{ < /details > }}
 
 [More shortcodes](https://gohugo.io/content-management/shortcodes/) on official website.

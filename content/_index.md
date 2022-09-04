@@ -10,10 +10,15 @@ a bit early in 2020. and continued graphing my knowledge from there.
 I wanted something more towards functional, as to offer me a practical snippet
 library for my TTP's, both online and as a backup of dementia.
 
-The notes are largery inspired by others and especial [Andy's](https://notes.andymatuschak.org) note-taking samples on his site. Thanks to Justin and Jethro for their theme support on static generation for this library of mine. Hope it will be worth to you as well as me.
+The notes are inspired by others (see: [#outro](#outro)); with only one goal. To simply note-take, graph, and quickly extract valuable data. Thanks to Justin and Jethro for their theme support and contribution. 
 
-You can start exploring from the [List of Topics](/list-of-topics), [List of Tools](/list-of-tools), or see the [full list of notes](/posts).
+I sincerly hope those notes will help you build yourself, extend your views, and expand your knowledge to new horizonts. Enjoy.
 
+You can start exploring from the [List of Topics](#list-of-topics), [List of Tools](/list-of-tools), or see the [full list of notes](/posts). 
+
+{{< details "Read More" >}}
+Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero. Much easier to browse and search. Otherwise, selecting subtopic(s) will put that selected subtopic as your index. 
+{{< /details >}}
 
 <!-- {{< content "/content/posts/list_of_topics.md" >}} -->
 ---
@@ -30,6 +35,12 @@ You can start exploring from the [List of Topics](/list-of-topics), [List of Too
 * [ECU Compromise](/how-to-compromise-ecu)
 * [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing) 
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
+* [BMW E34 Learning Material](/bmw-e34-learning-material-and-resources)
+    * [Electronic Signals](/electronic-signals)
+    * [AC & DC Signals](/ac-and-dc-signals) (*[⏦︎ click here](/bmw-e34-learning-material-and-resources) to expand*)
+        * [AC Voltage Signals](/ac-voltage-signals)
+        * [DC Voltage Signals](/dc-voltage-signals)
+    * [Signals Table](/signals-table)
 
 ### Classical Penetration Testing [§Classical Pentest](/classical)
 
@@ -102,6 +113,8 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * todo: `photos/ physical`
 * [Bash](/bash-in-simple-words)
 
+**btw**, I use GMMK 60% keyboard, [here are the default shortcuts](/gmmk-60-keyboard).
+
 ### Misc
 
 * [Windows Notes](/windows-notes)
@@ -122,10 +135,11 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 
 ### How it works
 
-Additionalities offered through `[params.styles]` via `config.toml`. It's
-possible to deploy dark version as well. Read for more in *.css.
+It uses parameters (such is `[params.styles]`) via `config.toml`. It's possible to deploy dark version as well. Read for more in `*.css`. The theme used in `~notes` is rewritten from [my blog](https://duraki.github.io/). 
 
-{{< details >}}
-This website is provided for free educational purposes. Knowledge shared here can be used for personal gain and experience.
+### Outro
+
+{{< details "Show #Outro" >}}
+This website is provided for free educational purposes. Knowledge shared here can be used for personal gain and experience. I do not condemn using TTPs explained here in your blackhat activities. The site is largely inspired by [Andy's](https://andymatuschak.org/) notes. I would like to thank to the One, All-seeing, All-hearing. Many greetings to all my friends and family who supported me till the very end. 
 {{< /details >}}
 
