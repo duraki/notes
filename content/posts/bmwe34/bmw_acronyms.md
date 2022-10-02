@@ -14,9 +14,9 @@ title: "BMW Acronyms"
 | BLS | Brake Light Switch |
 | BS | Block Diagram |
 | BST | Battery Safety Termina |
-| CAN-Bus | Controller Area Network(bus) |
+| CANBUS | Controller Area Network(bus) |
 | CCM | Check Control Module |
-| D-Bus | Diagnosis Bus (same as TXD) |
+| DBUS | Diagnosis Bus (same as TXD) |
 | DDE | Digital Diesel Electronics |
 | DIS | Diagnosis and Information System |
 | DISA | Differential Air Intake Control |
@@ -39,13 +39,18 @@ title: "BMW Acronyms"
 | EPC | Electronic Parts Catalog |
 | ETM | Electronic Troubleshooting Manual |
 | FB | Function Description |
+| FFB | Radio Remote Control |
 | FRU | Flat Rate Unit |
 | GAL | Speed Dependent Volume |
 | GM | General Module |
+| HR34 | Heading Control 34 (Dig/Analog)
 | IB | Interior lighting Control Signal |
-| I-Bus | Information Bus |
+| IBUS | Information Bus |
 | IHKA | Automatic Heating and A/C |
 | IHKR | Regulated Heating and A/C |
+| IHKR1 | Regulated Heating and A/C Control 1 |
+| IHKR2 | Regulated Heating and A/C Control 2 |
+| IHKR3 | Regulated Heating and A/C Control 3 |
 | IHKS | Standard Heating and A/C |
 | IKE | Instrument Cluster Electronics |
 | IR | Infrared |
@@ -53,13 +58,15 @@ title: "BMW Acronyms"
 | ISN | Individual Serial Number |
 | KAT | Catalytic Converter |
 | KATON | Converter Heating (signal) |
-| K-Bus | Body Bus |
+| KBUS | Body Bus |
 | KL | Terminal Designation |
 | KO | Compressor “ON” Signal |
 | KOMBI | Instrument Cluster |
 | KOREL | Compressor Relay Signal |
 | KW | Crankshaft |
+| PDC | Park Distance Control |
 | LCM | Lamp Check Module |
+| EML | Electronic Engine Power Control |
 | LDP | Leak Diagnosis Pump |
 | LEV | Low Emission Vehicle |
 | LKM | Lamp Control Module |
@@ -68,20 +75,23 @@ title: "BMW Acronyms"
 | LWS 5 | Steering Angle Sensor |
 | MBC | Maximum Brake Control |
 | MDK | Motorized Throttle Valve |
+| MF | Timer with switching function for heating/ventilation |
 | MFC | Multi-Function Controller |
+| MFW | Multifunction Clock |
 | MID | Multi-Information Display |
 | MoDiC | Mobile Diagnostic Computer |
 | MRS | Multiple Restraint System |
 | OBC | On-Board Computer |
 | OBD | On-Board Diagnosis (SAE) |
 | PB | Pin Assignments |
-| P-Bus | Periphery Bus |
+| PBUS | Periphery Bus |
 | PWG | Pedal Position Sensor |
 | RDC | Tire Pressure Control |
 | RDW | Tire Pressure Warning |
 | RM | Relay Module |
 | RXD | Wake-up Diagnosis Line |
 | RZV | Direct Stationary Ignition |
+| SA | [Special Equipment](https://www.e34wiki.de/index.php/SA-Codes) |
 | SB | Fuse Assignments |
 | SG | Control Unit |
 | SGS | Seat Integrated Belt System |
@@ -98,6 +108,7 @@ title: "BMW Acronyms"
 | TU | Technical Update |
 | TXD | Transmitting Diagnosis Line |
 | VANOS | Variable Camshaft Timing |
+| YOURF3 | Integrated Heading Control w/ filter 3 |
 | VL | Full load - wide open throttle |
 | WK | Converter Lock-up Clutch |
 | ZAE | Central Airbag Electronics |

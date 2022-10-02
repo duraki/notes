@@ -24,6 +24,13 @@ title: "Signals Table"
 * [B- Documentation](/switched-b-low-signals)
 * [B+ Documentation](/switched-b-high-signals)
 
+### Bench Test Tricks and Tips
+
+* You can easily send required signal for `B/type` Switches, just by checking the Signal Type of the specific Pin.
+* For example:
+	- Pin 3, is a "Fuel Level Warning Light" on X13060. It has signal type **B-**.
+	- You can ground this pin and the light will turn on, indicating the Fuel Warning.
+
 ### Signal Type ⇢ Component Using it
 
 * **Square Wave**
@@ -49,4 +56,9 @@ title: "Signals Table"
 	- Window Switches
 	- Sunroof Switch
 
+### Terminal Designations
+
+There is a terminal designation for almost every connection of a consumer or switch in the vehicle in order to facilitate the connection. The designation of the individual connections is defined in Germany according to DIN 72552. 
+
+Refer to [DIN 72552](/din) page for more details.
 

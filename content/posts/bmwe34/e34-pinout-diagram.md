@@ -2,7 +2,31 @@
 title: "E34 Pinout Diagram"
 ---
 
+**Note:** if you can't make sense of the "Terminal #" keywords in the pinouts below, refer to [Terminal Designations](/signals-table#terminal-designations), and [DIN 72552](/din) pages. In short, it represents a standardised/defined/constant Pin I/O.
+
+## E34 Radio Pinouts
+
+The BMW Series 5 E34 Radio Pinouts are [located here](/e34-misc-wiring#bmw-radio-pinout).
+
 ## E34 Low Cluster - EURO - MY. 88-90 Pinouts
+
+Details:
+
+```
+Cluster: Low (without Check Control - aka CCM)
+Installed in: 518i M40 (import), 520i M20, 520i M50, 524td
+Period: until 09/1990
+Manufacturer: Motometer
+
+Identification Features:
+- Mechanical km counter in the speedometer
+- Uneven scaling on the fuel gauge
+- White back of the instrument cluster
+- Coding plug (black) is in the back of the station wagon
+
+Defects and remedies:
+Replace the batteries on the circuit board (1.2V mignon). If these have leaked, they have usually already etched the circuit board - the only solution here is to replace them.
+```
 
 {{< imgcap title="Pinouts for the particular model (X16/Yellow, X13060/Blue)" src="/posts/images/e34_low_euro_till_1990_cluster.jpg" >}}
 

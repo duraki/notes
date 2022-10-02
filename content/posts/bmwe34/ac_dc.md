@@ -2,7 +2,7 @@
 title: "AC and DC Signals"
 ---
 
-This is part of BMW E34 Learning Resources, Topics related to Signals. See [Learning Resource index page](/bmw-e34-learning-material-and-resources) and [Electronic Signals](/electronic-signals) for more details. 
+This is part of BMW E34 Learning Resources, Topics related to Signals. See [Learning Resource index page](/bmw-ag-e34-learning-materials) and [Electronic Signals](/electronic-signals) for more details. 
 
 There are two types of such signals in BMW factory/production process:
 

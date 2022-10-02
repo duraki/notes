@@ -1,3 +1,4 @@
 config.toml
 .DS_Store
 .hugo_build*
+./docs/*/**
