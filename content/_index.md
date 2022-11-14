@@ -75,7 +75,7 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
 * [Byteman Cheatsheets](/byteman)
 * [Byteman Scripts](/byteman-scripts)
 * [Encryption and Cryptography](/encryption-and-cryptography)
-- [Demangling C++ files using Frida](/c-plus-plus-demangler)
+* [Demangling C++ files using Frida](/c-plus-plus-demangler)
 * [MacOS Reverse Engineering](/macos-reverse-engineering)
     * [Ghidra and Related](/ghidra)
     * [LLDB for MacOS](/macho_lldb)
