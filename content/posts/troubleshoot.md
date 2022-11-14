@@ -38,6 +38,14 @@ Very annoying on JAMF'd and managed devices. Basically, Company provides a lapto
 
 {{< gist duraki a0b81443484a6cd288e4eb15ae3734b1 >}}
 
+**JAMF "Nudge" Security Encoruager**
+
+JAMF'd and managed devices in some cases displays a modal NSWindow in a form of `nudge` 🤯. You can't close it unless you proceed with the update.
+
+This app. is sitting in `/Applications/Utilities/Nudge.app`. It's possible to disable this application by abusing privilege descriptions as seen on [GitHub](https://github.com/macadmins/nudge), or by reading the [wiki](https://github.com/macadmins/nudge/wiki).
+
+**Todo**: Discover a way to bypass screen nudging. This is just for the reference purposes.
+
 ## VirtualBox || VMWare
 
 **When in Kali Linux and doing Security Assessment**

@@ -8,4 +8,5 @@ If jailbreak detection persists in iOS application, try these tricks:
   application **Recommended**
 * [Objection](/frida-objection-tutorial#ios-tutorial) use `ios jailbreak disable` or `--startup-command`
 * [Frida](/frida-objection-tutorial#ios-tutorial) as a standalone instrumentation
+* [Cycript](/cycript) via REPL-based Dynamic Instrumentation 
 * Manual Patching, the old school way

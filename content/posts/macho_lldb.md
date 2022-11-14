@@ -2,6 +2,13 @@
 title: "lldb"
 ---
 
+## Commands/Assistance
+
+**Chisel**
+* [chisel](https://github.com/facebook/chisel) is a collection of LLDB commands to assist debugging iOS apps.
+* [swift_po](https://github.com/kastiglione/swift_po) substitutes `po` command for Swift, with edge cases avoidance.
+* [lldb-helpers](https://github.com/kastiglione/lldb-helpers) is a collection of helpers for more precise breakpoints.
+
 ## Cheatsheet
 
 ### Objective-C

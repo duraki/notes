@@ -2,39 +2,61 @@
 title: "Cycript"
 ---
 
-**Tips and Tricks**
+*Tips and Tricks for Cycript*
 
-Get pasteboard/clipboard items.
+**Tap an UIButton programatically**
+
+```
+[#0x000000000 sendActionsForControlEvents:UIControlEventTouchUpInside]
+```
+
+**Get pasteboard/clipboard items**
 
 ```
 [UIPasteboard generalPasteboard].items
 ```
 
-Get UI elements dump.
+**Get UI elements dump**
 
 ```
 [[UIApp keyWindow] recursiveDescription]
 ```
-**Bypass Jailbreak UIAlertController via Cycript**
+
+**Remove a SubView of a SuperView**
 
 ```
-function bypassJailbreakDetection() {
-	try {
-		var hook = ObjC.classes.Utils['+ isJailbroken'];
-		Interceptor.attach(hook.implementation, {
-	    	onLeave: function(oldValue) {
-	    		_newValue = ptr("0x0") ;
-	    		oldValue.replace(_newValue);
-	    	}
-	    });
-
-	} catch(err) {
-		console.log("[-] Error: " + err.message);
-	}
-}
+[0x000000000 removeFromSuperview]
 ```
 
-... from [Dynamic Analysis and Hacking](https://github.com/ivRodriguezCA/RE-iOS-Apps/blob/master/Module-4/README.md).
+**Bypass undismissable UIAlertController**, *(ie. Jailbreak Detected, Trial Ended, etc.)*
+
+```
+# Dump iOS UI, via Objection
+	com.xxxxxxxxxxx.app on (iPhone: xx.x.x) [usb] # ios ui dump
+
+# Dump iOS UI, via Cycript
+	[[UIApp keyWindow] recursiveDescription]
+
+	# Note down memory pointer addresses, referencing to UIAlert[View|Controller], and/or 
+	# any bottom-up threads on Stack indicating SuperView(s), containing the undissmisable 
+	# UIAlert*, such is 'UITransitionView'. @see below:
+	# 
+	# example ui:
+	# <UIWindow: 0x143dxxxxx; ...> 					# app. main thread
+	# <UILayoutContainerView: 0x143exxxxx; ...> 	# the 'view' that is unreachable
+	# 	... [redacted] ...
+	# <UITransitionView: 0x143exxxxx; ...> 			# the 'view' containing UIAlert* subview
+	# 	<_UIAlertControllerView: 0x1440xxxxx; ..-> 	# the 'view' of UIAlert* controller
+	# 
+	# therefore, you'd either patch ptr(0x143exxxxx:UITransitionView) and ptr(0x1440xxxxx:UIAlertController)
+	# or only patching ptr(0x1440xxxxx:UIAlertController) if no super-view is present.
+
+# Use Cycript to hide UIAlert[View|Controller], and/or any other top-level view(s) 
+# containing this UIAlert; as explained in above snippet.
+
+	[#0x1440xxxxx setHidden:YES]
+	[#0x143exxxxx setHidden:YES]
+``` 
 
 **Syslog Macros**
 

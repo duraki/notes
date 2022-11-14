@@ -6,9 +6,10 @@ title: "RE"
 * [WinDbg Cheatsheets](/windbg-cheatsheets)
 * [Byteman Cheatsheets](/byteman)
 * [Byteman Scripts](/byteman-scripts)
+* [Encryption/Cryptography](/Encryption-and-Cryptography)
 * [MacOS Reverse Engineering](/re)
     * [Ghidra and Related](/ghidra)
-    * [LLDB for MacOS](/macho_lldb)
+    * [LLDB for MacOS](/lldb)
     * [Hopper for MacOS](/pure_reverse_engineering)
 * [iOS Reverse Engineering](/ios-reverse-engineering)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
@@ -22,4 +23,3 @@ title: "RE"
     * [Frida & Objection Tutorial](/frida-objection-tutorial#android-tutorial)
     * [Frida Gadget Injection on Android](/frida-gadget-injection)
     * [Android Recompilation](/android-recompilation)
-* [OPCRouter Research](/opcrouter-research) `[wip]`

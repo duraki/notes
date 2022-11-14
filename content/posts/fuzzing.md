@@ -1,9 +1,11 @@
 ---
-title: "Web Fuzzing Technqiues"
+title: "Web Fuzzing Techniques"
 ---
 
 * Use **SecList** seed fuzz
 * Use **FuzzDB** seed fuzz
+
+**Note:** You don't have to clone `SecList` in your `$HOME` directory. Just create a symlink from your preferable directory (ie. `ln -s ~/util/SecLists ~/SecLists`).
 
 ### Using Gobuster || FFuF
 
@@ -13,12 +15,52 @@ title: "Web Fuzzing Technqiues"
 cat ~/SecLists/Discovery/Web-Content/Common-DB-Backups.txt \
 ~/SecLists/Discovery/Web-Content/Common-PHP-Filenames.txt \
 ~/SecLists/Discovery/Web-Content/PHP.fuzz.txt \
-~/SecLists/Discovery/Web-Content/common.txt \
-/tmp/php_files_only.txt | gobuster fuzz -u \
+~/SecLists/Discovery/Web-Content/common.txt | gobuster fuzz -u \
 https://www.utic.ba/FUZZ -b 404 -w - -k -t 30
 ```
 
+*Extending **Gobuster** with POSIX*:  
+Good trick for extending `gobuster` is by using POSIX `seq` command. To exclude specific length from the output, `gobuster` requires param: `--exclude-length <len>,<len>` which would require a lot of work for small byte diff. Use `seq` to generate such sequences.
+
+```
+$ seq -s "," 1500 1510
+# 1500,1501,1502,1503,1504,1505,1506,1507,1508,1509,1510
+# 
+# then:
+#     gobuster -u <url> --exclude-length <generated_sequence>
+``` 
+
 **ffuf** fuzzing:
+
+```
+cat ~/SecLists/Discovery/Web-Content/apache.txt \
+~/SecLists/Discovery/Web-Content/ApacheTomcat.fuzz.txt \
+~/SecLists/Discovery/Web-Content/Common-DB-Backups.txt \
+~/SecLists/Discovery/Web-Content/Common-PHP-Filenames.txt \
+~/SecLists/Discovery/Web-Content/common.txt \
+~/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt \
+~/SecLists/Discovery/Web-Content/dirsearch.txt \
+~/SecLists/Discovery/Web-Content/frontpage.txt \
+~/SecLists/Discovery/Web-Content/golang.txt \
+~/SecLists/Discovery/Web-Content/graphql.txt \
+~/SecLists/Discovery/Web-Content/IIS.fuzz.txt \
+~/SecLists/Discovery/Web-Content/Jenkins-Hudson.txt \
+~/SecLists/Discovery/Web-Content/Logins.fuzz.txt \
+~/SecLists/Discovery/Web-Content/nginx.txt \
+~/SecLists/Discovery/Web-Content/PHP.fuzz.txt \
+~/SecLists/Discovery/Web-Content/quickhits.txt \
+~/SecLists/Discovery/Web-Content/raft-small-directories-lowercase.txt \
+~/SecLists/Discovery/Web-Content/raft-small-files-lowercase.txt \
+~/SecLists/Discovery/Web-Content/spring-boot.txt \
+~/SecLists/Discovery/Web-Content/RobotsDisallowed-Top1000.txt \
+~/SecLists/Discovery/Web-Content/swagger.txt \
+~/SecLists/Discovery/Web-Content/CMS/Django.txt \
+~/SecLists/Discovery/Web-Content/CMS/joomla-plugins.fuzz.txt \
+~/SecLists/Discovery/Web-Content/CMS/symfony-315-demo.txt | ffuf -w - -u https://utic.ba/FUZZ -mc 200,204,301,302,307,401,405 -fs 0
+```
+
+
+**ffuf** fuzzing for **SVN/GIT/Rand_PHP**:
 
 ```
 cat ~/SecLists/Discovery/Web-Content/CMS/symphony-267-xslt-cms.txt \
@@ -50,10 +92,7 @@ cat ~/SecLists/Discovery/Web-Content/CMS/symphony-267-xslt-cms.txt \
 ~/SecLists/Discovery/Web-Content/Common-DB-Backups.txt \
 ~/SecLists/Discovery/Web-Content/Common-PHP-Filenames.txt \
 ~/SecLists/Discovery/Web-Content/PHP.fuzz.txt \
-~/SecLists/Discovery/Web-Content/common.txt \
-/tmp/backup_files_only.txt \
-/tmp/log_files_only.txt \
-/tmp/UnixDotfiles.txt | ffuf -w - -u https://www.nic.ba/FUZZ -mc 200,204,301,302,307,401,403,405 -fs 0
+~/SecLists/Discovery/Web-Content/common.txt | ffuf -w - -u https://utic.ba/FUZZ -mc 200,204,301,302,307,401,403,405 -fs 0
 ```
 
 ### Fuzz List

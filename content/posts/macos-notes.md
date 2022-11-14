@@ -2,6 +2,26 @@
 title: "MacOS Notes"
 ---
 
+**Adding an application to Finder.app toolbar**
+
+Locate the app. in your `/Application` folder. Lets say you want to use OpenTerminal-Lite app. as a toolbar menu in Finder.
+
+1. Locate the /Applications/OpenTerminal-Lite.app
+2. Use `⌘`+`⌥` on keyboard, and drag-and-drop the app to Finder.app toolbar
+3. Yup, thats it 
+
+**Hide a folder on MacOS (using an attribute)**
+
+```
+$ chflags hidden /someones/desktop/folder
+```
+
+**Hide a symlink folder on MacOS**
+
+```
+$ chflags -h hidden /someones/desktop/folder
+```
+
 **Check Application entitlement**
 
 ```
