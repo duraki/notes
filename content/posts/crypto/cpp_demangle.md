@@ -1,5 +1,5 @@
 ---
-title: "C++ Demangler"
+title: "C Plus Plus Demangler"
 ---
 
 Install C++ demangler globally via `npm` using the following command:
