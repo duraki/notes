@@ -2,8 +2,6 @@
 title: "Frida Trace for iOS"
 ---
 
-## Tracing with Frida
-
 **Using `frida-trace` to find NSURLSession tasks**
 
 ```
@@ -12,7 +10,7 @@ $ frida-trace -R Gadget -m '-[NSURLSession dataTaskWithURL:*]'
 
 # via Device
 $ frida-trace -U Gadget -m '-[NSURLSession dataTaskWithURL:*]'
-``` 
+```
 
 This will yield, something similar to:
 
@@ -44,7 +42,7 @@ ObjC.choose(ObjC.classes[clazz], {
 
 **Advanced observing and tracing via Frida Scripts**
 
-The following Frida Function will take `ClassName` as an input, and print all observations and recursive calls being executed in the traced method block. To use simply call `**observeClass('Someclass$innerClass');**` from the Frida REPL, after injecting the script into target process. 
+The following Frida Function will take `ClassName` as an input, and print all observations and recursive calls being executed in the traced method block. To use simply call **`observeClass('Someclass$innerClass');`** from the Frida REPL, after injecting the script into target process. 
 
 
 ```

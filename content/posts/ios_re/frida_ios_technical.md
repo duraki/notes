@@ -20,15 +20,15 @@ Process.id
 
 ```
 Process.getCurrentThreadId()
-``` 
+```
 
 **Enumerate Modules**
 
 ```
 # Find Modules via Frida
-Process.enumerateModules() 		// Print all loaded Modules
+Process.enumerateModules() 				// Print all loaded Modules
 Process.findModuleByName("libboringssl.dylib") 		// Find Module by name, displays the information
-Process.findModuleByAddress("0x1c1c4645c")   // Find Module by address, displays the information
+Process.findModuleByAddress("0x1c1c4645c")   		// Find Module by address, displays the information
 
 # Find Address and Module of an export function name
 DebugSymbol.fromAddress(Module.findExportByName(null, 'strstr'))
@@ -41,17 +41,17 @@ Process.findModuleByAddress("0x183cb81e8")
 # Exports inside a Module
 modules = Process.findModuleByName("Reachability")
 modules.enumerateExports()
-``` 
+```
 
 **Memory Manipulation**
 
 ```
 Memory.allocUtf8String("Hello") 		// 0x1067ec510
-Memory.readUtf8String("0x1067ec510") 	// Hello
+Memory.readUtf8String("0x1067ec510") 		// Hello
 ptr(0x1067ec510).readUtf8String(2)		// He
 
 pointerToCString = new NativePointer(ptr(0x1067ec510)) // 0x1067ec510
-console.log(pointerToCString.readCString(4)) // Hell
+console.log(pointerToCString.readCString(4)) 	       // Hell
 ```
 
 **Instance Methods and Static Methods**
@@ -70,7 +70,7 @@ var str = ObjC.classes.NSString.stringWithString_("Foo");
 var nsd = ObjC.classes.NSData
 
 nsd = str.dataUsingEncoding_(1)			// NSASCIIStringEncoding = 1, NSUTF8StringEncoding = 4,
-console.log(nsd)						// <666f6f> 		since, foo to hex equals to '666f6f'
+console.log(nsd)				// <666f6f> since, foo to hex equals to '666f6f'
 
 var byteHex = nsd.CKHexString()			// array of bytes as hex string
 var byteStr = ObjC.classes.NSString.stringWithUTF8String_[nsd.bytes]
@@ -89,7 +89,7 @@ appDelegateImpl.implementation = ObjC.implement(appDelegateImpl, function() {
 });
 
 // console.log("completed implementation replace mod")
-``` 
+```
 
 **Intercept a Method and Examine the data passed and returned**
 
@@ -101,33 +101,33 @@ appDelegateImpl.implementation = ObjC.implement(appDelegateImpl, function() {
 var licenseReg = ObjC.classes.UserLicenseRegistration['- validateSerialKey:withEmail:'];
 Interceptor.attach(licenseReg.implementation, {
 
-	/** Important */
-	// Do remember that in Objective-C runtime, and the way the language works (ie. by sending Message to a Selector),
-	// the first two (2) arguments of any implementation method is fixed on the stack, and they are referencing to
-	//
-	// #arg0  ->	1st Argument ->			Self			// the first argument is always pointer of self()
-	// #arg1 -> 	2nd Argument ->			Msg Selector 	// the second argument is always pointer pointing to message selector, ie. a method called
-	//
-	// Therefore, it is not needed to examine these two arguments during any analysis phase. 
-	/** [onEnter description] */
-	onEnter(args) {
-		var serialKey = ObjC.Object(args[2]) 	// as seen, as of 2nd parameter, we are getting real data of the method argument value
-		var withEmail = ObjC.Object(args[3]) 	// as declared by method signature, this is last argument
-
-		console.log(hexdump(serialKey)); 
-	}
-
-	/** [onLeave description] */
-	// This callback event is fired whenever the app is leaving the method
-	onLeave(retval) { 	 
-        var hooking_return_val = ptr(0x1);		// will be BOOL(true)
-        retval.replace(hooking_return_val);		// replace original retval with our variable
-        console.log("\t [*] New Return Value: " + hooking_return_val);
-
-        // boom :) bypassed serial key
-	}
-
-});
+/** Important */
+// Do remember that in Objective-C runtime, and the way the language works (ie. by sending Message to a Selector),
+// the first two (2) arguments of any implementation method is fixed on the stack, and they are referencing to
+//
+// #arg0  ->	1st Argument ->			Self			// the first argument is always pointer of self()
+// #arg1 -> 	2nd Argument ->			Msg Selector 	// the second argument is always pointer pointing to message selector, ie. a method called
+//
+// Therefore, it is not needed to examine these two arguments during any analysis phase. 
+  
+  /** [onEnter description] */
+  onEnter(args) {
+  	var serialKey = ObjC.Object(args[2]) 	// as seen, as of 2nd parameter, we are getting real data of the method argument   value
+  	var withEmail = ObjC.Object(args[3]) 	// as declared by method signature, this is last argument
+  
+  	console.log(hexdump(serialKey)); 
+  }
+  
+  /** [onLeave description] */
+  // This callback event is fired whenever the app is leaving the method
+  onLeave(retval) { 	 
+      var hooking_return_val = ptr(0x1);		// will be BOOL(true)
+      retval.replace(hooking_return_val);		// replace original retval with our variable
+      console.log("\t [*] New Return Value: " + hooking_return_val);
+  
+      // boom :) bypassed serial key
+  }
+  });
 ```
 
 **Creating a Block (Handler)**
@@ -179,13 +179,13 @@ instance.getSomething()
 instance.doSomeTask()
 # You may also pass an argument, if the method accepts it (ie. `- setSomething:`)
 instance.setSomething_(argument) 	// make sure to use "_" instead of Objective-C's ":" separator
-``` 
+```
 
 **Enumerating Type of the Method Arguments and Return Type**
 
 This is great trick when you are lacking real RE environment, and you must know what Types are accepted. Luckly, Frida plays nice in such cases.
 
-... to get **Argument Types** of a Class/Object Method
+... to get **`Argument Types`** of a Class/Object Method
 
 ```
 ObjC.classes.UIView['- addSubview:'].argumentTypes
@@ -194,16 +194,16 @@ ObjC.classes.UIView['- addSubview:'].argumentTypes
     "pointer",
     "pointer"
 ]
-``` 
+```
 
-... to get **Return Type** of a Class/Object Method
+... to get **`Return Type`** of a Class/Object Method
 
 ```
 ObjC.classes.UIView['- addSubview:'].returnType
 "void"
-``` 
+```
 
-... to get **low-level encoding** of Types (Internal ObjC)
+... to get **`low-level encoding`** of Types (Internal ObjC)
 
 ```
 ObjC.classes.UIView['- addSubview:'].types
@@ -235,14 +235,12 @@ This small keyword allows you do dump anything residing at specific memory addre
 ```
 console.log(hexdump(ptr(this.data))		// dumps this.data in a hexadecimal forma, with default opts
 
-console.log(hexdump(ptr(this.data), {   // dumps this.data but with specific display opts
-	length: 1000,	/* max number of chars in hexview */
-	header: true,	/* also include table header */
-	ansi: true 		/* display in ansi */
+console.log(hexdump(ptr(this.data), {		// dumps this.data but with specific display opts
+	length: 1000,			/* max number of chars in hexview */
+	header: true,			/* also include table header */
+	ansi: true 			/* display in ansi */
 })) 
 ```
-
-## Objective-C
 
 **Using Frida scripting to hook on the Module, and Exports**
 
@@ -262,45 +260,44 @@ The below snippet is an example on how to utiliese Frida scripting engine, and o
 stored = null /* a variable that will store/contain original completionHandler block */
 
 Interceptor.attach(ObjC.classes.NSURLSession["- dataTaskWithRequest:completionHandler:"].implementation, { 	// Hook on NSURLSession*completionHandler
-	onEnter: function (args) {
-		this.object_selector = "-[NSURLSession dataTaskWithRequest:completionHandler:]"
-		console.log("onEnter -- " + this.title)
+  onEnter: function (args) {
+    this.object_selector = "-[NSURLSession dataTaskWithRequest:completionHandler:]"
+    console.log("onEnter -- " + this.title)
 
-		requestObj = ObjC.Object(args[2]) // args[2] is dataTaskWithRequest:* value
-		console.log("Request " + requestObj)
+    requestObj = ObjC.Object(args[2]) // args[2] is dataTaskWithRequest:* value
+    console.log("Request " + requestObj)
 
-		completionHandler = new ObjC.Block(args[3]) // store the original completion handler
-		stored = completionHandler.implementation
+    completionHandler = new ObjC.Block(args[3]) // store the original completion handler
+    stored = completionHandler.implementation
 
-		/* (re)use completionHandler method implementation */
-		completionHandler.implementation = function (data, response, error) { 	// the block shall respect original implementation
-			// print completionHandler Network Response
-			console.log("Response: " + requestObj)
-			console.log(ObjC.Object(response))
+    /* (re)use completionHandler method implementation */
+    completionHandler.implementation = function (data, response, error) { 	// the block shall respect original implementation
+        // print completionHandler Network Response
+        console.log("Response: " + requestObj)
+        console.log(ObjC.Object(response))
+    
+        // Getting ahold of data
+        dat = ObjC.Object(data) // 'data' is an NSData object
+        datLen = dat.length() // Length of 'data' from the completion
+        datBytes = dat.bytes() // Get the data in bytes
+    
+        // Displaying data
+        console.log(hexdump(dat, {ansi:true, length:len}))
+        # alternative:
+        # console.log(Memory.readUtf8String(dat))
+    
+        // Call original completion block
+        return stored(data, response, error)
+  	}
+  } ,
 
-			// Getting ahold of data
-			dat = ObjC.Object(data) // 'data' is an NSData object
-			datLen = dat.length() // Length of 'data' from the completion
-			datBytes = dat.bytes() // Get the data in bytes
-
-			// Displaying data
-			console.log(hexdump(dat, {ansi:true, length:len}))
-			# alternative:
-			# console.log(Memory.readUtf8String(dat))
-
-			// Call original completion block
-			return stored(data, response, error)
-		}
-	},
-
-	onLeave: function (retval) {
-		console.log("onLeave -- " + this.title)
-	}
+  onLeave: function (retval) {
+      console.log("onLeave -- " + this.title)
+  }
 })
 ```
 
-## Swift
-
+**todo**: *add Swift/Frida Scripting examples*
 
 ### References
 
