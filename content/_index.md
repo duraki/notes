@@ -4,15 +4,15 @@ lastmod = 2022-04-29
 type = "index"
 +++
 
-Hello, these are my personal notes and knowledge graph. I started using Obsidian
-a bit early in 2020. and continued graphing my knowledge from there.
+# About these notes
 
-I wanted something more towards functional, as to offer me a practical snippet
-library for my TTP's, both online and as a backup of dementia.
+Hi! 👋 I'm [Halis Duraki](https://duraki.github.io) and these are my personal notes. I'm a passionate hacker, mostly interested in reverse engineering, 0day exploitation and web applications. Notes presented here will relate to topics I'm most expertus about. 
 
-The notes are inspired by others (see: [#outro](#outro)); with only one goal. To simply note-take, graph, and quickly extract valuable data. Thanks to Justin and Jethro for their theme support and contribution. 
+I started using [Obsidian](https://obsidian.md/) a bit early in 2020. and continued graphing my knowledge since then. I wanted something more functional, as to offer me a practical snippet library for my TTP's, both online and as a backup of my dementia.
 
-I sincerly hope those notes will help you build yourself, extend your views, and expand your knowledge to new horizonts. Enjoy.
+The notes are inspired by [others](#outro), and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data. 
+
+I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them. 
 
 You can start exploring from the [List of Topics](#list-of-topics), [List of Tools](/list-of-tools), or see the [full list of notes](/posts). 
 
@@ -149,6 +149,8 @@ It uses parameters (such is `[params.styles]`) via `config.toml`. It's possible 
 ### Outro
 
 {{< details "Show #Outro" >}}
-This website is provided for free educational purposes. Knowledge shared here can be used for personal gain and experience. I do not condemn using TTPs explained here in your blackhat activities. The site is largely inspired by [Andy's](https://andymatuschak.org/) notes. I would like to thank to the One, All-seeing, All-hearing. Many greetings to all my friends and family who supported me till the very end. 
+This website is provided free, for educational purposes. Knowledge shared here can be used for personal gain and experience. I do not condemn using TTPs explained here in your blackhat activities. The site is largely inspired by [Andy's](https://andymatuschak.org/) notes. Thanks to Justin and Jethro for their theme support and contribution. I would like to thank to the One, All-seeing, All-hearing. Many greetings to all my friends and family who supported me till the very end. 
+  
+Peace out ✌️
 {{< /details >}}
 

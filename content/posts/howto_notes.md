@@ -2,14 +2,11 @@
 title: "How to write Notes"
 ---
 
-### TL;DR
-
-* Use Markdown for everything
-* Use shortcodes, 
-	- **NOTE**: shortcodes are commented-out, 
-	- **NOTE**: the correct syntax is `{{ <..> }}` without spaces between `{}` & `<>`
-* Clear and consistent
-* Integrate well with `art` CLI
+* Use Markdown for everything, stand-alone deployment
+* Use shortcodes, and develop custom ones
+	* Note: shortcodes are commented-out
+	* Note: correct syntax is `{{`<..>`}}` (no spaces between `{}` & `<>`)
+* Clear and consistent, easy to implement new features
 
 ### Including Images
 
@@ -33,7 +30,7 @@ To include files of any type, ready to be downloaded, copy the file to `/content
 [File to Download](/posts/files/some_file_to_download-example.pdf)
 ```
 
-The folder `files` in `content/posts` is created to index those files in the final build/deploy.
+The folder `/content/posts/files` is used to serve and index those files in the final build/deploy.
 
 ### Markdown
 
@@ -45,19 +42,17 @@ This is a **Red Alert!** Take cover.
 :::
 ```
 
-::: alert red
-This is a **Red Alert!** Take cover.
-:::
+**Typical Insertions**
 
-**Media Insertion**
-
-Use quotes markdown block:
+Use `>` to quote in markdown block
 
 ```
-> https://vimeo.com/1234567
-```
+>  For I know the plans I have for you, declares the LORD, 
+   plans to prosper you and not to harm you, plans to give 
+   you hope and a future. 
 
-**FontAwesome Icons**
+   - Jeremiah 29:11
+```
 
 **Wikipedia Insertion**
 
@@ -71,15 +66,14 @@ Use quotes markdown block:
 {{ < wikipedia tag="VIC_cipher" lang="en" title="VIC Cipher" > }}
 ```
 
-
-Use `FontAwesome` [Icon Library]():
+**Inserting [FontAwesome](https://fontawesome.com/) Icons**
 
 ```
 # => in markdown (md)
 ## Some of my photos :fa-camera-retro:
 ```
 
-**Highlight Lines**
+**Highlight lines in code**
 
 [List of supported languages](https://gohugo.io/content-management/syntax-highlighting#list-of-chroma-highlighting-languages)
 
@@ -122,13 +116,13 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 {{ < imgcap title="Sample caption" src="/images/2016/thetheme/1.png" > }}
 ```
 
-**Insert Gist via this line**
+**Insert Gist from GitHub**
 
 ```
 {{ < gist duraki 78985452 > }}
 ```
 
-**Include Instagram image in the note**
+**Insert Instagram Image**
 
 ```
 # => https://www.instagram.com/p/BWNjjyYFxVx/
@@ -140,7 +134,7 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 {{ < instagram BWNjjyYFxVx hidecaption > }}
 ```
 
-**Include Tweet in the note**
+**Insert a Tweet in post**
 
 ```
 # => https://twitter.com/SanDiegoZoo/status/1453110110599868418
@@ -148,8 +142,9 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 {{ < tweet user="SanDiegoZoo" id="1453110110599868418" > }}
 ```
 
-**Hide something**
+**Hide Something**
 
+```
 {{ < details > }}
 This website is provided for free educational purposes. Knowledge shared here can be used for personal gain and experience.
 {{ < /details > }}
@@ -157,20 +152,11 @@ This website is provided for free educational purposes. Knowledge shared here ca
 {{ < details "Read More" > }}
 Note: Some <read more> note for further details, or hidden image/text/component.
 {{ < /details > }}
+```
 
 [More shortcodes](https://gohugo.io/content-management/shortcodes/) on official website.
 
 ### Deploy
 
-**To deploy localy, use any server and a generator**
-
-```
-# => build
-$ ruby art notes local # => for local environment
-$ ruby art notes hybrid # => for prod environment
-
-# => serve
-$ php -S 127.0.0.1:8800 # => in $REPO_ROOT directory
-```
-
+Check details of `README.md` to learn how to deploy **~notes** on local and remote machines.
 
