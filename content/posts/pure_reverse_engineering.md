@@ -2,20 +2,20 @@
 title: "Pure Reverse Engineering"
 ---
 
-Some internal [knowledge](/reverse-engineering-tricks-and-tips) have been shared here. Otherwise, check references below.
+Some [RE Tricks and Tips](/reverse-engineering-tricks-and-tips) have been shared here. Otherwise, check references at the bottom of these notes.
 
-Use [Byteman](/byteman) to instrument compiled Java application and Jar based files. A [sample script](/byteman-scripts) has been included in the notes.
+Use [Byteman](/byteman) to instrument compiled Java application and `*.jar` files. A [sample script](/byteman-scripts) has been included in the notes.
 
 ### Hopper Disassembler
 
-In case Hopper Disas is "Not Responding" due to large binary loaded you can:
+In case Hopper Disassembler is `Not Responding` (sometimes due to large binary/analysis), you can:
 
 * Wait a bit more, close all unused apps, especially (Chrome) tabs
-* Open Activity Monitor and check Hopper process details
+* Open Activity Monitor and check Hopper Disassembler process details
 * If nothing works, use the command below to purge all unused virtual memory
 
 ```
-% purge
+$ purge
 
 # => ... wait a bit
 # =>     hopper disas. should be unfrezzed and responding

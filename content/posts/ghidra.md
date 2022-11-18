@@ -1,12 +1,12 @@
 ---
-title: "Ghidra and related"
+title: "Ghidra and Related"
 ---
 
 ## Installation
 
-Clone the repository or download and extract somewhere. In Ghidra, open the Script Manager (Window -> Script Manager) click the Script Directory button and add $REPO/scripts to the list.
+Clone the repository or download and extract somewhere. In Ghidra, open the Script Manager (`Window -> Script Manager`) click the Script Directory button and add `$REPO/scripts` to the list.
 
-Once the script directory is added to Ghidra you can find the scripts in the Script Manager. You can run the scripts directly from the Script Manager if you like but the scripts also have menus and keyboard shortcuts for ease of use. In order to activate the menus and shortcuts you must click the In Tool checkbox next to the scripts you wish to integrate into the tool.
+Once the script directory is added to Ghidra you can find the scripts in the Script Manager. You can run the scripts directly from the Script Manager in Ghidra. Additionally, imported scripts can also have Menus entry, and assigned keyboard shortcuts for ease of use. In order to activate the menus and shortcuts, you must click the `In Tool` checkbox next to the scripts you wish to integrate into Ghidra UI.
 
 ## Favorite Plugins
 

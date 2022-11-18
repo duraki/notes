@@ -4,6 +4,29 @@ title: "Cycript"
 
 *Tips and Tricks for Cycript*
 
+**Remote connection to Cycript**
+
+```
+hcy = dlopen("libcycript.dylib", 1)
+CYListenServer=(typedef void(short)) (dlysym(hcy, "CYListenServer"))
+CYListenServer(55000)
+tcprelay -t 55000:55000
+cycript -r 127.0.0.1:55000
+```
+
+**Get loaded dyld modules**
+
+```
+cy# utils.get_dyld_info()
+cy# ObjectiveC.images
+```
+
+**Inject `LOAD_DYLIB` from Cycript**
+
+```
+cy# dlopen("/usr/lib/test.dylib", 1)
+```
+
 **Tap an UIButton programatically**
 
 ```

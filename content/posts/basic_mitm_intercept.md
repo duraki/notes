@@ -1,5 +1,5 @@
 ---
-title: "MITM_Intercept"
+title: "MacOS MITM on TCP/UDP"
 ---
 
 Configure your MacOS to point `/etc/private/hosts` to real server.

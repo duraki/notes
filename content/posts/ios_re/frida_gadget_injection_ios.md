@@ -12,7 +12,7 @@ Here, I will explain quickly how to patch IPA with Frida Gadget, usable for iOS,
 * Create a blank iOS app., let it be Objective-C based, name it 'MobileProvision'
 * Go to `Target -> MobileProvision`, then select 'Signing & Capabilities'
   * Check 'Automatically manage signing'
-  * Set 'Bundle Identifier' to `com.dummydcprovision.MobileProvision'
+  * Set 'Bundle Identifier' to `com.durakiconsulting.MobileProvision`
   * Set 'Team' to reflect newly created Apple Developer Account
 * Connect your iPhone device via Lightning Cable
 * Select Application Target to the physical device
