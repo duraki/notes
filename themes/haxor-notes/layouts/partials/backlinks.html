@@ -4,27 +4,12 @@
 
 {{ $currentBaseFileName := $.File.BaseFileName }}
 {{ range .Site.AllPages }}
-   {{ partial "console_log" (. | plainify) }}                                   {{/* goes through all pages and returns Array<page.Pages[]>, ie. [console_log]:  Page(/posts/bmwe34/ac_dc.md) */}}
-   
-
-      {{/* tries to regex match .Title property in RawContent of each Array<page.Pages[]> */}}
    {{ if and (findRE $re .RawContent)
       (not (eq $currentBaseFileName .File.BaseFileName)) }}                     {{/* skips matching current file (self) */}}
 
       {{ $backlinks = $backlinks | append . }}                                  {{/* append a $backlinks slice with Page() object */}}
    {{ end }}
 {{ end }}
-
-
-
-{{/*
-{{ errof "Backlinks Content: %q" $backlinks }}
-Backlinks Content: "Pages(3)"
-Backlinks Content: "Pages(2)"
-Backlinks Content: []
-*/}}
-
-
 
 {{ if gt (len $backlinks) 0 }}                                                  {{/* if sizeof $backlinks != 0 */}}
   <div class="bl-section">
@@ -34,15 +19,6 @@ Backlinks Content: []
         <a href="{{ .RelPermalink }}" class="backlink-anchor">
           <div class="backlink">
             <p class="backlink-title">{{ .Title }}</p>
-            {{/*          content of the Page()                          */}}
-            {{/*
-              {{ partial "console_log" ( .RawContent) }}                          
-            */}}
-           
-
-            {{ partial "console_log" ( $re ) }}                                   {{/*          (?i)\n?.*\[Automotive Hacking\].*\n?           */}}
-            {{ partial "console_log" ( trim ( index ( findRE $re .RawContent ) 0 ) "\n*" ) }}                                                        {{/*          [Automotive Hacking](/automotive-hacking)           */}}
-            {{ partial "console_log" ( index ( findRE $re .RawContent ) 0 | plainify | markdownify | plainify | plainify ) }}         {{/*          Automotive Hacking                                    */}}
             <p class="backlink-preview">{{ index ( findRE $re .RawContent ) 0 | plainify | markdownify | plainify | plainify }}</p>
           </div>
         </a>

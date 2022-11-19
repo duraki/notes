@@ -14,13 +14,8 @@ The notes are inspired by [others](#outro), and I'm very thankful for all the id
 
 I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them. 
 
-You can start exploring from the [List of Topics](#list-of-topics), [List of Tools](/list-of-tools), or see the [full list of notes](/posts). 
+You can start exploring from the [List of Topics](#list-of-topics), or see the [full list of notes](/posts). 
 
-{{< details "Read More" >}}
-Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero. Much easier to browse and search. Otherwise, selecting subtopic(s) will put that selected subtopic as your index. 
-{{< /details >}}
-
-<!-- {{< content "/content/posts/list_of_topics.md" >}} -->
 ---
 
 ## List of Topics
