@@ -703,5 +703,5 @@ objCIvarsBuiltins = [
 - [Crypto Hooks via Frida Scripting](https://github.com/theart42/hack.lu/blob/master/IOS/Notes/05-Crypt/00-crypto-hooks.md)
 - [Using Frida Scripting to hijack NSURLSession](https://flippingbitz.com/post/2020-05-12-frida-instrumentation-ios-nsurlsession/) - *doing so, you avoid SSL pins, web proxy, mitm attacks*
 - [frida-objc-bridge tests](https://github.com/frida/frida-objc-bridge/blob/main/test/basics.m)
-
+- [frida-ios-intercept-api](https://github.com/noobpk/frida-ios-intercept-api)
 

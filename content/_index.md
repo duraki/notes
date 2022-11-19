@@ -25,7 +25,7 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
 
 ## List of Topics
 
-### Automotive Cyber Security [§Automotive](/automotive)
+### Automotive Cyber Security
 
 * [Automotive Hacking](/automotive-hacking)
 * [Ethernet in Vehicles](/ethernet-specifications)
@@ -42,11 +42,12 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
 
-### Classical Penetration Testing [§Classical Pentest](/classical)
+### Classical Penetration Testing
 
 * [OSINT](/osint)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
 * [Web Fuzzing](/web-fuzzing-technqiues)
+    * [Javascript Deobfuscation](/javascript-deobfuscation)
 * [SQL Injection Payloads](/sqli-payloads)
 * [Cloud Metadata](/cloud-metadata)
 * [XSS Payloads](/xss-payloads)
@@ -68,7 +69,7 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
     * [Server Anywhere](/server-anywhere)
     * [Netcat Tricks](/netcat-tricks)
 
-### Reverse Engineering [§RE](/re)
+### Reverse Engineering
 
 * [Tricks and Tips](/reverse-engineering-tricks-and-tips)
 * [Network Reverse Engineering](/network-reverse-engineering)
@@ -77,11 +78,15 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
 * [Byteman Scripts](/byteman-scripts)
 * [Encryption and Cryptography](/encryption-and-cryptography)
 * [Demangling C++ files using Frida](/c-plus-plus-demangler)
+* [Frida](/frida)
+    * [Frida Class Generator](/generate-frida-class)
+    * [Frida and r2 Interop](/r2frida)
+* [radare2](/radare2)
 * [MacOS Reverse Engineering](/macos-reverse-engineering)
     * [Ghidra](/ghidra-and-related)
     * [MacOS Library Injection](/dyld-ios-injection)
-    * [LLDB for MacOS](/macho_lldb)
-    * [Hopper for MacOS](/pure_reverse_engineering)
+    * [LLDB for MacOS](/lldb-for-macos)
+    * [Hopper for MacOS](/pure-reverse-engineering#hopper-disassembler)
     * [MacOS MITM for TCP/UDP protocols](/macos-mitm-on-tcp/udp/)
 * [iOS Reverse Engineering](/ios-reverse-engineering)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
@@ -101,7 +106,7 @@ Selecting **`§`**-preffixed topics will put that topics hierarchy at index zero
     * [Android Recompilation](/android-recompilation)
 * [OPCRouter Research](/opcrouter-research)
 
-### Development [§dev](/dev)
+### Development
 
 **.files**
 
@@ -135,7 +140,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
     * [Building Kali Linux for Banana Pro](/building-kali-linux-for-banana-pro)
     * [Mounting SD Cards](/mounting-sd-cards)
     * [Mounting (ext4) partition in MacOS](/macos-notes)
-* [Uplink (game) Modding](/uplink_modding)
+* [Uplink (game) Modding](/modding-uplink-by-introversion)
 * [How to write Notes](/how-to-write-notes)
 * [Troubleshoot](/troubleshoot)
 * [~ ideas](/~-ideas)

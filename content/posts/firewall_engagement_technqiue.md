@@ -172,3 +172,4 @@ wafw00f  implementation
 * VPN or Firewall Version Disclosure
 * Known Exploits and CVE's
 * Potential SQLmap payload
+* using [pwnat](https://github.com/samyk/pwnat) to bypass NAT translation tables 

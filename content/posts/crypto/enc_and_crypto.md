@@ -39,3 +39,7 @@ Options:
 
 **Manual Decryption**
 Head over to [CyberChef](https://gchq.github.io/CyberChef/) from  `gchq@gov`, and manually craft your chiper recipe or combination. This takes some time, but the chances are much greated then using automated tasks.
+
+## Toolset
+
+* [carmaa/interrogate](https://github.com/carmaa/interrogate) - proof-of-concept tool for identification of cryptographic keys in binary material

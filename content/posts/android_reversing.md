@@ -40,6 +40,17 @@ To use built-in `logcat`, append the following:
 $ adb shell 'logcat --pid=$(pidof -s x.xxx.xxx.xxxxx.xx)'
 ```
 
+### Toolset
+
+* [jnitrace](https://github.com/ChiChou/vscode-frida) - trace JNI API in Android apps
+* [ldpreloadhook](https://github.com/poliva/ldpreloadhook) - `open/close/ioctl/read/write/free` symbol hooker
+* [dexinfo](https://github.com/poliva/dexinfo) - android dex file parser
+* [dexterity](https://github.com/rchiossi/dexterity) - analyse and manipulate android dex files
+* [apk-medit](https://github.com/aktsk/apk-medit) - memory search and patch tool for non-rooted android devices 
+* [ApkUrlGrep](https://github.com/ndelphit/apkurlgrep) - extract endpoints from APK files 
+* [dexcalibur](https://github.com/FrenchYeti/dexcalibur) - frida powered android RE tool
+* [fridroid-unpacker](https://github.com/enovella/fridroid-unpacker) - defeat Java packers via Frida instrumentation
+
 **References**
 
 * [Android Nougat and Burp Proxy Configuration](https://blog.ropnop.com/configuring-burp-suite-with-android-nougat/)

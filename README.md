@@ -20,6 +20,8 @@ $ brew install hugo
 $ hugo version # => hugo v0.98.0+extended darwin/amd64
 ```
 
+Start reading Hugo's documentation for [Functions](https://gohugo.io/categories/functions), [Templates](https://gohugo.io/templates/) and [Variables](https://gohugo.io/variables/) to get the feel of it.
+
 ## Development Environment 🎉
 
 **Engine Debugger**

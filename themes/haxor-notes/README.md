@@ -69,3 +69,7 @@ Here is a basic dark theme that can be tweaked:
   # Styles for the search page
   searchExtractColor = "#666"
 ```
+
+**References**
+
+* [DanWebb/jdown](https://github.com/DanWebb/jdown) - transform a directory of markdown files to JSON; can be used if you ever want to switch to a other blogging platform

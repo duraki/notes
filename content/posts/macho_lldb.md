@@ -1,5 +1,5 @@
 ---
-title: "lldb"
+title: "lldb for MacOS"
 ---
 
 [Click Here](/lldb-for-ios) if you are looking for iOS-specific `lldb` notes. Scroll below to [see attaching errors and workaround](#errors-and-workarounds). 
@@ -40,6 +40,19 @@ Cast an address to object:
 (lldb) settings set target.language swift
 ```
 
+Type-casting a memory address to a class:
+
+```
+(lldb) po unsafeBitCast(0x600003973c20, to: MyModule.MyClass.self)
+```
+
+Find Image containing the given symbol:
+
+```
+# => @see 'man dladdr'
+(lldb) image lookup -n "-[NSTextInputContext selectedRange_RTI]"
+```
+
 Import a Library in the lldb context:
 
 ```
@@ -48,7 +61,7 @@ Import a Library in the lldb context:
 
 # => Custom Classes
 (lldb) expr -l Swift -- import MyTestProject
-(lldb) expr -l Swift --  let $vc = unsafeBitCast(0x7fad22c066d0, ViewController.self)
+(lldb) expr -l Swift -- let $vc = unsafeBitCast(0x7fad22c066d0, ViewController.self)
 (lldb) expr -l Swift -- print($vc.view)
 ```
 

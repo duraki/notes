@@ -134,6 +134,7 @@ main "$@"
 **Reference**
 
 * [Bash Hackers](http://wiki.bash-hackers.org/scripting/start) and [common pitfalls](http://wiki.bash-hackers.org/scripting/newbie_traps)
+* [bash-snippets](https://github.com/matthewreagan/BashSnippets)
 * [Interactive Bash](http://samrowe.com/wordpress/advancing-in-the-bash-shell/)
 * [Google's Bash styleguide](https://google.github.io/styleguide/shell.xml)
 * [shellcheck](https://github.com/koalaman/shellcheck) to lint and detect erros

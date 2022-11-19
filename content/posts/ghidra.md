@@ -24,5 +24,6 @@ Once the script directory is added to Ghidra you can find the scripts in the Scr
 * [analyzeocmsgsend.py](https://github.com/PAGalaxyLab/ghidra_scripts#analyzeocmsgsendpy)
 * [fox](https://github.com/federicodotta/ghidra-scripts/tree/main/FOX)
 * [rhabdomancer.java](https://github.com/0xdea/ghidra-scripts/blob/main/Rhabdomancer.java)
+* [ghidra_stack_strings](https://github.com/zxgio/ghidra_stack_strings)
 
 Additionally, there is [ghidra-snippets](https://github.com/HackOvert/GhidraSnippets) repository that may be usable as a reference to various Ghidra functions and their signatures.

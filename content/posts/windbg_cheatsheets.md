@@ -124,3 +124,7 @@ To quit and detach from process:
 ```
 qd
 ```
+
+**References**
+
+* [windbg-scripts](https://github.com/0vercl0k/windbg-scripts)
