@@ -1,10 +1,10 @@
 <p align="center"><b>~ notes</b></p>
 
-The `~ notes` is a dedicated page of my knowledgebase, oneliners, writeups, and many more. It also does well at explaining my toolset and TTPs. These notes are published using [Hugo](https://gohugo.io), using custom theme which present these notes in stacked view; meaning each note is stacked side to other, similar to [Obsidian](https://obsidian.md/). Read more about [~notes](http://notes.durakiconsulting.com) or start contributing.
+The `~ notes` is a dedicated page of my knowledgebase, oneliners, writeups, and many more. It also does well at explaining my toolset and TTPs. These notes are published using [Hugo](https://gohugo.io), using custom theme which present these notes in stacked view; meaning each note is stacked side to other, similar to [Obsidian](https://obsidian.md/). Read more about [~notes](http://notes.durakiconsulting.com) or start contributing. You can check my theme [haxor-notes](./themes/haxor-notes), included in this repository.
 
 ## Contributing 😇
 
-The build phase uses parameters (such is `[params.styles]`) defined in `config.toml`. It’s possible to deploy **dark** version as well, read more in bundled `*.css`. The User Interface theme used in `~notes` is matching that of my [blog](https://duraki.github.io). The site is largely inspired by Andy’s notes, while credits for theme support and contribution goes to Justin. 
+The build phase uses parameters (such is `[params.styles]`) defined in `config.toml`. It’s possible to deploy **dark** version as well, read more in bundled `*.css`. The User Interface theme used in `~notes` is matching that of my [blog](https://duraki.github.io). The site is largely inspired by Andy’s notes, while credits for original theme goes to Justin. My [hard fork](./themes/haxor-notes) fixes many bugs and also adds number of enhancements to the Hugo theme. My [haxor-notes](./themes/haxor-notes) theme is bundled in this repository.
 
 **Usage Prerequisites**
 

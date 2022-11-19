@@ -1,0 +1,16 @@
+name = "haxor-notes"
+license = "MIT"
+licenselink = "https://github.com/duraki/notes/"
+description = "Theme for knowledge graph notes."
+homepage = "https://github.com/duraki/notes/tree/master/themes/haxor-notes"
+tags = ['knowledge-graph', 'notes', 'obsidian']
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Halis Duraki"
+  homepage = "https://duraki.github.io"
+
+[original]
+  name = "Justin Smith"
+  homepage = "https://justindsmith.me"
