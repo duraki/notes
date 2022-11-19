@@ -1,0 +1,62 @@
+{{ $cssdbg := resources.Get "/css/debugprint.css" }}
+<link rel="stylesheet" href="{{ $cssdbg.RelPermalink }}" />
+
+{{ $pos_arg_0 := .Get 0 }}
+{{ $param_arg := .Get "param" }}
+{{ $pos_arg_1 := .Get "var" }}
+{{ $p := $.Page }}
+
+<style type="text/css">
+    .debugcls h3 {
+        font-size: 15px;
+        font-weight: bold;
+        color: red;
+        background-color: black;
+        padding: 5px; 
+    }
+
+    .debugcls {
+        font-family: monospace;
+    }
+</style>
+
+<div class="debugcls">
+{{ if $pos_arg_0 }} 
+    {{ if (eq "params" $pos_arg_0) }}
+        <h3>.page.Params ::</h3>
+        {{ partial "debugprint.html" $p.Params }}
+    {{ else if (eq "site" $pos_arg_0) }}
+        <h3>.site :: 'self'</h3>
+        {{ partial "debugprint.html" site }}
+    {{ end }}
+{{ else }}
+    {{ if $pos_arg_1 }}
+        {{ with $param_arg }}
+        {{ else }}
+            {{ printf `<h3>.page.Variable :: '%s'</h3>` "NULL" | safeHTML }}
+            <code style="font-size: 14px;"><b>[debug]</b> unvalid call @debug for 'param' <b>NULL</b> 'var' <b>{{ $pos_arg_1 }}</b> -- use:<br> {</code><code>{< debug param='my_param' var='my_var' >}}</code>
+        {{ end }}
+    {{ end }}
+    {{ if $param_arg }}
+        {{ if $pos_arg_1 }}
+            {{ with $pos_arg_1 }}
+                {{ printf `<h3>.page.Variable :: '%s'</h3>` $param_arg | safeHTML }}
+                {{ partial "debugprint.html" ($pos_arg_1) }}
+            {{ end }}
+        {{ else }}
+                <code style="font-size: 14px;"><b>[debug]</b> unvalid call @debug for 'param' <b>{{ $param_arg }}</b> 'var' <b>NULL</b> -- use:<br>{</code><code>{< debug param='my_param' var='my_var' >}}</code>
+        {{ end }}
+     {{ end }}
+    {{ with $param_arg }}
+        {{ printf `<h3>.page.Param :: '%s'</h3>` . | safeHTML }}
+        {{ partial "debugprint.html" ($p.Param .) }}
+    {{ else }}
+    {{ if $pos_arg_1 }}
+    {{ else }}
+        <h3>.page :: 'self'</h3>
+        {{ partial "debugprint.html" $p }}
+    {{ end }}
+    {{ end }}
+{{ end }}
+<div class="debugcls">
+

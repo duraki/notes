@@ -1,7 +1,16 @@
 {{define "main"}}
-<div class="page" data-level="1">
-  <div class="content">
-    {{ .Content }}
-  </div>
+<div class="grid-container">
+  <div class="grid">
+    <div class="page" data-level="1">
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
+   </div>
 </div>
+
+{{ $urijs := resources.Get "js/URI.js" }}
+<script src="{{$urijs.Permalink}}" type="text/javascript"></script>
+{{ $pagejs := resources.Get "js/page.js" }}
+<script src="{{$pagejs.Permalink}}" type="text/javascript"></script>
 {{end}}
