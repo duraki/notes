@@ -6,6 +6,17 @@
 #search-input {
   background: #e8e8e8;
   border: 1px solid #64645352;
+  font: 14px courier new;
+  padding-left: 4px;
+}
+
+#search-submit {
+  border: 1px solid #64645352;
+  text-align: center;
+  font: 14px courier new;
+  vertical-align: baseline;
+  font-weight: bold;
+  color: #000000ad;
 }
 
 /**

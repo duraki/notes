@@ -1,19 +1,21 @@
-# Little Ocean
+# haxor-notes 
 
-A [Hugo](https://gohugo.io/) theme optimized for publishing personal [evergreen notes](https://notes.andymatuschak.org/Evergreen_notes).
+A [Hugo](https://gohugo.io/) theme optimized for publishing my personal [notes](http://notes.durakiconsulting.com).
 
-It is forked from [Jethro Kuan's Cortex theme](https://github.com/jethrokuan/cortex), with a number of enhancements to more closely mimic [Andy Matuschak's notes site](https://notes.andymatuschak.org).
+It is hard fork from [Justin's](https://justindsmith.me) theme, which is a fork of [Cortex theme](https://github.com/jethrokuan/cortex), with a number of enhancements to more closely mimic [Andy Matuschak's notes](https://notes.andymatuschak.org). Some extra features has been added by [me](https://twitter.com/0xduraki) such is [engine debug mode](./layouts/partials/debugprint.html), [debug shortcode](./layouts/shortcodes/debug.html), and [console_log](./layouts/partials/console_log.html). This fork is also matching UI style to that of my [blog](https://duraki.github.io). I've also implemented [stacked mode](./layouts/partials/debugprint.html) for top-level index and fixed [backlinks](./layouts/partials/backlinks.html) bug.
 
-Example Site: [Little Ocean Star Wars Knowledge Graph](https://little-ocean.netlify.app/)
+Example Site: [duraki notes](http://notes.durakiconsulting/)
 
-![Screenshot of Little Ocean Theme for Hugo](./screenshot.png)
+![Screenshot](./screenshot.png)
 
 Features:
 
 - Opens new pages in an ever-growing list to maintain context of how you arrived at a page.
+- This fork also fixes the top-level index page. It handles index page as it was subcontexed stacked note. 
 - Tracks and displays "backlinks" between pages to allow for related concept exploration.
+- This fork also fixes backlinks between stacked notes, which sometimes yielded markdown raw data. 
 - Shows preview of content on link hover to get a peek at the content before opening.
-- Customizable look-and-feel via configuration to personalize.
+- Customizable look-and-feel via to match style of my blog.
 - Text search to find interesting starting points into the knowledge graph.
 
 ## Search
@@ -22,7 +24,7 @@ In order for search to work, you must have a `/content/search/_index.md` file, s
 
 ## Custom Styling
 
-The default theme style matches [Andy Matuschak's notes site](https://notes.andymatuschak.org). You can configure the look and feel of the site using the `[params.styles]` property in your [`config.toml`](https://github.com/justindsmith/little-ocean/blob/main/exampleSite/config.toml).
+The default theme style matches [my blog](http://notes.durakiconsulting.com). You can configure the look and feel of the site using the `[params.styles]` property in your [`config.toml`](https://github.com/duraki/notes/themes/haxor-notes/blob/master/config.toml).
 
 Here is a basic dark theme that can be tweaked:
 
