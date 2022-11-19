@@ -1,6 +1,8 @@
 <p align="center"><b>~ notes</b></p>
 
-The `~ notes` is a dedicated page of my knowledgebase, oneliners, writeups, and many more. It also does well at explaining my toolset and TTPs. These notes are published using [Hugo](https://gohugo.io), using custom theme which present these notes in stacked view; meaning each note is stacked side to other, similar to [Obsidian](https://obsidian.md/). Read more about [~notes](http://notes.durakiconsulting.com) or start contributing. You can check my theme [haxor-notes](./themes/haxor-notes), included in this repository.
+The `~ notes` is a dedicated repository for my digital garden. These notes are published via [Hugo](https://gohugo.io) and it uses custom theme which presents these notes in stacked view; meaning each note is stacked side by side, similar to [Obsidian](https://obsidian.md/). Read these [~notes](http://notes.durakiconsulting.com) or start contributing. You can check my theme [haxor-notes](./themes/haxor-notes), included in this repository.
+
+> ... **digital garden** is something inbetween a personal blog and a wiki. It's a collection of evolving notes, essays, and ideas that aren't strictly organised by their publication date. They're inherently exploratory – posts are linked through contextual associations ... -[digital-gardeners](https://github.com/MaggieAppleton/digital-gardeners)
 
 ## Contributing 😇
 
