@@ -58,8 +58,8 @@ $ cd notes/
 Then use Hugo command-line interface to start debugging:
 
 ```
-# => bring Hugo server at http://127.0.0.1:8880
-$ hugo server --bind 127.0.0.1 --port 8800 --baseURL="http://127.0.0.1:8800/" -d docs/ --config config.toml # [--minify]
+# => bring Hugo server at http://127.0.0.1:8880/notes
+$ hugo server --bind 127.0.0.1 --port 8800 --baseURL="http://127.0.0.1:8800/notes" -d docs/ --config config.toml --verboseLog   # [ --minify ]
 
 # => bring Hugo server and output log more verbosly
 $ hugo server [..] --config config.toml --verboseLog 
