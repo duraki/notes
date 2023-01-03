@@ -116,10 +116,14 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 {{ < imgcap title="Sample caption" src="/images/2016/thetheme/1.png" > }}
 ```
 
-**Insert Gist from GitHub**
+**Insert Gist or GitHub Repository**
 
 ```
 {{ < gist duraki 78985452 > }}
+
+  # ... or ...
+
+{{ < github repo="duraki/notes" file="/path/to/file" lang="language" options="highlight-options" >}}
 ```
 
 **Insert Instagram Image**

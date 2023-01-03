@@ -25,7 +25,7 @@ In order to be able to understand a circuit diagram, you have to know a few basi
 
 {{< imgcap title="Only through this point (node) is a connection made between the red and the blue line in the circuit diagram" src="/posts/images/sym_line_conn.png" >}}
 
-{{< imgcap title="Two lines cross here, but there is no electrical connection" src="/posts/images/sym_batterypng" >}}
+{{< imgcap title="Two lines cross here, but there is no electrical connection" src="/posts/images/sym_battery.png" >}}
 
 {{< imgcap title="Battery" src="/posts/images/sym_battery.png" >}}
 

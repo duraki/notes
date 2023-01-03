@@ -49,6 +49,8 @@ All API rely on above library. For example, when the MachO Process starts, the a
 
 **Mount RaspberryPi / BananaPi SD Card**
 
+Note: these instructions are outdated, please take a look at newer documentation in [fuse-ext2 notes](/fuse-ext2). The difference between the `fuse-ext2` and `ext4fuse` is that the former allows for `r/w` on the mounted partition; and not only `r/o`, as is the case with `ext4fuse`. 
+
 Insert SD Card in your card reader or Macbook. Then when the error pops-up, just hit "Ignore" (not *Eject*!).
 
 The SD Card should be visible by the MacOS, but not mounted, as such:
@@ -77,16 +79,30 @@ $ brew install ext4fuse # => might throw an error, @see below for instructions
 
 # 2) the other option is to manually force ext2fuse via the script. the script are 
 #	 in this notes, right below.
-``` 
+```
 
-Make a mountable directory on your Mac and mount the SD card:
+Add current `$USER` to the operator group, so it could have readonly permissions to the disk:
+
+```
+$ sudo dscl . append /Groups/operator GroupMembership `whoami`
+```
+
+We shall not forget important step right here, unmounting the disk from the MacOS host (not the partition):
+
+```
+$ sudo diskutil unmountDisk /dev/disk2
+```
+
+Make a mountable directory on your Mac and mount the SD card ext4 partition:
 
 ```
 $ mkdir ~/raspberry # => or /Volumes/raspberry for natural choice
 $ sudo ext4fuse /dev/disk2s1 ~/raspberry -o allow_other
 ```
 
-*note*: adding `allow_other` for this SD card should be readable by everyone
+If you get **fuse: no mount point** error, it means you haven't set correct mount directory (ie. `~/raspberry`). Go back and repeat the steps as instructed.
+
+*note*: adding `allow_other` for this SD card should make it readable by everyone.
 
 To unmount the SD Card, just simply use:
 
@@ -104,10 +120,18 @@ Download the script below, and save it somewhere in your machine, then run:
 $ brew install --formula --build-from-source /tmp/ext4fuse.rb
 ```
 
-(*note*: paste the following in `/tmp/ext2fuse.rb`: 
+**References:**
+
+* [Mount Raspberry Pi SD Card on MacOS (R/O)](https://www.jeffgeerling.com/blog/2017/mount-raspberry-pi-sd-card-on-mac-read-only-osxfuse-and-ext4fuse)
+* [Mount Raspberry Pi SSD on Big Sur](https://bespired.medium.com/mount-a-pi-ssd-on-your-big-sur-mac-d0ada9939fa4)
+* [Mount an ext4 paritition on MacOS](https://www.zleptnig.com/blog/mount-an-ext4-partition-on-macos)
+* [Mount ext4 Filesystem on MacOS](https://docs.j7k6.org/mount-ext4-macos/)
+
+
+(*note*: paste the following in `/tmp/ext4fuse.rb`: 
 
 ```
-# => cat /tmp/ext2fuse.rb
+# => cat /tmp/ext4fuse.rb
 
 class MacFuseRequirement < Requirement
   fatal true

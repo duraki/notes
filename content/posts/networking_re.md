@@ -2,6 +2,8 @@
 title: "Network Reverse Engineering"
 ---
 
+**Using [`wireshark`](/wireshark)** is explained in seperated documentation. Please refer to Wireshark documentation for more extensive cheatsheet.
+
 **using `fritap` to analyse network traffic encapsulated in SSL or TLS**
 
 [fritap](https://github.com/fkie-cad/friTap) is a Python package that can be used to analyze network traffic on SSL/TLS transport layers. Works on SSL/TLS and supports all major operating systems (MacOS, iOS, Linux, Windows, Android). It is based on [frida](/frida), therefore it require `frida-server` to be up and running on the iOS/Android device.
@@ -157,3 +159,4 @@ $ netstat -a -c | grep -i example.com
 * [sslsplit](https://github.com/droe/sslsplit) - Transparent SSL/TLS interception 
 * [ProtoDump](https://github.com/leptos-null/ProtoDump) - Obtain proto definition files using the Objective-C and Google Protobuf runtimes
 * [dwarf_NetworkRequests](https://github.com/iGio90/NetworkRequests) - dwarf script to collect network requests, no need to unpin, hooks on low level functions
+* [netzob](https://github.com/netzob/netzob) - Netzob: Protocol Reverse Engineering, Modeling and Fuzzing 

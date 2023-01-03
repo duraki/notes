@@ -8,6 +8,10 @@ Clone the repository or download and extract somewhere. In Ghidra, open the Scri
 
 Once the script directory is added to Ghidra you can find the scripts in the Script Manager. You can run the scripts directly from the Script Manager in Ghidra. Additionally, imported scripts can also have Menus entry, and assigned keyboard shortcuts for ease of use. In order to activate the menus and shortcuts, you must click the `In Tool` checkbox next to the scripts you wish to integrate into Ghidra UI.
 
+## Favorite Scripts
+
+* []
+
 ## Favorite Plugins
 
 * [coloring_call_jmp.py](https://github.com/AllsafeCyberSecurity/ghidra_scripts#coloring_call_jmppy)
