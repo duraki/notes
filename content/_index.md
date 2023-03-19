@@ -6,15 +6,15 @@ type = "index"
 
 # About these notes
 
-Hi! 👋 I'm [Halis Duraki](https://duraki.github.io) and these are my personal notes. I'm a passionate hacker, mostly interested in reverse engineering, 0day exploitation and web applications. Notes presented here will relate to topics I'm most expertus about. 
+Hi! 👋 I'm [Halis Duraki](https://duraki.github.io) and these are my personal notes. I'm a passionate hacker, mostly interested in reverse engineering, 0day exploitation and web applications. Notes presented here will relate to topics I'm most expertus about.
 
 I started using [Obsidian](https://obsidian.md/) a bit early in 2020. and continued graphing my knowledge since then. I wanted something more functional, as to offer me a practical snippet library for my TTP's, both online and as a backup of my dementia.
 
-The notes are inspired by [others](#outro), and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data. 
+The notes are inspired by [others](#outro), and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data.
 
-I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them. 
+I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
 
-You can start exploring from the [List of Topics](#list-of-topics), or see the [full list of notes](/posts). 
+You can start exploring from the [List of Topics](#list-of-topics), or see the [full list of notes](/posts).
 
 ---
 
@@ -28,7 +28,7 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
 * [ECU Foundation](/ecu-foundations)
 * [ECU Calibration](/ecu-calibration)
 * [ECU Compromise](/how-to-compromise-ecu)
-* [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing) 
+* [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing)
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
 * [BMW E34 Learning Material](/bmw-ag-e34-learning-materials)
     * [Electronic Signals](/electronic-signals)
@@ -83,6 +83,9 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
     * [LLDB for MacOS](/lldb-for-macos)
     * [Hopper for MacOS](/pure-reverse-engineering#hopper-disassembler)
     * [MacOS MITM for TCP/UDP protocols](/macos-mitm-on-tcp/udp/)
+* [MacOS M1 Reverse Engineering]()
+    * [M1 LLDB Configuration](/configure-lldb-m1-m2)
+    * [Using Frida against MachO on ARM](/using-frida-against-macho-on-arm)
 * [iOS Reverse Engineering](/ios-reverse-engineering)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
     * [Pure Reverse Engineering](/pure-reverse-engineering)
@@ -144,13 +147,12 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 
 ### How it works
 
-It uses parameters (such is `[params.styles]`) via `config.toml`. It's possible to deploy dark version as well. Read for more in `*.css`. The theme used in `~notes` is rewritten from [my blog](https://duraki.github.io/). 
+It uses parameters (such is `[params.styles]`) via `config.toml`. It's possible to deploy dark version as well. Read for more in `*.css`. The theme used in `~notes` is rewritten from [my blog](https://duraki.github.io/).
 
 ### Outro
 
 {{< details "Show #Outro" >}}
-This website is provided free, for educational purposes. Knowledge shared here can be used for personal gain and experience. I do not condemn using TTPs explained here in your blackhat activities. The site is largely inspired by [Andy's](https://andymatuschak.org/) notes. Thanks to Justin and Jethro for their theme support and contribution. I would like to thank to the One, All-seeing, All-hearing. Many greetings to all my friends and family who supported me till the very end. 
-  
+This website is provided free, for educational purposes. Knowledge shared here can be used for personal gain and experience. I do not condemn using TTPs explained here in your blackhat activities. The site is largely inspired by [Andy's](https://andymatuschak.org/) notes. Thanks to Justin and Jethro for their theme support and contribution. I would like to thank to the One, All-seeing, All-hearing. Many greetings to all my friends and family who supported me till the very end.
+
 Peace out ✌️
 {{< /details >}}
-
