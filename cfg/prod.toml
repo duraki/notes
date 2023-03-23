@@ -1,0 +1,21 @@
+baseURL = '/notes/public/'
+
+CanonifyURLs=true
+
+
+
+languageCode = 'en-us'
+title = "duraki's notes"
+theme = "haxor-notes"
+
+copyright = "durakiconsulting (c) h. duraki"
+enableEmoji = true
+publishDir = "/docs"
+
+[permalinks]
+posts = '/:title'
+
+[params]
+logoUrl = 'favicon.png'
+
+[params.styles]
