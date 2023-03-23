@@ -1,5 +1,4 @@
-baseURL = 'https://notes.durakiconsulting.com/'
-
+#baseURL = 'https://notes.durakiconsulting.com/'
 CanonifyURLs=true
 
 

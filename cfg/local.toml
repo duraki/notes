@@ -1,4 +1,4 @@
-baseURL = 'http://127.0.0.1:8800/notes/'
+#baseURL = 'http://127.0.0.1:8800/notes/'
 buildDrafts=true
 
 #RelativeURLs=true
@@ -10,7 +10,7 @@ theme = "haxor-notes"
 
 copyright = "durakiconsulting (c) h. duraki"
 enableEmoji = true # => https://www.webfx.com/tools/emoji-cheat-sheet/
-# publishDir = "" # => https://gohugo.io/getting-started/configuration/#publishdir
+publishDir = "public" # => https://gohugo.io/getting-started/configuration/#publishdir
 
 [permalinks]
 posts = '/:title'
