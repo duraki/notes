@@ -10,7 +10,7 @@ theme = "haxor-notes"
 
 copyright = "durakiconsulting (c) h. duraki"
 enableEmoji = true
-publishDir = "/docs"
+#publishDir = "/docs"
 
 [permalinks]
 posts = '/:title'
