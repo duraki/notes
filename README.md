@@ -20,13 +20,41 @@ $ brew install hugo
 $ hugo version # => hugo v0.98.0+extended darwin/amd64
 ```
 
+## Quick Usage
+
+**Development Oneliner:**
+
+```
+$ hugo server
+## Start building sites …
+## Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+```
+
+**Production Oneliner** (*[push to GitHub](/.github/workflows/hugo.yml) `master` for deploy*)**:**
+
+```
+$ hugo
+## Start building sites …
+```
+
 Start reading Hugo's documentation for [Functions](https://gohugo.io/categories/functions), [Templates](https://gohugo.io/templates/) and [Variables](https://gohugo.io/variables/) to get the feel of it.
 
-## Development Environment 🎉
+
+### Full Usage
+
+**Publish to GitHub**
+
+The following line compiles content of `~notes`, commits a new release, and deploys it to `master` branch. If your GitHub is setup to serve as a [Pages](https://docs.github.com/en/pages) then you are good to.
+
+```
+$ hugo && git add . && git commit -m "Release 🥳" && git push origin master
+```
+
+### Development Environment 🎉
 
 **Engine Debugger**
 
-Sometimes, Hugo breaks. Don't we all? 😔 During the design and implementation of the theme used, I've added a few shortcodes and quick references to quickly dump debug information from the templating pages. I use custom (fork) version of [hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint) which is bundled in this repository, or call `{{ partial "console_log" }}` to dump the variables directly in the Web Console. [Log Example](https://duraki.github.io/notes/debug/dbg) are also part of the notes.
+Sometimes, Hugo breaks. Don't we all? 😔 During the design and implementation of the theme used, I've added a few shortcodes and quick references to quickly dump debug information from the templating pages. I use custom (fork) version of [hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint) which is bundled in this repository, or call `{{ partial "console_log" }}` to dump the variables directly in the Web Console. [Log Example](/content/debug/dbg.md) are also part of the notes.
 
 Using `hugo-debugprint` is easy, and you can do so via:
 
@@ -51,33 +79,25 @@ Using `console_log` to log in Web Console:
 Obviously, clone the repository:
 
 ```
-$ git clone git@github.com:duraki/notes.git
-$ cd notes/
+$ git clone git@github.com:duraki/notes.git && cd notes/
+$ hugo server       # uses config.toml
 ```
 
-Then use Hugo command-line interface to start debugging:
+~Then use Hugo command-line interface to start debugging:~
+
+<details><summary>OLD WAY</summary>
+<p>
 
 ```
-# => bring Hugo server at http://127.0.0.1:8880/notes
 $ hugo server --bind 127.0.0.1 --port 8800 --baseURL="http://127.0.0.1:8800/notes" -d docs/ --config cfg/local.toml --verboseLog  # [ --minify ]
 
 # => bring Hugo server and output log more verbosly
 $ hugo server [..] --config cfg/[local|prod].toml --verboseLog
 ```
 
-**Production Environment**
+</p>
+</details>
 
-```
-# => builds to 'docs/' using defined config, and minifies the final build
-$ hugo -D --config cfg/prod.toml -d docs/ --enableGitInfo --minify        # => only docs/ should be deployed
-```
-
-**Publish to GitHub**
-
-The following line compiles content of `~notes`, commits a new release, and deploys it to `master` branch. If your GitHub is setup to serve as a [Pages](https://docs.github.com/en/pages) then you are good to.
-
-```
-$ hugo -D --config cfg/prod.toml -d docs/ --minify && git add . && git commit -m "Release 🥳" && git push origin master
-```
+---
 
 <p align="center"><small>📝</small><br>by <a href="https://twitter.com/0xduraki">0xduraki</a></p>

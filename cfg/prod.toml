@@ -1,4 +1,4 @@
-#baseURL = 'https://notes.durakiconsulting.com/'
+#baseURL = 'http://notes.durakiconsulting.com/'
 #CanonifyURLs=true
 
 
@@ -9,7 +9,7 @@ theme = "haxor-notes"
 
 copyright = "durakiconsulting (c) h. duraki"
 enableEmoji = true
-#publishDir = "/docs"
+publishDir = "/docs"
 
 [permalinks]
 posts = '/:title'

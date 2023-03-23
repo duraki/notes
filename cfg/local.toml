@@ -10,7 +10,7 @@ theme = "haxor-notes"
 
 copyright = "durakiconsulting (c) h. duraki"
 enableEmoji = true # => https://www.webfx.com/tools/emoji-cheat-sheet/
-publishDir = "public" # => https://gohugo.io/getting-started/configuration/#publishdir
+publishDir = "/docs" # => https://gohugo.io/getting-started/configuration/#publishdir
 
 [permalinks]
 posts = '/:title'
