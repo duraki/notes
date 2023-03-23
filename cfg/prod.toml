@@ -1,4 +1,4 @@
-baseURL = 'https://deviltux.thedev.id/notes/'
+baseURL = '/notes/docs/'
 
 CanonifyURLs=true
 
