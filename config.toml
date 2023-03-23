@@ -15,7 +15,7 @@ posts = '/:title'
   GitHubUser = 'duraki'
   ListOfFoo = ['durakiconsulting', 'hduraki', 'halis notes']
   Subtitle = 'just a simple, interwebz connected notes.'
-  logoUrl = '/favicon.png'
+  logoUrl = 'http://notes.durakiconsulting.com/favicon.png'
 
 [build]
     # ...
