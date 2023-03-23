@@ -1,7 +1,7 @@
 /**
  * @author    Halis Duraki <h@durakiconsulting.com>
  * @web       https://duraki.github.io/
- * 
+ *
  */
 #search-input {
   background: #e8e8e8;
@@ -35,7 +35,7 @@
  * --header-background-color
  * --header-border-bottom-color
  * --header-color
- 
+
  * --page-background-color
  * --page-border-left-color
  * --page-link-color
@@ -50,7 +50,7 @@
  * --backlink-title-color
  * --backlink-preview-color
  * --backlink-hover-background-color
- * 
+ *
  * --preview-width
  * --preview-max-height
  * --preview-scale
@@ -58,7 +58,7 @@
  * --preview-box-shadow-right-color
  * --preview-box-shadow-bottom-color
  * --preview-box-shadow-left-color
- * 
+ *
  * --search-extract-color
  */
 
@@ -139,7 +139,15 @@ header {
   margin: 1px 0 -1px 5px;
 }
 
+#logo-and-title:hover {
+  background: #703dec;
+}
+
 #logo-and-title {
+  background: rgba(238, 56, 56, 1);
+  padding-left: 4px;
+  padding-right: 4px;
+
   margin: 8px 5px;
   display: flex;
   align-items: center;
