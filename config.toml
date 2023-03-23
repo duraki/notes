@@ -1,0 +1,39 @@
+baseURL = 'http://notes.durakiconsulting.com/'
+title = "duraki's notes"
+
+languageCode = 'en-us'
+theme = "haxor-notes"
+copyright = "durakiconsulting (c) h. duraki"
+enableEmoji = true
+#publishDir = "/docs"
+
+[permalinks]
+posts = '/:title'
+
+[params]
+  AuthorName = 'H. Duraki'
+  GitHubUser = 'duraki'
+  ListOfFoo = ['durakiconsulting', 'hduraki', 'halis notes']
+  Subtitle = 'just a simple, interwebz connected notes.'
+  logoUrl = '/favicon.png'
+
+[build]
+    # ...
+
+[server]    # relevant only in hugo server
+[[server.headers]]
+  for = '/**'
+  [server.headers.values]
+    Content-Security-Policy = 'script-src localhost:1313'
+    Referrer-Policy = 'strict-origin-when-cross-origin'
+    X-Content-Type-Options = 'nosniff'
+    X-Frame-Options = 'DENY'
+    X-XSS-Protection = '1; mode=block'
+
+
+[[redirects]]   # relevant for hugo server only
+    from   = "/**"
+    to     = "/404.html"
+    status = 404
+
+[params.styles]
