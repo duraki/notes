@@ -16,6 +16,6 @@ enableEmoji = true
 posts = '/:title'
 
 [params]
-logoUrl = 'favicon.png'
+logoUrl = '/favicon.png'
 
 [params.styles]
