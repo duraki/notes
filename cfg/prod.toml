@@ -1,4 +1,4 @@
-baseURL = '/notes/'
+baseURL = 'https://notes.durakiconsulting.com/'
 
 CanonifyURLs=true
 
