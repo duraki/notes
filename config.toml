@@ -5,7 +5,9 @@ languageCode = 'en-us'
 theme = "haxor-notes"
 copyright = "durakiconsulting (c) h. duraki"
 enableEmoji = true
-#publishDir = "/docs"
+enableRobotsTXT = true
+# googleAnalytics = UA-PROPERTY_ID
+# publishDir = "/docs"
 
 [permalinks]
 posts = '/:title'

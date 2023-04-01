@@ -6,7 +6,8 @@
     <description>Recent content in Posts on duraki&#39;s notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>durakiconsulting (c) h. duraki</copyright><atom:link href="http://notes.durakiconsulting.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>durakiconsulting (c) h. duraki</copyright>
+    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://notes.durakiconsulting.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>~ ideas</title>
       <link>http://notes.durakiconsulting.com/~-ideas/</link>
@@ -499,16 +500,6 @@ $ sudo touch /Volumes/boot/ssh Paswordless SSH Authentication In your Raspberry 
     </item>
     
     <item>
-      <title>Frida</title>
-      <link>http://notes.durakiconsulting.com/frida/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/frida/</guid>
-      <description>Frida Internals frida-gum is a cross-platform instrumentation and introspection library written in C. This library is consumed by frida-core through its JavaScript bindings, GumJS. See official documentation for more details and possible providers. The following example shows how to use frida-gum for standalone injection; specifically via iOS dylib injection.
-Prototyping with Fermion Fermion is an electron application that wraps frida-node and monaco-editor. It offers a fully integrated environment to prototype, test and refine Frida scripts through a single UI.</description>
-    </item>
-    
-    <item>
       <title>Frida &amp; Objection Tutorial</title>
       <link>http://notes.durakiconsulting.com/frida-objection-tutorial/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -697,15 +688,6 @@ $ sudo apt-get realmd $ realm join example.ba --user username </description>
     </item>
     
     <item>
-      <title>List of Tools</title>
-      <link>http://notes.durakiconsulting.com/list-of-tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/list-of-tools/</guid>
-      <description>apktool, android, openssl</description>
-    </item>
-    
-    <item>
       <title>lldb for iOS</title>
       <link>http://notes.durakiconsulting.com/lldb-for-ios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -728,6 +710,17 @@ Commands/Assistance chisel is a collection of LLDB commands to assist debugging 
     </item>
     
     <item>
+      <title>MacOS Application Preferences</title>
+      <link>http://notes.durakiconsulting.com/macos-application-preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/macos-application-preferences/</guid>
+      <description>Also See: Hooking MacOS Preferences changes. The macOS .plist or Property List is a Apple&amp;rsquo;s propriatery binary format that contains application&amp;rsquo;s information, build version, additional resources and assets as well as all other metadata that may be useable for app. lifecycle or usage.
+To print *plist files, use plutil with FILE:
+$ plutil /path/to/file.plist # This will output data from FILE To convert *plist files, use plistuitl from CLI:</description>
+    </item>
+    
+    <item>
       <title>macOS ARM/M1/M2</title>
       <link>http://notes.durakiconsulting.com/macos-arm/m1/m2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -737,15 +730,14 @@ Commands/Assistance chisel is a collection of LLDB commands to assist debugging 
     </item>
     
     <item>
-      <title>MacOS Filesystem Monitoring</title>
+      <title>macOS Filesystem Monitoring</title>
       <link>http://notes.durakiconsulting.com/macos-filesystem-monitoring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://notes.durakiconsulting.com/macos-filesystem-monitoring/</guid>
-      <description>The file(s) and filesystem change monitoring software is used to receives notifications when the contents of the specified files or directories are modified.
+      <description>Also See: MacOS App. Preferences, and Hooking MacOS Preferences changes. The file(s) and filesystem change monitoring software is used to receives notifications when the contents of the specified files or directories are modified.
 Available options:
-(PAID) FSMonitor (FREE) fswatch Developing MacOS FS Monitoring #ref FSMonitor The xnucrack contains license for FSMonitor. It&amp;rsquo;s pretty simple to use and, unlike fswatch, it is paid to use and it provides native MacOS GUI.
-fswatch This is a cross-platform file change monitor with multiple backends: Apple OS X File System Events API, BSD kqueue, Solaris/Illumos, Linux, and Microsoft Windows.</description>
+(PAID) FSMonitor (FREE) fswatch Developing MacOS FS Monitoring #ref FSMonitor The xnucrack contains license for FSMonitor. It&amp;rsquo;s pretty simple to use and, unlike fswatch, it is paid to use and it provides native MacOS GUI.</description>
     </item>
     
     <item>
@@ -977,28 +969,6 @@ Wait a bit more, close all unused apps, especially (Chrome) tabs Open Activity M
     </item>
     
     <item>
-      <title>r2frida</title>
-      <link>http://notes.durakiconsulting.com/r2frida/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/r2frida/</guid>
-      <description>r2frida is a self-contained plugin for radare2 that allows to instrument remote processes using frida.
-The recommended way to install r2frida is via r2pm:
-$ r2pm -ci r2frida Usage For testing, use r2 frida://0, as attaching to the pid0 in frida is a special session that runs in local. Now you can run the :? command to get the list of commands available.
-$ r2 &amp;#39;frida://?&amp;#39; r2 frida://[action]/[link]/[device]/[target] * action = list | apps | attach | spawn | launch * link = local | usb | remote host:port # .</description>
-    </item>
-    
-    <item>
-      <title>radare2</title>
-      <link>http://notes.durakiconsulting.com/radare2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/radare2/</guid>
-      <description>radare2 (commonly refered as r2) is UNIX-like reverse engineering framework and command-line toolset. r2 is a complete rewrite of radare. It provides a set of libraries, tools and plugins to ease reverse engineering tasks.
-The radare project started as a simple command-line hexadecimal editor focused on forensics. Today, r2 is a featureful low-level command-line tool with support for scripting. r2 can edit files on local hard drives, view kernel memory, and debug programs locally or via a remote gdb server.</description>
-    </item>
-    
-    <item>
       <title>Raspberry Pi Quick Guide</title>
       <link>http://notes.durakiconsulting.com/raspberry-pi-quick-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1101,16 +1071,6 @@ B&amp;#43;/- Signal - Example of Operating Condition Below is an example circuit
       <description>This DC (Digital) Type Signal produces an ON/OFF type input to the Control Module. The voltage level will indicate a specific operating condition.
 This type of signal can be seen in BMW&amp;rsquo;s Pinout diagrams, symboled by the B+.
 B&amp;#43; Signal - Example of ON/OFF Circuit Typical Application of Switched B+ Ignition Switch Light Switch Reed Switch Seat Belt Switch Hall Effect Switch (e.g. Brake Light Switch) &amp;hellip; </description>
-    </item>
-    
-    <item>
-      <title>tcpdump</title>
-      <link>http://notes.durakiconsulting.com/tcpdump/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/tcpdump/</guid>
-      <description>This document explains tcpdump advanced filters.
-Basic Syntax Filtering Hosts # =&amp;gt; Match any traffic involving 192.168.1.1 as destination or source $ tcpdump -i eth1 host 192.168.1.1 # =&amp;gt; As soure only $ tcpdump -i eth1 src host 192.168.1.1 # =&amp;gt; As destination only $ tcpdump -i eth1 dst host 192.168.1.1 Filtering Ports # =&amp;gt; Match any traffic involving port 25 as source or destination $ tcpdump -i eth1 port 25 # =&amp;gt; Source $ tcpdump -i eth1 src port 25 # =&amp;gt; Destination $ tcpdump -i eth1 dst port 25 Network Filtering $ tcpdump -i eth1 net 192.</description>
     </item>
     
     <item>
@@ -1247,14 +1207,14 @@ Access Active Directory Domain Admin via Linux:</description>
     </item>
     
     <item>
-      <title>Wireshark</title>
-      <link>http://notes.durakiconsulting.com/wireshark/</link>
+      <title>WindowsNT Reverse Engineering</title>
+      <link>http://notes.durakiconsulting.com/windowsnt-reverse-engineering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://notes.durakiconsulting.com/wireshark/</guid>
-      <description>Wireshark, whose old name is Ethereal; It is a program that can run in many operating systems such as Windows, Linux, MacOS or Solaris and can analyze all the traffic going to network cards connected to computer. Analyze over 750 protocols Can capture packets and save them to a file.
-Logical operators are available for all filterings:
-Example: http &amp;amp; ip.src == 192.168.0.1 Management Frame: The frame for the connection between the network device and the client.</description>
+      <guid>http://notes.durakiconsulting.com/windowsnt-reverse-engineering/</guid>
+      <description>Analyze APIs in binary and extract Function calls
+Read, build and install the pharos/callanalyzer utility. This CLI application analyzes function call points in binaries, attempting to determine their argument values.
+$ ./bin/callanalyzer --help # =&amp;gt; Show manpage for the Call Analyzer $ ./bin/callanalyzer --show-symbolic --allow-unknown /examples/binary.exe OPTI[INFO ]: Call: WaitForSingleObject (0x00401047) OPTI[INFO ]: Param: hHandle Value: {(HANDLE)0xffffffff -&amp;gt; {(void)&amp;lt;unknown&amp;gt;}} OPTI[INFO ]: Param: dwMilliseconds Value: {(DWORD)4294967295} # ... Search for patterns of API in binary</description>
     </item>
     
     <item>

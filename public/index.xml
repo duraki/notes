@@ -78,6 +78,17 @@ Using openssl is recommended way to convert DER to PEM format.</description>
     </item>
     
     <item>
+      <title>Apple Application Schemes and Handlers</title>
+      <link>http://notes.durakiconsulting.com/apple-application-schemes-and-handlers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/apple-application-schemes-and-handlers/</guid>
+      <description>Custom URL schemes provide a way to reference resources inside your app. You can connect to content deep inside your app with universal links. Users open your app in a specified context, allowing them to accomplish their goals efficiently.
+Refer to official Apple documentation to learn how apps. communicate and handle URI schemes.
+Toolset (Schemes.app) The application Schemes (requires manual compilation) is a small MacOS UI app. that lists all the schemes and their handlers that are registered via Launch Services.</description>
+    </item>
+    
+    <item>
       <title>Armbian</title>
       <link>http://notes.durakiconsulting.com/armbian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -615,6 +626,17 @@ The Hall element is a thin, non-magnetic plate which is electrically conductive.
     </item>
     
     <item>
+      <title>Hook macOS Preferences</title>
+      <link>http://notes.durakiconsulting.com/hook-macos-preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/hook-macos-preferences/</guid>
+      <description>Install Toolset Using prefsniff utility, we can sniff preferences changes on macOS plist files, and then autogenerate the defaults command to apply those changes.
+Install it first:
+$ pip3 install prefsniff prefsniff is a utility to watch macOS plist files for changes, and then autogenerate the defaults command to apply those changes. Its intended use is to have prefsniff watch a plist file while setting a system or application preference.</description>
+    </item>
+    
+    <item>
       <title>How to compromise ECU</title>
       <link>http://notes.durakiconsulting.com/how-to-compromise-ecu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -707,15 +729,6 @@ $ sudo apt-get realmd $ realm join example.ba --user username </description>
     </item>
     
     <item>
-      <title>List of Tools</title>
-      <link>http://notes.durakiconsulting.com/list-of-tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://notes.durakiconsulting.com/list-of-tools/</guid>
-      <description>apktool, android, openssl</description>
-    </item>
-    
-    <item>
       <title>lldb for iOS</title>
       <link>http://notes.durakiconsulting.com/lldb-for-ios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -738,6 +751,17 @@ Commands/Assistance chisel is a collection of LLDB commands to assist debugging 
     </item>
     
     <item>
+      <title>MacOS Application Preferences</title>
+      <link>http://notes.durakiconsulting.com/macos-application-preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/macos-application-preferences/</guid>
+      <description>Also See: Hooking MacOS Preferences changes. The macOS .plist or Property List is a Apple&amp;rsquo;s propriatery binary format that contains application&amp;rsquo;s information, build version, additional resources and assets as well as all other metadata that may be useable for app. lifecycle or usage.
+To print *plist files, use plutil with FILE:
+$ plutil /path/to/file.plist # This will output data from FILE To convert *plist files, use plistuitl from CLI:</description>
+    </item>
+    
+    <item>
       <title>macOS ARM/M1/M2</title>
       <link>http://notes.durakiconsulting.com/macos-arm/m1/m2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -747,15 +771,14 @@ Commands/Assistance chisel is a collection of LLDB commands to assist debugging 
     </item>
     
     <item>
-      <title>MacOS Filesystem Monitoring</title>
+      <title>macOS Filesystem Monitoring</title>
       <link>http://notes.durakiconsulting.com/macos-filesystem-monitoring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://notes.durakiconsulting.com/macos-filesystem-monitoring/</guid>
-      <description>The file(s) and filesystem change monitoring software is used to receives notifications when the contents of the specified files or directories are modified.
+      <description>Also See: MacOS App. Preferences, and Hooking MacOS Preferences changes. The file(s) and filesystem change monitoring software is used to receives notifications when the contents of the specified files or directories are modified.
 Available options:
-(PAID) FSMonitor (FREE) fswatch Developing MacOS FS Monitoring #ref FSMonitor The xnucrack contains license for FSMonitor. It&amp;rsquo;s pretty simple to use and, unlike fswatch, it is paid to use and it provides native MacOS GUI.
-fswatch This is a cross-platform file change monitor with multiple backends: Apple OS X File System Events API, BSD kqueue, Solaris/Illumos, Linux, and Microsoft Windows.</description>
+(PAID) FSMonitor (FREE) fswatch Developing MacOS FS Monitoring #ref FSMonitor The xnucrack contains license for FSMonitor. It&amp;rsquo;s pretty simple to use and, unlike fswatch, it is paid to use and it provides native MacOS GUI.</description>
     </item>
     
     <item>
@@ -839,6 +862,15 @@ Changing the Uplink default Font Size for HDPI On MacOS, specifically when using
 A Modulated Square Wave appears as a High/Low signal, repeated rapidly over and over Like the switched signal B+ and B-, the square wave has only two voltage levels. These are: High Level and Low Level.
 A modulated square wave has 3 characteristics that can be modified to vary the required signal:
 Frequency Pulse Width Duty Cycle Frequency The frequency of a modulated square wave signal is the number of complete cycles or pulses, that occur in one second (fq = O(cycle)^1sec).</description>
+    </item>
+    
+    <item>
+      <title>More Tools</title>
+      <link>http://notes.durakiconsulting.com/more-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/more-tools/</guid>
+      <description>See More (Cont.) Byteman Hopper Disassembler Ghidra Reverse Engineering Framework Netcat GSN3 Metasploit FSMonitor lldb@macos, lldb@ios Cycript WinDbg Safari </description>
     </item>
     
     <item>
@@ -1049,6 +1081,17 @@ Detailed instructions for Enabling SSH on Raspbian OS are also available.</descr
     </item>
     
     <item>
+      <title>Schemes.app</title>
+      <link>http://notes.durakiconsulting.com/schemes.app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/schemes.app/</guid>
+      <description>The application Schemes (requires manual compilation) is a small MacOS UI app. that lists all the schemes and their handlers that are registered via Launch Services.
+Searching and showing Scheme in the app. The application, after compiling in XCode creates Schemes.app app. bundle and additional XPC service UnregisterSchemeHandler.xpc that basically calls:
+# =&amp;gt; Show available help and commands for the &amp;#39;lsregister&amp;#39; $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -h lsregister: [OPTIONS] [ &amp;lt;path&amp;gt;... ] [ -apps &amp;lt;domain&amp;gt;[,domain].</description>
+    </item>
+    
+    <item>
       <title>Server Anywhere</title>
       <link>http://notes.durakiconsulting.com/server-anywhere/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1254,6 +1297,17 @@ x notepad:! Note, if ytou don7t see any output, enter .</description>
 Extract WiFi cleartextr password
 cls &amp;amp; echo. &amp;amp; for /f &amp;#34;tokens=4 delims=: &amp;#34; %a in (&amp;#39;netsh wlan show profiles ^| find &amp;#34;Profile &amp;#34;&amp;#39;) do @echo off &amp;gt; nul &amp;amp; (netsh wlan show profiles name=%a key=clear | findstr &amp;#34;SSID Cipher Content&amp;#34; | find /v &amp;#34;Number&amp;#34; &amp;amp; echo.) &amp;amp; @echo on Active Directory
 Access Active Directory Domain Admin via Linux:</description>
+    </item>
+    
+    <item>
+      <title>WindowsNT Reverse Engineering</title>
+      <link>http://notes.durakiconsulting.com/windowsnt-reverse-engineering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/windowsnt-reverse-engineering/</guid>
+      <description>Analyze APIs in binary and extract Function calls
+Read, build and install the pharos/callanalyzer utility. This CLI application analyzes function call points in binaries, attempting to determine their argument values.
+$ ./bin/callanalyzer --help # =&amp;gt; Show manpage for the Call Analyzer $ ./bin/callanalyzer --show-symbolic --allow-unknown /examples/binary.exe OPTI[INFO ]: Call: WaitForSingleObject (0x00401047) OPTI[INFO ]: Param: hHandle Value: {(HANDLE)0xffffffff -&amp;gt; {(void)&amp;lt;unknown&amp;gt;}} OPTI[INFO ]: Param: dwMilliseconds Value: {(DWORD)4294967295} # ... Search for patterns of API in binary</description>
     </item>
     
     <item>

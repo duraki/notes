@@ -5,6 +5,12 @@
     <loc>http://notes.durakiconsulting.com/</loc>
     <lastmod>2022-04-29T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://notes.durakiconsulting.com/posts/</loc>
+    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/posts/tools/</loc>
+    <lastmod>2022-04-29T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://notes.durakiconsulting.com/search/</loc>
     <lastmod>2021-09-07T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,6 +27,8 @@
     <loc>http://notes.durakiconsulting.com/android-reverse-engineering/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/api-penetration-test-checklist/</loc>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/apple-application-schemes-and-handlers/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/armbian/</loc>
   </url><url>
@@ -130,6 +138,8 @@
   </url><url>
     <loc>http://notes.durakiconsulting.com/hall-effect-sensors/</loc>
   </url><url>
+    <loc>http://notes.durakiconsulting.com/hook-macos-preferences/</loc>
+  </url><url>
     <loc>http://notes.durakiconsulting.com/how-to-compromise-ecu/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/how-to-write-notes/</loc>
@@ -148,11 +158,11 @@
   </url><url>
     <loc>http://notes.durakiconsulting.com/linux-notes/</loc>
   </url><url>
-    <loc>http://notes.durakiconsulting.com/list-of-tools/</loc>
-  </url><url>
     <loc>http://notes.durakiconsulting.com/lldb-for-ios/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/lldb-for-macos/</loc>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/macos-application-preferences/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/macos-arm/m1/m2/</loc>
   </url><url>
@@ -171,6 +181,8 @@
     <loc>http://notes.durakiconsulting.com/modding-uplink-by-introversion/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/modulated-square-wave-signals/</loc>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/more-tools/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/mounting-sd-cards/</loc>
   </url><url>
@@ -192,8 +204,6 @@
   </url><url>
     <loc>http://notes.durakiconsulting.com/php-source-code-analysis/</loc>
   </url><url>
-    <loc>http://notes.durakiconsulting.com/posts/</loc>
-  </url><url>
     <loc>http://notes.durakiconsulting.com/potentiometers/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/ptc-sensors/</loc>
@@ -211,6 +221,8 @@
     <loc>http://notes.durakiconsulting.com/safari-devconsole-internals/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/sbc-and-alternatives/</loc>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/schemes.app/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/server-anywhere/</loc>
   </url><url>
@@ -251,6 +263,8 @@
     <loc>http://notes.durakiconsulting.com/windbg-cheatsheets/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/windows-notes/</loc>
+  </url><url>
+    <loc>http://notes.durakiconsulting.com/windowsnt-reverse-engineering/</loc>
   </url><url>
     <loc>http://notes.durakiconsulting.com/wireshark/</loc>
   </url><url>

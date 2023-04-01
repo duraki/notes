@@ -1,0 +1,16 @@
+<style>
+    .sup_a {
+        text-decoration: none !important;
+    }
+
+</style>
+
+<span>
+    <a class="sup_a" href="{{ .Get 1 }}">
+        <i>
+            <sup>
+                <sup style="color:#c2c2c2">§{{ .Get 0 | markdownify }}</sup>
+            </sup>
+        </i>
+    </a>
+</span>

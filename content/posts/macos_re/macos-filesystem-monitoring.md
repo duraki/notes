@@ -1,6 +1,8 @@
 ---
-title: "MacOS Filesystem Monitoring"
+title: "macOS Filesystem Monitoring"
 ---
+
+* Also See: [MacOS App. Preferences](/macos-application-preferences), and [Hooking MacOS Preferences changes](/hook-macos-preferences).
 
 The file(s) and filesystem change monitoring software is used to receives notifications when the contents of the specified files or directories are modified.
 
@@ -16,12 +18,18 @@ The [xnucrack](https://github.com/xnucrack/) contains license for [FSMonitor](ht
 
 ## fswatch
 
-[This is](https://emcrisostomo.github.io/fswatch/) a cross-platform file change monitor with multiple backends: **Apple OS X File System Events API**, **BSD kqueue**, **Solaris/Illumos**, **Linux**, and **Microsoft Windows**. 
+[This is](https://emcrisostomo.github.io/fswatch/) a cross-platform file change monitor with multiple backends: **Apple OS X File System Events API**, **BSD kqueue**, **Solaris/Illumos**, **Linux**, and **Microsoft Windows**.
 
 Install `fswatch`  via:
 
 ```
 $ brew install fswatch
+```
+
+Usage is simple as; to scan ROOT `/` for AppName target:
+
+```
+$ fswatch --access -xr / | grep -i "AppName"
 ```
 
 ### Developing MacOS FS Monitoring

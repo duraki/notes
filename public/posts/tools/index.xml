@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on duraki&#39;s notes</title>
+    <link>http://notes.durakiconsulting.com/posts/tools/</link>
+    <description>Recent content in Tools on duraki&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>durakiconsulting (c) h. duraki</copyright>
+    <lastBuildDate>Fri, 29 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://notes.durakiconsulting.com/posts/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apple Application Schemes and Handlers</title>
+      <link>http://notes.durakiconsulting.com/apple-application-schemes-and-handlers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/apple-application-schemes-and-handlers/</guid>
+      <description>Custom URL schemes provide a way to reference resources inside your app. You can connect to content deep inside your app with universal links. Users open your app in a specified context, allowing them to accomplish their goals efficiently.
+Refer to official Apple documentation to learn how apps. communicate and handle URI schemes.
+Toolset (Schemes.app) The application Schemes (requires manual compilation) is a small MacOS UI app. that lists all the schemes and their handlers that are registered via Launch Services.</description>
+    </item>
+    
+    <item>
+      <title>Frida</title>
+      <link>http://notes.durakiconsulting.com/frida/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/frida/</guid>
+      <description>Frida Internals frida-gum is a cross-platform instrumentation and introspection library written in C. This library is consumed by frida-core through its JavaScript bindings, GumJS. See official documentation for more details and possible providers. The following example shows how to use frida-gum for standalone injection; specifically via iOS dylib injection.
+Prototyping with Fermion Fermion is an electron application that wraps frida-node and monaco-editor. It offers a fully integrated environment to prototype, test and refine Frida scripts through a single UI.</description>
+    </item>
+    
+    <item>
+      <title>Hook macOS Preferences</title>
+      <link>http://notes.durakiconsulting.com/hook-macos-preferences/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/hook-macos-preferences/</guid>
+      <description>Install Toolset Using prefsniff utility, we can sniff preferences changes on macOS plist files, and then autogenerate the defaults command to apply those changes.
+Install it first:
+$ pip3 install prefsniff prefsniff is a utility to watch macOS plist files for changes, and then autogenerate the defaults command to apply those changes. Its intended use is to have prefsniff watch a plist file while setting a system or application preference.</description>
+    </item>
+    
+    <item>
+      <title>More Tools</title>
+      <link>http://notes.durakiconsulting.com/more-tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/more-tools/</guid>
+      <description>See More (Cont.) Byteman Hopper Disassembler Ghidra Reverse Engineering Framework Netcat GSN3 Metasploit FSMonitor lldb@macos, lldb@ios Cycript WinDbg Safari </description>
+    </item>
+    
+    <item>
+      <title>r2frida</title>
+      <link>http://notes.durakiconsulting.com/r2frida/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/r2frida/</guid>
+      <description>r2frida is a self-contained plugin for radare2 that allows to instrument remote processes using frida.
+The recommended way to install r2frida is via r2pm:
+$ r2pm -ci r2frida Usage For testing, use r2 frida://0, as attaching to the pid0 in frida is a special session that runs in local. Now you can run the :? command to get the list of commands available.
+$ r2 &amp;#39;frida://?&amp;#39; r2 frida://[action]/[link]/[device]/[target] * action = list | apps | attach | spawn | launch * link = local | usb | remote host:port # .</description>
+    </item>
+    
+    <item>
+      <title>radare2</title>
+      <link>http://notes.durakiconsulting.com/radare2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/radare2/</guid>
+      <description>radare2 (commonly refered as r2) is UNIX-like reverse engineering framework and command-line toolset. r2 is a complete rewrite of radare. It provides a set of libraries, tools and plugins to ease reverse engineering tasks.
+The radare project started as a simple command-line hexadecimal editor focused on forensics. Today, r2 is a featureful low-level command-line tool with support for scripting. r2 can edit files on local hard drives, view kernel memory, and debug programs locally or via a remote gdb server.</description>
+    </item>
+    
+    <item>
+      <title>Schemes.app</title>
+      <link>http://notes.durakiconsulting.com/schemes.app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/schemes.app/</guid>
+      <description>The application Schemes (requires manual compilation) is a small MacOS UI app. that lists all the schemes and their handlers that are registered via Launch Services.
+Searching and showing Scheme in the app. The application, after compiling in XCode creates Schemes.app app. bundle and additional XPC service UnregisterSchemeHandler.xpc that basically calls:
+# =&amp;gt; Show available help and commands for the &amp;#39;lsregister&amp;#39; $ /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -h lsregister: [OPTIONS] [ &amp;lt;path&amp;gt;... ] [ -apps &amp;lt;domain&amp;gt;[,domain].</description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>http://notes.durakiconsulting.com/tcpdump/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/tcpdump/</guid>
+      <description>This document explains tcpdump advanced filters.
+Basic Syntax Filtering Hosts # =&amp;gt; Match any traffic involving 192.168.1.1 as destination or source $ tcpdump -i eth1 host 192.168.1.1 # =&amp;gt; As soure only $ tcpdump -i eth1 src host 192.168.1.1 # =&amp;gt; As destination only $ tcpdump -i eth1 dst host 192.168.1.1 Filtering Ports # =&amp;gt; Match any traffic involving port 25 as source or destination $ tcpdump -i eth1 port 25 # =&amp;gt; Source $ tcpdump -i eth1 src port 25 # =&amp;gt; Destination $ tcpdump -i eth1 dst port 25 Network Filtering $ tcpdump -i eth1 net 192.</description>
+    </item>
+    
+    <item>
+      <title>Wireshark</title>
+      <link>http://notes.durakiconsulting.com/wireshark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://notes.durakiconsulting.com/wireshark/</guid>
+      <description>Wireshark, whose old name is Ethereal; It is a program that can run in many operating systems such as Windows, Linux, MacOS or Solaris and can analyze all the traffic going to network cards connected to computer. Analyze over 750 protocols Can capture packets and save them to a file.
+Logical operators are available for all filterings:
+Example: http &amp;amp; ip.src == 192.168.0.1 Management Frame: The frame for the connection between the network device and the client.</description>
+    </item>
+    
+  </channel>
+</rss>

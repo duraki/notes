@@ -122,9 +122,9 @@ console.log(colors.green,"[debug_response] Dump Arugment in method: ",colors.res
 Use **PortSwigger BurpSuite Proxy** with provided Configuration `.json`:
 
 * Load `burpsuite_configuration_proxy.json` in BurpSuite Proxy
-* Run `python echoServer.py` which acts as the proxy tunnel 
+* Run `python echoServer.py` which acts as the proxy tunnel
 * Configure and optimize `handlers.js` for your environment
-* Run `python burpTracer.py -p com.durakiconsulting.bankapp` # [-n 'BankApp']  
+* Run `python burpTracer.py -p com.durakiconsulting.bankapp` # [-n 'BankApp']
 
 Hopefully, this will yield the traffic in your Terminal $stdout.
 
@@ -156,7 +156,8 @@ $ netstat -a -c | grep -i example.com
 **toolset**
 
 * [fuzzotron](https://github.com/denandz/fuzzotron) - A TCP/UDP based network daemon fuzzer written in C
-* [sslsplit](https://github.com/droe/sslsplit) - Transparent SSL/TLS interception 
+* [sslsplit](https://github.com/droe/sslsplit) - Transparent SSL/TLS interception
 * [ProtoDump](https://github.com/leptos-null/ProtoDump) - Obtain proto definition files using the Objective-C and Google Protobuf runtimes
 * [dwarf_NetworkRequests](https://github.com/iGio90/NetworkRequests) - dwarf script to collect network requests, no need to unpin, hooks on low level functions
-* [netzob](https://github.com/netzob/netzob) - Netzob: Protocol Reverse Engineering, Modeling and Fuzzing 
+* [netzob](https://github.com/netzob/netzob) - Netzob: Protocol Reverse Engineering, Modeling and Fuzzing
+* [tapioca](https://github.com/CERTCC/tapioca) - CERT Tapioca for MITM network analysis

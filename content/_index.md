@@ -14,11 +14,11 @@ The notes are inspired by [others](#outro), and I'm very thankful for all the id
 
 I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
 
-You can start exploring from the [List of Topics](#list-of-topics), or see the [full list of notes](/posts).
+You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts).
 
 ---
 
-## List of Topics
+## List of Topics {{< sup_clean " ~" "#" >}}
 
 ### Automotive Cyber Security
 
@@ -32,7 +32,7 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
 * [BMW E34 Learning Material](/bmw-ag-e34-learning-materials)
     * [Electronic Signals](/electronic-signals)
-    * [AC & DC Signals](/ac-and-dc-signals) (*[⏦︎ click here](/bmw-ag-e34-learning-materials) to expand*)
+    * [AC & DC Signals](/ac-and-dc-signals) {{< sup_a " (expand) ⏦" "/bmw-ag-e34-learning-materials" >}}
         * [AC Voltage Signals](/ac-voltage-signals)
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
@@ -55,7 +55,7 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
     * [Web Issue Library](/web-application-penetration-test-checklist)
     * [PHP Source Code Analysis](/php-source-code-analysis)
         * [PHP Filesystem Functions](/php-filesystem-functions)
-* Networking [§Network](/network)
+* Networking {{< sub "~ net" "#" >}}
     * [Basic Network Recon](/network-recon)
     * [Firewall Penetration Test](/firewall-engagements)
     * [Wifi Cracking via Aircrack](/wifi-cracking-via-aircrack)
@@ -64,11 +64,10 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
     * [Server Anywhere](/server-anywhere)
     * [Netcat Tricks](/netcat-tricks)
 
-### Reverse Engineering
+### Reverse Engineering {{< sup_a "Toolset" "/posts/tools" >}}
 
 * [Tricks and Tips](/reverse-engineering-tricks-and-tips)
 * [Network Reverse Engineering](/network-reverse-engineering)
-* [WinDbg Cheatsheets](/windbg-cheatsheets)
 * [Byteman Cheatsheets](/byteman)
 * [Byteman Scripts](/byteman-scripts)
 * [Encryption and Cryptography](/encryption-and-cryptography)
@@ -79,12 +78,15 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
 * [radare2](/radare2)
 * [MacOS Reverse Engineering](/macos-reverse-engineering)
     * [Filesystem Monitor](/macos-filesystem-monitoring)
+      * [MacOS App. Preferences](/macos-application-preferences)
+      * [MITM MacOS Preferences](/hook-macos-preferences)
+      * [Apple URI Schemes](/Apple-Application-Schemes-and-Handlers)
     * [Ghidra](/ghidra-and-related)
     * [MacOS Library Injection](/dyld-ios-injection)
     * [LLDB for MacOS](/lldb-for-macos)
     * [Hopper for MacOS](/pure-reverse-engineering#hopper-disassembler)
     * [MacOS MITM for TCP/UDP protocols](/macos-mitm-on-tcp/udp/)
-    * macOS ARM/M1/M2 [ARM/M1/M2 §](/macos-arm/m1/m2/)
+    * macOS ARM/M1/M2 [{{< sup_clean "ARM/M1/M2 §" >}}](/macos-arm/m1/m2/)
       * [M1 LLDB Configuration](/configure-lldb-on-m1/m2/)
       * [Using Frida against MachO on ARM](/using-frida-against-macho-on-arm)
     * [Safari Dev Console](/safari-devconsole-internals)
@@ -104,7 +106,8 @@ You can start exploring from the [List of Topics](#list-of-topics), or see the [
     * [Frida & Objection Tutorial](/frida-objection-tutorial#android-tutorial)
     * [Frida Gadget Injection on Android](/frida-gadget-injection)
     * [Android Recompilation](/android-recompilation)
-* [OPCRouter Research](/opcrouter-research)
+* [Windows/WinNT Reverse Engineering](/windowsnt-reverse-engineering)
+    * [WinDbg Cheatsheets](/windbg-cheatsheets)
 
 ### Development
 

@@ -13,3 +13,4 @@ title: "Reverse Engineering Tricks and Tips"
 * Use Burp + `mitm_relay` to proxy traffic
 * Decompile JAR and attack via Frida, [Byteman](/byteman) or any other dynamic instrumentation toolkit
 * Use dotPeek to identify and process attack surface for anything .NET based
+* Use [bingrep](https://github.com/m4b/bingrep) to search for strings through binaries in all OSs/Arches (`brew install bingrep`)
