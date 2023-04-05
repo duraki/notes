@@ -1,0 +1,20 @@
+DirectoryPath: "public/"
+EnforceHTTPS: false
+IgnoreURLs:
+- "github.com"
+- "https://notes.durakiconsulting.com"
+- "^durakiconsulting.com$"
+- "^bgp.he.net*"
+- "^sync.ba*"
+- "^/livereload.js*"
+IgnoreDirs:
+- "lib"
+- "/livereload.js*"
+CacheExpires: "6h"
+CheckAnchors: false
+CheckImages: true
+IgnoreEmptyHref: true
+IgnoreAltMissing: true
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreInternalEmptyHash: true
+CheckDoctype: false
