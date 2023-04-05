@@ -279,7 +279,7 @@ control systems and IoT devices.
 ```
 
 **References:**
-* [Demo Download](https://s3.amazonaws.com/downloads.kepware.com/dl/KEPServerEX-6.10.623.0.exe?AWSAccessKeyId=AKIAJHQP3GS35B5Q7KYQ&Expires=1621113297&Signature=GRmDCLHeUbi8Ueq55FL%2FfHp3oiI%3D)
+* *DEAD* [Demo Download](#)
 * [Install Guide](https://www.kepware.com/support/resource-library/installation-guide.pdf)
 * [Documentation / Manuals](https://www.kepware.com/products/kepserverex/documents/kepserverex-manual.pdf)
 

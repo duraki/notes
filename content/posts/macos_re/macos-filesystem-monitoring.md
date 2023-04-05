@@ -10,7 +10,7 @@ Available options:
 
 - (**PAID**) [FSMonitor](http://fsmonitor.com/)
 - (**FREE**) [fswatch](https://github.com/emcrisostomo/fswatch)
-- **Developing MacOS FS Monitoring** [#ref](#Developing-MacOS-FS-Monitoring)
+- **Developing MacOS FS Monitoring** [#ref](#developing-macos-fs-monitoring)
 
 With **SIP** is disabled, one can use `opensnoop`:
 

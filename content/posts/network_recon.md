@@ -91,7 +91,7 @@ sudo nmap -sV -Pn -p4000-4433,8000-8089,80-443,9000-9443 --script=vulscan/vulsca
 
 **firewall evasion**
 
-* [Firewall Penetration Test](/firewall-engagement)
+* [Firewall Penetration Test](/firewall-engagements)
 
 ```
 # => Firewall Hopping

@@ -114,6 +114,24 @@ $ brew install ccat
 $ cat -n ~/INPUT.txt | ccat
 ```
 
+**Remove an Application from Launchpad**
+
+Sometimes MacOS Launchpad gets overflown with number of applications that are visible in the view. There is a way to remove/hide an application by working directly with MacOS's Internal databases.
+
+```
+$ sqlite3 $(sudo find /private/var/folders -name com.apple.dock.launchpad)/db/db
+# ...
+
+sqlite> .tables
+app_sources       categories        downloading_apps  image_cache
+apps              dbinfo            groups            items
+sqlite> DELETE FROM apps WHERE title='qwingraph';
+   <Ctrl+D> 
+
+$ killall Dock
+```
+This should remove the application from the Launchpad, but will not remove it from the `/Applications` directory. 
+
 **Mount RaspberryPi / BananaPi SD Card**
 
 Note: these instructions are outdated, please take a look at newer documentation in [fuse-ext2 notes](/fuse-ext2). The difference between the `fuse-ext2` and `ext4fuse` is that the former allows for `r/w` on the mounted partition; and not only `r/o`, as is the case with `ext4fuse`.

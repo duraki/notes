@@ -10,7 +10,7 @@ Hi! 👋 I'm [Halis Duraki](https://duraki.github.io) and these are my personal 
 
 I started using [Obsidian](https://obsidian.md/) a bit early in 2020. and continued graphing my knowledge since then. I wanted something more functional, as to offer me a practical snippet library for my TTP's, both online and as a backup of my dementia.
 
-The notes are inspired by [others](#outro), and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data.
+The notes are inspired by [others](#outro)[^1], and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data.
 
 I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
 
@@ -41,7 +41,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 
 * [OSINT](/osint)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
-* [Web Fuzzing](/web-fuzzing-technqiues)
+* [Web Fuzzing](/web-fuzzing-techniques)
     * [Javascript Deobfuscation](/javascript-deobfuscation)
 * [SQL Injection Payloads](/sqli-payloads)
 * [Cloud Metadata](/cloud-metadata)
@@ -164,3 +164,4 @@ This website is provided free, for educational purposes. Knowledge shared here c
 
 Peace out ✌️
 {{< /details >}}
+[^1]: Outro

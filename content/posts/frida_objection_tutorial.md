@@ -129,6 +129,5 @@ LibraryDirectory   /var/mobile/Containers/Data/Application/B26572F4-75BA-45C0-A6
 
 * [Frida and Objection](https://www.allysonomalley.com/2018/12/20/ios-pentesting-tools-part-3-frida-and-objection/)
 * [Objection Mobile Exploration](https://kalilinuxtutorials.com/objection-mobile-exploration/ )
-* [Frida and Objection via x64.sh](https://x64.sh/mobile/security/2019/06/01/Frida-and-Objection/)
 * [Objection/Frida Guide](https://www.secjuice.com/objection-frida-guide/)
 

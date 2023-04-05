@@ -123,7 +123,7 @@ Remove the SD Card from your Raspberry Pi after base configuration and wizard se
 
 You can use this to edit boot configuration files, enable SSH etc. directly from your Raspbian HDD.
 
-Read the following to [Enable SSH](enable-ssh-on-raspbian-os) on via SD Card.
+Read the following to [Enable SSH](https://raspberrypi-guide.github.io/networking/connecting-via-ssh) on via SD Card.
 
 ### Install VNC on Raspberry Pi
 

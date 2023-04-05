@@ -20,6 +20,8 @@ $ r2env add radare2@git
 $ brew install radare2
 ```
 
+I highly recommend installing typical toolchain with-it; ie: `r2ghidra`{{< sup_a "~github" "https://github.com/radareorg/r2ghidra" >}},  `r2diaphora`{{< sup_a "~github" "https://github.com/FernandoDoming/r2diaphora" >}} and so on. 
+
 **Usage**
 
 All r2 tools and commands support printing the output in different formats by appending a character at the end or using the `-r` (`*r2`) and `-j` (json) flags. Check out the manpages and help messages for more information (`man r2`).
@@ -62,6 +64,33 @@ rax2
 $ rax2 '10+0x20' # compute the result
 $ rax2 -k 10+32  # keep the same base as input (10)
 $ rax2 -h        # convert between (hex, octal, decimal.. bases)
+```
+
+radiff2 is really cool {{< sup_a "ref//ext" "https://radareorg.github.io/blog/posts/binary-diffing/" >}}
+
+```
+$ radiff2 FILE_A FILE_B            # compare two binary files
+$ radiff2 -s /bin/true /bin/false  # Check Similarity in p%
+$ radiff2 -c /bin/true /bin/false  # Count diff
+```
+
+If you have use correct radiff2 output arguments, the exported file of r2 commands can be imported, patching the final binary:
+
+```
+$ radiff ... [FILE_A] [FILE_B]               # export patch.bytediff
+
+# cat patch.bytediff
+# wx 9c90 @ 0x00000016
+# wx 70 @ 0x0000002b
+# ...
+
+$ r2 -w FILE_B  # we want to apply bytediff to FILE_B
+$ . ./patch.bytediff
+
+         ... or w. rizin
+         
+$ rizin -w FILE_B
+$ . ./patch.bytediff
 ```
 
 **Plugins**

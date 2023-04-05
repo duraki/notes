@@ -2,7 +2,7 @@
 title: "MacOS Reverse Engineering"
 ---
 
-It helps knowing more deep technical stuff for the overview of those notes. Besides, also take a look at: [Ghidra](/Ghidra-and-Related), [LLDB for MacOS](/lldb), and [Hopper for MacOS](/pure-reverse-engineering). Notes on [`dyld` Injection](/dyld-macos-injection) are also handful for Mach-O RE tasks.
+It helps knowing more deep technical stuff for the overview of those notes. Besides, also take a look at: [Ghidra](/Ghidra-and-Related), [LLDB for MacOS](/lldb-for-macos), and [Hopper for MacOS](/pure-reverse-engineering). Notes on [`dyld` Injection](/dyld-macos-injection) are also handful for Mach-O RE tasks.
 
 ## Accessing Metadata Attributes {{< sup_a "ref/metadata" "/macos-metadata-extraction" >}}
 
@@ -11,6 +11,17 @@ Describing how to use `mdls`, `mdfind` and `mdutil`, and `mdimport` is [referenc
 ## Converting MachO binaries {{< sup_a "ref/tool/LIPO" "/lipo" >}}
 
 Using [lipo](/lipo) to convert a MachO universal binary, or a single-architecture binary.
+
+## Accessing AppStore Downloaded PKGs
+
+The location of AppStore's downloaded application, ie. `*.PKG` and `*.DMG`, is generated in a different spot. You have to crawl the filesystem to locate the folder(s) that contain these files.
+
+```
+ls -ld $TMPDIR../C/com.apple.appstore*
+
+drwx------  5 $USER  staff  160 Feb 27 16:23 /var/folders/g1/3xgktw055bj8v173njj_333m0000gn/T/../C/com.apple.appstoreagent
+drwx------  2 $USER  staff   64 Feb 28 06:59 /var/folders/g1/3xgktw055bj8v173njj_333m0000gn/T/../C/com.apple.appstorecomponentsd
+```
 
 ## Accessing Logs on System Level
 

@@ -6,7 +6,7 @@ This document explains common use during the operation of SBC (Single-board Comp
 
 Detail instruction for SBC(s) below:
 - [Raspberry Pi Installation and Configuration](/raspberry-pi-quick-guide)
-- [Banana Pro Installation and Configuration](/banana_pro_quick_guide)
+- [Banana Pro Installation and Configuration](/banana-pro-quick-guide)
 
 Check [How to mount SD Cards](/mounting-sd-cards) notes for instruction on how to mount `/boot` and `ext4` partitions directly from the Host OS. Some `ext4` partition mounting explained in [MacOS Notes](/macos-notes).
 

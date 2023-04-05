@@ -141,7 +141,7 @@ apt-get
 ### Related iOS Notes~
 
 * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
-* [LLDB](/lldb)
+* [LLDB](/lldb-for-ios)
 * [Pure Reverse Engineering](/pure-reverse-engineering)
 * [Cycript](/cycript)
 * [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore)
@@ -154,7 +154,6 @@ apt-get
 * [iOS Pentesting Checklist](https://book.hacktricks.xyz/mobile-pentesting/ios-pentesting-checklist)
 * [iOS WebViews Debugging](https://book.hacktricks.xyz/mobile-pentesting/ios-pentesting/ios-webviews)
 * [iOS CheatSheet](https://owasp.org/www-pdf-archive/OWASPIreland-Limerick-Day_20131031_iOSCheatSheet-OanaCornea.pdf)
-* [Decrypting apps from AppStore](https://kov4l3nko.github.io/blog/2016-03-01-decrypting-apps-from-appstore/)
 * [Reverse Engineering Tools](https://iphonedevwiki.net/index.php/Reverse_Engineering_Tools)
 * [iOS Static Analysis](https://trelis24.github.io/2018/03/27/Pentesting-iOS-Static/)
 * [iOS Internals and Security Testing](https://github.com/vadimszzz/iOS-Internals-and-Security-Testing)

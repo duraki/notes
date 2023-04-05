@@ -95,7 +95,8 @@ PIN 14 -> PIN 23 (MIC +)
 That should just about do it. Your radio should mute when you are on the phone, and your car kit should use the factory audio. BTW the microphone is in the headliner next to the sunroof switch.
 
 {{< details "Archived References" >}}
-Refer to [AndrewP's Phone Wiring](http://www.bmwtips.com/tipsntricks/phonewiring/PhoneWiring.htm).
+Refer to ~AndrewP's Phone Wiring:
+* *DEAD_ APR/2023* `bmwtips.com/tipsntricks/phonewiring/PhoneWiring.html`
 {{< /details >}}
 
 

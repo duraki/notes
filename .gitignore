@@ -2,4 +2,5 @@
 .hugo_build*
 ./docs/*/**
 ./docs
-./public
+public
+tmp

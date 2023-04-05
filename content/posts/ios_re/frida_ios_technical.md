@@ -2,7 +2,7 @@
 title: "iOS Frida Scripting"
 ---
 
-Before start, make sure you follow [all of the typical](/ios-static-analysis) [iOS Reverse Engineering](/ios-reverse-engineering) processes, as well as how to [use lldb](/lldb) more professionally. The below Frida snippets will greatly increase your binary instrumentation knowledge.
+Before start, make sure you follow [all of the typical](/ios-static-analysis) [iOS Reverse Engineering](/ios-reverse-engineering) processes, as well as how to [use lldb](/lldb-on-ios) more professionally. The below Frida snippets will greatly increase your binary instrumentation knowledge.
 
 **Check if Objective-C Runtime is available**
 
