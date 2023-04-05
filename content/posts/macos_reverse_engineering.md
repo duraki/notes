@@ -4,13 +4,21 @@ title: "MacOS Reverse Engineering"
 
 It helps knowing more deep technical stuff for the overview of those notes. Besides, also take a look at: [Ghidra](/Ghidra-and-Related), [LLDB for MacOS](/lldb), and [Hopper for MacOS](/pure-reverse-engineering). Notes on [`dyld` Injection](/dyld-macos-injection) are also handful for Mach-O RE tasks.
 
+## Accessing Metadata Attributes {{< sup_a "ref/metadata" "/macos-metadata-extraction" >}}
+
+Describing how to use `mdls`, `mdfind` and `mdutil`, and `mdimport` is [referenced in related](/macos-metadata-extraction) notes.
+
+## Converting MachO binaries {{< sup_a "ref/tool/LIPO" "/lipo" >}}
+
+Using [lipo](/lipo) to convert a MachO universal binary, or a single-architecture binary.
+
 ## Accessing Logs on System Level
 
 To access the Host OS (MacOS) logs from the command line, the `log` command can be used.
 
 ```
 # => will log via default settings
-$ (sudo) log show --style syslog --predicate 'process == "com.durakiconsulting.appname"' 
+$ (sudo) log show --style syslog --predicate 'process == "com.durakiconsulting.appname"'
 
 # => will log with debug & info
 $ (sudo) log show --style syslog --predicate 'process == "com.durakiconsulting.appname"' --debug --info
@@ -30,7 +38,7 @@ $ /Applications/AppName.app/Contents/MacOS/AppName
 ```
 
 ## Dump System LaunchServices
-Basically, OS X LaunchServices is how an application is found to run when you double-click on a document. If the program is in `/Applications`, or you launch it at least once, then LaunchServices should detect it. LaunchServices contains a big, long list of all the Applications, and which ones accept documents of which type. So if you have an Application that is not "registering" correctly with LaunchServices, try this in the Terminal: 
+Basically, OS X LaunchServices is how an application is found to run when you double-click on a document. If the program is in `/Applications`, or you launch it at least once, then LaunchServices should detect it. LaunchServices contains a big, long list of all the Applications, and which ones accept documents of which type. So if you have an Application that is not "registering" correctly with LaunchServices, try this in the Terminal:
 
 Via `lsregister` utility:
 ```
@@ -69,13 +77,13 @@ $ plutil -p embedded.plist
 **Tools I often use**
 
 ```
-jtool (code signing), 
-spctl (manage system's policy, controls gatekeeper), 
-codesign (macos codesign utility), 
-security (decode CMS format), 
-openssl (generate certificates), 
-xcrun (validate/notarize utility), 
-csreq (code signing utility), 
+jtool (code signing),
+spctl (manage system's policy, controls gatekeeper),
+codesign (macos codesign utility),
+security (decode CMS format),
+openssl (generate certificates),
+xcrun (validate/notarize utility),
+csreq (code signing utility),
 rcodesign (3rd party code signing utiltiy)
 ```
 
@@ -148,7 +156,10 @@ $ rcodesign x509-oids 	# => to print OIDs for x.509 certs
 
 ### Resources
 
-* [OS X Frameworks](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemFrameworks/SystemFrameworks.html)
+* [MacOS Open Source](https://developer.apple.com/opensource/)
+* [MacOS Documentation Archives](https://developer.apple.com/library/archive/navigation/)
+* [Apple Legacy Manuals](https://web.archive.org/web/20180414202241/http://home.earthlink.net/~strahm_s/manuals.html)
+* [OS X Frameworks](https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemFrameworks/SystemFrameworks.html), [Apple Frameworks](https://iphonedev.wiki/index.php/Frameworks), [System Frameworks](https://www.theiphonewiki.com/wiki//System/Library/Frameworks)
 * [TN3125: Inside Code Signing: Provisioning Profiles](https://developer.apple.com/documentation/technotes/tn3125-inside-code-signing-provisioning-profiles)
 * [TN3126: Inside Code Signing: Hashes](https://developer.apple.com/documentation/technotes/tn3126-inside-code-signing-hashes)
 * [TN3127: Inside Code Signing: Requirements](https://developer.apple.com/documentation/technotes/tn3127-inside-code-signing-requirements)

@@ -17,3 +17,9 @@ preserveTOC: false
 * [Cycript](/cycript)
 * [WinDbg](/windbg-cheatsheets)
 * [Safari](/safari-devconsole-internals)
+
+
+{{< notice >}}
+~ Helpful Tip
+{{< /notice >}}
+{{< callout emoji="👋" text="Manually-compiled MacOS Applications and CLI utils are available in personal iCloud backups and in dotfiles Repository." >}}

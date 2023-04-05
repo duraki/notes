@@ -12,9 +12,34 @@ Available options:
 - (**FREE**) [fswatch](https://github.com/emcrisostomo/fswatch)
 - **Developing MacOS FS Monitoring** [#ref](#Developing-MacOS-FS-Monitoring)
 
+With **SIP** is disabled, one can use `opensnoop`:
+
+```
+$ sudo opensnoop
+$ sudo opensnoop -n Preview
+```
+
+The `opensnoop` tracks file opens. As a process issues a file open, details such as UID, PID and pathname are printed out.
+
 ## FSMonitor
 
 The [xnucrack](https://github.com/xnucrack/) contains license for [FSMonitor](http://fsmonitor.com/). It's pretty simple to use and, unlike `fswatch`, it is paid to use and it provides native MacOS GUI.
+
+## filemon
+
+[filemon](http://newosxbook.com/tools/filemon.html) is a free, open-source, FS monitoring tool.
+
+```
+filemon -h
+Usage: filemon [options]
+Where [options] are optional, and may be any of:
+	-p|--proc  pid/procname:  filter only this process or PID
+	-f|--file  string[,string]:        filter only paths containing this string (/ will catch everything)
+	-e|--event event[,event]: filter only these events
+	-s|--stop:                auto-stop the process generating event
+	-l|--link:                auto-create a hard link to file (prevents deletion by program :-)
+	-c|--color (or set JCOLOR=1 first)
+```
 
 ## fswatch
 

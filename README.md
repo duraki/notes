@@ -6,6 +6,7 @@ The `~ notes` is a dedicated repository for my [digital garden](https://github.c
 
 * [Nikita Voloboev](https://wiki.nikiv.dev/)
 * [digital-gardeners](https://github.com/MaggieAppleton/digital-gardeners)
+* Also See: [docs/CREDITS](notes/docs/CREDITS.md)
 
 ## Contributing 😇
 

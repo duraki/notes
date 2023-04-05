@@ -47,9 +47,9 @@ This is a **Red Alert!** Take cover.
 Use `>` to quote in markdown block
 
 ```
->  For I know the plans I have for you, declares the LORD, 
-   plans to prosper you and not to harm you, plans to give 
-   you hope and a future. 
+>  For I know the plans I have for you, declares the LORD,
+   plans to prosper you and not to harm you, plans to give
+   you hope and a future.
 
    - Jeremiah 29:11
 ```
@@ -75,7 +75,7 @@ Use `>` to quote in markdown block
 
 **Highlight lines in code**
 
-[List of supported languages](https://gohugo.io/content-management/syntax-highlighting#list-of-chroma-highlighting-languages)
+[List of supported languages](https://gohugo.io/content-management/syntax-highlighting#list-of-chroma-highlighting-languages), [List of Themes](https://xyproto.github.io/splash/docs/all.html)
 
 ```
 # => xml
@@ -102,6 +102,27 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 ```
 
 ### Shortcodes
+
+**Callout with Emoji including Caption**
+
+```
+{{ < notice > }}
+Add Caption Here
+{{ < /notice >}}
+{{ < callout emoji="🥳" text="Some long long notes text goes here." > }}
+```
+{{< notice >}}
+Add Caption Here
+{{< /notice >}}
+{{< callout emoji="🥳" text="Some long long notes text goes here." >}}
+
+**Add a Plain Caption**
+
+```
+{{ < notice > }}
+Some title or caption header.
+{{ < /notice >}}
+```
 
 **Caption images via this shortcode**
 
@@ -163,4 +184,3 @@ Note: Some <read more> note for further details, or hidden image/text/component.
 ### Deploy
 
 Check details of `README.md` to learn how to deploy **~notes** on local and remote machines.
-

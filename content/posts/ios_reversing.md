@@ -25,7 +25,7 @@ $ dsdump App  // new way
 **Install offloaded `*IPA` files**
 
 ```
-# requires: 
+# requires:
 #   brew install libimobiledevice
 #   brew install ideviceinstaller
 
@@ -136,7 +136,7 @@ apt-get
   - syslog (syslogon, syslogoff); /var/log/syslog
   - wget, ncdu, lsof, file, less
   - gdb (ar, nm, objdump, ranlib, strip, addr2line, gdb, objdump)
-``` 
+```
 
 ### Related iOS Notes~
 
@@ -159,4 +159,4 @@ apt-get
 * [iOS Static Analysis](https://trelis24.github.io/2018/03/27/Pentesting-iOS-Static/)
 * [iOS Internals and Security Testing](https://github.com/vadimszzz/iOS-Internals-and-Security-Testing)
 * [iOS Hacking Resources](https://github.com/Siguza/ios-resources)
-
+* [iOS 16.x Class Headers Dump](https://headers.cynder.me/index.php?sdk=ios/16.0)

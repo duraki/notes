@@ -2,7 +2,7 @@
 title: "lldb for MacOS"
 ---
 
-[Click Here](/lldb-for-ios) if you are looking for iOS-specific `lldb` notes. Scroll below to [see attaching errors and workaround](#errors-and-workarounds). 
+[Click Here](/lldb-for-ios) if you are looking for iOS-specific `lldb` notes. Scroll below to [see attaching errors and workaround](#errors-and-workarounds).
 
 ## Commands/Assistance
 
@@ -11,6 +11,37 @@ title: "lldb for MacOS"
 * [lldb-helpers](https://github.com/kastiglione/lldb-helpers) is a collection of helpers for more precise breakpoints.
 
 ## Cheatsheet
+
+Using `lldb` should not be a hassle; prepare the `lldb` session once you are in REPL:
+
+```
+##                               => Set 'target' Language
+(lldb) (devil/dc) settings set target.language [objc|swift|...]
+
+##                               => For MacOS Apps
+(lldb) expr @import AppKit
+
+##                               => For iOS Apps
+(lldb) expr @import UIKit
+```
+
+If you are getting errors while importing frameworks in `lldb`, try to run original XCode binary via:
+
+```
+$ xcrun lldb
+(lldb) expr @import AppKit
+```
+
+**Type Lookup**
+
+The `lldb` supports built-in type lookup that you can execute via command:
+
+```
+(lldb) type lookup <SomeType>
+
+# ie;
+(lldb) type lookup ErrorType
+```
 
 ### Objective-C
 
@@ -23,7 +54,7 @@ title: "lldb for MacOS"
 **Important** -- set a lldb language context to Objective-C:
 
 ```
-(lldb) settings set target.language objc 
+(lldb) settings set target.language objc
 ```
 
 Cast an address to object:
@@ -185,7 +216,6 @@ Process 8873 exited with status = 9 (0x00000009) Terminated due to code signing 
 Create a Code Signing certificate from within Keychain.app in MacOS (ie. `signature`), and use it to code sign target application. The following will recursevly force code sign of all application resources.
 
 ```
-# switch signature with your code signing certificate 
+# switch signature with your code signing certificate
 $ codesign --deep --force -s "signature" /Applications/SomeApp.app
 ```
-

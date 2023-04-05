@@ -2,13 +2,65 @@
 title: "MacOS Notes"
 ---
 
+**Common CLI Utils**
+
+```
+    # User identity
+$ id -F             # => [FirstName  LastName]
+$ id -u             # => [UserID]
+$ hostname          # => [user.hostname]
+
+    # Host identity
+$ sw_vers
+$ sw_vers -productName
+$ sw_vers -productVersion
+$ sw_vers -buildVersion
+
+    # Date/Time
+$ date
+$ cal
+
+    # List Open Files/Networks
+    # @see: https://ftp.mirrorservice.org/sites/lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ
+$ lsof
+$ lsof [FILEPATH1] [FILEPATH2] [...]        # => Show who is using a FILE(S)
+$ lsof -c [PROCNAME]                        # => Show used files from PROCNAME
+$ lsof -i                                   # => List all network connections
+$ lsof -i [4|6] -a -p [PID]                 # => List all open files by PID that also pings IPv4 or IPv6
+$ lsof -i @HOSTNAME.com:80-443              # => List all files using PORTS range of HOSTNAME
+$ lsof -i :PORT                             # => List all files using PORT
+
+    # Network
+$ sudo tcpdump -i [INTERFACE]
+
+    # Launch Services DB
+$ lsregister
+
+    # Evaluates expression
+$ expr [EXPR]
+$ let  [EXPR]
+
+    # Environment
+$ export
+$ printenv
+
+    # macOS user defaults
+$ defaults [read|write] [PATH]
+$ defaults read -app Preview
+
+    # Kernel Extensions (kexts)
+$ kextfind
+$ kextstat
+$ kextfind
+```
+
 **Adding an application to Finder.app toolbar**
 
 Locate the app. in your `/Application` folder. Lets say you want to use OpenTerminal-Lite app. as a toolbar menu in Finder.
 
 1. Locate the /Applications/OpenTerminal-Lite.app
 2. Use `⌘`+`⌥` on keyboard, and drag-and-drop the app to Finder.app toolbar
-3. Yup, thats it 
+3. Yup, thats it
 
 **Hide a folder on MacOS (using an attribute)**
 
@@ -47,9 +99,24 @@ $ jtool --ent /Applications/ProtonVPN.app
 
 All API rely on above library. For example, when the MachO Process starts, the above library will be loaded early in time so it can use other APIs.
 
+**Color-print file output with line numbers**
+
+```
+$ brew install ccat
+# in ~/.config/.aliases:
+#
+#       alias ccat="ccat --bg=dark
+#                   -G Plaintext='white' -G String='*darkgray*'
+#                   -G Comment='white' -G HTMLAttrValue='red'
+#                   -G HTMLAttrName='red' -G Type='**purple**'
+#                   -G HTMLTag='**yellow**'"
+
+$ cat -n ~/INPUT.txt | ccat
+```
+
 **Mount RaspberryPi / BananaPi SD Card**
 
-Note: these instructions are outdated, please take a look at newer documentation in [fuse-ext2 notes](/fuse-ext2). The difference between the `fuse-ext2` and `ext4fuse` is that the former allows for `r/w` on the mounted partition; and not only `r/o`, as is the case with `ext4fuse`. 
+Note: these instructions are outdated, please take a look at newer documentation in [fuse-ext2 notes](/fuse-ext2). The difference between the `fuse-ext2` and `ext4fuse` is that the former allows for `r/w` on the mounted partition; and not only `r/o`, as is the case with `ext4fuse`.
 
 Insert SD Card in your card reader or Macbook. Then when the error pops-up, just hit "Ignore" (not *Eject*!).
 
@@ -77,7 +144,7 @@ $ brew install ext4fuse # => might throw an error, @see below for instructions
 # 		brew install ext4fuse
 # Make sure to reboot your system, because of the new Kext/Kernel extension.
 
-# 2) the other option is to manually force ext2fuse via the script. the script are 
+# 2) the other option is to manually force ext2fuse via the script. the script are
 #	 in this notes, right below.
 ```
 
@@ -128,7 +195,7 @@ $ brew install --formula --build-from-source /tmp/ext4fuse.rb
 * [Mount ext4 Filesystem on MacOS](https://docs.j7k6.org/mount-ext4-macos/)
 
 
-(*note*: paste the following in `/tmp/ext4fuse.rb`: 
+(*note*: paste the following in `/tmp/ext4fuse.rb`:
 
 ```
 # => cat /tmp/ext4fuse.rb

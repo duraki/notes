@@ -1,0 +1,34 @@
+{{/* Available notice types: warning, info, note, tip */}}
+{{ $noticeType := .Get 0 | default "note" }}
+
+<style>
+    .notice {
+        border: 1px dashed rgba(105, 105, 105, 0.36);
+        /*border-radius: 3px;*/
+        padding-left: 10px;
+        padding-bottom: 1px !important;
+        margin-bottom: 0px !important;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .note {
+        color: gray;
+        font-family: monospace;
+        font-weight: 800;
+    }
+
+    div.notice p {
+
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        color: darkgray;
+    }
+
+</style>
+
+{{ $raw := (markdownify .Inner | chomp) }}  
+<div class="notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+    <p>{{ $raw }}</p>
+</div>

@@ -1,3 +1,54 @@
-{{ $dataJ := getJSON "https://api.github.com/repos/"  (.Get "repo")  "/contents/"  (.Get "file")  }}
-{{ $con := base64Decode $dataJ.content }}
-{{ highlight $con (.Get "lang") (.Get "options") }}
+<div class="ghwrap">
+    {{ $dataJ := getJSON "https://api.github.com/repos/" (.Get "repo") "/contents/" (.Get "file") }}
+    {{ $con := base64Decode $dataJ.content }}
+    {{ highlight $con (.Get "lang") (.Get "options") }}
+
+    {{ $noticeType := "note" }}
+
+    <div class="gh-notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+        <p>~ source:
+            <a target="_blank" href='{{ print "https://github.com/" ( .Get "repo" ) "/blob/master/" (.Get "file" ) }}'>
+                {{ print "github.com/" ( .Get "repo" )}}
+            </a>
+        </p>
+    </div>
+</div>
+
+<style>
+    .ghwrap {}
+
+    .highlight>pre {
+        margin: 0 !important;
+        overflow: none;
+    }
+
+    .gh-notice {
+        border: 1px dashed rgba(105, 105, 105, 0.36);
+        /*border-radius: 3px;*/
+        padding-left: 0px;
+        /*padding-bottom: 1px !important;*/
+        margin-bottom: 0px !important;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+    }
+
+    .note {
+        color: gray;
+        font-family: monospace;
+        font-weight: 800;
+    }
+
+    div.gh-notice p {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 11px !important;
+        color: gray !important;
+    }
+
+    div.gh-notice a {
+        color: darkgray !important;
+        font-style: normal;
+    }
+
+</style>
