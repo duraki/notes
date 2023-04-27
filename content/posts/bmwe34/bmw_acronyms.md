@@ -8,6 +8,7 @@ title: "BMW Acronyms"
 | AB | Airbag |
 | ABS | Anti-lock Braking System |
 | ADS | Engine Intake Air Control |
+| ADS | Aktiven Diagnose Stecker |
 | ADV | Wiper Pressure Control |
 | ASC | All Season Traction |
 | BC | Board Computer |
