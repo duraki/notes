@@ -6,6 +6,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 
 ## Table of Content
 
+* [Keyword Protocol KW-71](/keyword-protocols#kw71)
 * [Electronic Signals](/electronic-signals)
 * [AC & DC Signals](/ac-and-dc-signals)
 * [AC Voltage Signals](/ac-voltage-signals)
@@ -15,10 +16,11 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 	* [PTC Sensors](/ptc-sensors)
 	* [Potentiometers](/potentiometers)
   - Digital
-	* [B+ Signal](/switched-b-high-signals) 
+	* [B+ Signal](/switched-b-high-signals)
 	* [B- Signal](/switched-b-low-signals)
 	* [Square Wave Signals](/modulated-square-wave-signals)
 * [DC Digital Sensors](/dc-digital-sensors)
+    * [BMW Sensors Specifications](/dc-digital-sensors)
 	* [Hall Effect Sensors](/hall-effect-sensors)
 	* [Magnetoresistive Sensors](/magnetoresistive-sensors)
 	* [Designated Value Signals](/designated-value-signals)
@@ -30,12 +32,17 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 * See Also
 	* [BMW Acronyms](/bmw-acronyms)
 	* [DIN 72552](/din)
+	* [Links](#other-links)
 * Wiring
 	* [Circuit Basics](/circuit-basics)
 	* [Circuit Debugging](/circuit-basics#how-to-tracing-the-electrical-issues)
 	* [E34 Low Cluster - EURO - MY. 88-90 Test Bench](/e34-cluster-wiring-diagram)
 	* [E34 Low Cluster - EURO - MY. 88-90 Pinout](/e34-pinout-diagram)
 	* [E34 Misc. Wiring](/e34-misc-wiring)
+
+**Forums**
+* [PCMHacking.NET](https://pcmhacking.net/forums/index.php)
+* [Digital-Kaos.CO.UK](https://www.digital-kaos.co.uk/forums/index.php)
 
 {{< details "Electronic Signals" >}}
 Objectives of the [Electronic Signals](/electronic-signals) is to explain inductive sensors, and type of signals one may stumble upon during the reversing and hacking of BMW E34s and possibly other series as well. Upon completion, you should understand the difference between analog and digital signals, know the difference between NTC and PTC sensors, recognizing different signals on the oscilloscope etc. Besides, many EE stuff can be learn from reading the resources published. [Reference](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf)
@@ -50,5 +57,29 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 {{< /details >}}
 
 {{< details "References" >}}
-[Introduction to Bus Systems](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/10%20Introduction%20to%20Bus%20Systems.pdf), [Breakout Boxes and Connectors](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/03%20Breakout%20Boxes%20%26%20Connectors.pdf), [Engine Electronics Overview](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/01_Engine%20Electronics%20Overview.pdf), [Air Management](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/03_Air%20Management.pdf), [Ignition Management](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/05_Ignition%20Management.pdf), [Coding and Programming](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST052%20Body%20Electronics%20II%20%28Archive%201%29/2%20Coding%20and%20Programming.pdf), [Wiring Diagram Symbols](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I/02_Wiring%20Diagrams%20and%20Associated%20Documents.pdf), [Electronic Signals](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf), [Coding, Individualization & Programming (CIP)](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST050%20Technical%20Systems%20%28Archive%201%29/CIP.pdf), [BMW Technical Training Documents](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/)
+[Introduction to Bus Systems](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/10%20Introduction%20to%20Bus%20Systems.pdf), [Breakout Boxes and Connectors](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/03%20Breakout%20Boxes%20%26%20Connectors.pdf), [Engine Electronics Overview](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/01_Engine%20Electronics%20Overview.pdf), [Air Management](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/03_Air%20Management.pdf), [Ignition Management](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST055%20Engine%20Electronics/05_Ignition%20Management.pdf), [Coding and Programming](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST052%20Body%20Electronics%20II%20%28Archive%201%29/2%20Coding%20and%20Programming.pdf), [Wiring Diagram Symbols](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I/02_Wiring%20Diagrams%20and%20Associated%20Documents.pdf), [Electronic Signals](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf), [Coding, Individualization & Programming (CIP)](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST050%20Technical%20Systems%20%28Archive%201%29/CIP.pdf), [BMW Technical Training Documents](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/), [BMW Sensors Table](https://web.archive.org/web/20130810205612/https://kovsh.com/media/library/312/Sensors%20Europe.pdf)
+{{< /details >}}
+
+{{< details "Other Links" >}}
+* [IBUS Protocol Reverse Engineering](https://web.archive.org/web/20071022152757/http://www.openbmw.net/bus/)
+* [BMW Navigation Systems](https://web.archive.org/web/20050920201133/http://www.openbmw.net/nav/index.html) - [E46 Retrofit](https://web.archive.org/web/20050912001000/http://www.openbmw.net/nav/sys/index.html), [Concepts](https://web.archive.org/web/20050930205915/http://www.ac-schnitzer.de/englisch/produkte/comm_concept/index.htm)
+* [BMW PDF Downloads](https://web.archive.org/web/20050830010505/http://www.openbmw.net/downloads/)
+* [BMW Programming Tools & CD's](https://web.archive.org/web/20051224055902/http://www.centrallettershop.com/cd.html)
+* [BMW AV Connection Pinouts](https://web.archive.org/web/20051023091951/http://www.750i.de/e/av_conns.htm)
+* [BMW E38 Navigation System Unit Repair](https://web.archive.org/web/20050828170028/http://www.750i.de/e/repair.htm)
+* [BMW K-BUS Data Reader Project](https://web.archive.org/web/20050206003327/http://neiland.com/Kbusproj.htm)
+* [BMW Connected iDrive System Reverse Engineering](https://bimmergestalt.github.io/BMWConnectedAnalysis/)
+* [BMW i3 API Reverse Engineering](https://shkspr.mobi/blog/2015/11/reverse-engineering-the-bmw-i3-api/)
+* [Communicating with the Instrument Cluster](https://hackaday.io/project/334-integrated-rpi-car-audio/log/1078-communicating-with-the-instrument-cluster)
+* [Arduino and BMW E46 K/IBUS Interface](https://curious.ninja/blog/arduino-bmw-i-bus-interface-intro/), [Technical Details](https://curious.ninja/project/bmw-e46/e46-k-bus/arduino-bmw-i-bus-interface-technical-details/)
+* [BMW E39 INSA, EDIABAS, NCSExpert, DIS, EasyDIS Forum Thread](https://www.bimmerfest.com/threads/making-sense-of-inpa-ediabas-ncsexpert-ncs-dummies-dis-gt1-easydis-progman.561237/page-5)
+* [How to use BMW wiring diagrams](https://www.bimmerforums.co.uk/threads/how-to-use-wiring-diagrams.332561/)
+* [Serial DSUB-9 and DSUB-25 Connectors](https://tldp.org/HOWTO/Serial-HOWTO-19.html)
+* [Oil Pressure in E36 OpenOBC](https://openlabs.co/blog/2014/06/openOBC-oil-pressure)
+* [TinyADS DIY Interface for old BMW Diagnostics](https://openlabs.co/OSHW/Tiny-ADS-Interface)
+* [BimmerDIY Directory](https://www.bimmerdiy.com), [E36 Start Button](https://www.bimmerdiy.com/diy/e36startbutton/)
+* [Injecting UART Messages into BMW Instrument Cluster LCD](https://i-code.net/injecting-custom-uart-messages-into-the-bmw-750il-instrument-cluster-lcd/)
+* [Reusing BMW Phone Keypad with Arduino](https://i-code.net/tapping-into-the-bmw-750il-phone-keypad/)
+* [E34 Cluster ROM Dump](http://www.bimmerboard.com/forums/posts/490258)
+* [rusEFI - Internal Combustion ECU](https://github.com/rusefi/rusefi), (*[w/ BMW E34 Wiring](https://github.com/rusefi/rusefi/wiki/BMW-e34)*)
 {{< /details >}}

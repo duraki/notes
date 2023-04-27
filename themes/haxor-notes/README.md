@@ -1,4 +1,4 @@
-# haxor-notes 
+# haxor-notes
 
 A [Hugo](https://gohugo.io/) theme optimized for publishing my personal [notes](http://notes.durakiconsulting.com).
 
@@ -11,9 +11,9 @@ Example Site: [duraki notes](http://notes.durakiconsulting/)
 Features:
 
 - Opens new pages in an ever-growing list to maintain context of how you arrived at a page.
-- This fork also fixes the top-level index page. It handles index page as it was subcontexed stacked note. 
+- This fork also fixes the top-level index page. It handles index page as it was subcontexed stacked note.
 - Tracks and displays "backlinks" between pages to allow for related concept exploration.
-- This fork also fixes backlinks between stacked notes, which sometimes yielded markdown raw data. 
+- This fork also fixes backlinks between stacked notes, which sometimes yielded markdown raw data.
 - Shows preview of content on link hover to get a peek at the content before opening.
 - Customizable look-and-feel via to match style of my blog.
 - Text search to find interesting starting points into the knowledge graph.
@@ -73,3 +73,4 @@ Here is a basic dark theme that can be tweaked:
 **References**
 
 * [DanWebb/jdown](https://github.com/DanWebb/jdown) - transform a directory of markdown files to JSON; can be used if you ever want to switch to a other blogging platform
+* [mozilla/mdn](https://developer.mozilla.org/en-US/docs/Web/CSS) for general CSS docs

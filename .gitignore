@@ -4,3 +4,6 @@
 ./docs
 public
 tmp
+.jupyter
+*ipynb*
+*.jupyterlab-workspace

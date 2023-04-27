@@ -23,15 +23,21 @@ h3 > span > sup {
     color: #c2c2c2 !important;
 }
 
+details summary {
+    cursor: pointer;
+}
+
 details {
-    padding-top: 10px;
-    margin-bottom: 1px;
     border-bottom: 1px dashed rgba(0,0,0,0.16);
     box-sizing: 10px;
     padding-bottom: 1px;
+    /*margin-bottom: 10px;*/
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 details[open] {
+    padding-bottom: 0px !important;
 /**
     border-block: dashed green;
     writing-mode: vertical-rl;
