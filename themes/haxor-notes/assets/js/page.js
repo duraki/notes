@@ -153,8 +153,6 @@ function initializePage(page, level) {
       )
     )) {
 
-      //console.log("rawHref (true) && rawHref not (http.https.#.pdf.svg)");
-
 
       /**
        *  Using fixed basedir (testing only)
@@ -174,35 +172,6 @@ function initializePage(page, level) {
         //console.error("rawHref after computation=", rawHref, "element.href=", element.href);
       }
     }
-
-    /**
-     * Correct context
-        initializePage page= <div class="page" data-level="1">
-        initializePage level= 1
-        initializePage (set) level= 1
-        initializePage links= Array(96) [ a, a, a, a, a, a, a, a, a, a, … ]
-     *
-        initializePage rawHref= ./automotive-hacking
-        initializePage element.dataset.level= 1
-        initializePage element.href= http://127.0.0.1:8800/notes/automotive-hacking
-        rawHref (true) && rawHref not (http.https.#.pdf.svg)
-        rawHref prefetchLink= /notes/
-     */
-
-    /**
-     * Incorrect context
-     *
-       initializePage page= <div class="page" data-level="2">
-       initializePage level= 2
-       initializePage (set) level= 2
-       initializePage links= Array(5) [ a, a, a, a, a.backlink-anchor ]
-     *
-       initializePage rawHref= ../ecu-foundations
-       initializePage element.dataset.level= 2
-       initializePage element.href= http://127.0.0.1:8800/ecu-foundations
-       rawHref (true) && rawHref not (http.https.#.pdf.svg)
-       rawHref prefetchLink= /notes/
-     */
 
     if (
       rawHref &&
@@ -278,7 +247,6 @@ function showPreview(previewHtml, anchorElement) {
   fragment.innerHTML = previewHtml;
   let element = fragment.content.querySelector(".page");
   previewContainer4.appendChild(element);
-
   const previewContainer1Style = getComputedStyle(previewContainer1);
   const previewContainer3Style = getComputedStyle(previewContainer3);
   const previewContainer4Style = getComputedStyle(previewContainer4);
