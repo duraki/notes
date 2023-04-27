@@ -23,6 +23,41 @@ h3 > span > sup {
     color: #c2c2c2 !important;
 }
 
+details {
+    padding-top: 10px;
+    margin-bottom: 1px;
+    border-bottom: 1px dashed rgba(0,0,0,0.16);
+    box-sizing: 10px;
+    padding-bottom: 1px;
+}
+
+details[open] {
+/**
+    border-block: dashed green;
+    writing-mode: vertical-rl;
+**/
+}
+
+details[open] {
+    padding-bottom: 10px;
+}
+
+details[open] summary {
+    border-radius: 5px;
+    margin-bottom: 10px !important;
+    /* color: black; */
+    /* font-weight: 500; */
+    background: rgba(8, 8, 8, 0.12);
+    /* letter-spacing: 10px; */
+    padding: 4px;
+}
+
+details[open] > span.details-expand-content {
+    color: rgb(158, 158, 158);
+    /**background: black;**/
+}
+
+
 /**
  * @author    !me
  */
