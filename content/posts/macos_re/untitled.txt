@@ -1,0 +1,31 @@
+  "fr.frapps.SingleFile-Safari.Extension (FPM6D68GAR)" => {
+    "AccessibleOrigins" => [
+      0 => "<all_urls>"
+    ]
+    "AddedDate" => 2023-04-01 14:24:32 +0000
+    "BackgroundPageListeners" => {length = 676, bytes = 0x62706c69 73743030 d4010203 04050607 ... 00000000 000001fc }
+    "BackgroundPageListenersVersion" => 2
+    "Enabled" => 1
+    "EnabledByUserGesture" => 1
+    "EnabledModificationDate" => 2023-04-01 14:24:50 +0000
+    "GrantedPermissionOrigins" => {
+      "*://*/*" => 4001-01-01 00:00:00 +0000
+    }
+    "GrantedPermissions" => {
+    }
+    "HasAbilityToInjectContentIntoWebpages" => 1
+    "LastSeenBaseURI" => "safari-web-extension://43216FB5-FC2B-4E12-AD1A-41E9F57D7CDF/"
+    "LastSeenUniqueIdentifier" => "F1817A78-D3ED-408A-8695-314DB9A371B3"
+    "LastSeenVersion" => "1.21.41"
+    "Permissions" => [
+      0 => "contextMenus"
+      1 => "storage"
+      2 => "tabs"
+    ]
+    "RequestsTracking" => 0
+    "RevokedPermissionOrigins" => {
+    }
+    "RevokedPermissions" => {
+    }
+  }
+}
