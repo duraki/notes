@@ -140,7 +140,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 
 * [Windows Notes](/windows-notes)
 * [Linux Notes](/linux-notes)
-* [MacOS Notes](/macos-notes)
+* [MacOS Notes](/macos-notes) & [iPad Notes](/ipad-notes)
 * [Single-Board Computers (SBC)](/sbc-and-alternatives)
     * [Raspberry Pi Installation](/raspberry-pi-quick-guide)
     * [Enable SSH access via SD Card](/enable-ssh-on-raspbian-os)

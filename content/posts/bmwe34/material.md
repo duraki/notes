@@ -32,13 +32,12 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 * See Also
 	* [BMW Acronyms](/bmw-acronyms)
 	* [DIN 72552](/din)
-	* [Links](#other-links)
 * Wiring
-	* [Circuit Basics](/circuit-basics)
-	* [Circuit Debugging](/circuit-basics#how-to-tracing-the-electrical-issues)
+	* [Circuit Basics & Debugging](/circuit-basics)
 	* [E34 Low Cluster - EURO - MY. 88-90 Test Bench](/e34-cluster-wiring-diagram)
 	* [E34 Low Cluster - EURO - MY. 88-90 Pinout](/e34-pinout-diagram)
-	* [E34 Misc. Wiring](/e34-misc-wiring)
+    * [E34 Headlights Switch Wiring](/headlight-switch-connector-pinouts)
+    * [E34 Misc. Wiring](/e34-misc-wiring)
 
 **Forums**
 * [PCMHacking.NET](https://pcmhacking.net/forums/index.php)
@@ -82,4 +81,9 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [Reusing BMW Phone Keypad with Arduino](https://i-code.net/tapping-into-the-bmw-750il-phone-keypad/)
 * [E34 Cluster ROM Dump](http://www.bimmerboard.com/forums/posts/490258)
 * [rusEFI - Internal Combustion ECU](https://github.com/rusefi/rusefi), (*[w/ BMW E34 Wiring](https://github.com/rusefi/rusefi/wiki/BMW-e34)*)
+* [ECU Connectors - Pin Removal Guide](http://vtec.academy/ecu-pin-removal-guide/)
+* [Tachocluster EML Control Light Repair](http://bmwe32.masscom.net/johan/eml_bulb/eml_bulb.html)
+* [Rear Seat cigarette lighter 🇯🇵](https://dd.jpn.org/BMW_HP/20071125/index.shtml)
+* [Under Ashtray LED 🇯🇵](https://dd.jpn.org/BMW_HP/20040829/index.shtml)
+* [Alarm Indicator LED on windshield mirror 🇯🇵](https://dd.jpn.org/BMW_HP/20150817/index.shtml), or on [door lock pin](https://dd.jpn.org/BMW_HP/20080705/index.shtml)
 {{< /details >}}
