@@ -7,3 +7,4 @@ tmp
 .jupyter
 *ipynb*
 *.jupyterlab-workspace
+*.code-workspace

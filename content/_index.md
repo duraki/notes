@@ -30,6 +30,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [ECU Compromise](/how-to-compromise-ecu)
 * [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing)
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
+{{< hrsep >}}
 * [BMW E34 Learning Material](/bmw-ag-e34-learning-materials)
     * [Keyword Protocols](/keyword-protocols) {{< sup_a " KW-71" "/kw71-protocol-description" >}}
     * [Electronic Signals](/electronic-signals)
@@ -93,7 +94,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
       * [M1 LLDB Configuration](/configure-lldb-on-m1/m2/)
       * [Using Frida against MachO on ARM](/using-frida-against-macho-on-arm)
     * [Safari Dev Console](/safari-devconsole-internals)
-    * [Metadata Extraction](/macos-metadatqa-extraction)
+    * [Metadata Extraction](/macos-metadata-extraction)
 * [iOS Reverse Engineering](/ios-reverse-engineering)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
     * [Pure Reverse Engineering](/pure-reverse-engineering)
@@ -165,4 +166,5 @@ This website is provided free, for educational purposes. Knowledge shared here c
 
 Peace out ✌️
 {{< /details >}}
+
 [^1]: Outro

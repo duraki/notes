@@ -28,7 +28,9 @@
 
 </style>
 
+<div id='notice-wrapper'>
 {{ $raw := (markdownify .Inner | chomp) }}  
 <div class="notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
     <p>{{ $raw }}</p>
+</div>
 </div>

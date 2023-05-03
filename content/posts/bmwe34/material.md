@@ -6,7 +6,6 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 
 ## Table of Content
 
-* [Keyword Protocol KW-71](/keyword-protocols#kw71)
 * [Electronic Signals](/electronic-signals)
 * [AC & DC Signals](/ac-and-dc-signals)
 * [AC Voltage Signals](/ac-voltage-signals)
@@ -28,16 +27,28 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 * [DC Digital Input/Output Stages](/dc-digital-io-stages)
 * [Signals Table](/signals-table)
 	* [E34: Speed Signal](/e34-misc-wiring#speed-impulsesignal)
-* [Test your knowledge](/bmw-qa)
-* See Also
-	* [BMW Acronyms](/bmw-acronyms)
-	* [DIN 72552](/din)
+* Production Details
+    * [Keyword Protocols](/keyword-protocols)
+	  - KWP [KW-71](/keyword-protocols#kw71)
+    * [Instrument Clusters / Tachometers](/instrument-clusters)
+      - [Details: Cluster Low (Normal)](/bmw/clusters/low-normal)
+      - [Details: Cluster Low (Redesign)](/bmw/clusters/low-redesign)
+      {{< hrsep >}}
+      - [Details: Cluster High (Normal)](/bmw/clusters/high-normal)
+      - [Details: Cluster High (Redesign/240)](/bmw/clusters/high-redesign)
+      - [Details: Cluster High (Redesign 2)](/bmw/clusters/high-redesign-2)
+      {{< hrsep >}}
+      - [Coding Plugs](/coding-plugs)
 * Wiring
 	* [Circuit Basics & Debugging](/circuit-basics)
 	* [E34 Low Cluster - EURO - MY. 88-90 Test Bench](/e34-cluster-wiring-diagram)
 	* [E34 Low Cluster - EURO - MY. 88-90 Pinout](/e34-pinout-diagram)
     * [E34 Headlights Switch Wiring](/headlight-switch-connector-pinouts)
     * [E34 Misc. Wiring](/e34-misc-wiring)
+* See Also
+	* [BMW Acronyms](/bmw-acronyms)
+	* [DIN 72552](/din)
+	* [Test your knowledge](/bmw-qa)
 
 **Forums**
 * [PCMHacking.NET](https://pcmhacking.net/forums/index.php)
@@ -86,4 +97,5 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [Rear Seat cigarette lighter 🇯🇵](https://dd.jpn.org/BMW_HP/20071125/index.shtml)
 * [Under Ashtray LED 🇯🇵](https://dd.jpn.org/BMW_HP/20040829/index.shtml)
 * [Alarm Indicator LED on windshield mirror 🇯🇵](https://dd.jpn.org/BMW_HP/20150817/index.shtml), or on [door lock pin](https://dd.jpn.org/BMW_HP/20080705/index.shtml)
+* [E34 Electronic DIYs 🇩🇪](http://www.pet-racing.de/E34)
 {{< /details >}}

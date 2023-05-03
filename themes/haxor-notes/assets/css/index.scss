@@ -23,6 +23,12 @@ h3 > span > sup {
     color: #c2c2c2 !important;
 }
 
+.content > ul > li > span {
+  line-height: 0.1rem !important;
+  font-size: 12px;
+  font-style: italic;
+}
+
 details summary {
     cursor: pointer;
 }
@@ -43,6 +49,10 @@ details[open] {
     writing-mode: vertical-rl;
 **/
 }
+
+// hr {
+//   margin: 0 !important;
+// }
 
 details[open] {
     padding-bottom: 10px;

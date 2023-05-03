@@ -179,6 +179,29 @@ Note: Some <read more> note for further details, or hidden image/text/component.
 {{ < /details > }}
 ```
 
+**Separator Line for ToC**
+
+Its possible to make `hr` separator line in Table of Contents, having 0 margin and padding, for example, to create this;
+
+{{< details "**Click to Expand Preview Image** 🏞️" >}}
+![](/posts/images/random/hrsep.png)
+{{< /details >}}
+
+You just add appropriate `hrsep` shortcode between the list items, like so:
+
+```
+* Item 1
+  - Subitem 2
+  {{ < hrsep > }}     // add this shortcode
+  - Subitem 3
+* Item 2
+* ...
+```
+
+... or use the `{{ < hrsep > }}` shortcode whenever needed.
+
+**Shortcode Resources**
+
 [More shortcodes](https://gohugo.io/content-management/shortcodes/) on official website.
 
 ### Deploy
