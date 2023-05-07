@@ -38,11 +38,15 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
       - [Details: Cluster High (Redesign/240)](/bmw/clusters/high-redesign)
       - [Details: Cluster High (Redesign 2)](/bmw/clusters/high-redesign-2)
       {{< hrsep >}}
+	  - [Cluster Conversion](/cluster-conversion)
+	  {{< hrsep >}}
       - [Coding Plugs](/coding-plugs)
 * Wiring
 	* [Circuit Basics & Debugging](/circuit-basics)
-	* [E34 Low Cluster - EURO - MY. 88-90 Test Bench](/e34-cluster-wiring-diagram)
-	* [E34 Low Cluster - EURO - MY. 88-90 Pinout](/e34-pinout-diagram)
+	{{< hrsep >}}
+	* [E34 Instrument Cluster - Test Bench](/e34-cluster-wiring-diagram)
+	* [E34 Instrument Cluster - Pinouts](/e34-pinout-diagram)
+	{{< hrsep >}}
     * [E34 Headlights Switch Wiring](/headlight-switch-connector-pinouts)
     * [E34 Misc. Wiring](/e34-misc-wiring)
 * See Also
@@ -53,6 +57,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 **Forums**
 * [PCMHacking.NET](https://pcmhacking.net/forums/index.php)
 * [Digital-Kaos.CO.UK](https://www.digital-kaos.co.uk/forums/index.php)
+* [MHHAuto.COM](https://mhhauto.com)
 
 {{< details "Electronic Signals" >}}
 Objectives of the [Electronic Signals](/electronic-signals) is to explain inductive sensors, and type of signals one may stumble upon during the reversing and hacking of BMW E34s and possibly other series as well. Upon completion, you should understand the difference between analog and digital signals, know the difference between NTC and PTC sensors, recognizing different signals on the oscilloscope etc. Besides, many EE stuff can be learn from reading the resources published. [Reference](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf)
@@ -89,6 +94,7 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [TinyADS DIY Interface for old BMW Diagnostics](https://openlabs.co/OSHW/Tiny-ADS-Interface)
 * [BimmerDIY Directory](https://www.bimmerdiy.com), [E36 Start Button](https://www.bimmerdiy.com/diy/e36startbutton/)
 * [Injecting UART Messages into BMW Instrument Cluster LCD](https://i-code.net/injecting-custom-uart-messages-into-the-bmw-750il-instrument-cluster-lcd/)
+* [Display data from ECU to LCD](https://web.archive.org/web/20150815092259/https://www.bimmerforums.com/forum/showthread.php?2134697-Display-data-from-ECU-to-LCD)
 * [Reusing BMW Phone Keypad with Arduino](https://i-code.net/tapping-into-the-bmw-750il-phone-keypad/)
 * [E34 Cluster ROM Dump](http://www.bimmerboard.com/forums/posts/490258)
 * [rusEFI - Internal Combustion ECU](https://github.com/rusefi/rusefi), (*[w/ BMW E34 Wiring](https://github.com/rusefi/rusefi/wiki/BMW-e34)*)

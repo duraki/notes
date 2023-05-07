@@ -31,6 +31,10 @@ This instrument cluster is a latest **High - Redesign** cluster version produced
 
 - `8 350 524 9` (Petrol)
 
+**Connectors:**
+
+{{< imgcap title="Connectors View and Mapping - Cluster - HIGH Redesign 2" src="/posts/images/bmw_schm_diags/cluster_high_redesign_2_connectors.jpg" >}}
+
 ---
 
 {{< details "**Expand for Photos (Images)**" >}}

@@ -4,7 +4,11 @@ title: "E34 Cluster Wiring Diagram"
 
 *Hint: Use right-click, "Open Image in New Tab" - to see full resolution.*
 
-## E34 Low Cluster - EURO - MY. 88-90 Test Bench
+Available Wiring and Test Bench diagrams:
+* **E34 Low Cluster (Standard/Analog)**
+* **E34 High Cluster (Redesign 1/240)**
+
+## E34 Low Cluster - Standard/Analog - MY. 88-90 Test Bench
 
 {{< imgcap title="Wiring E34 Low Cluster, Euro, MY. < '90 - Test Bench" src="/posts/images/low_cluster_88-90-bench.png" >}}
 
@@ -13,6 +17,16 @@ For this cluster, there are [available pinouts](/e34-pinout-diagram) for the sen
 Additionally, to trigger "Coolant Temperature Sensor", put the Pin 4 of X16 to Ground.
 
 To trigger "Fuel Level Warning Light", make sure to put Pin 3 of X13060 to Ground. Along side, set Pin 14 ("Fuel Level Signal") to Ground as well.
+
+---
+
+## E34 High Cluster - Redesign 1/240 - MY. 89-90 Test Bench
+
+{{< imgcap title="Wiring E34 High Cluster, Redesign 1/240, MY. < '90 - Test Bench" src="/posts/images/high_redesign_1_240_cluster-90-bench.png" >}}
+
+For this cluster, there are [available pinouts](/e34-pinout-diagram) for the sensors and signals.
+
+---
 
 ## E34 Low Cluster - EURO - MY. 88-90 Repair Matrix
 
