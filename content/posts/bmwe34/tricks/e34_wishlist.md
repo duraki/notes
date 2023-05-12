@@ -2,6 +2,16 @@
 title: "Upgrade+Wishlist"
 ---
 
+### Upgrade: Wheels/Rims
+
+* I'm a sucker for **M-System II "Throwing Start"** Wheels/Rims, sits well with E34
+* A classic such is **Style 32** BBS Wheels/Rims
+* Another favorite of mine is **Style 129**, preferably size of 18"
+
+### Upgrade: Style/Exterior
+
+* [GTR Performance Front Bumper (Splitter) for M5](https://protuning.com/en/63584-gtr-performance-front-bumper-splitter-for-e34-m5)
+
 ### Upgrade: Dash Camera
 
 Preferably **front and back**, tho would appreciated frontal only.
@@ -44,3 +54,4 @@ Self upgrade alternatives:
 - Escort Inc Passport 7500, Radar/Laser/Safety Detector
 - Cobra RAD 480i Laser Radar Detector
 - Escort MAX360C Laser Radar Detector
+
