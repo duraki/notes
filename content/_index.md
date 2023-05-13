@@ -38,6 +38,8 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
         * [AC Voltage Signals](/ac-voltage-signals)
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
+* [Hardware Hacking](/hardware-hacking)
+    * [UART Interface](/uart-interface)
 
 ### Classical Penetration Testing
 
