@@ -31,6 +31,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
     * [Keyword Protocols](/keyword-protocols)
 	  - KWP [KW-71](/keyword-protocols#kw71)
     * [Instrument Clusters / Tachometers](/instrument-clusters)
+	  - [Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
       - [Details: Cluster Low (Normal)](/bmw/clusters/low-normal)
       - [Details: Cluster Low (Redesign)](/bmw/clusters/low-redesign)
       {{< hrsep >}}

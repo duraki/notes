@@ -17,6 +17,13 @@ To start the process of the PCB Reverse Engineering, for any of above methods - 
 
 This table will contain a list of components with its designators, as shown on the actual PCB. Designators are small labels usually printed on the PCB, for each of the component. The package for the specific component will contain package for a specific component, and the marking of the component is shown usually on top of the component such is IC or MCU - usually indicating a part number. When looking for designators, the labels can indicate what kind of component it is: **T**/**Q** prefix indicates a *Transistor*, whereas **R** designator indicates a resistor.
 
+**Common Hardware Debug Interfaces**
+
+* [UART](/uart-interface) (4 pins)
+* JTAG (ARM JTAG - 20 Pins, ARM14 JTAG - 14 pins, MIPS EJTAG - 14 pins, Toshiba MIPS JTAG - 20 pins, Standard JTAG - 12 pins)
+* I2C
+* SPI
+
 **Shell Access**
 
 Getting access to a shell allows the user to run commands to interact with the operating system. Typically, a root shell is aimed for, which grants administrative privileges, to let the user modify operating system files. Root access can be obtained through the use of software exploits, through the bootloader console, or over a serial port embedded in the device, such as a JTAG or [UART interface](/uart-interface).

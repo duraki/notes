@@ -30,6 +30,7 @@ It's possible to **convert** *LOW to HIGH cluster*, by repinning and rewiring co
 
 * [High Instrument Cluster (Standard)](/bmw/clusters/high-normal) {{< sup_clean "MY. 1988-1989" >}}
 * [High Instrument Cluster Redesign/240](/bmw/clusters/high-redesign) {{< sup_clean "MY. 1989-1989"  >}}
+  - [Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
 * [High Instrument Cluster Redesign "2"](/bmw/clusters/high-redesign-2) {{< sup_clean "MY. 1990-1996" >}}
 
 {{< notice >}}
