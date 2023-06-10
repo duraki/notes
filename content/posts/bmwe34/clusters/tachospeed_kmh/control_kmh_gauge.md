@@ -76,4 +76,9 @@ Addition to mandatory pins to power up the instrument cluster, display and backl
 
 {{< imgcap title="Arduino Uno R3 GPIOs connected to the X271 connector (Instrument Cluster)" src="/posts/bmwe34/clusters/tachospeed_kmh/control_tacho_kmh_ard-w_pwm.png" >}}
 
+---
+
+The Engine Speed Signal (RPM) from the DME (.5mm^2 black, "TD") is a clean, 50% duty cycle, 12V, active low square wave with a frequency of 1Hz for every 20 RPM. Click to see [more details on RPM and other DME pinouts](http://www.fekzen.se/StandAlone/).
+
+{{< imgcap title="Sending data and RPM value to Instrument Cluster, out from the DME" src="/posts/bmwe34/clusters/tachospeed_kmh/control_tacho_rpm.png" >}}
 

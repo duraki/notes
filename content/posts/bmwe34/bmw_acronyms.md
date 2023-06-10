@@ -112,7 +112,9 @@ title: "BMW Acronyms"
 | YOURF3 | Integrated Heading Control w/ filter 3 |
 | VL | Full load - wide open throttle |
 | WK | Converter Lock-up Clutch |
+| ZAB | Ignition Fade Out |
 | ZAE | Central Airbag Electronics |
+| ZAS | Ignition Starter Switch |
 | ZGM | Central Gateway Module |
 | ZKE | Central Body Electronics |
 | ZV | Central Locking System |
