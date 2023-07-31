@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="grid-container">
+    <div class="grid">
+        <div class="page">
+            <div class="content">
+                <h4>Table of Contents <sup><sup><i>({{.Title}})</i></sup></sup></h4>
+                {{ range .Pages }}
+                <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+                {{ end }}
+
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

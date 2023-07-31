@@ -1,0 +1,88 @@
+{{define "wfm"}}
+
+<div class="setup-root">
+  <section class="bio">
+    <h1 class="name">{{ .Params.full_persona_name }}</h1>
+    <div class="occupation">{{ .Params.full_spec_title }}</div>
+    <div class="location">{{ .Params.persona_location }}</div>
+    <a class="link" href="https://twitter.com/{{ .Params.persona_twitter }}">@{{ .Params.persona_twitter }}</a>
+  </section>
+
+  <section class="setup">
+    <article class="environment">
+      <section class="environment-header">
+        <h2 class="environment-title">{{ .Params.full_spec_title }}</h2>
+        <div class="description">
+          <p class="description-paragraph">
+            <span>
+              1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </span>
+          </p>
+
+          <p class="description-paragraph">
+            <span>
+              2. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            </span>
+          </p>
+
+          <figure class="image">
+            <img class="image__picture" src="{{ .Params.wfm_desktp_img }}" alt="Desktop screenshot" />
+          </figure>
+        </div>
+      </section>
+
+      <article class="environment">
+        <section class="environment-header">
+          <h2 class="environment-title">{{ .Title }}</h2>
+          <div class="description">
+            {{ .Content }}
+          </div>
+        </section>
+        <section class="tools-list">
+          {{ range .Params.tools }}
+            <div class="tool-item">
+              <div class="tool-head">
+                <div class="tool-names-list">
+                  <a class="tool-name" href="{{ .link }}">{{ .name }}</a>
+                </div>
+              </div>
+              <div class="description">
+                {{ .description }}
+              </div>
+              <figure class="image">
+                <img class="image__picture" src="{{ .image }}" alt="{{ .name }}" />
+              </figure>
+            </div>
+          {{ end }}
+        </section>
+      </article>
+      
+
+
+
+
+
+
+
+
+    </article>
+  </section>
+
+</div>
+
+
+{{/*
+<!-- Confirming (working with:) -->
+<div class="grid-container">
+  <div class="grid">
+    <div class="page" data-level="2">
+      <div class="content">
+        <h1>{{ .Params.full_spec_title }}</h1>
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div> */}}
+
+
+{{end}}
