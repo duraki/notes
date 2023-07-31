@@ -14,7 +14,7 @@ The notes are inspired by [others](#outro)[^1], and I'm very thankful for all th
 
 I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
 
-You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts).
+You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts). Besides, my {{< aref  href="works-for-me/" title="✨ works for me" >}} page is open for public.
 
 ---
 
@@ -120,7 +120,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 
 **.files**
 
-My `.dotfiles` are available [on my GitHub](https://github.com/duraki/dotfiles). At the time of writing, this repository is private due to confidential information.
+My `.dotfiles` are available [on my GitHub](https://github.com/duraki/dotfiles). At the time of writing, this repository is private due to confidential information. Please refer to {{< aref  href="works-for-me/" title="✨ works for me" >}} page to get details about my running environment.
 
 In particular, I use:
 

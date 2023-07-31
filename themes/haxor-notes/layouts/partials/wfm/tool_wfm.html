@@ -1,0 +1,61 @@
+<article class="environment">
+    <section class="environment-header">
+      {{ if .list_title }}
+      <h2 class="environment-title">{{ .list_title }}</h2>
+      {{ else }}
+      {{/*  <h2 class="environment-title">{{ .name }}</h2>  */}}
+        {{ $tool_title := .name }}
+      {{ end }}
+
+      {{/*  <div class="description">
+        {{ .Content }}
+      </div>  */}}
+
+      {{/*  {{ if .list_name }}
+        <section class="tools-list">
+          <div class="tool-item">
+            <div class="tool-head">
+              <div class="tool-name-list">
+                {{ range .list_name }}
+                <span class="tool-name">{{ . }}</span>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </section>
+      {{ end }}  */}}
+
+      <section class="tools-list">
+      {{ if .name }}
+        {{ if .list_title }}
+        {{ else }}
+        <div class="tool-item">
+          <div class="tool-head">
+            <div class="tool-name-list">
+              {{ if .link }}
+              <a class="tool-name" href="{{ .link }}">{{ .name }}</a>
+              {{ else }}
+              <span class="tool-name">{{ .name }}</span>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    </section>
+      
+      {{ if .description }}
+        <div class="description">
+          {{ range .description }}
+            <p class="description-paragraph">{{ . | markdownify }}</p>
+          {{ end }}
+          {{ if .image }}
+            <figure class="image">
+              <img class="image__picture" src="{{ .image }}" alt="{{ .imageAlt }}" />
+            </figure>
+          {{ end }}
+        </div>
+      {{ end }}
+    </section>
+  </article>
+  

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-  {{- partial "head_wfm.html" . -}}
+  {{- partial "wfm/head_wfm.html" . -}}
   <body>
-    {{- partial "header_wfm.html" . -}}
+    {{- partial "wfm/header_wfm.html" . -}}
+
     {{- block "wfm" . }}{{- end }}
-    {{/*  {{- partial "scripts.html" . -}}  */}}
-    {{/*  {{- partial "search-index.html" . -}}  */}}
+
+    {{ partial "wfm/scripts_wfm.html" . }}
   </body>
 </html>
