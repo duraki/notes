@@ -106,3 +106,9 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [Alarm Indicator LED on windshield mirror 🇯🇵](https://dd.jpn.org/BMW_HP/20150817/index.shtml), or on [door lock pin](https://dd.jpn.org/BMW_HP/20080705/index.shtml)
 * [E34 Electronic DIYs 🇩🇪](http://www.pet-racing.de/E34)
 {{< /details >}}
+
+{{< details "External References" >}}
+* [BMW E34 M5 OEM Paint Color Codes](https://www.myclassicparts.com/wp-content/uploads/2021/10/BMW_E34_M5_OEM_PAINT_COLOR_OPTIONS.pdf)
+* [BMW E34 OEM Paint Color Codes](https://www.myclassicparts.com/wp-content/uploads/2021/10/BMW_E34_PAINT_CODES_OEM_COLOR_OPTIONS.pdf)
+* [BMW E34 M5 OEM Wheel Style Options](https://www.myclassicparts.com/wp-content/uploads/2021/10/07_BMW_E34_M5_Wheel_Style_Specs_Options.pdf)
+{{< /details >}}

@@ -6,7 +6,7 @@ Please, check [Upgradables](/upgrade-wishlist) as well. These show my to-do, and
 
 ### Fixing and repairing Cigarette Lighter
 
-If the cigarette lighter no longer works, simply bend the two lugs at the rear-end of the socket **sligthly inwards**, with a **plastic rod** and it will work again.
+If the cigarette lighter no longer works, simply bend the two lugs at the rear-end of the socket **slightly  inwards**, with a **plastic rod** and it will work again.
 
 ### Fixing Cluster and Interior Lights
 
@@ -20,7 +20,7 @@ Use **T1 14/40mA** (or 14/60mA) for: *lumbar switch*, *sport seat switch*, *old 
 
 Use **T1 1/4 80mA** for: *sunroof switch*, *automatic program switch*, *rear window switch*, *light switch*, *NSW switch* etc.
 
-Use [E34Wiki Table List](https://www.e34wiki.de/index.php/Leuchtmittel) for all Bulbs that might need replacing. 
+Use [E34Wiki Table List](https://www.e34wiki.de/index.php/Leuchtmittel) for all Bulbs that might need replacing. Additionally, see internal [BMW Cluster Modding Inspiration](/cluster-modding-inspiration) to see alternatives and visuals by other modders.
 
 ### Opening doors with a dead battery
 
