@@ -111,10 +111,10 @@ x.xxxx.xxxxxxxx.xxxx on (iPhone: 13.3) [net] #
 
 **Objection Usage**
 
-$ env
-x.xxx.xxxxxxxxx.xxxx on (iPhone: 13.3) [net] # env                                                                                                                                                        
-
 ```
+$ env
+x.xxx.xxxxxxxxx.xxxx on (iPhone: 13.3) [net] # env
+
 Name               Path
 -----------------  -------------------------------------------------------------------------------------------
 BundlePath         /private/var/containers/Bundle/Application/DD6C2A3C-6CD3-44D0-9EAF-BC8EEE8C6702/App.app

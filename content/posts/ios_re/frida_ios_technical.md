@@ -470,10 +470,10 @@ Interceptor.attach(Module.findExportByName(null, 'tls_record_encrypt'), {
 The below snippet is an example on how to utiliese Frida scripting engine, and override the completion handler or a block. The parameters, data, and request will be displayed first, and after that, the original completion handler will continue.
 
 ```
-stored = null /* a variable that will store/contain original completionHandler block */
+var stored = null /* a variable that will store/contain original completionHandler block */
 
 Interceptor.attach(ObjC.classes.NSURLSession["- dataTaskWithRequest:completionHandler:"].implementation, { 	// Hook on NSURLSession*completionHandler
-  onEnter: function (args) {
+  onEnter: function(args) {
     this.object_selector = "-[NSURLSession dataTaskWithRequest:completionHandler:]"
     console.log("onEnter -- " + this.title)
 
@@ -484,28 +484,28 @@ Interceptor.attach(ObjC.classes.NSURLSession["- dataTaskWithRequest:completionHa
     stored = completionHandler.implementation
 
     /* (re)use completionHandler method implementation */
-    completionHandler.implementation = function (data, response, error) { 	// the block shall respect original implementation
-        // print completionHandler Network Response
-        console.log("Response: " + requestObj)
-        console.log(ObjC.Object(response))
-    
-        // Getting ahold of data
-        dat = ObjC.Object(data) // 'data' is an NSData object
-        datLen = dat.length() // Length of 'data' from the completion
-        datBytes = dat.bytes() // Get the data in bytes
-    
-        // Displaying data
-        console.log(hexdump(dat, {ansi:true, length:len}))
-        # alternative:
-        # console.log(Memory.readUtf8String(dat))
-    
-        // Call original completion block
-        return stored(data, response, error)
-  	}
-  } ,
+    completionHandler.implementation = function(data, response, error) { 	// the block shall respect original implementation
+      // print completionHandler Network Response
+      console.log("Response: " + requestObj)
+      console.log(ObjC.Object(response))
 
-  onLeave: function (retval) {
-      console.log("onLeave -- " + this.title)
+      // Getting ahold of data
+      dat = ObjC.Object(data) // 'data' is an NSData object
+      datLen = dat.length() // Length of 'data' from the completion
+      datBytes = dat.bytes() // Get the data in bytes
+
+      // Displaying data
+      console.log(hexdump(dat, { ansi: true, length: len }))
+      // alternative:
+      // console.log(Memory.readUtf8String(dat))
+
+      // Call original completion block
+      return stored(data, response, error)
+    }
+  },
+
+  onLeave: function(retval) {
+    console.log("onLeave -- " + this.title)
   }
 })
 ```
