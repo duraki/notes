@@ -4,6 +4,14 @@ toc: false
 preserveTOC: false
 ---
 
+#### Handy Command-Line Apps.
+
+Most of the 3rd party general Command Line apps. for Apple macOS system are in [MacOS Notes > Handy CLI Apps.](/macos-notes). Refer to that page to see details.
+
+#### RevEng Command-Line Apps.
+
+* [mirage/conan](https://github.com/mirage/conan) - file type detection, a successor of Unix `file` command
+
 #### See More {{< sup "Cont." >}}
 
 * [Byteman](/byteman)

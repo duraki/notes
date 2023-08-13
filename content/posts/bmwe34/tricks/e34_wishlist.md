@@ -29,6 +29,17 @@ title: "Upgrade+Wishlist"
 * [Coolant Temperature Adapter](https://racegerman.com/collections/e34-all-products/products/coolant-temperature-sender-adapter)
 * [NRG Steering Wheel QUick Release Gen 2.5](https://racegerman.com/collections/e34-all-products/products/nrg-steering-wheel-quick-release-gen-2-5)
 * [Deluxe E34 Shifter Plate](https://racegerman.com/collections/e34-all-products/products/deluxe-e34-shifter-surround)
+* **Single-DIN Head/Radio Units**
+  - [iLX-F905D Alpine Halo9](https://www.alpine.co.uk/p/Products/SingleView/ilx-f905d)
+  - [iLX-F409 Alpine Halo9](https://www.crutchfield.com/S-epQGUVTntkv/p_500ILXF409/Alpine-Halo9-iLX-F409.html)
+  - [Pioneer DMH-WT8600NEX](https://www.pioneerelectronics.com/PUSA/Car/NEX/DMH-WT8600NEX)
+  - [Pioneer AVH-3500NEX](https://www.pioneerelectronics.com/PUSA/Car/DVD+Receivers/AVH-3500NEX)
+  - [Pioneer DMH-WT7600NEX](https://www.pioneerelectronics.com/PUSA/Car/Digital+Media+Receivers/DMH-WT7600NEX)
+  - [Pioneer DMH-C5500NEX](https://www.pioneerelectronics.com/PUSA/Car/NEX/DMH-C5500NEX)
+  - [Sony XAV-AX8000 Digital Media Receiver](https://www.sony.com/lr/electronics/in-car-receivers-players/xav-ax8000)
+  - [Stinger HEIGHT10 UN1810](https://stingerelectronics.com/products/heigh10)
+  - [Stinger ELEV8 UN1880](https://stingerelectronics.com/products/elev8)
+  - [BOSS BE10ACP-C Audio Systems](https://www.crutchfield.com/S-w4K1oaGwJfJ/p_104BE10ACC/Boss-BE10ACP-C.html)
 
 ### Upgrade: Dash Camera
 

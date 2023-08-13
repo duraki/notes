@@ -2,7 +2,11 @@
 title: "MacOS Reverse Engineering"
 ---
 
-It helps knowing more deep technical stuff for the overview of those notes. Besides, also take a look at: [Ghidra](/Ghidra-and-Related), [LLDB for MacOS](/lldb-for-macos), and [Hopper for MacOS](/pure-reverse-engineering). Notes on [`dyld` Injection](/dyld-macos-injection) are also handful for Mach-O RE tasks.
+It helps knowing more deep technical stuff for the overview of those notes. Besides, also take a look at: [Ghidra](/ghidra-and-related), [LLDB for MacOS](/lldb-for-macos), and [Hopper for MacOS](/pure-reverse-engineering). Notes on [`dyld` Injection](/dyld-macos-injection) are also handful for Mach-O RE tasks.
+
+Additionally, the notes at [Objective-C RevEng](/objective-c-re) provides introduction to all Objective-C related Reverse Engineering techniques and tactics you might use during macOS Reverse Engineering or otherwise, during [iOS RevEng](/ios-reverse-engineering).
+
+Some additional instructions on #RevEng, specifically making sense of MacOS disassembled instructions in Hopper, is visible on [Apple XNU commpage](/pure-reverse-engineering#macos-and-ios-commpage) notes. This section briefly explains what are pseudo-random memory addresses visible here and there in the Hopper Disassembler outputs.
 
 ## Accessing Metadata Attributes {{< sup_a "ref/metadata" "/macos-metadata-extraction" >}}
 

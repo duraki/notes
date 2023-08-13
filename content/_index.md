@@ -76,6 +76,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Byteman Scripts](/byteman-scripts)
 * [Encryption and Cryptography](/encryption-and-cryptography)
 * [Demangling C++ files using Frida](/c-plus-plus-demangler)
+* [Objective-C Reverse Eng.](/objective-c-re) {{< sup_a "~ iOS/macOS" "#" >}}
 * [Frida](/frida)
     * [Frida Class Generator](/generate-frida-class)
     * [Frida and r2 Interop](/r2frida)
@@ -144,6 +145,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * [Windows Notes](/windows-notes)
 * [Linux Notes](/linux-notes)
 * [MacOS Notes](/macos-notes) & [iPad Notes](/ipad-notes)
+* 🦄 [Sys/DevOps Deployments & Notes](/sys-devops-notes)
 * [Single-Board Computers (SBC)](/sbc-and-alternatives)
     * [Raspberry Pi Installation](/raspberry-pi-quick-guide)
     * [Enable SSH access via SD Card](/enable-ssh-on-raspbian-os)

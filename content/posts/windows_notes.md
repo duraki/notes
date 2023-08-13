@@ -2,6 +2,9 @@
 title: "Windows Notes"
 ---
 
+
+### Hacking
+
 When setting up Reverse Engineering workstation, use `retoolkit` for a start kit.
 
 ---
@@ -28,3 +31,7 @@ Resource:
 * [AD Attack-Defense](https://github.com/infosecn1nja/AD-Attack-Defense)
 * [Windows Data Hunting](https://thevivi.net/2018/05/23/a-data-hunting-overview/)
 
+### Tweaking
+
+* [macOS Cursors for WindowsNT](https://github.com/antiden/macOS-cursors-for-Windows)
+* [Sort of 'QuickLook' for WindowsNT](https://github.com/QL-Win/QuickLook)

@@ -2,6 +2,8 @@
 title: "iOS Reverse Engineering"
 ---
 
+The notes at [Objective-C RevEng](/objective-c-re) provides introduction to all Objective-C related Reverse Engineering techniques and tactics you might use during [macOS Reverse Engineering](/macos-reverse-engineering) or otherwise, during iOS app. reversing.
+
 **Restart SpringBoard if iPhone crashed**
 
 ```

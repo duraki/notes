@@ -2,7 +2,23 @@
 title: "MacOS Notes"
 ---
 
-**Common CLI Utils**
+**Handy Command Line (CLI) Apps.**
+
+Several CLI utility apps are described and linked in [Sys/DevOps Notes](/sys-devops-notes). Other newly discovered CLI utils, that may not be *Sys/DevOps* specific, are linked in list below:
+
+* [xsv](https://github.com/BurntSushi/xsv) - fast CSV command-line toolkit written in Rust
+* [tealdeer](https://github.com/dbrgn/tealdeer) - faster *(Rust-based)* alternative for `tldr`
+* [denisidoro/navi](https://github.com/denisidoro/navi) - `navi` is an interactive cheatsheet tool
+* [phiresky/ripgrep-all](https://github.com/phiresky/ripgrep-all) - `rga` is like `ripgrep` but works for PDFs, eBooks, Office Docs, Archives, ..
+* [sharkdp/fd](https://github.com/sharkdp/fd) - `fd` is a quick, user-friendly alternative to `POSIX`'s `find`
+* [ivarch/pv/pipeviewer](https://ivarch.com/programs/pv.shtml) - `pv` is a Pipe Viewer, allowing you to monitor the progress of data thru pipelines
+* [fkill-cli](https://github.com/sindresorhus/fkill-cli) - `fkill` is a cross-platform process terminator, can kill by: `PID`, `Name`, `Port`
+* [TomWright/dasel](https://github.com/TomWright/dasel) - The app. `dasel` is like `jq/yq/fq` but supports: `JSON`, `YAML`, `TOML`, `XML`, & `CSV`
+* [jqnatividad/qsv](https://github.com/jqnatividad/qsv) - Ultra-fast CSV data-wrangling toolkit `qsv`, with [huge list of commands](https://github.com/jqnatividad/qsv#available-commands)
+* [samwho/spacer](https://github.com/samwho/spacer) - `spacer` is a simple CLI tool to insert spacers when command output stops or finishes
+* [o2sh/onefetch](https://github.com/o2sh/onefetch) - use `onefetch` to query `git` repositories information, providing project info., code statistics and other info
+
+**System Builtin Command Line (CLI) Apps.**
 
 ```
     # User identity
@@ -53,6 +69,8 @@ $ kextfind
 $ kextstat
 $ kextfind
 ```
+
+* Other *(built-in)* [Hidden Tools in macOS](https://github.com/azenla/MacHack)
 
 **Adding an application to Finder.app toolbar**
 

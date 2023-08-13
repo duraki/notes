@@ -8,9 +8,9 @@ The file(s) and filesystem change monitoring software is used to receives notifi
 
 Available options:
 
-- (**PAID**) [FSMonitor](http://fsmonitor.com/)
-- (**FREE**) [fswatch](https://github.com/emcrisostomo/fswatch)
-- **Developing MacOS FS Monitoring** [#ref](#developing-macos-fs-monitoring)
+- **Paid**: [FSMonitor](http://fsmonitor.com/)
+- **Free**: [fswatch](https://github.com/emcrisostomo/fswatch)
+- **Developing MacOS FS Monitoring**: [#ref](#developing-macos-fs-monitoring)
 
 With **SIP** is disabled, one can use `opensnoop`:
 
@@ -24,6 +24,40 @@ The `opensnoop` tracks file opens. As a process issues a file open, details such
 ## FSMonitor
 
 The [xnucrack](https://github.com/xnucrack/) contains license for [FSMonitor](http://fsmonitor.com/). It's pretty simple to use and, unlike `fswatch`, it is paid to use and it provides native MacOS GUI.
+
+## fsmon
+
+*(Preferred Option)* - Developed by [nowsecure/frida](frida.re), [fsmon](https://github.com/nowsecure/fsmon/) is a great little multi-platform utility that acts as a file change monitor with multiple backends included. Supported on iOS/macOS as well as Linux and Windows! Backends can be any of: `osx=`:devfsev,kqueue,kdebug,fsevapi or `linux/android=`:inotify,fanotify,kdebug. Btw, typing `fsmon -L` will yield all supported backends.
+
+Close `fsmon` to local host:
+
+```bash
+$ cd /tmp/
+$ git clone https://github.com/nowsecure/fsmon/ && cd fsmon
+$ make
+$ sudo make install
+$ which fsmon
+# /usr/local/bin/fsmon
+```
+
+Usage is simple as is the case with other listed FS monitoring utils:
+
+```bash
+# via App/Process Name
+$ sudo fsmon -B kdebug  -P MakePass / 		# will monitor from ROOT(/) dir. on changes made by process name 'MakePass'
+
+$ sudo fsmon -B kdebug -J -P\
+  MakePass ~/ | jq -r .filename # will monitor from HOME(~/) dir. on changes made by process name 'MakePass'
+								# outputs to JSON via -J and parsed via 'jq'
+
+$ sudo fsmon -B kdebug -P MakePass ~/ 		# will monitor from HOME(~/) dir. on changes made by process 'MakePass'
+
+
+# or via PID
+$ PIDOF=$(ps -A | grep Safari | grep -e grep | awk '{print $1}')
+$ sudo fsmon -B fsevapi -p $PIDOF ~/ 	 	# will monitor from HOME(~/) dir. on changes made by PID of process 'Safari'
+											# uses 'fsevapi' as the backend
+```
 
 ## filemon
 

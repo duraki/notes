@@ -75,6 +75,8 @@ DVIA.app/DVIA-v2:
 	# ...
 ```
 
+It's good to note that you may also try [mirage/conan](https://github.com/mirage/conan) which is file type detection, a successor of Unix `file` command.
+
 Looking at the `otool` output, we can see that the app is correctly code-signed:
 
 ```

@@ -2,6 +2,59 @@
 title: "Network Reverse Engineering"
 ---
 
+**Find broken URLs in Files**
+
+The CLI utility `urlsup` can come handy when you want to find URLs in files, and check whether they are alive, by issuing a `GET` request and checking the response status code. The [simeg/urlsup](https://github.com/simeg/urlsup) is written in Rust, and executes using async requests in multiple threads, making it quite fast.
+
+To install it, use:
+
+```sh
+$ cargo install urlsup
+```
+
+Usage is simple as:
+
+```sh
+$ urlsup `find . -name "*.md"`      # Finding URLs in folder in all files ending in (*.md)
+$ urlsup README.md --white-list example.com,sample.tld   # Whitelist all links starting with example.com or sample.tld
+$ urlsup README.md --allow 403,429  # Will allow status code errs: 403, 429
+```
+
+An alternative CLI app. with similar functionality, called [brok](https://github.com/smallhadroncollider/brok) is also available on GitHub.  
+
+**Get TCP/UDP Socket Stats** - GNU/Linux Only!
+
+Make sure to install [PabloLec/neoss](https://github.com/PabloLec/neoss) which will allow you to sort, refresh and navigate in TUI of the `neoss`. It's similar to `ss`, but has many advantages such is retrieval of protocol definition, states and queues, domain name resolution, detailed PE info, et al. **Supported by GNU/Linux only**, does not support macOS or WindowsNT.
+
+```sh
+$ npm install -g neoss
+```
+
+To launch, simply type:
+
+```sh
+$ neoss
+```
+
+**Creating Unix TCP Socket and passing FD Index to Child Process**
+
+A CLI app. [catflap](https://github.com/passcod/catflap) is a small CLI tool for unix-likes that creates a TCP socket at the address you tell it to, then passes its FD index to a child process using an environment variable. The child (or any descendants) can then bind the socket.
+
+```sh
+$ cargo install catflap           # Install catflap
+$ cargo install --force catflap   # Upgrade
+```
+
+To use it, pass the CLI arguments `catflap [options] -- <commands> [args...]`, like so:
+
+```sh
+$ catflap -e LISTEN_FDS -- <command> [args...]      # Environment variable that will hold the socket file descriptor
+$ catflap -h 0.0.0.0 [--] <command> [args...]       # Any of IPv4/IPv6, but not domain names, to bind the socket to 
+$ catflap -p 8000 [--] <command> [args...]          # Port to bind the socket to
+```
+
+Usually used in combination with [mitsuhiko/listenfd](https://github.com/mitsuhiko/listenfd) which acts as a support provider for ext. managed file descriptors.
+
 **Using [`wireshark`](/wireshark)** is explained in seperated documentation. Please refer to Wireshark documentation for more extensive cheatsheet.
 
 **using `fritap` to analyse network traffic encapsulated in SSL or TLS**
