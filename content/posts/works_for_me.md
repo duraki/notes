@@ -7,36 +7,36 @@ type: wfm
     ######################################################################
     #     WHAT IS THIS
     ######################################################################
-    # 
+    #
     # This is a so called 'Works for Me' page, as a part of ~notes bundle of
-    # my page/blog listing. This describes a data details for Works for Me: 
+    # my page/blog listing. This describes a data details for Works for Me:
     #   @see: http://works-for-me.github.io/
-    # 
-    # You are supposed to edit this file, which will be available at URI 
-    # location: 
+    #
+    # You are supposed to edit this file, which will be available at URI
+    # location:
     #   @see: {BASE_URL}/works-for-me/
-    # 
+    #
     # Basically, this page should describe the running environment and preferred
-    # choice for Operating System, hardware machine, as well as software tools 
+    # choice for Operating System, hardware machine, as well as software tools
     # most commonly used in personas profession.
     #
     # The page is automatically updated via:
     #     =>    /themes/haxor-notes/layouts/wfm/                (layout)
     #     =>    /themes/haxor-notes/layouts/partials/wfm/       (partials)
-    # 
-    # You are required to set proper parameters for the page to be compiled 
+    #
+    # You are required to set proper parameters for the page to be compiled
     # and/or loaded via Hugo server.
     #
     # ----------------------------------------------------------------------
     # Defining 'tools' section.
-    #   XXX: The 'tools' YAML properties contain page content, that will get 
+    #   XXX: The 'tools' YAML properties contain page content, that will get
     #        transformed into a beautiful single page presentation.
     # ----------------------------------------------------------------------
     # => If defined as below:
     #    -- 'This kind of definition will only create a H2 title tag with value
     #       of <list_title>. The <name> can be anything unique to other <tools:> definitions.
-    #       You can refer to this definition if you want to create sort of like 
-    #       <CATEGORY> that may contain <SUBCATEGORY>. The <SUBCATEGORY> can, 
+    #       You can refer to this definition if you want to create sort of like
+    #       <CATEGORY> that may contain <SUBCATEGORY>. The <SUBCATEGORY> can,
     #       as you may guessed, a <CATEGORY>.'
     # tools:
     #   - name: "Main Header"
@@ -72,24 +72,24 @@ type: wfm
     #     image: "https://[sample_url_image]"
     #     imageAlt: "Alt. text for Image"
     # ----------------------------------------------------------------------
-    # 
+    #
     # https://github.com/duraki
     ######################################################################
 
     # set personal information
 name: "Halis Duraki"
 occupation: "Vulnerability Research Specialist, Reverse Engineer"
-location: "Sarajevo, Bosnia-Herz."
+location: "Sarajevo, Bosnia-Herz. 🇧🇦"
 
     # you can set it to LinkedIn, Twitter etc.
-link: "https://twitter.com/0xduraki"      # can be any HTTP(s) URL
+link: "https://twitter.com/WeAreDCLLC"      # can be any HTTP(s) URL
 link_text: "@0xduraki"                    # "/in/duraki" for LinkedIn
 
     # the 'tools' define, besides list of tools and bullet-formatted descriptions
     # that sparks interest in that tool, and also defines:
     #
     # 1*      [Title] + [Description] + [Desktop Image]
-    # 
+    #
     # 2*(n)   [Tools]
     #           > Tool #1
     #           > Tool #2
@@ -98,22 +98,22 @@ tools:
   ######################################################################
   # Declaring <DESKTOP> category
   # Describe:
-  #     General usage, local ENV preliminary information, Clean Desktop Screenshot 
+  #     General usage, local ENV preliminary information, Clean Desktop Screenshot
   ######################################################################
   # 1*                      # Main Header Title Definition
   - name: "Desktop"         # Name (Environment, Software, OS ..)
     list_title: "Desktop"   # Set the section as Category, and set Category Title
-    description:            
-      # You can use bullets to append each new paragraph in the 'wfm' page, 
+    description:
+      # You can use bullets to append each new paragraph in the 'wfm' page,
       # or you can write everything in one line, which will generate a single paragraph.
       - "As a vivid and passionate security researcher and reverse engineer, I use my macOS day to day, and this page shows core toolkit which helps me be productive and creative in my profession."
       - "Obviously Apple macOS Operating System."
-      - "My laptop is a MacBook Pro (Retina, 14-Inch, Late 2022) with Apple M1 CPU and 16GB of RAM."
-      
+      - "My laptop is a MacBook Pro (Retina, 14-Inch, Late '21) with Apple M1 CPU and 16GB of RAM."
+
     # Desktop Screenshot, or similar
     imageAlt: "Desktop Screenshot"              # Its okay to leave it empty/omitted ...
-    image: "https://works-for-me.github.io/toolkits/nikolay-garmash/desktop.png"
- 
+    image: "https://i.imgur.com/U3xMsPL.jpg"
+
 
 
     # ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -132,9 +132,10 @@ tools:
     list_name: # subsection title
       - "Apple MacBook Pro (14'in Retina) with M1"
     description:
-      - "My setup contains two (2x) Lenovo-p27h External 2K Displays that I usually replace with my [12.9' iPad Pro (5th Gen)](https://support.apple.com/kb/SP844) when I'm on the move."
+      - "My setup contains dualscreen (2x) [Lenovo-p27h External 2K Displays](https://www.lenovo.com/in/en/accessories-and-monitors/monitors/professional/P27h-20D19270QP127inch-Monitor-HDMI/p/61E9GAR6WW?orgRef=https%253A%252F%252Fwww.google.com%252F) that I usually replace with my [12.9' iPad Pro (5th Gen)](https://support.apple.com/kb/SP844) when I'm on the move."
       - "For keyboard I use [White Glorious GMMK 60%](https://www.gloriousgaming.com/products/the-glorious-gmmk-compact-pre-built), and my preferred mouse of choice is [Logitech MX Masters 3](https://www.logitech.com/en-us/products/mice/mx-master-3s.html)."
-      - "My daily laptop is a MacBook Pro (Retina, 14' inch), late ~2022 model with Apple M1 CPU, 16GB of RAM and 1TB of solid storage."
+      - "My daily laptop is a MacBook Pro (Retina, 14' inch), late '21 model with Apple M1 CPU, 16GB of RAM and 1TB of solid storage."
+      - "When I'm on the move, I prefer using my 12.9 iPad Pro (5th Gen) with [Magic Keyboard Folio](https://www.apple.com/shop/product/MQDP3LL/A/magic-keyboard-folio-for-ipad-10th-generation-us-english), in combination with my iPhone 11 Max Pro (1TB) and my [Apple Watch Ultra](https://www.apple.com/apple-watch-ultra/) which I absolutely love to bring on my holiday trips and hikings."
 
   ######################################################################
   # Declaring <SOFTWARE> category
@@ -149,23 +150,49 @@ tools:
   # Declaring <TOOLS>+(n) in <SOFTWARE> category
   # Describe:
   #     Applications and Softwares used in day to day life, enhancing productivity,
-  #     easing the daily workload, any software you'd like to credit. Since we are 
-  #     omitting <list_title> property, the following will be created as a list of 
+  #     easing the daily workload, any software you'd like to credit. Since we are
+  #     omitting <list_title> property, the following will be created as a list of
   #     tools (subcategories) under SOFTWARE category.
   ######################################################################
   - name: "iTerm"
     link: "https://iterm.com"
     description:
-      - "I'm not a fan of default macOS Terminal app therefore I switch to iTerm on each macOS fresh install."
-    image: "https://i.imgur.com/e3lXKwW.png"
+      - "I'm not a fan of default macOS Terminal app therefore I switch to iTerm on each macOS instance. I'm using my custom color scheme, as well as custom `zsh` prompt, with my very own startup ascii graphics."
+    image: "https://i.imgur.com/FPPQYfH.png"
     imageAlt: "iTerm Screenshot"
+  - name: "tmux"
+    description:
+      - "This is literally the best tool ever. It allows you to create terminal sessions, windows, panes all within single tty. I can easily switch between each and also detach from sessions which may contain long running tasks."
+
+  - name: "Nova"
+    link: "http://nova.app"
+    description:
+      - "Usually I prefer **NeoVim** but lately I've been using **Nova** from Panic as my main IDE and development editor of choice. It is quite robust and works natively on MacOS, plus you get handy of extensions that you may use for different type of projects and specificiations. Unlike other similar alternative, Nova is not too expensive (100$ USD) and it works out of the box for most projects."
 
   - name: "NeoVim"
     # link: "https://iterm.com"
     description:
-      - "Using NeoVim as my main IDE."
+      - "Using NeoVim as my main IDE, specifically integretated with my iTerm and `tmux` environment. I use NeoVim nowadays to quickly edit some files."
     image: ""
     imageAlt: ""
+
+  - name: "Safari"
+    description:
+      - "I'm using Safari to browse interenet websites, research new topics, develop my frontend activities and do other web related work."
+
+  - name: "Images & Video"
+    list_title: "Images & Video"
+  - name: "Sketch"
+    link: "https://www.sketch.com"
+    description:
+      - "The only UI editing software that I trust, and have been using for years. Highly recommended for all UI/UX designers."
+  - name: "Shapr3D"
+    link: "http://shapr3d.com"
+    description:
+      - "I rarely design anything in 3D, but when I do, I'm opting out for Shapr3D which is also available on iPad. It allows me to quickly three-dimensionaly design any kind of projection I've imagined. It's a bit pricey and subscription based, but it's well worth the price."
+  - name: "VN Video Editor"
+    description:
+      - "I use VN Video Editor as a my main video editor which I mostly use when editing demo videos for my [Instagram](https://instagram.com/e34.brt) account."
 
   ######################################################################
   # Declaring <ORGANIZATION> category
@@ -180,11 +207,34 @@ tools:
     description:
       - "The default macOS Notes app. is really good to take quick notes in a workspace-oriented collections. Here I paste my *todos*, URLs, random notes and ideas, and so on."
 
+  - name: "SnippetsLab"
+    description:
+      - "It's not strange to catch me using [SnippetsLab](https://www.renfei.org/snippets-lab/) which usually contains temporary trash notes that I might need for future reference, depending what my workflow is. I rarely use it to actually store long-term snippets for the development stuff."
+
+  - name: "Utils"
+    list_title: "Utils"
+  - name: "Itsycal"
+    description:
+      - "Cute and small calendar living in your macOS menubar, good for glancing over your meetings and events."
+  - name: "Syncalicious"
+    description:
+      - "I've just started using this utility but I absolutely love the way it works. It allows you to sync all of your macOS applications to your iCloud, and use the synced configuration on all your other Macs."
+  - name: "Amphetamine"
+    description:
+      - "Keeps your MacOS awake, even if lid is closed. Quite configurable and also free."
+  - name: "Command X"
+    description:
+      - "Tries to bring WindowsOS **`Ctrl+X`** shortcut on your macOS."
+  - name: "Some more ✨"
+    description:
+      - "Maccy (Clipboard Manager), Spaceman (Desktop Switcher), Manila (Folder Coloring), OneThing, Pure Paste, Vanilla ..."
+
+
   ######################################################################
   # Declaring <READS> category
   # Describe:
   #     This is a CATEGORY definition for <READS>. Used to create a separator
-  #     between categories, and as a place to put all common links and 
+  #     between categories, and as a place to put all common links and
   #     news link aggregators in this category.
   ######################################################################
   - name: "Reads"
@@ -193,13 +243,13 @@ tools:
     link: "https://news.ycombinator.com/"
     description:
       - "HackerNews is a social news website that showcases user-submitted technology-related news and discussions. I use it daily to discover new tech-related releases and latest information."
-  - name: "Hackernews"
+  - name: "Lobste.rs"
     link: "https://lobste.rs/"
     description:
-      - "Lobste.rs is a technology-focused link aggregator that curates and shares user-submitted stories and discussions about programming, technology, and related topics. Quite similar to previous, but requires user-invitation to be able to submit and comment. Mostly focused on FreeBSD and other `*BSD` distributions."  
-  
+      - "Lobste.rs is a technology-focused link aggregator that curates and shares user-submitted stories and discussions about programming, technology, and related topics. Quite similar to previous, but requires user-invitation to be able to submit and comment. Mostly focused on FreeBSD and other `*BSD` distributions."
+
 # Add <as many other> [tools/section/subsection/list_title] here.
-# ... 
+# ...
 
 
 
