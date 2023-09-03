@@ -180,9 +180,13 @@ tools:
     description:
       - "I'm using Safari to browse interenet websites, research new topics, develop my frontend activities and do other web related work."
 
+  - name: "Airmail Business"
+    description:
+      - "Possibly the best eMail client available natively for MacOS, iPadOS and iOS. I highly recommend Airmail for Business if your daily acitivities include managing multiple eMail addresses, sending invoices, replying on business offers and so on."
+
   - name: "Worth Mentioning 🎉"
     description:
-      - "[Sequel Ace](https://sequel-ace.com), [AppCleaner](https://freemacsoft.net/appcleaner/), WiFi Explorer, Sleeve 2, ..."
+      - "[Sequel Ace](https://sequel-ace.com), [AppCleaner](https://freemacsoft.net/appcleaner/), [Tangent Notes](https://www.tangentnotes.com), WiFi Explorer, Sleeve 2, ..."
 
   - name: "Images & Video"
     list_title: "Images & Video"
@@ -197,6 +201,9 @@ tools:
   - name: "VN Video Editor"
     description:
       - "I use VN Video Editor as a my main video editor which I mostly use when editing demo videos for my [Instagram](https://instagram.com/e34.brt) account."
+  - name: "Want to buy 🤑"
+    description:
+      - "[OptiClean](https://opticlean.io)"
 
   ######################################################################
   # Declaring <ORGANIZATION> category
@@ -224,6 +231,10 @@ tools:
 
   - name: "Utils"
     list_title: "Utils"
+  - name: "Tiles"
+    link: "https://freemacsoft.net/tiles/"
+    description:
+      - "Deserved place in this list - once you try Tiles, you will never stop using it. Tiles allows you to reorganize windows by dragging them to the edges of the screen, similar to what WindowsNT does natively."
   - name: "Itsycal"
     link: "https://www.mowglii.com/itsycal/"
     description:
@@ -240,7 +251,7 @@ tools:
       - "Tries to bring WindowsOS **`Ctrl+X`** shortcut on your macOS."
   - name: "Some more ✨"
     description:
-      - "Maccy (Clipboard Manager), Spaceman (Desktop Switcher), Manila (Folder Coloring), OneThing, Pure Paste, Vanilla, [Accents](https://mahdi.jp/apps/accents), {{< hidden >}}Later{{< /hidden >}}, {{< hidden >}}WebTorrent{{< /hidden >}}, {{< hidden >}}MeetingBar{{< /hidden >}}, and others ..."
+      - "Maccy (Clipboard Manager), Spaceman (Desktop Switcher), Manila (Folder Coloring), OneThing, Pure Paste, Vanilla, [Accents](https://mahdi.jp/apps/accents), Mounty, {{< hidden >}}Later{{< /hidden >}}, {{< hidden >}}WebTorrent{{< /hidden >}}, {{< hidden >}}MeetingBar{{< /hidden >}}, and others ..."
 
 
   ######################################################################

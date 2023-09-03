@@ -26,6 +26,14 @@ Most of the 3rd party general Command Line apps. for Apple macOS system are in [
 * [WinDbg](/windbg-cheatsheets)
 * [Safari](/safari-devconsole-internals)
 
+##### Misc.
+
+* [DHS](https://objective-see.org/products/dhs.html)
+* [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)
+* [DSStoreView](https://github.com/macmade/DSStoreView)
+* [Nauz Crypto Detector](https://github.com/horsicq/Nauz-File-Detector)
+* [TaskExplorer](https://objective-see.org/products/taskexplorer.html)
+* [XMachOViewer](https://github.com/horsicq/XMachOViewer)
 
 {{< notice >}}
 ~ Helpful Tip
