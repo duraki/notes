@@ -1,0 +1,23 @@
+<!-- <style>
+	.main_box {
+	   text-align: left;
+	}
+
+	.details-hidden {
+		display: inline-block !important;
+		width: 50px;
+		box-sizing: border-box;
+		color: black;
+		background: black;
+		/* max-height: auto; */
+	}
+
+	.details-hidden:hover {
+		color: white;
+	}
+</style> -->
+
+<!-- <details> -->
+	<!-- <summary>{{ (.Get 0) | markdownify }}</summary> -->
+<span class="details-hidden">{{ .Inner | markdownify }}</span>
+<!-- </details> -->

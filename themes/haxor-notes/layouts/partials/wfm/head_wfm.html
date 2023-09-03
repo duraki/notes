@@ -6,3 +6,6 @@
 <meta name="description" content="{{ .Params.occupation }}">
 <meta name="author" content="{{ .Params.name }}">
 
+{{ $IndexCss := resources.Get "/css/wfm.scss" | resources.ToCSS (dict
+"outputStyle" "compressed") | fingerprint }}
+<link rel="stylesheet" href="{{ $IndexCss.RelPermalink }}" />

@@ -172,13 +172,17 @@ tools:
   - name: "NeoVim"
     # link: "https://iterm.com"
     description:
-      - "Using NeoVim as my main IDE, specifically integretated with my iTerm and `tmux` environment. I use NeoVim nowadays to quickly edit some files."
-    image: ""
-    imageAlt: ""
+      - "Using NeoVim as my secondary editor, integrated with iTerm and my `tmux` environment. I have custom color scheme that looks beautiful and matches my iTerm theme. I'm sucker for [LunarVim](http://lunarvim.org), which I used extensively to configure my NeoVim instance. I rarely use NeoVim nowadays, except to quickly edit some files."
+    image: "https://i.imgur.com/4TBbmCx.png"
+    imageAlt: "NeoVim w/ custom LunarVim - Startup"
 
   - name: "Safari"
     description:
       - "I'm using Safari to browse interenet websites, research new topics, develop my frontend activities and do other web related work."
+
+  - name: "Worth Mentioning 🎉"
+    description:
+      - "[Sequel Ace](https://sequel-ace.com), [AppCleaner](https://freemacsoft.net/appcleaner/), WiFi Explorer, Sleeve 2, ..."
 
   - name: "Images & Video"
     list_title: "Images & Video"
@@ -211,9 +215,17 @@ tools:
     description:
       - "It's not strange to catch me using [SnippetsLab](https://www.renfei.org/snippets-lab/) which usually contains temporary trash notes that I might need for future reference, depending what my workflow is. I rarely use it to actually store long-term snippets for the development stuff."
 
+  - name: "Rayon"
+    link: "https://github.com/Lakr233/Rayon"
+    description:
+      - "I use Rayon to manage and organise my Virtual Private Servers, Nodes, Controllers, and other network devices through multiple datacenters and providers. It's quite simple to configure and use, and you can sync your settings to iCloud."
+    image: "https://i.imgur.com/NY63PmZ.png"
+    imageAlt: "Rayon App. Preview (Blurred)"
+
   - name: "Utils"
     list_title: "Utils"
   - name: "Itsycal"
+    link: "https://www.mowglii.com/itsycal/"
     description:
       - "Cute and small calendar living in your macOS menubar, good for glancing over your meetings and events."
   - name: "Syncalicious"
@@ -223,11 +235,12 @@ tools:
     description:
       - "Keeps your MacOS awake, even if lid is closed. Quite configurable and also free."
   - name: "Command X"
+    link: "https://sindresorhus.com/command-x"
     description:
       - "Tries to bring WindowsOS **`Ctrl+X`** shortcut on your macOS."
   - name: "Some more ✨"
     description:
-      - "Maccy (Clipboard Manager), Spaceman (Desktop Switcher), Manila (Folder Coloring), OneThing, Pure Paste, Vanilla ..."
+      - "Maccy (Clipboard Manager), Spaceman (Desktop Switcher), Manila (Folder Coloring), OneThing, Pure Paste, Vanilla, [Accents](https://mahdi.jp/apps/accents), {{< hidden >}}Later{{< /hidden >}}, {{< hidden >}}WebTorrent{{< /hidden >}}, {{< hidden >}}MeetingBar{{< /hidden >}}, and others ..."
 
 
   ######################################################################
