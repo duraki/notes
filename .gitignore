@@ -8,3 +8,5 @@ tmp
 *ipynb*
 *.jupyterlab-workspace
 *.code-workspace
+./resources/*/**
+.nova
