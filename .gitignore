@@ -10,3 +10,4 @@ tmp
 *.code-workspace
 ./resources/*/**
 .nova
+resources/*
