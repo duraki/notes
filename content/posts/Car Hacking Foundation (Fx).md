@@ -3,6 +3,7 @@ title: "Automotive Hacking"
 ---
 
 - Link [ECUs](/ecu-foundations) to avoid wires (weight, size, cost)
+	- [ECU Programming](/ecu-programming)
 - Network Protocols allow ECUs to share information quickly and precisely ([Ethernet](/ethernet-specifications) & [CANFD/CAN](/canfd-specifications))
 - Networks used between ECUs are based on Serial Communications
 	- Serial means that items of information are sent via a single stream of communication

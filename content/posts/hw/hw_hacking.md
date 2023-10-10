@@ -2,7 +2,7 @@
 title: "Hardware Hacking"
 ---
 
-The hacking of consumer electronics also known as *Hardware Hacking* is a process which users perform in order to customize or modify electronic device s beyond what is typically possible. The process of consumer electronics hacking is usually accomplished through modification of the system software, either an operating system or firmware, but hardware modifications are not uncommon.
+The hacking of consumer electronics also known as *Hardware Hacking* is a process which users perform in order to customise or modify electronic device s beyond what is typically possible. The process of consumer electronics hacking is usually accomplished through modification of the system software, either an operating system or firmware, but hardware modifications are not uncommon.
 
 Multiple methods are used in order to successfully hack the target device, such as gaining shell access, gathering information about the device hardware and software, before using the obtained information to manipulate the operating system.
 
@@ -28,7 +28,7 @@ This table will contain a list of components with its designators, as shown on t
 
 Getting access to a shell allows the user to run commands to interact with the operating system. Typically, a root shell is aimed for, which grants administrative privileges, to let the user modify operating system files. Root access can be obtained through the use of software exploits, through the bootloader console, or over a serial port embedded in the device, such as a JTAG or [UART interface](/uart-interface).
 
-**Unlocking the bootloader**
+**Unlocking the Bootloader**
 
 On some Android devices, the bootloader is locked for security to prevent installation of other operating systems. Unlocking it is required before another OS can be installed. See [Bootloader Unlocking](https://en.wikipedia.org/wiki/Bootloader_unlocking) Wikipedia page for more details.
 
@@ -38,7 +38,9 @@ Getting information on the device's hardware and software is vital because explo
 
 **See Also**
 
-- Notes on [Getting UART Access](/uart-interface) to debug embedded device 
+- Notes on [Getting UART Access](/uart-interface) to debug embedded device
+
+Things I carry during on-site hardware engagements *(aka the "Fieldkit") are also described in [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit) notes.
 
 **References**
 

@@ -28,9 +28,10 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 * [Signals Table](/signals-table)
 	* [E34: Speed Signal](/e34-misc-wiring#speed-impulsesignal)
 * Production Details
+	* [Diagnostic ADS Interface](/ads-interface)
     * [Keyword Protocols](/keyword-protocols)
 	  - KWP [KW-71](/keyword-protocols#kw71)
-    * [IBus Protocol](/ibus-overview)  
+    * [IBUS Protocol](/ibus-overview)
     * [Instrument Clusters / Tachometers](/instrument-clusters)
 	  - [Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
       - [Details: Cluster Low (Normal)](/bmw/clusters/low-normal)

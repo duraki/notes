@@ -12,7 +12,7 @@ I started using [Obsidian](https://obsidian.md/) a bit early in 2020. and contin
 
 The notes are inspired by [others](#outro)[^1], and I'm very thankful for all the ideas. To simply put, I use this to note-take, graph, and quickly extract valuable data.
 
-I sincerly hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
+I sincerely hope these notes will help you build yourself, extend your views, and expand your possibilities. In any case, these notes were written for myself and by myself, so they might not reflect the wide public opinion, nor was that the case when I started collecting them.
 
 You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts). Besides, my {{< aref  href="works-for-me/" title="✨ works for me" >}} page is open for public.
 
@@ -26,19 +26,22 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Ethernet in Vehicles](/ethernet-specifications)
 * [CANFD Specifications](/canfd-specifications)
 * [ECU Foundation](/ecu-foundations)
+* [ECU Programming](/ecu-programming)
 * [ECU Calibration](/ecu-calibration)
 * [ECU Compromise](/how-to-compromise-ecu)
 * [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing)
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
 {{< hrsep >}}
 * [BMW E34 Learning Material](/bmw-ag-e34-learning-materials)
-    * [Keyword Protocols](/keyword-protocols) {{< sup_a " KW-71" "/kw71-protocol-description" >}}
+    * [Diagnostic ADS Interface](/ads-interface)
+        * [Keyword Protocols](/keyword-protocols) {{< sup_a " KW-71" "/kw71-protocol-description" >}}
     * [Electronic Signals](/electronic-signals)
     * [AC & DC Signals](/ac-and-dc-signals) {{< sup_a " (expand) ⏦" "/bmw-ag-e34-learning-materials" >}}
         * [AC Voltage Signals](/ac-voltage-signals)
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
 * [Hardware Hacking](/hardware-hacking)
+    * [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit)
     * [UART Interface](/uart-interface)
 
 ### Classical Penetration Testing
@@ -85,7 +88,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Filesystem Monitor](/macos-filesystem-monitoring)
       * [MacOS App. Preferences](/macos-application-preferences)
       * [MITM MacOS Preferences](/hook-macos-preferences)
-      * [Apple URI Schemes](/Apple-Application-Schemes-and-Handlers)
+      * [Apple URI Schemes](/apple-application-schemes-and-handlers)
     * [Ghidra](/ghidra-and-related)
       * [Ghidra Native ARM Binaries](/rebuilding-native-arm64-binaries)
       * [Ghidra Scripts & Plugins](/ghidra-scripts)
@@ -145,7 +148,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * [Windows Notes](/windows-notes)
 * [Linux Notes](/linux-notes)
 * [MacOS Notes](/macos-notes) & [iPad Notes](/ipad-notes)
-* 🦄 [Sys/DevOps Deployments & Notes](/sys-devops-notes)
+* [Sys/DevOps Deployments & Notes](/sys/devops-notes) 🦄
 * [Single-Board Computers (SBC)](/sbc-and-alternatives)
     * [Raspberry Pi Installation](/raspberry-pi-quick-guide)
     * [Enable SSH access via SD Card](/enable-ssh-on-raspbian-os)

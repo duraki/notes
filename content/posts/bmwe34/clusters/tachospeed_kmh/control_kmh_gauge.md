@@ -3,12 +3,14 @@ title: "Vehicle Speed"
 url: /bmw/clusters/vehicle-speed
 ---
 
+### Controlling KM/H Vehicle Speed on Instrument Cluster
+
 The vehicle speed indicates how fast does a vehicle travel, with `km/h` (EUR) designation labels. It's possible to wire the instrument cluster interface pinouts against the Arduino PWM GPIOs and manipulate the signal of the tachometer (km/h) needle on the cluster itself. To do so, you will need to wire up the cluster mandatory pins as explained in [BMW E34 Cluster Wiring Diagram](/e34-cluster-wiring-diagram), and attach Arduino Uno R3 to the Host OS with the following firmware:
 
 ```
 /**
  * Controling KMH needle on BMW E34 Instrument Cluster via PWM
- * based on Arduino Uno R3 board. The firmware below should be 
+ * based on Arduino Uno R3 board. The firmware below should be
  * uploaded and wires as per the diagram.
  *
  * Author: H. Duraki <h@durakiconsulting.com>
@@ -37,7 +39,7 @@ void loop() {
 ```
 // ...
 void loop() {
-  analogWrite(PIN_TACHPWM, 10); // set the tacho speed 
+  analogWrite(PIN_TACHPWM, 10); // set the tacho speed
   analogWrite(PIN_TACHPWM, 50000); // set the tacho speed at 120kmh
   analogWrite(PIN_TACHPWM, 50000 * 2); // set the tacho speed at 150kmh
 }
@@ -78,7 +80,18 @@ Addition to mandatory pins to power up the instrument cluster, display and backl
 
 ---
 
+### Controlling RPM Engine Speed on Instrument Cluster
+
 The Engine Speed Signal (RPM) from the DME (.5mm^2 black, "TD") is a clean, 50% duty cycle, 12V, active low square wave with a frequency of 1Hz for every 20 RPM. Click to see [more details on RPM and other DME pinouts](http://www.fekzen.se/StandAlone/).
 
 {{< imgcap title="Sending data and RPM value to Instrument Cluster, out from the DME" src="/posts/bmwe34/clusters/tachospeed_kmh/control_tacho_rpm.png" >}}
 
+---
+
+### Identifying correct I/O signals for Instrument Cluster pinouts
+
+It is sometimes difficult to identify what each pinout on the instrument cluster expects in a form of signals. A good workaround for this is to reference to an older or newer technical or electrical documentation of the similar vehicle models. For example, the following BMW E30 Instrument Cluster contains pinouts for each of the backpanel port, and also the output and input signals the pinout expects:
+
+{{< imgcap title="Plug connections on Instrument Cluster (BMW E30 Series-3)" src="/posts/bmwe34/clusters/tachospeed_kmh/E30clusterpinout.jpg" >}}
+
+If we reference on the pinout table, we can see that the **Analog Speed. outlet** on "Pin Board III" outputs frequency (PWM) signal, and the **Analog Speed** (Pin 16) of "Pin Board IV" is also used for that. Therefore we can conclude that newer Instrument Clusters also use same signals.

@@ -4,7 +4,7 @@ title: "MacOS Notes"
 
 **Handy Command Line (CLI) Apps.**
 
-Several CLI utility apps are described and linked in [Sys/DevOps Notes](/sys-devops-notes). Other newly discovered CLI utils, that may not be *Sys/DevOps* specific, are linked in list below:
+Several CLI utility apps are described and linked in [Sys/DevOps Notes](/sys/devops-notes). Other newly discovered CLI utils, that may not be *Sys/DevOps* specific, are linked in list below:
 
 * [xsv](https://github.com/BurntSushi/xsv) - fast CSV command-line toolkit written in Rust
 * [tealdeer](https://github.com/dbrgn/tealdeer) - faster *(Rust-based)* alternative for `tldr`
@@ -144,11 +144,11 @@ sqlite> .tables
 app_sources       categories        downloading_apps  image_cache
 apps              dbinfo            groups            items
 sqlite> DELETE FROM apps WHERE title='qwingraph';
-   <Ctrl+D> 
+   <Ctrl+D>
 
 $ killall Dock
 ```
-This should remove the application from the Launchpad, but will not remove it from the `/Applications` directory. 
+This should remove the application from the Launchpad, but will not remove it from the `/Applications` directory.
 
 **Mount RaspberryPi / BananaPi SD Card**
 
@@ -227,9 +227,9 @@ $ brew install --formula --build-from-source /tmp/ext4fuse.rb
 
 * [Mount Raspberry Pi SD Card on MacOS (R/O)](https://www.jeffgeerling.com/blog/2017/mount-raspberry-pi-sd-card-on-mac-read-only-osxfuse-and-ext4fuse)
 * [Mount Raspberry Pi SSD on Big Sur](https://bespired.medium.com/mount-a-pi-ssd-on-your-big-sur-mac-d0ada9939fa4)
-* [Mount an ext4 paritition on MacOS](https://www.zleptnig.com/blog/mount-an-ext4-partition-on-macos)
+* [Mount an ext4 partition on MacOS](https://www.zleptnig.com/blog/mount-an-ext4-partition-on-macos)
 * [Mount ext4 Filesystem on MacOS](https://docs.j7k6.org/mount-ext4-macos/)
-
+* [Use more than one version of macOS on a Mac](https://support.apple.com/en-us/HT208891)
 
 (*note*: paste the following in `/tmp/ext4fuse.rb`:
 
