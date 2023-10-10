@@ -26,7 +26,9 @@ The computer, running on Windows XP would need specific BMW proprietary software
 	- BMW Tool32: *This is a CLI MS-DOS application that you can use to reset the service, apply individual functions on the control units, or read the fault memory of individual control units. It can also be used for BMW coding*
 
 **EDIABAS**: The EDIABAS or *Electronic Diagnostic Basic System* is a BMW AG proprietary communication protocol implementing and describing the control unit description files. This command set (based on BLAKE/2) is developed by BMW and implemented in all their vehicles. All software and tools used by the BMW AG officials uses EDIABAS to communicate with the vehicle. To debug and diagnose older BMW production models, you will need an original `ediabas` library drivers provided by the BMW AG, while for the newer BMW production models, one can use [EdiabasLib](https://github.com/uholeschak/ediabaslib) which is free and open-source alternative replacement for the BWM and VAG Ediabas toolset *(@see: [wiki](https://de.wikipedia.org/wiki/EdiabasLib))*.
+
 **INPA**: So called INPA or *Interpreter for Test Procedures* is an older factory diagnostic software, design to run test procedures.
+
 **NCS Expert**: The NCS Expert is an application provided by the BMW AG used to for [ECU coding and reprogramming](/ecu-programming) (*flashing*).
 
 The software suite distributed by BMW Group AG that contains several interoperating applications and drivers, including *NCS Expert*, *WinKFP*, *NFS*, *INPA*, and others. Other tools exists as well and developed by dealer-level partenrs at BMW AG; some of them are: DIS/DISv44/DISPlus, BMW ISTA/D, BMW ISTA/P and many others.
