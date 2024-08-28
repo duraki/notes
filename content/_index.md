@@ -49,6 +49,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 ### Classical Penetration Testing
 
 * [OSINT](/osint)
+* [Source Code Auditing](/source-code-audit)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
     * [Web Tricks and Tips](/web-tricks-and-tips)
 * [Web Fuzzing](/web-fuzzing-techniques)
@@ -105,6 +106,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Safari Dev Console](/safari-devconsole-internals)
     * [Metadata Extraction](/macos-metadata-extraction)
 * [iOS Reverse Engineering](/ios-reverse-engineering)
+    * [iOS Vulnerability Checklist](/ios-vulnerability-checklist)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#ios-tutorial)
     * [Pure Reverse Engineering](/pure-reverse-engineering)
     * [LLDB for iOS](/lldb-for-ios)
