@@ -19,10 +19,18 @@ This table will contain a list of components with its designators, as shown on t
 
 **Common Hardware Debug Interfaces**
 
+* [EEPROM](/eeprom)
 * [UART](/uart-interface) (4 pins)
-* JTAG (ARM JTAG - 20 Pins, ARM14 JTAG - 14 pins, MIPS EJTAG - 14 pins, Toshiba MIPS JTAG - 20 pins, Standard JTAG - 12 pins)
+* [JTAG](/jtag-interface)
+  - ARM JTAG - 20 Pins
+  - ARM14 JTAG - 14 pins
+  - MIPS EJTAG - 14 pins
+  - Toshiba MIPS JTAG - 20 pins
+  - Standard JTAG - 12 pins
 * I2C
 * SPI
+
+![](https://raw.githubusercontent.com/arunmagesh/hw_hacking_cheatsheet/master/cheatsheet_0.1.png)
 
 **Shell Access**
 

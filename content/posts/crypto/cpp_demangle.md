@@ -35,3 +35,7 @@ Run the demangler with Frida as usual, but make sure to include newly compiled s
 ```
 $ frida -Uf com.app -l out.js
 ``` 
+
+**References**
+
+* [Reversing C++ QT-based Applications using Ghidra](https://ktln2.org/reversing-c%2B%2B-qt-applications-using-ghidra/)

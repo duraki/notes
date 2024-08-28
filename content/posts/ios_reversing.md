@@ -161,3 +161,6 @@ apt-get
 * [iOS Internals and Security Testing](https://github.com/vadimszzz/iOS-Internals-and-Security-Testing)
 * [iOS Hacking Resources](https://github.com/Siguza/ios-resources)
 * [iOS 16.x Class Headers Dump](https://headers.cynder.me/index.php?sdk=ios/16.0)
+* [Testing if an arbitrary pointer is a valid ObjC Object](https://blog.timac.org/2016/1124-testing-if-an-arbitrary-pointer-is-a-valid-objective-c-object/)
+* [Unredacting iOS's `<private>` os_log privacy mechanism](https://github.com/EthanArbuckle/unredact-private-os_logs), practically [explained here](https://naehrdine.blogspot.com/2022/05/iphone-setup-for-reversing-and-debugging.html)
+* [Embedding Frida in iOS TestFlight Apps](https://naehrdine.blogspot.com/2023/02/embedding-frida-in-ios-testflight-apps.html)

@@ -171,6 +171,8 @@ $ rcodesign x509-oids 	# => to print OIDs for x.509 certs
 
 ### Resources
 
+* [MacOS Frida Setup](https://naehrdine.blogspot.com/2022/11/macos-frida-setup.html)
+* [Jailbreak any IPA and run it on Apple M1/M2 macOS w/o decrypting](https://github.com/RootHide/FairFree)
 * [MacOS Open Source](https://developer.apple.com/opensource/)
 * [MacOS Documentation Archives](https://developer.apple.com/library/archive/navigation/)
 * [Apple Legacy Manuals](https://web.archive.org/web/20180414202241/http://home.earthlink.net/~strahm_s/manuals.html)

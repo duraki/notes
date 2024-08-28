@@ -43,11 +43,14 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Hardware Hacking](/hardware-hacking)
     * [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit)
     * [UART Interface](/uart-interface)
+    * [JTAG Interface](/jtag-interface)
+    * [EEPROM](/eeprom)
 
 ### Classical Penetration Testing
 
 * [OSINT](/osint)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
+    * [Web Tricks and Tips](/web-tricks-and-tips)
 * [Web Fuzzing](/web-fuzzing-techniques)
     * [Javascript Deobfuscation](/javascript-deobfuscation)
 * [SQL Injection Payloads](/sqli-payloads)

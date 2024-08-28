@@ -11,6 +11,7 @@ Most of the 3rd party general Command Line apps. for Apple macOS system are in [
 #### RevEng Command-Line Apps.
 
 * [mirage/conan](https://github.com/mirage/conan) - file type detection, a successor of Unix `file` command
+* [jthack/hacks/b64d](https://github.com/jthack/hacks/tree/master/b64d) - find and decode base64-encoded strings in a file
 
 #### See More {{< sup "Cont." >}}
 

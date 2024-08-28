@@ -8,7 +8,7 @@ title: "ECU Foundations"
 - Doing calculations or apply rules in the vehicle system
 	- Calculation example of ECU
 	- Meassure "Speed (km/h)"
-	- ECU would "calculate": 
+	- ECU would "calculate":
 			- **speed (km/h) = wheel (rpm) x 3.6**
 - Apply a tiny part of logic
 	- If speed is above 5km/h, then lock the doors
@@ -37,3 +37,4 @@ title: "ECU Foundations"
 ## HCP (New era of ECU's)
 
 - There is new generation of ECU called high-performance computing platform (HCP)
+
