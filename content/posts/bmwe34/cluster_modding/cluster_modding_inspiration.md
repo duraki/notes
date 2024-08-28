@@ -109,6 +109,3 @@ Other similar examples:
 
 ---
 
-**Misc Lab/Photos**
-
-![](https://scontent.fsjj1-1.fna.fbcdn.net/v/t1.6435-9/105526872_103207981454583_5620491625786542820_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=CNK7mSjDfvcAX-V6op1&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfAkzIbrtiw4vb7FCMS7mro9cQJUlU5KZ_5HBZg7So6w8g&oe=64EE602B)
