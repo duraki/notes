@@ -10,15 +10,23 @@ title: Cluster Modding Inspiration
 
 ### Modding Samples
 
-**E30 Cluster Black-on-Black w/ Red needle**
+**E30 Cluster Modding Examples**
 
-![](https://scontent.fsjj1-1.fna.fbcdn.net/v/t39.30808-6/281469013_538223974619646_4669016080962491329_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=ce4rRM-xD6oAX97ddXC&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfA6ADF9FvyohLHbyBDq5VDJT8ijGbT_bCnkv3II_PaPRw&oe=64CC1CB3)
-![](https://scontent.fsjj1-1.fna.fbcdn.net/v/t39.30808-6/271912709_463456918763019_584574860117610081_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=7dN2pfVkSbwAX9n0bR3&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfA0t_fAy7eX-m0cfzIcosDqzUqOIvl-Do3Q0iOd3Y84lQ&oe=64CB2394)
-![](https://scontent.fsjj1-1.fna.fbcdn.net/v/t39.30808-6/243164491_395231712252207_89721587399364217_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a26aad&_nc_ohc=RMCEDaSFmY0AX-K_YSY&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfDhkJ0yM1tm88wUJJ-XOgrBhNeFz-0Myi88k2bgs-2QdA&oe=64CB3576)
+![](https://i.imgur.com/sKmGzEp.jpeg)
+![](https://i.imgur.com/XgH4lTD.jpeg)
+![](https://i.imgur.com/SsAHXQA.jpeg)
+![](https://i.imgur.com/e0hPPk5.jpeg)
 
-**Odometer Mileage Adjustment (Analog)**
+**More samples from BavarianRestoration**
 
-![](https://scontent.fsjj1-1.fna.fbcdn.net/v/t1.6435-9/106353136_103316931443688_243338941728147259_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=3o8mOdvkrvAAX-aP7At&_nc_ht=scontent.fsjj1-1.fna&oh=00_AfDnR7n7E_Y0ttz0OVxssEP-UysXyhO-tQxcY1ASsjPWig&oe=64EE54E0)
+![](https://i.imgur.com/4L0MW1y.png)
+![](https://i.imgur.com/2f2QQ1G.png)
+![](https://i.imgur.com/6TNviZE.png)
+![](https://i.imgur.com/lhP5878.png)
+![](https://i.imgur.com/VaFy1GB.png)
+![](https://i.imgur.com/GzaO0Vw.jpeg)
+
+* [Album](https://imgur.com/a/mRFZY0B), and more available on [BavarianRestoration](https://bavrest.com) & [e30.clusters](https://instagram.com/e30.clusters)
 
 **E30 Cluster Gauge for Oil -Temp and Pressure**
 
