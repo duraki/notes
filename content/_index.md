@@ -119,6 +119,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Advanced Frida Scripting for iOS](/ios-frida-scripting)
     * [Frida Tracing](/frida-trace-for-ios)
 * [Android Reverse Engineering](/android-reverse-engineering)
+    * [Running Android Apps on MacOS](/running-android-apps-on-macos)
     * [Frida & Objection Tutorial](/frida-objection-tutorial#android-tutorial)
     * [Frida Gadget Injection on Android](/frida-gadget-injection)
     * [Android Recompilation](/android-recompilation)
