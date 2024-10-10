@@ -11,3 +11,4 @@ tmp
 ./resources/*/**
 .nova
 resources/*
+.vscode
