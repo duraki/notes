@@ -155,6 +155,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * [Windows Notes](/windows-notes)
 * [Linux Notes](/linux-notes)
 * [MacOS Notes](/macos-notes) & [iPad Notes](/ipad-notes)
+* [Computer Sync](/computer-sync)
 * [Sys/DevOps Deployments & Notes](/sys/devops-notes) 🦄
 * [Single-Board Computers (SBC)](/sbc-and-alternatives)
     * [Raspberry Pi Installation](/raspberry-pi-quick-guide)
