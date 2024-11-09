@@ -6,6 +6,10 @@ For **PHP/x.xx** Server-Side Scripting Language, additional notes are available 
 
 ---
 
+For **Java** Language, mostly related for web-application, additional notes are available in [Java Source Code Analysis](/java-source-code-analysis).
+
+---
+
 For **GoLang** code audits and reviews, read out "Secfault Security Report, published for 1Password Code Audit" in references below.
 
 ---
