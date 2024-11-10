@@ -9,6 +9,9 @@ enableRobotsTXT = true
 # googleAnalytics = UA-PROPERTY_ID
 # publishDir = "/docs"
 
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files @see: https://stackoverflow.com/a/61292855
+
 [permalinks]
 posts = '/:title'
 

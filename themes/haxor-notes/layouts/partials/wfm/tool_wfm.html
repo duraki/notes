@@ -1,49 +1,194 @@
+<style>
+  .section-collapse-div-description {
+    line-height: 0.3;
+    padding-left: 60px !important;
+  }
+
+  .section-collapse-div-description > p {
+    line-height: normal !important;
+  }
+
+  .description-paragraph-expanded {
+    line-height: normal !important;
+  }
+
+  .section-collapse-category-title {
+    font-weight: 400;
+    text-decoration: wavy;
+    text-decoration-line: underline;
+    text-decoration-color: darkslateblue;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1.2pt;
+    user-select: none;
+    color: #201d1d;
+  }
+
+  .section-collapse-category-items {
+    padding-top: 15px !important; /** padd top */
+    padding-bottom: 15px !important;
+    line-height: normal;
+    font-size: 13px;
+    letter-spacing: 0.001em;
+    /* text-align: center; */
+    text-align: right;
+    color: #767676;
+    transition: color 0.1s ease-in;
+  }
+
+  .section-collapse-category-items:hover {
+    color: black;
+  }
+
+  .tool-name-tooltip {
+    font-size: 9px;
+    vertical-align: middle;
+    text-align: right !important;
+    margin-right: 0 !important;
+    /* margin-left: 310px; *//* this will put tooltip text to the most right */
+    margin-left: 20px;
+    padding-right: 0 !important;
+    color: darkslategray;
+    font-style: italic;
+  }
+
+  .hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: rgb(255, 255, 255) !important;
+  text-align: left;
+  height: 1.5em;
+  opacity: .5;
+    &:before {
+      content: '';
+      /* use the linear-gradient for the fading effect
+         use a solid background color for a solid bar */
+      background: linear-gradient(to right, transparent, #818078, transparent);
+      position: absolute;
+      left: 0;
+      top: 35%;
+      width: 100%;
+      height: 1px;
+      /* my additions */
+      font-weight: 400;
+      user-select: none;
+      color: #ffffff !important;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 0 .5em;
+      line-height: 1.5em;
+      /* this is really the only tricky part, you need to specify the background color of the container element... */
+      /* color: #818078; */
+      color: #ffffff !important;
+      background-color: #000; /* #fcfcfa */
+       /* my additions */
+      font-weight: 400;
+      user-select: none;
+    }
+  }
+</style>
+
 <article class="environment">
-    <section class="environment-header">
-      {{ if .list_title }}
-      <h2 class="environment-title">{{ .list_title }}</h2>
-      {{ else }}
-      {{/*  <h2 class="environment-title">{{ .name }}</h2>  */}}
-        {{ $tool_title := .name }}
-      {{ end }}
+  <section class="environment-header">
 
-      {{/*  <div class="description">
-        {{ .Content }}
-      </div>  */}}
+    {{ if .collapsible }}
 
-      {{/*  {{ if .list_name }}
+        {{/*  
+        <!-- !!! -->
+        <!-- Collapsible section with <details> and <summary> -->
+        <!-- !!! -->  
+        */}}
         <section class="tools-list">
           <div class="tool-item">
             <div class="tool-head">
               <div class="tool-name-list">
-                {{ range .list_name }}
-                <span class="tool-name">{{ . }}</span>
-                {{ end }}
-              </div>
-            </div>
-          </div>
-        </section>
-      {{ end }}  */}}
+                <details style="user-select: none; cursor: pointer;">
+                  <summary style="padding-bottom: 10px;">
+                    {{ if .list_title }}
+                    <h2 class="environment-title">{{ .list_title }}</h2>
+                    {{ else }}
+                    <span class="tool-name">{{ .name }}</span>
+                    <small class="tool-name-tooltip">〄 click to expand full software library</small>
+                    {{ end }}
+                  </summary>
+
+                  {{ if .description }}
+                    <div class="description">
+                      <div class="section-collapse-div-description">
+                      {{ range .description }} 
+                        {{- $parts := split . ":" -}}
+                        <p class="description-paragraph">
+
+                          <!-- dynamically generating HTML from yaml string definition -->                        
+                          <hr class="hr-text" data-content="{{- index $parts 0}}" /> <!-- Software Category -->
+                          <div class='section-collapse-category-items'>
+                            {{- if gt (len $parts) 1 }}
+                              {{- index $parts 1 | markdownify | safeHTML }} <!-- Software Items -->
+                            {{ end }}
+                          </div>
+                        
+                        </p>
+
+                      {{ end }}
+                      
+                      {{ if .image }}
+                        <figure class="image">
+                          <img
+                            class="image__picture"
+                            src="{{ .image }}"
+                            alt="{{ .imageAlt }}"
+                          />
+                        </figure>
+                      {{ end }}
+                    </div> {{/* end of div: section-collapse-div-description */}}
+                  {{ end }} {{/* end of "if .description" */}}
+                </details>
+              </div> {{/* end of div: tool-name-list */}}
+            </div> {{/* end of div: tool-head */}}
+          </div> {{/* end of div: tool-item */}}
+        </section> {{/* end of section: tool-list */}}
+
+
+    {{ else }}
+
+      {{/*
+      <!-- !!! -->
+      <!-- Non-collapsible section without <details> and <summary> -->
+      <!-- !!! -->
+      */}}
+      {{ if .list_title }}
+        <h2 class="environment-title">{{ .list_title }}</h2>
+      {{ else }}
+        {{ $tool_title := .name }}
+      {{ end }} {{/* end of "if .list_title" */}}
+
 
       <section class="tools-list">
-      {{ if .name }}
-        {{ if .list_title }}
-        {{ else }}
-        <div class="tool-item">
-          <div class="tool-head">
-            <div class="tool-name-list">
-              {{ if .link }}
-              <a class="tool-name" href="{{ .link }}">{{ .name }}</a>
-              {{ else }}
-              <span class="tool-name">{{ .name }}</span>
-              {{ end }}
-            </div>
-          </div>
-        </div>
-        {{ end }}
-      {{ end }}
-    </section>
-      
+        {{ if .name }}
+          {{ if .list_title }}
+          {{ else }}
+            <div class="tool-item">
+              <div class="tool-head">
+                <div class="tool-name-list">
+                  {{ if .link }}
+                    <a class="tool-name" href="{{ .link }}">{{ .name }}</a>
+                  {{ else }}
+                    <span class="tool-name">{{ .name }}</span>
+                  {{ end }}
+                </div> {{/* end of div: tool-name-list */}}
+              </div> {{/* end of div: tool-head */}}
+            </div> {{/* end of div: tool-item */}}
+          {{ end }} {{/* end of "if .list_title */}}
+        {{ end }} {{/* end of "if .name" */}}
+      </section> {{/* end of section: tool-list */}}
+
       {{ if .description }}
         <div class="description">
           {{ range .description }}
@@ -51,11 +196,18 @@
           {{ end }}
           {{ if .image }}
             <figure class="image">
-              <img class="image__picture" src="{{ .image }}" alt="{{ .imageAlt }}" />
+              <img
+                class="image__picture"
+                src="{{ .image }}"
+                alt="{{ .imageAlt }}"
+              />
             </figure>
           {{ end }}
-        </div>
-      {{ end }}
-    </section>
-  </article>
-  
+        </div> {{/* end of div: description */}}
+      {{ end }} {{/* end of "if .description" */}}
+
+    {{ end }} {{/* end of "if .collapsible" */}}
+
+
+  </section> {{/* end of div: environment-header */}}
+</article> {{/* end of article: environment */}}

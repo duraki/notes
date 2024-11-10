@@ -12,3 +12,4 @@ tmp
 .nova
 resources/*
 .vscode
+node_modules/
