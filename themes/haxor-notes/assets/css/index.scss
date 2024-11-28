@@ -50,16 +50,12 @@ details[open] {
 **/
 }
 
-// hr {
-//   margin: 0 !important;
-// }
-
-.details-expand-content > ul li {
+details .details-expand-content > ul li {
   line-height: 1.2; /* Set a reasonable line height */
   margin-bottom: -0.99em; /* Fine-tune spacing between items */
 }
 
-.details-expand-content > ul li a {
+details .details-expand-content > ul li a {
   display: inline-block; /* Prevent text from overlapping */
 }
 
