@@ -21,10 +21,11 @@
         hand, on local 'hugo server' (local) deployments, the ul>li's line-height
         do not overlap. This is an ugly way to fix this issue, since the below
         important style will be applied only on non-localhost versions.
+        @see: https://johnjago.com/hugo-css-mystery/ (TODO, Proper Fix?)
     -->
     <style type="text/css">
         details .details-expand-content > ul li {
-            margin-bottom: 0 !important; /* Fine-tune spacing between items, PROD only */
+            /* margin-bottom: 0 !important; */ /* Fine-tune spacing between items, PROD only */
         }
     </style>
 {{ else }}
@@ -34,7 +35,7 @@
 
 {{ $IndexCss := resources.Get "/css/index.scss" | resources.ToCSS (dict
 "outputStyle" "compressed") | fingerprint }}
-<link rel="stylesheet" href="{{ $IndexCss.RelPermalink }}" />
+<link rel="stylesheet" href="{{ printf "%s" (strings.TrimSuffix "/" .Site.BaseURL) }}{{ $IndexCss.RelPermalink }}" />
 
 <style type="text/css">
   :root {
