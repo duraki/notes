@@ -9,10 +9,24 @@
 />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
-{{ if not (in (.Site.BaseURL | string) "127.0.0.1") }}
+{{ if not (or (in (.Site.BaseURL | string) "127.0.0.1") (in (.Site.BaseURL | string) "localhost")) }}
     <!-- This template code only runs when the website
         does *not* run on localhost (meaning, runs in the
         production environment). -->
+    
+    <!--
+        For some reason, when publishing the Hugo pages via GitHub workflow
+        and when accessing the GitHub pages hosted version of the ~notes, the
+        ul>li>'s line-height overlaps due to styles in the CSS. On the other
+        hand, on local 'hugo server' (local) deployments, the ul>li's line-height
+        do not overlap. This is an ugly way to fix this issue, since the below
+        important style will be applied only on non-localhost versions.
+    -->
+    <style type="text/css">
+        details .details-expand-content > ul li {
+            margin-bottom: 0 !important; /* Fine-tune spacing between items, PROD only */
+        }
+    </style>
 {{ else }}
 {{ end }}
 

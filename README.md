@@ -40,7 +40,6 @@ $ hugo
 
 Start reading Hugo's documentation for [Functions](https://gohugo.io/categories/functions), [Templates](https://gohugo.io/templates/) and [Variables](https://gohugo.io/variables/) to get the feel of it.
 
-
 ### Full Usage
 
 **Publish to GitHub**
@@ -50,6 +49,29 @@ The following line compiles content of `~notes`, commits a new release, and depl
 ```
 $ hugo && git add . && git commit -m "Release 🥳" && git push origin master
 ```
+
+### CSS Editing
+
+Edit the SCSS (`*.scss`) from within the themes directory (ie. `themes/haxor-notes/assets/css`) located in this repository. The `hugo server` automatically compiles the SCSS to CSS and updates the rendering results using hotreload while running local development server.
+
+```scss
+// notes/themes/haxor-notes/assets/css/index.scss
+
+/* ... [REDACTED] ... */
+/* add other CSS class stylings */
+```
+
+This file compiles automatically to `*.css` asset files upon saving the file; as evident by the `hugo server` Terminal output below:
+
+```sh
+Change detected, rebuilding site (#75).
+2024-11-28 04:24:39.967 +0100
+Asset changed /css/index.scss
+Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+Total in 273 ms
+```
+
+The changes should reflect instantly on the `~notes` webpages, or if not, refresh manually.
 
 ### Development Environment 🎉
 
