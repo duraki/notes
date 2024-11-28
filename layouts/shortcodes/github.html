@@ -1,6 +1,7 @@
 <div class="ghwrap">
-    {{ $dataJ := getJSON "https://api.github.com/repos/" (.Get "repo") "/contents/" (.Get "file") }}
-    {{ $con := base64Decode $dataJ.content }}
+    {{ $dataJ := resources.GetRemote (print "https://api.github.com/repos/" (.Get "repo") "/contents/" (.Get "file")) }}
+    {{ $data := $dataJ | transform.Unmarshal }}
+    {{ $con := base64Decode $data.content }}
     {{ highlight $con (.Get "lang") (.Get "options") }}
 
     {{ $noticeType := "note" }}

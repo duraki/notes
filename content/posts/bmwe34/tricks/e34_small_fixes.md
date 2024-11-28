@@ -2,7 +2,7 @@
 title: "E34 Repair & Restoration"
 ---
 
-Please, check [Upgradables](/upgrade-wishlist) as well. These show my to-do, and wishlist that I planned for my E34. 
+Please, check [Upgradables](/upgrade-wishlist) as well. These show my to-do, and wishlist that I planned for my E34. Partial list of [Repair & Restoration Tools](/bmw/tools) are also available.
 
 ### Fixing and repairing Cigarette Lighter
 
@@ -10,7 +10,7 @@ If the cigarette lighter no longer works, simply bend the two lugs at the rear-e
 
 ### Fixing Cluster and Interior Lights
 
-**Requirement**
+**Requirements**
 
 * Two type of bulbs (*both ending with orange wires*)
   - T1 14V/40mA or 14V/60mA (3x6mm)
@@ -24,10 +24,10 @@ Use [E34Wiki Table List](https://www.e34wiki.de/index.php/Leuchtmittel) for all 
 
 ### Opening doors with a dead battery
 
-Use the emergency unlock procedure; work every time with a dead battery. 
+Use the emergency unlock procedure; work every time with a dead battery.
 
-* Turn passenger lock as to unlock the car, 
-* Keep it there, 
+* Turn passenger lock as to unlock the car,
+* Keep it there,
 * Pull the handle and turn key some more,
 * Release the handle and turn more again,
 * This will unlock your door.

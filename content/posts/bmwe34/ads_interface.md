@@ -6,6 +6,12 @@ An ADS (sic. *Aktive DiagnoseStecker (DE)*, or *Active Diagnostic Connector (EN)
 
 The [TinyADS Interface](https://openlabs.co/store/Tiny-ADS-Interface) is an open-source implementation of the ADS from the team at openlabs.co, which uses BMW 20-Pin Diagnostic Port in vehicle at one side, and RS232 Serial Interface on the other side, to communicate with PC. Alternatively, you can [build custom BMW ADS adapter](https://deviltux.thedev.id/posts/o/20220219-bmw-tiny-ads-interface.html) via breadboard and a few transistors which I described in details [at my blog](https://deviltux.thedev.id/posts/o/20220219-bmw-tiny-ads-interface.html).
 
+{{< details "Example of DIY TinyADS Interface" >}}
+![](https://i.imgur.com/0bzcMJ4.jpeg)
+![](https://i.imgur.com/294qmsn.jpeg)
+![](https://i.imgur.com/rgva2b7.jpeg)
+{{</ details >}}
+
 ### Software Requirements
 
 The computer, running on Windows XP would need specific BMW proprietary software toolset installed and configured, to read and diagnose the vehicle. The list of tools and softwares needed to work with this adapter is:
@@ -121,4 +127,8 @@ The RS-232-C uses standardised levels for its signal, except for `RI` line. The 
 * [BimmerForums: Interface in ADS mode over cheap PCMCIA-SERIAL adapter](https://www.bimmerforums.com/forum/showthread.php?1633825-SUCCESS-Interface-in-ADS-mode-without-a-real-COM-port)
 * [BimmerForums: Using USB and 64bit ADS Interface via EdiabasLib](https://www.bimmerforums.com/forum/showthread.php?2419002-USB-ADS-Interface-Working!&p=30379058#post30379058)
 * [BimmerForums: Using cheap PCMCIA-SERIAL Adapter with TinyADS](https://www.bimmerforums.com/forum/showthread.php?2270258-HELP-WITH-INPA-DIS-on-an-E34&p=29159137#post29159137)
+* [Drive.ru: TinyADS Alternative](https://www.drive2.ru/l/636920698765335698/), also [Schematics](https://drive.google.com/file/d/1WbkMEgDPISKbExbEmsgghqY3aTK6nyVT/view)
+* [Drive.ru: Homemade DIY ADS Adapter for BMW E34](https://www.drive2.ru/l/674430263069005051/)
+* [Drive.ru: Another DIY Diagnostic Adapter](https://www.drive2.ru/l/532112226748729651/)
+* [Drive.ru: ADS Interface bundled with the Plug Cable](https://www.drive2.ru/l/8715174/), also [Schematics](https://disk.yandex.ru/d/iCVabNa74iAbHg)
 {{< /details >}}

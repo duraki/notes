@@ -54,6 +54,15 @@ details[open] {
 //   margin: 0 !important;
 // }
 
+.details-expand-content > ul li {
+  line-height: 1.2; /* Set a reasonable line height */
+  margin-bottom: -0.99em; /* Fine-tune spacing between items */
+}
+
+.details-expand-content > ul li a {
+  display: inline-block; /* Prevent text from overlapping */
+}
+
 details[open] {
     padding-bottom: 10px;
 }

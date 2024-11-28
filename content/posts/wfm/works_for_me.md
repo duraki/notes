@@ -388,6 +388,12 @@ tools:
         technology, and related topics. Quite similar to previous, but requires
         user-invitation to be able to submit and comment. Mostly focused on
         FreeBSD and other `*BSD` distributions."
+  - name: "Hackaday.com"
+    link: "https://hackaday.com"
+    description: 
+      - "Hackaday serves up fresh hacks every day from around the Internet. It 
+        mostly writes and publishes stories about Electronics, Electrical Engineering, 
+        and Hacking creativity & thinkering, mostly specific to hardware."
 # Add <as many other> [tools/section/subsection/list_title] here.
 # ...
 

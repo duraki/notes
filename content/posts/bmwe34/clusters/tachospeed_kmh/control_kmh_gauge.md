@@ -80,6 +80,10 @@ Addition to mandatory pins to power up the instrument cluster, display and backl
 
 ---
 
+### BMW Speed Frequency Pulse Generator
+
+There is an open-source Arduino code hosted on [GitHub](https://github.com/jmsmuy/BMWSpeedoPulseGerator) that provides a way to generate speed on the BMW E30/E28/E24/E23 Instrument Clusters.
+
 ### Controlling RPM Engine Speed on Instrument Cluster
 
 The Engine Speed Signal (RPM) from the DME (.5mm^2 black, "TD") is a clean, 50% duty cycle, 12V, active low square wave with a frequency of 1Hz for every 20 RPM. Click to see [more details on RPM and other DME pinouts](http://www.fekzen.se/StandAlone/).

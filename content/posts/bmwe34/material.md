@@ -2,7 +2,7 @@
 title: "BMW AG (E34) Learning Materials"
 ---
 
-This is Bavarian (*E34 5-series focused*) learning materials and resources, mostly related to ECUs, DMEs, Tuning, EE, Wirings et al. I currently daily-drive BMW E34, therefore I collect [my own repair&restoration](/e34-repair-restoration) techniques. The documentation is written and compiled with different models and versions in mind, but keeping the methodologies of the BMW Technical Documentation collected and researched through the years. Nevertheless, a lot of topics and information presented here are #ReverseEngineered from the very low or no available resources, for years in the past. [Thank me later →](https://twitter.com/0xduraki).
+This is Bavarian (*E34 5-series focused*) learning materials and resources, mostly related to ECUs, DMEs, Tuning, EE, Wirings et al. I currently daily-drive BMW E34, therefore I collect [my own repair&restoration](/e34-repair-restoration) techniques. The documentation is written and compiled with different models and versions in mind, but keeping the methodologies of the BMW Technical Documentation collected and researched through the years. Nevertheless, a lot of topics and information presented here are #ReverseEngineered from the very low or no available resources, for years in the past. [Thank me later →](https://linkedin.com/in/duraki/).
 
 ## Table of Content
 
@@ -26,14 +26,27 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 	* [Coded Ground Signals](/coded-ground-signals)
 * [DC Digital Input/Output Stages](/dc-digital-io-stages)
 * [Signals Table](/signals-table)
-	* [E34: Speed Signal](/e34-misc-wiring#speed-impulsesignal)
+	* [BMW E34: Speed Signal](/e34-misc-wiring#speed-impulsesignal)
+* 🚙 Project Car Notes
+    * [BMW E34: Repair & Restoration](/e34-repair-restoration)
+    * [BMW E34: Upgradeables](/upgrade-wishlist)
+    * [BMW E34: Tools & Equipment](/bmw/tools)
 * Production Details
+    * [General Modding](/bmw/modding/general)
+	  - [ECU Chip Modding](/bmw/modding/ecu)
+	  - [Steering Wheel Button Panel](/bmw/modding/steeringwheel)
+   	  - [Misc BMW E34 Tutorials](/bmw/misc/tutorials)
 	* [Diagnostic ADS Interface](/ads-interface)
     * [Keyword Protocols](/keyword-protocols)
 	  - KWP [KW-71](/keyword-protocols#kw71)
     * [IBUS Protocol](/ibus-overview)
+	  - [BMW GSM Phone System](/bmw/gsm-phone)
     * [Instrument Clusters / Tachometers](/instrument-clusters)
-	  - [Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
+	  - [Instrument Cluster: Disassembly](/bmw/clusters/disassembly)
+	  - [Instrument Cluster: Communication](/bmw/clusters/communication)
+	  - [Instrument Cluster: Modding](/cluster-modding-inspiration)
+	  - [Instrument Cluster: Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
+	  {{< hrsep >}}
       - [Details: Cluster Low (Normal)](/bmw/clusters/low-normal)
       - [Details: Cluster Low (Redesign)](/bmw/clusters/low-redesign)
       {{< hrsep >}}
@@ -41,9 +54,9 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
       - [Details: Cluster High (Redesign/240)](/bmw/clusters/high-redesign)
       - [Details: Cluster High (Redesign 2)](/bmw/clusters/high-redesign-2)
       {{< hrsep >}}
-	  - [Cluster Conversion](/cluster-conversion)
+	  - [Instrument Cluster: Cluster Conversion](/cluster-conversion)
 	  {{< hrsep >}}
-      - [Coding Plugs](/coding-plugs)
+      - [Instrument Cluster: Coding Plugs](/coding-plugs)
 * Wiring
 	* [Circuit Basics & Debugging](/circuit-basics)
 	{{< hrsep >}}
@@ -63,7 +76,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 * [MHHAuto.COM](https://mhhauto.com)
 
 {{< details "Electronic Signals" >}}
-Objectives of the [Electronic Signals](/electronic-signals) is to explain inductive sensors, and type of signals one may stumble upon during the reversing and hacking of BMW E34s and possibly other series as well. Upon completion, you should understand the difference between analog and digital signals, know the difference between NTC and PTC sensors, recognizing different signals on the oscilloscope etc. Besides, many EE stuff can be learn from reading the resources published. [Reference](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf)
+Objectives of the [Electronic Signals](/electronic-signals) is to explain inductive sensors, and type of signals one may stumble upon during the reversing and hacking of BMW E34s and possibly other series as well. Upon completion, you should understand the difference between analog and digital signals, know the difference between NTC and PTC sensors, recognizing different signals on the oscilloscope etc. Besides, many EE stuff can be learn from reading the resources published. Click here for the [reference *(PDF)*](https://ia801005.us.archive.org/11/items/BMWTechnicalTrainingDocuments/ST051%20Body%20Electronics%20I%20%28Archive%201%29/06%20Electronic%20Signals.pdf).
 {{< /details >}}
 
 {{< details "Bus Networks" >}}
@@ -80,7 +93,8 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 
 {{< details "Other Links" >}}
 * [IBUS Protocol Reverse Engineering](https://web.archive.org/web/20071022152757/http://www.openbmw.net/bus/)
-* [BMW Navigation Systems](https://web.archive.org/web/20050920201133/http://www.openbmw.net/nav/index.html) - [E46 Retrofit](https://web.archive.org/web/20050912001000/http://www.openbmw.net/nav/sys/index.html), [Concepts](https://web.archive.org/web/20050930205915/http://www.ac-schnitzer.de/englisch/produkte/comm_concept/index.htm)
+* [BMW Navigation Systems](https://web.archive.org/web/20050920201133/http://www.openbmw.net/nav/index.html)
+* [E46 Retrofit](https://web.archive.org/web/20050912001000/http://www.openbmw.net/nav/sys/index.html), [Concepts](https://web.archive.org/web/20050930205915/http://www.ac-schnitzer.de/englisch/produkte/comm_concept/index.htm)
 * [BMW PDF Downloads](https://web.archive.org/web/20050830010505/http://www.openbmw.net/downloads/)
 * [BMW Programming Tools & CD's](https://web.archive.org/web/20051224055902/http://www.centrallettershop.com/cd.html)
 * [BMW AV Connection Pinouts](https://web.archive.org/web/20051023091951/http://www.750i.de/e/av_conns.htm)
@@ -107,6 +121,7 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [Under Ashtray LED 🇯🇵](https://dd.jpn.org/BMW_HP/20040829/index.shtml)
 * [Alarm Indicator LED on windshield mirror 🇯🇵](https://dd.jpn.org/BMW_HP/20150817/index.shtml), or on [door lock pin](https://dd.jpn.org/BMW_HP/20080705/index.shtml)
 * [E34 Electronic DIYs 🇩🇪](http://www.pet-racing.de/E34)
+* [DIY Cleaning the MAF Sensor](https://qcwo.com/technicaldomain/my-car-engine-hesitates-when-i-accelerate/)
 {{< /details >}}
 
 {{< details "External References" >}}

@@ -1,6 +1,4 @@
 <details>
     <summary>{{ (.Get 0) | markdownify }}</summary>
-    <span class='details-expand-content'>
-        {{ .Inner | markdownify }}
-    </span>
+    <span class='details-expand-content' style="white-space: pre-wrap;">{{ .Inner | markdownify }}</span>
 </details>
