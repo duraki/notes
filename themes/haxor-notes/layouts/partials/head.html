@@ -25,7 +25,7 @@
     -->
     <style type="text/css">
         details .details-expand-content > ul li {
-            /* margin-bottom: 0 !important; */ /* Fine-tune spacing between items, PROD only */
+            margin-bottom: 0 !important; /* Fine-tune spacing between items, PROD only */
         }
     </style>
 {{ else }}
@@ -35,7 +35,7 @@
 
 {{ $IndexCss := resources.Get "/css/index.scss" | resources.ToCSS (dict
 "outputStyle" "compressed") | fingerprint }}
-<link rel="stylesheet" href="{{ printf "%s" (strings.TrimSuffix "/" .Site.BaseURL) }}{{ $IndexCss.RelPermalink }}" />
+<link rel="stylesheet" href="{{ $IndexCss.RelPermalink }}" />
 
 <style type="text/css">
   :root {
