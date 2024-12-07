@@ -169,6 +169,10 @@ Usually, for BMW and MINI Cooper vehicles it is located In plastic box next to t
 * Corrosion of pins on DME PCB
 * Corrosion of pins outside the DME socket
 
+### Programmers
+
+* [Xgecu T48 Programmer Step-by-Step](https://www.youtube.com/watch?v=36xP4uufo84)
+
 ### References
 
 * [/r/ECU_Tuning](https://old.reddit.com/r/ECU_Tuning)
