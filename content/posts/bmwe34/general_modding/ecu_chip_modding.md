@@ -201,3 +201,4 @@ Usually, for BMW and MINI Cooper vehicles it is located In plastic box next to t
 * [BimmerForums.com - E34 EWS v2 Explained in Details](https://www.bimmerforums.com/forum/showthread.php?1603140-EWS-II-Explained-in-Detail)
 * [The Prom Tuning Guide Book & FAQ](https://www.thirdgen.org/forums/diy-prom/288763-prom-tuning-guide-book.html)
 * [(RU 🇷🇺) Documentation for BMW M50B20/M50B20TU Petrol Engines (Vanos) and the Siemens DME MS40.0/MS40.1 Control Systems](https://oldbmw.ru/documentation/319-dokumentaciya-po-dvigatelyam-bmw-m50b20-i-m50b20tu-sistemy-upravleniya-dme-siemens-ms400-i-ms401.html)
+* [DME Performance Chip Install Instructions](http://www.nmia.com/~dgnrg/page_18a.htm)

@@ -34,6 +34,9 @@ url: /bmw/modding/general
 * [Add Bluetooth to old Car Car Hi-Fi Radio System](https://www.instructables.com/Bluetooth-Upgrade-Your-Old-Car-V2/)
 * [Glow in the Dark Car Vehicle Antenna Mod](https://www.instructables.com/Glow-in-the-Dark-Car-Vehicle-Antenna-Mod-How-to-Fi/)
 * [1.28" Circle LCD Gauges for NA Miata's and Other Cars](https://www.instructables.com/128-LCD-Gauges-for-NA-Miatas-and-Other-Cars/)
+* [Center Vent Removal & Thumbwheel Bulb Replacement for E32/E34](http://www.nmia.com/~dgnrg/page_37.htm)
+* [Seat Armrest Removal for E32/E34](http://www.nmia.com/~dgnrg/page_34.htm)
+* [On-board Computer (OBC) of the BMW E34 - BC IV - 4th Gen](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/BC_ATA/BC.htm)
 
 ### Other Links
 

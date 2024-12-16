@@ -126,3 +126,8 @@ Other similar examples:
 
 ---
 
+## Other Links
+
+* [BMW E30 Cluster Housing 3D Model (Paid)](https://sketchfab.com/3d-models/bmw-e30-cluster-housing-d9b8b8b572af4716bd25e272fb0005bc)
+* [BMW E30 Blank Cluster 3D Model (Paid)](https://sketchfab.com/3d-models/bmw-e30-blank-cluster-e2e37fc9df88401da1fc4576df7f54f7)
+* [BMW E30 DIY Digital Dash](https://www.allaboutthebuild.com/blog/2024/1/40-year-old-bmw-gets-a-digital-dash)

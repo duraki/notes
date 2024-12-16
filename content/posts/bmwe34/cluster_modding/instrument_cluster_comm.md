@@ -36,7 +36,7 @@ Normally, modules in the car that want to speak to the Instrument Cluster wait f
 
 ### Connecting Instrument Cluster to the Microcontroller
 
-**WARNING:** Whatever microcontroller (MCU) is used, it probably won't talk at 12V on its serial communication line. We would need a level shifting circuit, which will be used to transition the signal from whatever voltage our microcontroller (MCU) runs at, to the 12V the Instrument Cluster runs at. You can use any Logic Level Converter to aid the process, for example this [SparkFun Logic Level Converter](https://www.sparkfun.com/products/12009). The Transmission Wire goes from the Arduino's Transmit pin, to the Logic Level Shifter/Converter; and then from the Logic Level Shifter to X16 Pin #23. Therefore, once you have prepared the Logic Level Shifter in the circuit, you may:
+**WARNING:** Whatever microcontroller (MCU) is used, it probably won't talk at 12V on its serial communication line. We would need a level shifting circuit, which will be used to transition the signal from whatever voltage our microcontroller (MCU) runs at, to the 12V the Instrument Cluster runs at. You can use any Logic Level Converter to aid the process, for example this [SparkFun Logic Level Converter](https://www.sparkfun.com/products/12009). The Transmission Wire goes from the Arduino's Transmit Pin (TX), to the Logic Level Shifter/Converter; and then from the Logic Level Shifter to X16 Pin #23. Therefore, once you have prepared the Logic Level Shifter in the circuit, you may:
 
 - X16 Beige (26-pin Connector): Hook Pin #23 to the Logic Level Shifter
 - Logic Level Shifter: Hook the used Level Converter pin to Arduino Transmit Pin

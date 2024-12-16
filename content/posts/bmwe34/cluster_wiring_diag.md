@@ -22,7 +22,11 @@ To trigger "Fuel Level Warning Light", make sure to put Pin 3 of X13060 to Groun
 
 ## E34 High Cluster - Redesign 1/240 - MY. 89-90 Test Bench
 
-{{< imgcap title="Wiring E34 High Cluster, Redesign 1/240, MY. < '90 - Test Bench" src="/posts/images/high_redesign_1_240_cluster-90-bench.png" >}}
+{{< imgcap title="Wiring E34 High Cluster, Redesign 1/240, MY. < '90 - Test Bench" src="/posts/images/high_redesign_1_240_cluster-90-bench_white_backpanel.png" >}}
+
+## E34 High Cluster - Normal - MY. 88-89 Test Bench
+
+{{< imgcap title="Wiring E34 High Cluster, Normal, MY. < '89 - Test Bench" src="/posts/images/high_redesign_1_240_cluster-90-bench.png" >}}
 
 For this cluster, there are [available pinouts](/e34-pinout-diagram) for the sensors and signals.
 

@@ -41,6 +41,8 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
 * [Hardware Hacking](/hardware-hacking)
+    * [Logic Analyzer](/hw/logic-analyzer)
+      * [DSLogic Plus](/hw/dslogic-logic-analyzer)
     * [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit)
     * [UART Interface](/uart-interface)
     * [JTAG Interface](/jtag-interface)

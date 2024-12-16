@@ -17,6 +17,12 @@ To start the process of the PCB Reverse Engineering, for any of above methods - 
 
 This table will contain a list of components with its designators, as shown on the actual PCB. Designators are small labels usually printed on the PCB, for each of the component. The package for the specific component will contain package for a specific component, and the marking of the component is shown usually on top of the component such is IC or MCU - usually indicating a part number. When looking for designators, the labels can indicate what kind of component it is: **T**/**Q** prefix indicates a *Transistor*, whereas **R** designator indicates a resistor.
 
+**Signal Analysis**
+
+* [Logic Analyzer](/hw/logic-analyzer)
+  * [DSLogic+ Logic Analyzer](/hw/dslogic-logic-analyzer)
+* [Oscilloscope](/hw/oscilloscope) *~TODO*
+
 **Common Hardware Debug Interfaces**
 
 * [EEPROM](/eeprom)
@@ -29,6 +35,9 @@ This table will contain a list of components with its designators, as shown on t
   - Standard JTAG - 12 pins
 * I2C
 * SPI
+* [Other common](https://www.mattmillman.com/info/crimpconnectors/) WTB (Wire-to-Board), WTW (Wire-to-Wire), and Crimp Connectors
+* [DuPont Connectors](https://www.mattmillman.com/info/crimpconnectors/dupont-and-dupont-connectors/)
+* [Common JST Connector Types](https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/)
 
 ![](https://raw.githubusercontent.com/arunmagesh/hw_hacking_cheatsheet/master/cheatsheet_0.1.png)
 
@@ -60,3 +69,5 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 - [Micro Channel Architecture](https://en.wikipedia.org/wiki/Micro_Channel_architecture)
 - [Single-board Computer (SBC)](https://en.wikipedia.org/wiki/Single-board_computer)
 - [System on a Chip (SoC)](https://en.wikipedia.org/wiki/System_on_a_chip)
+- [What is 'Bus Pirate' and how its used](https://www.bigmessowires.com/2013/11/19/what-is-the-bus-pirate/)
+- [List of Tools & Test Equipment](https://old.reddit.com/r/PrintedCircuitBoard/wiki/tools)

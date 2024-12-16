@@ -2,7 +2,7 @@
 title: "ADS Interface"
 ---
 
-An ADS (sic. *Aktive DiagnoseStecker (DE)*, or *Active Diagnostic Connector (EN)* is a diagnostic interface for older BMWs. It is based on [Keyword Protocol](/keyword-protocols), specifically KW-71 protocol implementation standards. The physical implementation is based on the interaction of two bus line called K and L (K-Line & L-Line), K-Line which produces bidirectional data, and L-Line used to handle in-directional data.
+An ADS (sic. *Aktive DiagnoseStecker (DE)*, or *Active Diagnostic Connector (EN)* is a diagnostic interface for older BMWs. It is based on [Keyword Protocol](/keyword-protocols), specifically KW-71 protocol implementation standards. The physical implementation is based on the interaction of two bus line called K and L (K-Line & L-Line), K-Line which produces bidirectional data, and L-Line used to handle in-directional data. There is a provisioned and detailed interface repository hosted privately on my [GitHub's Company Page](https://github.com/durakiconsulting/bmw-tiny-ads-interface) called `durakiconsulting/bmw-tiny-ads-interface`, which goes in details on the corresponding ADS Interface topic.
 
 The [TinyADS Interface](https://openlabs.co/store/Tiny-ADS-Interface) is an open-source implementation of the ADS from the team at openlabs.co, which uses BMW 20-Pin Diagnostic Port in vehicle at one side, and RS232 Serial Interface on the other side, to communicate with PC. Alternatively, you can [build custom BMW ADS adapter](https://deviltux.thedev.id/posts/o/20220219-bmw-tiny-ads-interface.html) via breadboard and a few transistors which I described in details [at my blog](https://deviltux.thedev.id/posts/o/20220219-bmw-tiny-ads-interface.html).
 

@@ -16,6 +16,7 @@ help:
 	@echo "	make help	- Show this help"
 	@echo "	make dev 	- Run Hugo development server"
 	@echo "	make prod 	- Build the static Hugo website for production"
+	@echo "	make push 	- Commit and push the tracked files on current branch"
 
 dev:
 	$(HUGO_CMD) server

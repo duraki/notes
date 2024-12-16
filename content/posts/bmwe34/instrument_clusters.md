@@ -2,7 +2,9 @@
 title: "Instrument Clusters"
 ---
 
-Several different versions of BMW E34 Instrument Clusters exists and were produced during the manufacturing process starting from 1988. up to 1996. which is the latest production of this 5-Series take turn. Very simplified, there are few different versions of E34 instrument cluster, where we can group a so called **Low** instrument cluster specifications, and **High** cluster specifications. All BMW E34 (7-Series) models use same instrument clusters as the E34 models. An experienced electrician [can convert clusters from Low ↔ High](/cluster-conversion) type, or further do various [Cluster Moddings](/cluster-modding-inspiration).  
+Several different versions of BMW E34 Instrument Clusters exists and were produced during the manufacturing process starting from 1988. up to 1996. which is the latest production of this 5-Series take turn. Very simplified, there are few different versions of E34 instrument cluster, where we can group a so called **Low** instrument cluster specifications, and **High** cluster specifications. All BMW E34 (7-Series) models use same instrument clusters as the E34 models. An experienced electrician [can convert clusters from Low ↔ High](/cluster-conversion) type, or further do various [Cluster Moddings](/cluster-modding-inspiration).
+
+A separate note in [VDO Instrument Cluster Display](/bmw/e34/ic/displays) provide more details on the LCD Display Modules used in BMW E34 Instrument Clusters.
 
 {{< notice >}}
 Instrument Clusters: LOW vs HIGH
@@ -160,3 +162,5 @@ Helpful Tools:
 * [Low to High Conversion Connector Schematics](https://drive.google.com/drive/folders/157ufvTEh-cFt6NoFWhwsj4IOxlOojPpC)
 * [Instructions for coding instrument panels on BMW E32/E34 via DIS Coding/Programming](https://en.oldbmw.ru/pages/manuals/363-instrukciya-po-kodirovaniyu-pribornyh-paneley-bmw-e34-e32.html)
 * [Installing DIS on VMWare Workstation, IBM T30, or GT1](https://en.oldbmw.ru/pages/manuals/340-instrukciya-po-ustanovke-dis-na-vmware-ibm-t30-i-gt1.html), and also [Optimizing performance of BMW DIS running on a VMWare Virtual Machine](https://en.oldbmw.ru/pages/manuals/341-optimizaciya-proizvoditelnosti-i-skorosti-raboty-bmw-dis.html)
+* *Pages 375 - 400* @ [Instrument Cluster BMW E34 '93](https://shark.armchair.mb.ca/~dave/BMW/e32/e32_93.pdf)
+* *Pages 319 - 342* @ [Instrument Cluster BMW E34 '94](https://www.armchair.mb.ca/~dave/BMW/e34/e34_94.pdf)

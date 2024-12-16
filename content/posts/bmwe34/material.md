@@ -2,7 +2,7 @@
 title: "BMW AG (E34) Learning Materials"
 ---
 
-This is Bavarian (*E34 5-series focused*) learning materials and resources, mostly related to ECUs, DMEs, Tuning, EE, Wirings et al. I currently daily-drive BMW E34, therefore I collect [my own repair&restoration](/e34-repair-restoration) techniques. The documentation is written and compiled with different models and versions in mind, but keeping the methodologies of the BMW Technical Documentation collected and researched through the years. Nevertheless, a lot of topics and information presented here are #ReverseEngineered from the very low or no available resources, for years in the past. [Thank me later →](https://linkedin.com/in/duraki/).
+This is Bavarian (*BMW E34 Series 5 focused*) learning materials and resources, mostly related to ECUs, DMEs, Tuning, EE, Wirings et al. I currently daily-drive BMW E34 with M50B20TU engine ([probably on MS40.1](https://web.archive.org/web/20080502043725/http://www.madi-auto.ru/articles/36.html)), therefore I collect [my own repair&restoration](/e34-repair-restoration) techniques. The documentation is written and compiled with different models and versions in mind, but keeping the methodologies of the BMW Technical Documentation collected and researched through the years. Nevertheless, a lot of topics and information presented here are #ReverseEngineered from the very low or no available resources, for years in the past. [Thank me later →](https://linkedin.com/in/duraki/).
 
 ## Table of Content
 
@@ -35,6 +35,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
     * [General Modding](/bmw/modding/general)
 	  - [ECU Chip Modding](/bmw/modding/ecu)
 	  - [Steering Wheel Button Panel](/bmw/modding/steeringwheel)
+	  - [RPM Shift LED](/bmw/shifter/led)
    	  - [Misc BMW E34 Tutorials](/bmw/misc/tutorials)
 	* [Diagnostic ADS Interface](/ads-interface)
     * [Keyword Protocols](/keyword-protocols)
@@ -44,6 +45,10 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
     * [Instrument Clusters / Tachometers](/instrument-clusters)
 	  - [Instrument Cluster: Disassembly](/bmw/clusters/disassembly)
 	  - [Instrument Cluster: Communication](/bmw/clusters/communication)
+	  - [Instrument Cluster: LCD Display](/bmw/e34/ic/displays)
+    	  - [Display: Non-VDO LCD Display](/bmw/e34/small-lcd)
+    	  - [Display: VDO LCD Display @ 18 Pins](/bmw/e34/vdo-lcd-18pins)
+    	  - [Display: VDO LCD Display @ 11 Pins](/bmw/e34/vdo-lcd-11pins)
 	  - [Instrument Cluster: Modding](/cluster-modding-inspiration)
 	  - [Instrument Cluster: Control Tachometer KM/H](/bmw/clusters/vehicle-speed)
 	  {{< hrsep >}}
@@ -57,6 +62,7 @@ This is Bavarian (*E34 5-series focused*) learning materials and resources, most
 	  - [Instrument Cluster: Cluster Conversion](/cluster-conversion)
 	  {{< hrsep >}}
       - [Instrument Cluster: Coding Plugs](/coding-plugs)
+      - [Instrument Cluster: Engine Temp Gauge](/bmw/e34/engine-temp-gauge)
 * Wiring
 	* [Circuit Basics & Debugging](/circuit-basics)
 	{{< hrsep >}}
@@ -128,4 +134,6 @@ Objectives of the [Electronic Signals](/electronic-signals) is to explain induct
 * [BMW E34 M5 OEM Paint Color Codes](https://www.myclassicparts.com/wp-content/uploads/2021/10/BMW_E34_M5_OEM_PAINT_COLOR_OPTIONS.pdf)
 * [BMW E34 OEM Paint Color Codes](https://www.myclassicparts.com/wp-content/uploads/2021/10/BMW_E34_PAINT_CODES_OEM_COLOR_OPTIONS.pdf)
 * [BMW E34 M5 OEM Wheel Style Options](https://www.myclassicparts.com/wp-content/uploads/2021/10/07_BMW_E34_M5_Wheel_Style_Specs_Options.pdf)
+* [BMW E27/E34 Repair and Maintanence Operations](https://web.archive.org/web/20200808144258/http://www.autoprospect.ru/bmw/e28-e34/)
+* [BMW E34 Service and OPeration Manual](https://web.archive.org/web/20190328110037/http://automn.ru/bmw-5-e34/)
 {{< /details >}}
