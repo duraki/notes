@@ -12,4 +12,3 @@ title: "Ethernet Specifications"
 - Physical Layer Collision Avoidance (PLCA)
 - Avoid collision of data
 - Multiple applications on single cable
-

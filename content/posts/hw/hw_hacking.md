@@ -59,6 +59,28 @@ Getting information on the device's hardware and software is vital because explo
 
 Things I carry during on-site hardware engagements *(aka the "Fieldkit") are also described in [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit) notes.
 
+**Recommended Books**
+
+- "Practical Electronics for Inventors", by P. Scherz & S. Monk
+  - *A foundational book to get a strong understanding of electronics components, circuits, and debugging tools. This serves as the groundwork for hardware reverse engineering.*
+- "The Hardware Hacker: Adventures in Making and Breaking Hardware", by A. Huang
+  - *Written by one of the best-known hardware hackers, this book explores how to reverse-engineer hardware, including challenges like chip-level reverse engineering.*
+- "Hacking the Xbox: An Introduction to Reverse Engineering", by A. Huang
+  - *A classic case study of hardware reverse engineering that teaches the fundamental techniques and mindset.*
+- "Practical Hardware Pentesting", by J.G. Valle
+  - *Focuses on how to identify, analyze, and exploit vulnerabilities in IoT hardware devices using reverse engineering techniques.*
+- "Exploring the Raspberry Pi: Interfacing to the Real World with Embedded Linux", by D. Molloy
+  - *While Raspberry Pi-focused, this book is a great primer for understanding embedded systems, interfacing with hardware, and hacking IoT devices.*
+- "The Art of Electronics", by P. Horowitz & W. Hill
+  - *A must-read for anyone serious about electronics, it delves into advanced concepts that are key for understanding and reverse engineering hardware systems.*
+- "Car Hacker's Handbook: A Guide for the Penetration Tester", by C. Smith
+  - *This is the go-to guide for reverse engineering modern vehicles, explaining CAN bus hacking, firmware analysis, and security testing of automotive systems.*
+- "Practical IoT Hacking: The Definitive Guide to Attacking the Internet of Things", by F. Chantzis
+  - *While not purely automotive-focused, it explains hardware and software techniques for IoT devices, which overlap significantly with modern connected car systems.*
+- "Automotive Embedded Systems Handbook", by N. Navet & F. Simonot
+  - *A comprehensive look at embedded systems in vehicles, covering hardware design and software reverse engineering.*
+- "
+
 **References**
 
 - [Embedded Systems](https://en.wikipedia.org/wiki/Embedded_system)
@@ -71,3 +93,12 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 - [System on a Chip (SoC)](https://en.wikipedia.org/wiki/System_on_a_chip)
 - [What is 'Bus Pirate' and how its used](https://www.bigmessowires.com/2013/11/19/what-is-the-bus-pirate/)
 - [List of Tools & Test Equipment](https://old.reddit.com/r/PrintedCircuitBoard/wiki/tools)
+
+**Other Links**
+
+- [Analysis of Mitsubishi ETC navigation terminal communication protocol](https://kaele.com/~kashima/car/metc/)
+- [Connecting a PC to a Panasonic VGA Navigation System](https://kaele.com/~kashima/car/navi/vga/)
+- [Jailbreaking Subaru StarLink](https://github.com/sgayou/subaru-starlink-research/blob/master/doc/README.md)
+- [DIY - Wiring in a Headunit (With Bluetooth Modification)](https://www.bimmerforums.com/forum/showthread.php?2195008-DIY-Wiring-in-a-Headunit-(With-Bluetooth-Modification))
+- [Display data from ECU to LCD](https://web.archive.org/web/20150815092259/http://www.bimmerforums.com/forum/showthread.php?2134697-Display-data-from-ECU-to-LCD)
+- [Tapping into the BMW 750iL's Phone Keypad](https://i-code.net/tapping-into-the-bmw-750il-phone-keypad/)

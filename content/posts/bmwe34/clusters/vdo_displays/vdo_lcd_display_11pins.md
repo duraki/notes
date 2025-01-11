@@ -13,7 +13,7 @@ url: /bmw/e34/vdo-lcd-11pins
 
 ---
 
-This is a note describing an LCD Display Module, with flat ribbon cable, adaptable to MotoMeter Instrument Cluster dashboards of a BMW 5 Series E34 (post-facelift models, for E34 525i and up, and also E32 735i and up).
+This is a note describing an LCD Display Module, with flat ribbon cable, adaptable to VDO Instrument Cluster dashboards of a BMW 5 Series E34 (post-facelift models, for E34 525i and up, and also E32 735i and up).
 
 {{< details "Expand Actual Photos" >}}
 ![](https://i.imgur.com/J85JaTO.png)

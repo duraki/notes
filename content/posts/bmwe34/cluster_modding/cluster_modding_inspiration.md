@@ -13,6 +13,8 @@ title: Cluster Modding Inspiration
 * [BMW E34 Instrument Cluster Overexposure & Needle LED Upgrade](https://www.drive2.ru/l/532954177777697018/)
 * [Make BMW E34 Instrument Cluster Brighter using LED Stripe](https://www.drive2.ru/l/9220763/)
 * [DIY LED Needle in BMW E46](https://www.youtube.com/watch?v=UAP589PZqcc)
+* [Installation and modding of an aftermarket Engine Temperature Gauge](http://alpinakozou.web.fc2.com/file/costomize2012/20120603.html)
+* [E34 Blue Dashboard Lights DIY](https://www.induleo.com/blauneu.html), and [Blue LED for BC](https://www.induleo.com/blaubc.html) as well
 * Also, make sure to check [RPM Shift Lights](/bmw/shifter/led) notes for more modding ideas
 
 ### Original Racing Parts

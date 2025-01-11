@@ -131,4 +131,5 @@ The RS-232-C uses standardised levels for its signal, except for `RI` line. The 
 * [Drive.ru: Homemade DIY ADS Adapter for BMW E34](https://www.drive2.ru/l/674430263069005051/)
 * [Drive.ru: Another DIY Diagnostic Adapter](https://www.drive2.ru/l/532112226748729651/)
 * [Drive.ru: ADS Interface bundled with the Plug Cable](https://www.drive2.ru/l/8715174/), also [Schematics](https://disk.yandex.ru/d/iCVabNa74iAbHg)
+* [e34.de: Reading BMW E34 Error Codes and building custom diagnostic interface 🇩🇪](https://www.e34.de/tips_tricks/fehlerspeicher/fehlerspeicher.htm), or <a target="_blank" href="/pdf/bmw-e34de-reading-bmw_e34_errors_building_interface.pdf">PDF (English)</a>
 {{< /details >}}

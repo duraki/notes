@@ -13,7 +13,7 @@ url: /bmw/e34/vdo-lcd-18pins
 
 ---
 
-This is a note describing an LCD Display Module, with no ribbon cable, attachable to LCD Module enclosure, adaptable to MotoMeter Instrument Cluster dashboards of a BMW 5 Series E34. Unlike the [VDO LCD Display - 11 Pins](/bmw/e34/vdo-lcd-11pins), this LCD provides a pin header on its backside, containing 18 pinouts.
+This is a note describing an LCD Display Module, with no ribbon cable, attachable to LCD Module enclosure, adaptable to VDO Instrument Cluster dashboards of a BMW 5 Series E34. Unlike the [VDO LCD Display - 11 Pins](/bmw/e34/vdo-lcd-11pins), this LCD provides a pin header on its backside, containing 18 pinouts.
 
 {{< details "Expand Actual Photos" >}}
 ![](https://i.imgur.com/oOKzWCj.png)

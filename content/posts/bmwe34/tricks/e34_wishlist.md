@@ -40,6 +40,7 @@ title: "Upgrade+Wishlist"
 - [Coolant Temperature Adapter](https://racegerman.com/collections/e34-all-products/products/coolant-temperature-sender-adapter)
 - [NRG Steering Wheel QUick Release Gen 2.5](https://racegerman.com/collections/e34-all-products/products/nrg-steering-wheel-quick-release-gen-2-5)
 - [Deluxe E34 Shifter Plate](https://racegerman.com/collections/e34-all-products/products/deluxe-e34-shifter-surround)
+- [BMW ALPINA Leather Bucket Seats](http://www.the-highwaystar.com/parts/entry-981.html)
 - **Single-DIN Head/Radio Units**
   - [Clarion FZ102E](https://www.clarion.com/xe/en/products-personal/audio/FZ102E/)
   - [iLX-F905D Alpine Halo9](https://www.alpine.co.uk/p/Products/SingleView/ilx-f905d)

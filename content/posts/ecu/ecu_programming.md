@@ -46,3 +46,10 @@ TBA: *Details*.
 
 TBA: *Details*.
 
+### References
+
+* [DME Firmware Data Extraction of the ECU Chip](http://alpinakozou.web.fc2.com/file/costomize2011/20110128.html)
+* [RX7 FDS3S 16bit ECU Analysis](https://kaele.com/~kashima/car/rx7.html)
+* [Synchronous switching of ECU ROM while driving](https://kaele.com/~kashima/car/spre/index.html)
+* [ECU ROM Changer that can be switched while driving](https://kaele.com/~kashima/car/rom_ch/index.html)
+* [Toyota ECU Toshiba 8X Series Disassembler](https://kaele.com/~kashima/software/tos8x.html)

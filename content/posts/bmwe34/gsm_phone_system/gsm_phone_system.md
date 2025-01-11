@@ -65,3 +65,4 @@ Please visit the separate GitHub project titled [Thesis on Reverse Engineering G
 * [BimmerForums.com Eject Box Wiring Pinout for E39](https://www.bimmerforums.com/forum/showthread.php?2411046-Help-Eject-Box-Wiring-Pinouts)
 * [BimmerForums.com Custom Standalone GSM Board](https://www.bimmerforums.com/forum/showthread.php?2415184-OEM-BMW-car-phone-modified-to-work-with-todays-networks&p=30346382#post30346382)
 * [Drive.RU Regular Phone Part #1](https://www.drive2.ru/l/645179680357360795/), and also [Part #2](https://www.drive2.ru/l/645180504991090987/)
+* [BMW Autotelefon (GSM) Operating Instructions](https://www.induleo.com/e34/autotelefon.pdf)

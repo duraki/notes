@@ -21,3 +21,7 @@ It's possible to convert LOW [instrument cluster](/instrument-clusters) to HIGH 
 {{< imgcap title="Instrument Cluster X501 Connector (Fig.2)" src="/posts/images/bmw_schm_diags/cluster_connectors_-x501-gn.jpg" >}}
 
 ---
+
+### References
+
+* [Convert Low Redesign Instrument Cluster to High Instrument Cluster](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Low_High_Umbau/Low_High.htm)

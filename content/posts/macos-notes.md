@@ -2,6 +2,105 @@
 title: "MacOS Notes"
 ---
 
+**Move macOS Desktop/Spaces with `Control+[Arrows+LeftRight]`**
+
+Using `Control+Left` or `Control+Right`, you can move over macOS Spaces either in Full Screen view, or default app windows view.
+
+To do so, open `Keyboard->Keyboard Shortcuts...` menu button in **System Settings** app on macOS and set the following in the `Mission Control->Mission Control` [tree] sidebar and list section:
+
+- Add "Move left a space" (`Control+[Left Arrow]`)
+- Add "Move right a space" (`Control+[Right Arrow]`)
+- Click "Done" button
+
+![](https://i.imgur.com/37gACWs.png)
+
+**Quickly open selected item in Finder New Window**
+
+This works both for opening either new Finder.app window or opening a new tab in the Finder.app for selected folder or document item currently selected in the Finder.
+
+To do so, first open Automator.app and set the Automator Script to `Open New Tab for selected Item ...`. 
+
+{{< notice >}}
+Tips and Tricks
+{{</ notice >}}
+{{< callout emoji="💡" text="The Automator.app workflows will be stored in the following macOS directory: `/Users/$USER/Library/Services/[filename].workflow`." >}}
+
+Using Terminal, you can open the workflow script directory with the command:
+
+```sh
+$ open ~/Library/Services
+```
+
+The Automator.app workflow will show up when starting it up and after using a `File->New ...` button or via shortcut `CMD+N`, simply choose the `Quick Action` as the workflow type and click **Choose** in the popup window.
+
+![](https://i.imgur.com/dVthoCx.jpeg)
+
+Then use the newly created Automator.app Workflow settings as shown below:
+
+1. Rename the Workflow to `"Open New Tab for selected Item ...[.workflow]"` (by renaming the document in Finder)
+2. Workflow Receiver:
+  - "Workflow receives current: `[files or folders]`" in `Finder.app`
+  - "Input is: `[entire selection]`" (*disabled, default*)
+  - "Image: `All My Files`" (*or select any other icons*)
+  - "Colour: `Black`" (*or select icon color*)
+3. Click on the "Library" toolbar icon, or app. menu `View->Show Library`
+4. In `Library->Actions` tab, search for "Run AppleScript" and drag-&-drop it to the workflow steps
+5. Paste the AppleScript code for the workflow and Save the Workflow Document (`Cmd+S`)
+
+![](https://i.imgur.com/SZySwSp.jpeg)
+
+The AppleScript code to use is shown below:
+
+```scpt
+# @see: https://gist.github.com/duraki/9a14120e74ab7e678a99eb9621ef108f
+#
+# AppleScript for macOS Sonoma that opens a new Finder window/tab showing the directory of  
+# a selected item (file or folder). If no item is selected, the script does nothing. Can be 
+# used in a Shortcut.app, as a Service in the menubar item, or as a Quick Action extension. 
+# 
+# Author: H. Duraki <hduraki@icloud.com>
+#					          <https://github.com/duraki>
+#                   Jan 11, 2025
+
+tell application "Finder"
+	-- Check if there is a selection of Item/Folder
+	set selectedItems to selection
+	if selectedItems is not {} then
+		-- Get the folder of the first selected item
+		set selectedItem to item 1 of selectedItems
+		set parentFolder to container of selectedItem as alias
+		
+		-- Open a new Finder window/tab with the item's directory
+		make new Finder window
+		set target of front window to parentFolder
+		
+		-- Optionally highlight the item in the new window
+		select selectedItem
+	else
+		-- If no item is selected, ~do~ nothing ~or~
+    -- use 'display dialog ... buttons {...}' to show the dialog selection
+	end if
+end tell
+```
+
+The workflow will be added to the "Quick Action" list when using right-click button on the Finder's selected item or directory, or it can be enabled in "Services" by opening Finder.app, then clicking `Finder->Services->Services Settings...` in the macOS menubar and selecting "Files and Folders" from the listview in the `Services` sidebar and checking the "*Open New Tab for selected item ...*". Click "Done" button when finished to complete the adding the item in the Application Services menu. By clicking on the "*none*" column (marked as *no# 4* in screenshot below), you may set a shortcut for the selected service button/action.
+
+![](https://i.imgur.com/hoPzEd7.jpeg)
+
+Using the above, the workflow will be added both in the right's-click "Quick Action" menu from the Finder.app, or using the `Services->Open New Tab for selected item ...` from the menubar in the Finder.app - for example, [using the right-click menu](https://i.imgur.com/Q8MLDes.jpeg), or via `Services->[...]` in the menubar [as shown here](https://i.imgur.com/yFdxkjZ.jpeg).
+
+{{< details "Right-click 'Quick Action' Menu" >}}
+![](https://i.imgur.com/Q8MLDes.jpeg)
+{{< /details >}}
+
+{{< details "Using 'Services' Menu in Finder" >}}
+![](https://i.imgur.com/yFdxkjZ.jpeg)
+{{< /details >}}
+
+Alternatively, download the full `.workflow` script for Automator.app to quickly add this action: [Download `.workflow` Bundle](/posts/files/macos/Open New Tab for selected Item .....workflow), and copy it to `~/Library/Services` directory.
+
+See also: [Github Gist - "*Open New Tab for Selected Item.scpt*"](https://gist.github.com/duraki/9a14120e74ab7e678a99eb9621ef108f)
+
 **Handy Command Line (CLI) Apps.**
 
 Several CLI utility apps are described and linked in [Sys/DevOps Notes](/sys/devops-notes). Other newly discovered CLI utils, that may not be *Sys/DevOps* specific, are linked in list below:

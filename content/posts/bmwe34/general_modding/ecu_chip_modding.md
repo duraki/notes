@@ -169,9 +169,21 @@ Usually, for BMW and MINI Cooper vehicles it is located In plastic box next to t
 * Corrosion of pins on DME PCB
 * Corrosion of pins outside the DME socket
 
+## Reflashes and EEPROM Swaps
+
+![](https://i.imgur.com/LgODBCc.png)
+
 ### Programmers
 
 * [Xgecu T48 Programmer Step-by-Step](https://www.youtube.com/watch?v=36xP4uufo84)
+
+### The DME/ECU Schematics
+
+* [BMW Motronic 1.3](https://www.e34.de/tips_tricks/motronic/m1_3.pdf)
+* [BMW Motronic 3.1](https://www.e34.de/tips_tricks/motronic/m3_1.pdf)
+* [BMW Motrnic Simens MS40](https://www.e34.de/tips_tricks/motronic/ms40.pdf)
+* [BMW Bosch L-Jetronic](https://www.e34.de/tips_tricks/motronic/lejet.pdf)
+* [BMW Computer Engine Control @ 535i](https://www.e34.de/tips_tricks/motronic/elmot535.pdf)
 
 ### References
 
@@ -202,3 +214,8 @@ Usually, for BMW and MINI Cooper vehicles it is located In plastic box next to t
 * [The Prom Tuning Guide Book & FAQ](https://www.thirdgen.org/forums/diy-prom/288763-prom-tuning-guide-book.html)
 * [(RU 🇷🇺) Documentation for BMW M50B20/M50B20TU Petrol Engines (Vanos) and the Siemens DME MS40.0/MS40.1 Control Systems](https://oldbmw.ru/documentation/319-dokumentaciya-po-dvigatelyam-bmw-m50b20-i-m50b20tu-sistemy-upravleniya-dme-siemens-ms400-i-ms401.html)
 * [DME Performance Chip Install Instructions](http://www.nmia.com/~dgnrg/page_18a.htm)
+* [DME Firmware Data Extraction of the ECU Chip](http://alpinakozou.web.fc2.com/file/costomize2011/20110128.html)
+* [RX7 FDS3S 16bit ECU Analysis](https://kaele.com/~kashima/car/rx7.html)
+* [Synchronous switching of ECU ROM while driving](https://kaele.com/~kashima/car/spre/index.html)
+* [ECU ROM Changer that can be switched while driving](https://kaele.com/~kashima/car/rom_ch/index.html)
+* [Toyota ECU Toshiba 8X Series Disassembler](https://kaele.com/~kashima/software/tos8x.html)

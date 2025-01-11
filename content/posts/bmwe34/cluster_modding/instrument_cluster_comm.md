@@ -218,3 +218,4 @@ The user @Roxsamara posted a [Drive.RU](https://www.drive2.ru/l/6392120809976106
 * [Injecting UART Messages into the BMW E32 750iL Instrument Cluster LCD](https://web.archive.org/web/20200817092629/https://i-code.net/injecting-custom-uart-messages-into-the-bmw-750il-instrument-cluster-lcd/)
 * [Bypass the 'Check Control' Error on E32/E34 Instrument Cluster w/ Arduino](https://github.com/spanDN/check_emulation/tree/master)
 * [BMW E34 Display that will display data from Rx/Tx Line w/ Arduino](https://github.com/LOBACU/BMW_e34_display?tab=readme-ov-file)
+* [Drive.ru: E34 Speed/Tacho/Voltage/Temperature in IC](https://www.drive2.ru/l/639212080997610691/)
