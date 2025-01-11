@@ -340,7 +340,7 @@ tools:
       - "Reverse Engineering: IDA by Hex-Rays, Asset Catalog Tinkerer, Bit
         Slicer, CAARPlayer, Hopper Disassembler, imhex, iOS App Signer,
         MachOView, Samra, Schemes, Sloth, Suspicious Package, veles, BinDiff,
-        WhatsYourSign"
+        WhatsYourSign, Bananafish's Dumper"
       - "Penetration Testing: Burp Suite Professional, Kali Linux"
       - "Electrical Engineering: Cuprum, DSView, Fritzing, KiCAD, Arduino IDE"
       - "Development: Visual Studio Code, XCode, Captain, DB Browser for SQLite,

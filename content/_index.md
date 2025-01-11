@@ -86,6 +86,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Encryption and Cryptography](/encryption-and-cryptography)
 * [Demangling C++ files using Frida](/c-plus-plus-demangler)
 * [Objective-C Reverse Eng.](/objective-c-re) {{< sup_a "~ iOS/macOS" "#" >}}
+    * [ObjC Class Decompilation](/objc-decompile)
 * [Frida](/frida)
     * [Frida Class Generator](/generate-frida-class)
     * [Frida and r2 Interop](/r2frida)
@@ -101,6 +102,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [MacOS Library Injection](/dyld-ios-injection)
     * [LLDB for MacOS](/lldb-for-macos)
     * [Hopper for MacOS](/pure-reverse-engineering#hopper-disassembler)
+      * [ObjC Class Decompilation @macOS](/objc-decompile)
     * [MacOS MITM for TCP/UDP protocols](/macos-mitm-on-tcp/udp/)
     * macOS ARM/M1/M2 [{{< sup_clean "ARM/M1/M2 §" >}}](/macos-arm/m1/m2/)
       * [M1 LLDB Configuration](/configure-lldb-on-m1/m2/)
@@ -117,6 +119,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore)
     * [iOS Jailbreak Bypass](/jailbreak-bypass)
     * [iOS Static Analysis](/ios-static-analysis)
+      * [ObjC Class Decompilatio @iOS](/objc-decompile)
     * [Frida Gadget injection on iOS](/frida-gadget-injection-on-ios)
     * [Advanced Frida Scripting for iOS](/ios-frida-scripting)
     * [Frida Tracing](/frida-trace-for-ios)
