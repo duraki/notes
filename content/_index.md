@@ -119,6 +119,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [iOS Library Injection](/dyld-ios-injection)
     * [Cycript](/cycript)
     * [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore)
+      * [Download IPA on MacOS](/download-ipa-on-macos)
     * [iOS Jailbreak Bypass](/jailbreak-bypass)
     * [iOS Static Analysis](/ios-static-analysis)
       * [ObjC Class Decompilatio @iOS](/objc-decompile)
