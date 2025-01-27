@@ -161,7 +161,7 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 ### Misc
 
 * [Windows Notes](/windows-notes)
-* [Linux Notes](/linux-notes)
+* [Linux Notes](/linux-notes) & [AndroidOS Notes](/android-notes)
 * [MacOS Notes](/macos-notes) & [iPad Notes](/ipad-notes)
 * [Computer Sync](/computer-sync)
 * [Sys/DevOps Deployments & Notes](/sys/devops-notes) 🦄
