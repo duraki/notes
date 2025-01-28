@@ -2,7 +2,7 @@
 title: Running Android Apps on MacOS
 ---
 
-There are multiple ways to run Android applications on MacOS. Some of tested methods are outlined below.
+There are multiple ways to run Android applications on MacOS. Some of tested methods are outlined below, while others are presented by Laurie's [Android Emulators for RE](https://github.com/LaurieWired/android_emulators_for_reverse_engineers) notes on her GitHub, albeit seems a bit old.
 
 ## Running Android apps via MuMuPlayer Pro
 

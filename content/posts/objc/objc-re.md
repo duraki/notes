@@ -130,3 +130,6 @@ Described in [separate notes](/dissecting-objc-runtime-on-arm64) due to huge con
 
 Described in [separate notes](/generic-block-proxy) due to huge content.
 
+#### Other Resources
+
+* [RenameObjCStubs](https://github.com/level3tjg/ghidra_scripts) Ghidra Script

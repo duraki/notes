@@ -2,6 +2,10 @@
 title: "Network Reverse Engineering"
 ---
 
+**Sniff & Decrypt HTTP/HTTPS Traffic on macOS/iOS**
+
+The [harlogger](https://github.com/doronz88/harlogger) is a simple utlity for sniffing & decrypting HTTP/HTTPS traffic on a macOS/iOS device which is either jailbroken or not based on Apple's not-so-well documented APIs.
+
 **Find broken URLs in Files**
 
 The CLI utility `urlsup` can come handy when you want to find URLs in files, and check whether they are alive, by issuing a `GET` request and checking the response status code. The [simeg/urlsup](https://github.com/simeg/urlsup) is written in Rust, and executes using async requests in multiple threads, making it quite fast.

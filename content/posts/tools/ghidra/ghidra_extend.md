@@ -2,6 +2,12 @@
 title: "Ghidra Scripts"
 ---
 
+## Apple-related Scripts
+
+* [SwizzlingDetector](https://github.com/LaurieWired/iOS_Reverse_engineering/blob/main/SwizzlingDetector.py) - Detect whether an app is using swizzling
+* [SwiftNameDemangler](https://github.com/LaurieWired/iOS_Reverse_Engineering/blob/main/SwiftNameDemangler.py) - Demangle Swift class, functions, and vars
+* [RenameObjCStubs](https://github.com/level3tjg/ghidra_scripts) - An Objective-C Stub decoder
+
 ## Replica - Analysis Enhancer
 
 * [reb311ion/replica](https://github.com/reb311ion/replica) **{{< sup_a " installation guide" "https://github.com/reb311ion/replica#-installation" >}}**  `=> replica is Ghidra's Analysis Enhancer plugin`

@@ -114,3 +114,7 @@ On a jailbroken device, a `MobileSubstrate.dylib` will be injected via `DYLD_INS
 ```
 $ getenv("DYLD_INSERT_LIBRARIES")
 ```
+
+## Jailbreaking Techniques
+
+* [Legacy-iOS-Kit](https://github.com/LukeZGD/Legacy-iOS-Kit)

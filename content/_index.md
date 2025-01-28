@@ -121,6 +121,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore)
       * [Download IPA on MacOS](/download-ipa-on-macos)
     * [iOS Jailbreak Bypass](/jailbreak-bypass)
+      * [Tweaks](/tweaks-for-ios)
     * [iOS Static Analysis](/ios-static-analysis)
       * [ObjC Class Decompilatio @iOS](/objc-decompile)
     * [Frida Gadget injection on iOS](/frida-gadget-injection-on-ios)

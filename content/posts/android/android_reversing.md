@@ -2,6 +2,10 @@
 title: "Android Reverse Engineering"
 ---
 
+### Decompilation & Debugging
+
+Use the [JADX](https://github.com/skylot/jadx) and Laurie's [JADXecute](https://github.com/LaurieWired/JADXecute) plugin that enhances JADX by adding **Dynamic Code Execution** abilities. The JADXecute allows you to dynamically run Java code or modify/investigate components of the `jadx-gui` output.
+
 ### Burp Proxy Setup
 
 If using **Android 7** or above, you need to export Burp CA Certificate from `Proxy → Options`, and selecting `Import/Export CA certificate`. Android wants the certificate to be in **PEM format**. The filename has to be equal to the `subject_hash_old` value appended with `.0`.

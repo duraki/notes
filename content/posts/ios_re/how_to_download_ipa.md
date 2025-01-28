@@ -9,7 +9,7 @@ See [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore) notes for details, o
 
 # Via MacOS (Mac)
 
-Downloading IPA from the AppStore is possible on macOS as well, thanks to the [majd/ipatool](https://github.com/majd/ipatool).
+Downloading IPA from the AppStore is possible on macOS as well, thanks to the [majd/ipatool](https://github.com/majd/ipatool). The process of decrypting these binaries is explained under separate note - [decrypt IPA from AppStore (macOS)](/decrypt-ipa-from-appstore#macOS) but the results are not tested.
 
 ## Setting up & Using `ipatool` on macOS
 

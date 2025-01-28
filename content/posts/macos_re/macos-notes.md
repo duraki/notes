@@ -391,3 +391,16 @@ class Ext4fuse < Formula
   end
 end
 ```
+
+**MacOS ScreenSaver Collection**
+
+* [Flux](https://github.com/packagesdev/flux) *([Picture](https://www.reallyslick.com/pictures/flux_th.jpg))*
+* [Flocks](https://github.com/packagesdev/flocks) *([Picture](http://www.reallyslick.com/pictures/flocks_th.jpg))*
+* [Cyclone](https://github.com/packagesdev/cyclone) *([Picture](http://www.reallyslick.com/pictures/cyclone_th.jpg))*
+* [Fireflies](https://github.com/packagesdev/fireflies)
+* [MatrixGL](https://github.com/packagesdev/matrixgl)
+
+**Other Utils**
+
+* [mac-cleanup-py](https://github.com/mac-cleanup/mac-cleanup-py) - Python cleanup script for macOS
+
