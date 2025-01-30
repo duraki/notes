@@ -11,6 +11,8 @@ See [Decrypt IPA from AppStore](/decrypt-ipa-from-appstore) notes for details, o
 
 Downloading IPA from the AppStore is possible on macOS as well, thanks to the [majd/ipatool](https://github.com/majd/ipatool). The process of decrypting these binaries is explained under separate note - [decrypt IPA from AppStore (macOS)](/decrypt-ipa-from-appstore#macOS) but the results are not tested.
 
+To run IPAs on Mac with M1 support (*Apple Silicon*), you can try [PlayCover](https://github.com/PlayCover/PlayCover). Additionally, you may [download XCode simulator](https://github.com/timsutton/speedwagon) using `speedwagon` and use it in combination with [simforge](https://github.com/EthanArbuckle/simforge) allowing you to run decrypted iOS apps on iOS Simulators. There is also [simject](https://github.com/akemin-dayo/simject) which allows for iOS dynamic library injection (ie. *tweak injection*) in the iOS Simulators.
+
 ## Setting up & Using `ipatool` on macOS
 
 The `ipatool` is an open-source utility developed by [majd](https://github.com/majd) which allows users to download IPA files directly from the AppStore.

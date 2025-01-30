@@ -22,3 +22,4 @@ title: "Tweaks for iOS"
   * [Infuse+ Enhancer](https://github.com/dayanch96/InfusePlus) - Enhancer for Infuse iOS app
   * [iTorrent](https://github.com/XITRIX/iTorrent) - Torrent client for iOS
   * [qBitControl](https://github.com/Michael-128/qBitControl) - Control qBitTorrent from iPhone
+  * [Brushr](https://github.com/markydoodled/Brushr?tab=readme-ov-file) - Toothbrushing Timer iOS app that integrates with Apple Health

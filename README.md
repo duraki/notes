@@ -75,6 +75,39 @@ The changes should reflect instantly on the `~notes` webpages, or if not, refres
 
 ### Development Environment 🎉
 
+**Repository Hooks**
+
+This repository implements a *pre-commit* hook located in `.git/hooks/pre-commit`. This *pre-commit* hook is using [`htmltest`](https://github.com/wjdp/htmltest) to verify and make sure all links in markdown are valid. If the  content in these markdown files have a broken URLs linked, it will report back these errors in your tty (Terminal) and stops you from commiting the changes on [GitHub](https://github.com/duraki/notes). In case you need to skip this commit and push to remote accordingly, use `--no-verify` flag when using `git commit`.
+
+**TODO:**
+- [ ] Replace [htmltest](https://github.com/wjdp/htmltest) with [lychee](https://github.com/lycheeverse/lychee)
+- [ ] Fix this *pre-commit* script to support [lychee](https://github.com/lycheeverse/lychee)
+
+```bash
+$ cat .git/hooks/pre-commit
+
+#!/bin/sh
+#
+if ls -l './public/'; then
+  echo "Directory [/public] found, cont. ... [YES]"
+else
+  hugo -D $(pwd)/config.toml -d $(pwd)/public
+fi
+
+RESULT="1"
+$(pwd)/bin/htmltest -c $(pwd)/bin/.htmltest.yml
+set $RESULT="$?"
+
+if [ "$RESULT" == "0" ]; then
+  echo "Error with links"
+  exit
+fi
+
+# Redirect output to stderr.
+exec 1>&2
+```
+
+
 **Engine Debugger**
 
 Sometimes, Hugo breaks. Don't we all? 😔 During the design and implementation of the theme used, I've added a few shortcodes and quick references to quickly dump debug information from the templating pages. I use custom (fork) version of [hugo-debugprint](https://github.com/kaushalmodi/hugo-debugprint) which is bundled in this repository, or call `{{ partial "console_log" }}` to dump the variables directly in the Web Console. [Log Example](/content/debug/dbg.md) are also part of the notes.
