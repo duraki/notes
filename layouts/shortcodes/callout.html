@@ -26,6 +26,6 @@
 <div id="callout" style="">
     <div>{{ .Get "emoji" }}</div>
     <div id="callout-inner">
-        {{ .Get "text" }}
+        {{ .Get "text" | markdownify }}
     </div>
 </div>

@@ -38,3 +38,5 @@ $ echo "options rt2800pci  nohwcrypt=1" | sudo tee /etc/modprobe.d/rt2800pci.con
 $ sudo modprobe -rfv rt2800pci
 $ sudo modprobe -v rt2800pci
 ```
+
+Also check [WiFi Penetration Testing Guide](https://github.com/ricardojoserf/wifi-pentesting-guide) for more details.

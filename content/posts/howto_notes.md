@@ -200,6 +200,36 @@ You just add appropriate `hrsep` shortcode between the list items, like so:
 
 ... or use the `{{ < hrsep > }}` shortcode whenever needed.
 
+**Image Gallery with Captions**
+
+The files in `layouts/shortcodes/[gallery.html]|[galleries.html]` provides a Hugo shortcut that provides easy to use gallery rendering using the nanogallery library to do all the good stuff. Plus, you can set your own image captions. It's based on this [code](https://atharvashah.netlify.app/posts/tech/hugo-shortcodes/#gallery).
+
+```
+{{ < galleries >}}
+  {{ < gallery src="/blog/image.webp" title="Image Caption Goes Here" >}}
+  {{ < gallery src="/blog/image.png" title="You can use PNG, WEBP, or any other image format" >}}
+  {{ < gallery src="..." title="..." >}}
+{{ < /galleries >}}
+```
+
+**Highlight particular part of the Text**
+
+```
+If you want, you can highlight {{ < highlight "this particular text." > }} Okay, thats it!
+```
+
+**Example:** If you want, you can highlight {{< highlight "this particular text." >}} Okay, thats it!
+
+**Styled Keyboard Shortcut**
+
+Use below shortcode to display stylized *Keyboard Shortcuts* usually seen on documentation pages and alike.
+
+```
+This is an example of keyboard shortcut: {{ <kbd>⎇</kbd> }}
+```
+
+This is an example of keyboard shortcut: {{<kbd>}}⎇{{</kbd>}}.
+
 **Shortcode Resources**
 
 [More shortcodes](https://gohugo.io/content-management/shortcodes/) on official website.

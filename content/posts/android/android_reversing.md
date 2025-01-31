@@ -64,3 +64,4 @@ $ adb shell 'logcat --pid=$(pidof -s x.xxx.xxx.xxxxx.xx)'
 * [Frida on non-rooted device](https://jlajara.gitlab.io/mobile/2019/05/18/Frida-non-rooted.html)
 * [InjectFridaGadget tool](https://github.com/darvincisec/InjectFridaGadget)
 * [Proxying Android App traffic](https://blog.nviso.eu/2020/11/19/proxying-android-app-traffic-common-issues-checklist/)
+* [Awesome Android Security](https://github.com/ashishb/android-security-awesome)

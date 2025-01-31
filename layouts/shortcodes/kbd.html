@@ -1,0 +1,39 @@
+{{/*  <kbd style="display: inline-block; border: 1px solid #ccc; border-radius: 4px; padding: 0.1em 0.5em; margin: 0 0.2em; box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset; background-color: #f7f7f7">{{ .Get "key" }}</kbd>  */}}
+
+{{/*
+width: auto;
+height: 22px;
+text-align: center;
+vertical-align: baseline;
+align-content: center;
+align-self: center;
+align-items: center;
+
+*/}}
+
+<kbd 
+    style="
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: 22px;
+        max-height: 22px;
+        min-width: 22px;
+        vertical-align: text-bottom;
+
+        text-align: center;
+        font-family: monospace; 
+        font-size: x-small; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        padding: 0em 0.5em; 
+        margin: 0em 0em 0em 0em; 
+        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset; 
+        background-color: #f7f7f7">
+{{ .Inner }}
+</kbd>
+
+{{/*  *-top *-right *-bottom *-left  */}}
+{{/*  0em 0em 0em 0em  */}}
+{{/*  margin: 0em 0.2em;   */}}
