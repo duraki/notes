@@ -10,7 +10,19 @@ For **Java** Language, mostly related for web-application, additional notes are 
 
 ---
 
+For **Python** Language, there is [pyt](https://github.com/python-security/pyt) - a static analysis tool for detecting security vulnerabilities in Python Web Applications. You may also take a look at [PyCQA/bandit](https://github.com/PyCQA/bandit), a security linter tool designed to find common security issues in Python code.
+
+---
+
 For **GoLang** code audits and reviews, read out "Secfault Security Report, published for 1Password Code Audit" in references below.
+
+---
+
+Misc Tools:
+
+* [opengrep/opengrep](https://github.com/opengrep/opengrep) - Static code analysis engine to find security issues in code
+* [google/osv-scanner](https://github.com/google/osv-scanner) - Vulnerability Scanner written in Go which uses data provided by osv.dev
+
 
 ---
 

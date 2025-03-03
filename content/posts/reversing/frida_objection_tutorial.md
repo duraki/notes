@@ -1,54 +1,7 @@
 ---
-title: "Frida & Objection Tutorial"
+title: "Frida & Objection Tutorial (iOS)"
+url: "frida-objection-tutorial"
 ---
-
-## Android Tutorial
-
-### Frida Setup
-
-Make sure to have Android Debugging interface running (`adbd`) on your testing device. For reference, read the [adbd setup](#adbd-setup) first and then continue here.
-
-Install the Frida for [Android](https://frida.re/docs/android/):
-
-```
-$ adb root # might be required
-$ adb push frida-server /data/local/tmp/
-$ adb shell "chmod 755 /data/local/tmp/frida-server"
-$ adb shell "/data/local/tmp/frida-server &"
-```
-
-Smoke test on Frida setup:
-
-```
-$ adb devices -l
-$ frida-ps -U
-# PID NAME 1590 com.facebook.katana
-# 13194 com.facebook.katana:providers
-# 12326 com.facebook.orca
-# 13282 com.twitter.android
-...
-```
-
-### `adbd` setup
-
-* Change all SELinux permissions to **Permissable**
-* Use SELinuxPermission Android application, which checks for `getenforce` on a system reboot
-* In MagiskManager application, enable the [ADB Root](https://github.com/evdenis/adb_root)
-* When device is rebooting, USB debugging will not work out of the box
-* SSH to Android device, using OpenSSHD
-* In SSH shell type the following:
-
-```
-# => On Android device (ssh)
-% su
-% whoami
-% adbd
-
-# => On Attackers machine (duh)
-$ adb root
-$ adb shell
-(android) $ whoami # => root
-```
 
 ## iOS Tutorial
 

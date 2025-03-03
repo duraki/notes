@@ -20,3 +20,4 @@ Potential automotive cyber attacks surface and vectors are mentioned in [here](h
 * [KeenLab: Exploiting Wi-Fi Stack on Tesla Model S](https://keenlab.tencent.com/en/2020/01/02/exploiting-wifi-stack-on-tesla-model-s/)
 * [Updating Maps in RNS315 Radio Navigation Multimedia](https://blog.danman.eu/updating-rns315-maps-for-fun-and-profit/)
 * [Playing with CANBus with CAN Controller](https://blog.danman.eu/playing-with-can-bus/)
+* [Recovering an ECU Firmware using Disassembler and Branches](https://blog.quarkslab.com/recovering-an-ecu-firmware-using-disassembler-and-branches.html)

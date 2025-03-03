@@ -53,3 +53,4 @@ TBA: *Details*.
 * [Synchronous switching of ECU ROM while driving](https://kaele.com/~kashima/car/spre/index.html)
 * [ECU ROM Changer that can be switched while driving](https://kaele.com/~kashima/car/rom_ch/index.html)
 * [Toyota ECU Toshiba 8X Series Disassembler](https://kaele.com/~kashima/software/tos8x.html)
+* [Recovering an ECU Firmware using Disassembler and Branches](https://blog.quarkslab.com/recovering-an-ecu-firmware-using-disassembler-and-branches.html)

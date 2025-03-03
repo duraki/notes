@@ -17,6 +17,95 @@ $ killall -SIGSEGV SpringBoard ^  // Safe Mode
 $ tail -f /var/log/syslog
 ```
 
+**Use `mobdevim` to interact with iOS device**
+
+The [`mobdevim`](https://github.com/DerekSelander/mobdevim) utility written by Derek S. is great little tool that allows us to query and interact with iOS (iPhone) device from our MacOS Host. This utility needs to be compiled by cloning the repository and building it from the XCode. Alterantively, there is an outdated [compiled version](https://github.com/DerekSelander/mobdevim/blob/main/compiled/mobdevim) of it, but I don't recommend using it. Instead, build the XCode Project and copy the built executable `mobdevim` to your `$PATH` directory, ie:
+
+```
+$ cp $HOME/Library/Developer/Xcode/.../.../mobdevim ~/.config/bin/
+```
+
+Do note that you need to have DDI (*XCode Developer Disk Images*) specific to your iOS version running on the iPhone device. For example, if I'm running iOS 16.7, I'd need a DDI for that iOS version. Some DDI's are available on [this GitHub](https://github.com/mspvirajpatel/Xcode_Developer_Disk_Images) repository. If you can't find DDI you need, then connect your iPhone device to MacOS and build a simple iOS app targeting your iPhone device, which will automatically copy and provision the DDI you need on your HostOS. The provisioned DDI should be visible in the XCode directory:
+
+```
+$ ls -la /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport
+# drwxrwxr-x   4 root  wheel  128 Apr 18  2024 16.1
+# drwxr-xr-x   4 root  wheel  128 Apr 18  2024 16.4
+```
+
+You can see that I have iOS 16.4 DDI already, which would proably work for iOS 16.7 as well, therefore, we can upload the DDI for the `mobdevim`:
+
+```
+        # to mount the DDI
+$ mobdevim -I /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/16.4/DeveloperDiskImage.dmg.signature \
+              /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport/16.4/DeveloperDiskImage.dmg
+## Connected to: "XXXXX XXXXXX’s iPhone" (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) USB
+## DDI mounted to /Developer! |============[REDACTED]============| ETA 100%
+
+        # to later unmount the DDI
+$ mobdevim -M       # Unmount
+```
+
+Now you can use `mobdevim`, with a few examples shown below:
+
+```
+$ mobdevim -F   # list all available connections (USB/WiFi/...)
+# [ 1] xxxxxxxx-xxxxxxxxxxxxxxxx ("xxxxxxxx-xxxxxxxxxxxxxxxx") WIFI
+# [ 2] xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") USB
+# [ 3] xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") WIFI
+
+$ mobdevim -U   # prefer device connection over USB
+# Connected to: "XXXXX XXXXXX’s iPhone" (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) USB
+#             or use:
+# mobdevim -W   # prefer device connection over use WiFi
+# Connected to: "..."
+
+$ mobdevim -f   # get device info
+# Connected to: "XXXXX XXXXXX’s iPhone" (XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX) USB
+#
+# name	XXXXX XXXXXX’s iPhone 
+# UDID	d7d5b623ac4e29331c029537aec9b6e75c81c88c
+# Product Type	iPhone10,3
+# 
+# State	Activated
+# ...
+# 
+# DskSpce	78%
+# Serial	XXXXXXXXXXXX
+# ...
+
+            ## Requires DDI ##
+$ mobdevim -p                   # list running processes on the device
+$ mobdevim -k <...>             # kill a process
+
+$ mobdevim -l | grep example    # list all apps & grep/show with name 'example'
+# com.example.com, ExampleApp
+##          ... or ... 
+$ mobdevim -l com.example.com                 # get detailed info about specified app
+$ mobdevim -l com.example.com Entitlements    # list 'Entitlemenets' key from specified app
+
+            ## Requires DDI ##
+$ mobdevim -o com.example.com   # open app
+#           ... or ...
+$ mobdevim -o com.example.com -A "--some-args-here" -V EnvKey=EnvValue \
+                              -V AnotherEnv=SomeValue # open app with args and env flags                       
+
+$ mobdevim -g com.example.com   # get device logs for specific app
+$ mobdevim -g 3                 # get the 3rd most recent log
+$ mobdevim -g __all             # get all the logs
+$ mobdevim -c                   # dump out the console info
+
+$ mobdevim -i <path_to_bundle>    # Install app. given the path to bundle
+$ mobdevim -u <bundleIdentifier>  # Uninstall an app, given the bundleIdentifier
+
+            ## Requires DDI ##
+$ mobdevim -L 0 0               # remote location simulation
+$ mobdevim -L <lat> <lon>       # simulate phone in location at lan/lon
+
+$ mobdevim -R                   # use color in tty output
+                                # or use: DSCOLOR=1 mobdevim <...>
+```
+
 **Using `class-dump`, or `dsdump`**
 
 ```

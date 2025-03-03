@@ -20,6 +20,8 @@ The file can be read with just normal hexadecimal editors (ie. *HexView*). Using
 
 Modifying the contents is done by searching the hex for known patterns that are called *[Lookup Tables](/lookup-tables)*. There is a large number of lookup tables describing parameter details such as: *throttle position vs rpm*, *coolant temp vs rpm*, and so on.
 
+Also, take a look at Quarkslab's [Recovering an ECU Firmware using Disassembler and Branches](https://blog.quarkslab.com/recovering-an-ecu-firmware-using-disassembler-and-branches.html) blogpost.
+
 ### Tuning Software vs Hex Editors
 
 The use of all the Tuning Software is that they allow plotting the hex values on a graph against its location, to give you image of the data, something the human eye can recognise quickly and easily. The tuning software usually contains the [Lookup Tables](/lookup-tables) databases, so you can open the table and change the values in each column/row as you would in any database client.
@@ -29,4 +31,3 @@ Using hex editors is an old-school choice, and should be used only by experience
 Software List:
 
 - RomRaider [web](https://www.romraider.com) - [GitHub](https://github.com/RomRaider/RomRaider)
-

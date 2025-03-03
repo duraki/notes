@@ -2,6 +2,12 @@
 title: "Android Recompilation"
 ---
 
+## APKLab Workbench
+
+A more in-depth instructions are provided in separate note titled ["Using APKLab for Recompilation"](/reactnative-patch-devmode-old) which is both easier and stable method of recompilation.
+
+## Manual Recompilation
+
 Decompile Android APK file using `apktool`:
 
 ```
@@ -22,4 +28,3 @@ $ jarsigner -keystore example.keystore -verbose AppName.apk example
 # => installation
 $ apk install AppName.apk
 ```
-
