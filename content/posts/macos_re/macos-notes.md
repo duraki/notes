@@ -14,6 +14,69 @@ To do so, open `Keyboard->Keyboard Shortcuts...` menu button in *System Settings
 
 ![](https://i.imgur.com/37gACWs.png)
 
+**Essential Commands**
+
+Add below code to `~/.zshrc` or equivalent to quickly enable new settings and configuration.
+
+```
+profile() {
+  open .bash_profile
+}
+
+reload() {
+  . .bash_profile
+}
+```
+
+**Printing and Related**
+
+Clear printing queue:
+
+```
+$ cancel -a -
+```
+
+Quit Printer App after print jobs has completed:
+
+```
+$ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+```
+
+**System and Related**
+
+Use `sudo` with TouchID instead of typing the password:
+
+```
+$ sudo vim /etc/pam.d/sudo
+# add the following line to the top:
+# auth sufficient pam_tid.so
+```
+
+Or use the following one-liner to do the same:
+
+```sh
+sudo sh -c -- 'filename="sudo" && file="/etc/pam.d/$filename" && echo "auth sufficient pam_tid.so" | cat - $file > /tmp/$filename.tmp && mv /tmp/$filename.tmp $file'
+```
+
+Programatically set macOS login window text:
+
+```
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "This system is authorized to ... [redacted]"
+```
+
+Speeding up "Quick Look" animation:
+
+```
+$ defaults write -g QLPanelAnimationDuration -float 0.1
+```
+
+Allow last installed app. from unidentified developer to be allowed:
+
+```
+$ sudo spctl --add /Applications/$(ls -lt /Applications/ | head -2 | grep .app | cut -d':' -f2 | sed 's/[0-9]*//g' | sed -e 's/^[ \t]*//')
+# it's possible to create a shortcut that will execute this command 
+```
+
 **Quickly open selected item in Finder's New Window**
 
 This works both for opening either new Finder.app window or opening a new tab in the Finder.app for selected folder or document item, as selected in the Finder app.

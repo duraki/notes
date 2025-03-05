@@ -13,3 +13,4 @@ tmp
 resources/*
 .vscode
 node_modules/
+themes/haxor-notes/exampleSite*
