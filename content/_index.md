@@ -4,7 +4,7 @@ lastmod = 2022-04-29
 type = "index"
 +++
 
-# About these notes
+# <img style="height: 32px; vertical-align: middle; float: left; padding-right: 10px;" src="https://deviltux.thedev.id/notes/favicons/favicon_boxed.png"> About these notes
 
 Hi! 👋 I'm [Halis Duraki](https://duraki.github.io) and these are my personal notes. I'm a passionate hacker, mostly interested in reverse engineering, 0day exploitation and web applications. Notes presented here will relate to topics I'm most expertus about.
 
