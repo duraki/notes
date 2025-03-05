@@ -1,55 +1,83 @@
 /**
-var baseURL = JSON.string( {{ Site.baseURL }} );
-console.err("baseURL set to=", baseURL);
-**/
+ * This Javascript code manages a note-stacking system, allowing users to dynamically
+ * load and navigate through different pages (ie. notes) within a grid-like structure.
+ * The loading of the notes content is AJAX-based, alongside the navigation history, 
+ * and interactive previews. 
+ * 
+ * This Javascript code enables features such as:
+ *    - Dynamically fetching and inserting _note_ content
+ *    - Maintaining a history stack of _notes_ via the Browser's history API
+ *    - Handling link statuses and interactions of the _notes_
+ *    - Displaying previews of linked content (_notes_) in preview pop-ups
+ */
+console.log("Initializing note stacking script ...");
+var DEV_MODE = true;
 
+if (
+  (window.location.href.indexOf('//localhost') > 0) ||
+  (window.location.href.indexOf('//127.0.0.1') > 0) ||
+  (window.location.href.indexOf('//0.0.0.0') > 0)
+) {
+  /* do not no-op console.* funcs in dev env */
+} else {
+  /* no-op console.* funcs in prod env */
+  console.log = function () { };
+  console.debug = function () { };
+  console.error = function () { };
+  console.info = function () { };
+  console.warn = function () { };
+  DEV_MODE = false;
+}
+
+console.log("Uses DEV_MODE=" + DEV_MODE + " environment ...");
+
+// Track navigated pages
 let pages = [window.location.pathname];
 let basedir_rx = new RegExp(pages, 'g');
+console.log("Pages Array (Directory Pathnames)=", pages)
+console.log("Matching Regex Pattern (Base Dir. Path)=", basedir_rx);
 
-// console.log("pages directory pathname=", pages, "new regex patter for basedir is", basedir_rx);
-
+// UI Configurations
 let switchDirectionWindowWidth = 900;
 let animationLength = 200;
 
+/**
+ * Adds a note to the stack and updates browser history.
+ * @param {string} href - The URL of the note to stack. 
+ * @param {number} level - The depth level of the note in the stack.
+ */
 function stackNote(href, level) {
   level = Number(level) || pages.length;
-  if (level == 1) {
-    level = 2;
-  }
+  if (level == 1) level = 2;
 
-  // console.log("stackNote level=", level);
+  console.log("Stacking note at level:", level);
 
-  //console.log("stackNote href=", href);
   if (href.startsWith("../")) {
-    //console.log("stackNote will not work. requires .. not .");
-    href = href.trimLeft(1);
+    href = href.trimLeft(1); // Fix relative path
   }
 
   href = URI(href);
-  //console.log("stackNote href=", href);
-
-  uri = URI(window.location);
-  //console.log("stackedNote uri=", uri);
+  let uri = URI(window.location);
 
   pages.push(href.path());
-  //console.log("stackedNote href.path=", href.path());
-
-  //console.log("stackedNotes query=", pages.slice(1, pages.length));
   uri.setQuery("stackedNotes", pages.slice(1, pages.length));
 
-  old_pages = pages.slice(0, level - 1);
-  //console.log("stackNote old_pages=", old_pages);
-
-  state = { pages: old_pages, level: level };
-  //console.log("stackNote state=", state);
+  let old_pages = pages.slice(0, level - 1);
+  let state = { pages: old_pages, level: level };
 
   window.history.pushState(state, "", uri.href());
-  //console.log("window.history.pushState(" + state + "), " + uri.href());
+  console.log("Browser History updated with state:", state);
 }
 
+/**
+ * Removes notes beyond a certain stack level.
+ * @param {number} level - The level to retain up to.
+ */
 function unstackNotes(level) {
+  console.log("Unstacking note from level:", level);
+
   let container = document.querySelector(".grid");
-  let children = Array.prototype.slice.call(container.children);
+  let children = Array.from(container.children);
 
   for (let i = level; i < children.length; i++) {
     container.removeChild(children[i]);
@@ -57,31 +85,41 @@ function unstackNotes(level) {
   pages = pages.slice(0, level);
 }
 
+/**
+ * Updates the status of links based on stacked notes.
+ */
 function updateLinkStatuses() {
-  links = Array.prototype.slice.call(document.querySelectorAll("a"));
-  links.forEach(function(e) {
+  console.log("Updating link statuses ...");
 
+  links = Array.prototype.slice.call(document.querySelectorAll("a"));
+  console.log("All collected links ready for the update:", links);
+
+  links.forEach(function(e) {
     if (pages.indexOf(e.getAttribute("href")) > -1) {
       e.classList.add("active");
     } else {
-      //e.classList.add("active");
       e.classList.remove("active");
     }
   });
 }
 
 /**
- * Inserts a note at the given level, first removing any notes up to that level.
- * @param {string} href
- * @param {string} text
- * @param {number} level
+ * Inserts a fetched note into the document at a specific stack level.
+ * The function first removes any notes up to that level and then cont. 
+ * inserting a new note at the given level.
+ * @param {string} href - The note URL.
+ * @param {string} text - The HTML content of the note.
+ * @param {number} level - The note hierarchy stack level.
  */
 function insertNote(href, text, level) {
   level = Number(level) || pages.length;
   unstackNotes(level);
+
   let container = document.querySelector(".grid");
+
   let fragment = document.createElement("template");
   fragment.innerHTML = text;
+
   let element = fragment.content.querySelector(".page");
   container.appendChild(element);
 
@@ -92,6 +130,7 @@ function insertNote(href, text, level) {
       element.dataset.level = level + 1;
       initializePage(element, level + 1);
       element.scrollIntoView();
+
       if (window.MathJax) {
         window.MathJax.typeset();
       }
@@ -101,13 +140,14 @@ function insertNote(href, text, level) {
 }
 
 /**
- * Fetches note at href then inserts the note at the given level
- * @param {string} href
- * @param {number} level
+ * Fetches a note via AJAX and inserts it into the stack at the given
+ * level.
+ * @param {string} href - The note URL.
+ * @param {number} level - The note hierarchy stack level.
+ * @returns 
  */
 function fetchNote(href, level) {
-  //console.log("fetchNote href=", href);
-  //console.log("fetchNote level=", level);
+  console.log("Fetching note:", href);
 
   if (pages.indexOf(href) > -1) return;
   level = Number(level) || pages.length;
@@ -120,27 +160,20 @@ function fetchNote(href, level) {
     });
 }
 
-function removeByIndex(str, index) {
-  return str.slice(0, index) + str.slice(index + 1);
-}
-
+/**
+ * Initializes interactivity for a given page.
+ * @param {HTMLElement} page - The page element to initialize.
+ * @param {number} level - The stack level.
+ */
 function initializePage(page, level) {
-  //console.log("initializePage page=", page);
-  //console.log("initializePage level=", level);
+  console.log("Initializing page at level:", level);
 
   level = level || pages.length;
-  //console.log("initializePage (set) level=", level);
-
   links = Array.prototype.slice.call(page.querySelectorAll("a"));
-  //console.log("initializePage links=", links);
 
   links.forEach(async function(element) {
     var rawHref = element.getAttribute("href");
-    //console.log("initializePage rawHref=", rawHref);
     element.dataset.level = level;
-    //console.log("initializePage element.dataset.level=", element.dataset.level);
-
-    //console.log("initializePage element.href=", element.href.toString());
 
     if (rawHref && !(
       // Skip if rawHref is remote
@@ -153,60 +186,17 @@ function initializePage(page, level) {
       )
     )) {
 
-      //console.log("rawHref (true) && rawHref not (http.https.#.pdf.svg)");
-
-
-      /**
-       *  Using fixed basedir (testing only)
-       *   // const regex_matches_notes_level = /notes/g; // /(\/notes\/)/gi
-           // if (element.href.search(regex_matches_notes_level) != "-1") { }
-       */
-
       const regex_matches_basedir_level = basedir_rx;
       if (element.href.search(regex_matches_basedir_level) != "-1") {
-        //console.log("skip on [url]=", rawHref, "rawHref starts with [correct] notation");
+        // rawHref starts with correct notation.
       } else {
-        //rawHref = removeByIndex(rawHref, 0); // + rawHref;
         origUrl = URI(element.href).origin();
         origPath = URI(element.href).path();
-        //console.error("original url=", origUrl, "path=", origPath);
-        element.href = origUrl + "/notes" + origPath; // element.href.replace("0/", "0/notes/");
-        //console.error("rawHref after computation=", rawHref, "element.href=", element.href);
+        element.href = origUrl + "/notes" + origPath;
       }
     }
 
-    /**
-     * Correct context
-        initializePage page= <div class="page" data-level="1">
-        initializePage level= 1
-        initializePage (set) level= 1
-        initializePage links= Array(96) [ a, a, a, a, a, a, a, a, a, a, … ]
-     *
-        initializePage rawHref= ./automotive-hacking
-        initializePage element.dataset.level= 1
-        initializePage element.href= http://127.0.0.1:8800/notes/automotive-hacking
-        rawHref (true) && rawHref not (http.https.#.pdf.svg)
-        rawHref prefetchLink= /notes/
-     */
-
-    /**
-     * Incorrect context
-     *
-       initializePage page= <div class="page" data-level="2">
-       initializePage level= 2
-       initializePage (set) level= 2
-       initializePage links= Array(5) [ a, a, a, a, a.backlink-anchor ]
-     *
-       initializePage rawHref= ../ecu-foundations
-       initializePage element.dataset.level= 2
-       initializePage element.href= http://127.0.0.1:8800/ecu-foundations
-       rawHref (true) && rawHref not (http.https.#.pdf.svg)
-       rawHref prefetchLink= /notes/
-     */
-
-    if (
-      rawHref &&
-      !(
+    if (rawHref && !(
         // Internal Links Only
         (
           rawHref.indexOf("http://") === 0 ||
@@ -215,13 +205,15 @@ function initializePage(page, level) {
           rawHref.includes(".pdf") ||
           rawHref.includes(".svg")
         )
-      )
-    ) {
+    )) {
+      
       var prefetchLink = element.href;
+
       async function myFetch() {
         let response = await fetch(prefetchLink);
         let text = await response.text();
         let ct = await response.headers.get("content-type");
+
         if (ct.includes("text/html")) {
           // Click to open
           element.addEventListener("click", function(e) {
@@ -269,13 +261,15 @@ previewContainer4.classList.add('preview-container-4')
 document.getElementsByTagName('body')[0].appendChild(previewContainer1);
 
 /**
- * Show preview container and add preview html. Position content anchor to the given element.
- * @param {string} previewHtml : ;
- * @param {HTMLElement} anchorElement
+ * Show preview of a linked note on mouse hover. Position content anchor
+ * to the given element. 
+ * @param {string} previewHtml - HTML content of the preview.
+ * @param {HTMLElement} anchorElement - The link triggering the preview.
  */
 function showPreview(previewHtml, anchorElement) {
   let fragment = document.createElement("template");
   fragment.innerHTML = previewHtml;
+
   let element = fragment.content.querySelector(".page");
   previewContainer4.appendChild(element);
 
@@ -346,17 +340,22 @@ function calculatePreviewElementPosition(width, height, marginLeft, marginTop, s
   };
 }
 
-/** Hide preview container and remove any children */
+/**
+ * Hide the preview container.
+ */
 function hidePreview() {
   previewContainer1.classList.remove('active');
   Array.from(previewContainer4.children).map(e => previewContainer4.removeChild(e));
 }
 
-window.addEventListener("popstate", function(event) {
+// Handle browser navigation (Back/Forward buttons)
+window.addEventListener("popstate", event => {
+  console.warn("Handling popstate event:", event);
   // TODO: check state and pop pages if possible, rather than reloading.
   window.location = window.location; // this reloads the page.
 });
 
+// On page load, initialize first page and fetch stacked notes
 window.onload = function() {
   initializePage(document.querySelector(".page"), 1);
 

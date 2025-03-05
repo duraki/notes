@@ -35,7 +35,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing)
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
 {{< hrsep >}}
-* [BMW E34 Learning Material](/bmw-ag-e34-learning-materials) {{< sup_a "~ BMW" "" >}}
+* [BMW E34 Learning Material](/bmw-ag-e34-learning-materials) {{< sup_a "~ BMW" "#" >}}
     * [Diagnostic ADS Interface](/ads-interface)
         * [Keyword Protocols](/keyword-protocols) {{< sup_a " KW-71" "/kw71-protocol-description" >}}
     * [Electronic Signals](/electronic-signals)
@@ -43,7 +43,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
         * [AC Voltage Signals](/ac-voltage-signals)
         * [DC Voltage Signals](/dc-voltage-signals)
     * [Signals Table](/signals-table)
-* [Honda Accord TypeS Learning Material](/honda-accord-types-learning-materials) {{< sup_a "~ Honda" "" >}}
+* [Honda Accord TypeS Learning Material](/honda-accord-types-learning-materials) {{< sup_a "~ Honda" "#" >}}
 {{< hrsep >}}
 * [Hardware Hacking](/hardware-hacking)
     * [Logic Analyzer](/hw/logic-analyzer)
@@ -95,7 +95,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Frida](/frida)
     * [Frida Class Generator](/generate-frida-class)
     * [Frida and r2 Interop](/r2frida)
-    * [Medusa Framework](/medusa) [{{< sup_clean "iOS" >}}](/using-medusa-ios) [{{< sup_clean "/" >}}]() [{{< sup_clean "Android" >}}](/using-medusa-android)
+    * [Medusa Framework](/medusa) [{{< sup_clean "iOS" >}}](/using-medusa-ios) [{{< sup_clean "/" >}}](/medusa) [{{< sup_clean "Android" >}}](/using-medusa-android)
 * [radare2](/radare2)
 * [MacOS Reverse Engineering](/macos-reverse-engineering)
     * [Filesystem Monitor](/macos-filesystem-monitoring)

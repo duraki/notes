@@ -29,6 +29,11 @@
 * [Hugo Quiz Shortcode](https://github.com/bonartm/hugo-quiz)
 * [Hugo "Ko-fi" Shortcodes to Monetize Blog](https://gagor.pro/2024/03/monetize-your-blog-with-ko-fi-shortcodes-for-hugo-sites/), see [this](https://github.com/tgagor/hugo-shortcode-kofi) for repo
 
+### Inspiration
+
+* [RemWiki Digital Garden](https://x.com/muhajirdev/status/1616419800993124352)
+* [Aravind's Notes](https://notes.aravindballa.com) based on [his Gatsby theme](https://github.com/aravindballa/gatsby-theme-andy) via [GitHub](https://github.com/aravindballa/notes.aravindballa.com)
+
 ### Tips & Tricks
 
 * [Hugo pre-commit hook](https://gagor.pro/2024/01/my-pre-commit-config-for-hugo-blog/)

@@ -18,6 +18,11 @@ Features:
 - Customizable look-and-feel via to match style of my blog.
 - Text search to find interesting starting points into the knowledge graph.
 
+## Components
+
+* `lunr.min.js` - A minified [Lunr.js](https://lunrjs.com) Javascript component that provides Search functionality
+* `URI.js` - [This JavaScript](https://medialize.github.io/URI.js/) library is used for working with URLs
+
 ## Search
 
 In order for search to work, you must have a `/content/search/_index.md` file, so that `/search` is a valid url.

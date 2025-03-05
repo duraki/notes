@@ -3,6 +3,64 @@
  * @web       https://duraki.github.io/
  *
  */
+
+ a[href]:not(:where(
+  /* exclude links without href */
+  [href^=""],
+  [href*=""],
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude javascript only links */
+  [href^="javascript:" i],  
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//deviltux.thedev.id"],
+  /* domains to exclude */
+  [href*="//notes.durakiconsulting.com"],
+  /* domains to exclude */
+  [href*="//localhost"],
+  /* domains to exclude */
+  [href*="//127.0.0.1"],
+  /* domains to exclude */
+  [href*="//0.0.0.0"],
+  /* subdomains to exclude */
+  [href*="//duraki.github.io"],
+)):after {
+  // background: rgba(0, 255, 0, 0.13);
+  // padding-left: 3px;
+  padding-right: 3px;
+  content: " " url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAVklEQVR4Xn3PgQkAMQhDUXfqTu7kTtkpd5RA8AInfArtQ2iRXFWT2QedAfttj2FsPIOE1eCOlEuoWWjgzYaB/IkeGOrxXhqB+uA9Bfcm0lAZuh+YIeAD+cAqSz4kCMUAAAAASUVORK5CYII=);
+}
+
+ a[href]:not(:where(
+  /* exclude links without href */
+  [href^=""],
+  [href*=""],
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude javascript only links */
+  [href^="javascript:" i],  
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//deviltux.thedev.id"],
+  /* domains to exclude */
+  [href*="//notes.durakiconsulting.com"],
+  /* domains to exclude */
+  [href*="//localhost"],
+  /* domains to exclude */
+  [href*="//127.0.0.1"],
+  /* domains to exclude */
+  [href*="//0.0.0.0"],
+  /* subdomains to exclude */
+  [href*="//duraki.github.io"],
+)) {
+  background: rgba(0, 255, 0, 0.13);
+  padding-left: 3px;
+  // padding-right: 3px;
+}
+
 #search-input {
   background: #e8e8e8;
   border: 1px solid #64645352;
