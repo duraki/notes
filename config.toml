@@ -1,4 +1,4 @@
-baseURL = 'http://notes.durakiconsulting.com/'
+baseURL = 'https://deviltux.thedev.id/notes/'
 title = "duraki's notes"
 
 languageCode = 'en-us'
@@ -20,7 +20,7 @@ posts = '/:title'
   GitHubUser = 'duraki'
   ListOfFoo = ['durakiconsulting', 'hduraki', 'halis notes']
   Subtitle = 'just a simple, interwebz connected notes.'
-  logoUrl = 'http://notes.durakiconsulting.com/favicon.png'
+  logoUrl = 'https://deviltux.thedev.id/notes/favicon.png'
 
 [build]
     # ...
