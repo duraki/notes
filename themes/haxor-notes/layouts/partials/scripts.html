@@ -4,6 +4,12 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ></script>
 
+{{ $utilsJS := resources.Get "./js/utils.js" }}
+<script src="{{ $utilsJS.Permalink }}" type="text/javascript"></script>
+
+{{ $stackedNotesHandler := resources.Get "./js/stackedNotesHandler.js" }}
+<script src="{{ $stackedNotesHandler.Permalink }}" type="text/javascript"></script>
+
 {{ $pageJS := resources.Get "./js/page.js" }}
 <script src="{{ $pageJS.Permalink }}" type="text/javascript"></script>
 

@@ -19,7 +19,7 @@ help:
 	@echo "	make push 	- Commit and push the tracked files on current branch"
 
 dev:
-	$(HUGO_CMD) server
+	$(HUGO_CMD) server --disableFastRender --ignoreCache --noHTTPCache --gc 
 
 prod:
 	$(HUGO_CMD)

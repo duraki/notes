@@ -2,8 +2,14 @@
 <html>
   {{- partial "head.html" . -}}
   <body>
+  
+    <div class="NotePageRoot">
+
     {{- partial "header.html" . -}}
     {{- block "main" . }}{{- end }}
+
+    </div>
+
     {{- partial "scripts.html" . -}}
     {{- partial "search-index.html" . -}}
   </body>

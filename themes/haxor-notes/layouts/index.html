@@ -1,16 +1,24 @@
 {{define "main"}}
-<div class="grid-container">
-    <div class="grid">
-        <div class="page" data-level="1">
-            <div class="content">
-                {{ .Content }}
+
+    <div class="grid-container NoteColumnsScrollingContainer">
+        <div class="grid NoteColumnsContainer InitialRootNote">
+            <div class="page NoteContainer" data-level="1" style="overflow-x: hidden;">
+                <div class="PresentedNote jsx-1649199117">
+                    <div class="jsx-2479918432 NoteContainer">
+                        <div class="jsx-2479918432 PrimaryNote">
+                            <div class="content jsx-732926425">
+                                {{ .Content }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="jsx-3179990917 ObscuredLabel jsx-1649199117" style="display: none;">About these notes</div>
             </div>
         </div>
     </div>
-</div>
 
 {{ $urijs := resources.Get "js/URI.js" }}
 <script src="{{$urijs.Permalink}}" type="text/javascript"></script>
-{{ $pagejs := resources.Get "js/page.js" }}
-<script src="{{$pagejs.Permalink}}" type="text/javascript"></script>
+
 {{end}}

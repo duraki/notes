@@ -1,9 +1,9 @@
 /**
  * This Javascript code manages a note-stacking system, allowing users to dynamically
  * load and navigate through different pages (ie. notes) within a grid-like structure.
- * The loading of the notes content is AJAX-based, alongside the navigation history, 
- * and interactive previews. 
- * 
+ * The loading of the notes content is AJAX-based, alongside the navigation history,
+ * and interactive previews.
+ *
  * This Javascript code enables features such as:
  *    - Dynamically fetching and inserting _note_ content
  *    - Maintaining a history stack of _notes_ via the Browser's history API
@@ -13,19 +13,21 @@
 console.log("Initializing note stacking script ...");
 var DEV_MODE = true;
 
+const ALIGN_LEFT_PX_SIZE = 40; // 40px
+var AlignLeftMathCalc = 40; // calc = eq + ALIGN_LEFT_PX_SIZE
+
+const NOTE_WIDTH_DEFAULT = 625; // width: 625px (default width of each note)
+var InitialNoteCoolumnsContainerWidth = NOTE_WIDTH_DEFAULT; // width: 625px (stores total width of all notes + available space)
+
 if (
-  (window.location.href.indexOf('//localhost') > 0) ||
-  (window.location.href.indexOf('//127.0.0.1') > 0) ||
-  (window.location.href.indexOf('//0.0.0.0') > 0)
+  window.location.href.includes("//localhost") ||
+  window.location.href.includes("//127.0.0.1") ||
+  window.location.href.includes("//0.0.0.0")
 ) {
-  /* do not no-op console.* funcs in dev env */
+  // do not no-op console.* funcs in dev env
 } else {
-  /* no-op console.* funcs in prod env */
-  console.log = function () { };
-  console.debug = function () { };
-  console.error = function () { };
-  console.info = function () { };
-  console.warn = function () { };
+  // no-op console.* funcs in prod env
+  console.log = console.debug = console.error = console.info = console.warn = () => {};
   DEV_MODE = false;
 }
 
@@ -33,8 +35,8 @@ console.log("Uses DEV_MODE=" + DEV_MODE + " environment ...");
 
 // Track navigated pages
 let pages = [window.location.pathname];
-let basedir_rx = new RegExp(pages, 'g');
-console.log("Pages Array (Directory Pathnames)=", pages)
+let basedir_rx = new RegExp(pages, "g");
+console.log("Pages Array (Directory Pathnames)=", pages);
 console.log("Matching Regex Pattern (Base Dir. Path)=", basedir_rx);
 
 // UI Configurations
@@ -43,7 +45,7 @@ let animationLength = 200;
 
 /**
  * Adds a note to the stack and updates browser history.
- * @param {string} href - The URL of the note to stack. 
+ * @param {string} href - The URL of the note to stack.
  * @param {number} level - The depth level of the note in the stack.
  */
 function stackNote(href, level) {
@@ -53,20 +55,27 @@ function stackNote(href, level) {
   console.log("Stacking note at level:", level);
 
   if (href.startsWith("../")) {
-    href = href.trimLeft(1); // Fix relative path
+    href = href.slice(1); // Fix relative path
   }
 
   href = URI(href);
-  let uri = URI(window.location);
+  const uri = URI(window.location);
 
   pages.push(href.path());
-  uri.setQuery("stackedNotes", pages.slice(1, pages.length));
+  uri.setQuery("stackedNotes", pages.slice(1));
 
   let old_pages = pages.slice(0, level - 1);
-  let state = { pages: old_pages, level: level };
+  let state = { pages: old_pages, level };
 
   window.history.pushState(state, "", uri.href());
   console.log("Browser History updated with state:", state);
+
+  // Force visibility check after note insertion
+  requestAnimationFrame(() => {
+    onScrollCheck();
+    // Force a second check to ensure proper rendering
+    requestAnimationFrame(onScrollCheck);
+  });
 }
 
 /**
@@ -83,29 +92,28 @@ function unstackNotes(level) {
     container.removeChild(children[i]);
   }
   pages = pages.slice(0, level);
+
+  // onScrollCheck();
 }
 
 /**
  * Updates the status of links based on stacked notes.
  */
 function updateLinkStatuses() {
-  console.log("Updating link statuses ...");
+  const links = Array.from(document.querySelectorAll("a"));
 
-  links = Array.prototype.slice.call(document.querySelectorAll("a"));
-  console.log("All collected links ready for the update:", links);
-
-  links.forEach(function(e) {
-    if (pages.indexOf(e.getAttribute("href")) > -1) {
-      e.classList.add("active");
+  links.forEach(function (link) {
+    if (pages.indexOf(link.getAttribute("href")) > -1) {
+      link.classList.add("active");
     } else {
-      e.classList.remove("active");
+      link.classList.remove("active");
     }
   });
 }
 
 /**
  * Inserts a fetched note into the document at a specific stack level.
- * The function first removes any notes up to that level and then cont. 
+ * The function first removes any notes up to that level and then cont.
  * inserting a new note at the given level.
  * @param {string} href - The note URL.
  * @param {string} text - The HTML content of the note.
@@ -115,28 +123,105 @@ function insertNote(href, text, level) {
   level = Number(level) || pages.length;
   unstackNotes(level);
 
-  let container = document.querySelector(".grid");
+  const container = document.querySelector(".grid");
+  container.classList.add("NoteColumnsContainer");
 
-  let fragment = document.createElement("template");
+  const fragment = document.createElement("template");
   fragment.innerHTML = text;
+  const element = fragment.content.querySelector(".page");
+  element.classList.add("NoteContainer");
 
-  let element = fragment.content.querySelector(".page");
+  // Calculate the padding to the left for vertical note title
+  const newAlignStyle = `left: ${AlignLeftMathCalc}px; right: -585px`;
+  element.style = newAlignStyle;
+  AlignLeftMathCalc += ALIGN_LEFT_PX_SIZE; // Update AlignLeft calc. result in global var
+
+  // Calculate initial root container width
+  const elInitialRootNote = document.querySelector(".InitialRootNote");
+  InitialNoteCoolumnsContainerWidth += 625; // 625px (width of each note) in global var 
+  elInitialRootNote.style.width = `${InitialNoteCoolumnsContainerWidth}px`;
+
   container.appendChild(element);
-
   stackNote(href, level);
 
-  setTimeout(
-    function(element, level) {
-      element.dataset.level = level + 1;
-      initializePage(element, level + 1);
-      element.scrollIntoView();
+  setTimeout(() => {
+    refreshNoteOverlayShadowMask(); // Set "Overlay" class to previous note
+    element.dataset.level = level + 1;
+    initializePage(element, level + 1);
 
-      if (window.MathJax) {
-        window.MathJax.typeset();
-      }
-    }.bind(null, element, level),
-    10
-  );
+    // Improved smooth scrolling without jitter
+    const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
+    const finalScrollPosition = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+    // Use native smooth scrolling
+    scrollContainer.scrollTo({
+      left: finalScrollPosition + 10,
+      behavior: 'instant'
+    });
+
+    // Only use as fallback if needed
+    element.scrollIntoView({
+      inline: "end",
+      block: "end",
+      behavior: "smooth"
+    });
+
+
+    // // Improved smooth scrolling without jitter
+    // const scrollContainer = document.querySelector(".NoteColumnsContainer");
+    // const finalScrollPosition = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    // console.log("finalScrollPosition=", finalScrollPosition);
+
+    
+    // // Use native smooth scrolling
+    // scrollContainer.scrollTo({
+    //   left: finalScrollPosition,
+    //   behavior: 'smooth'
+    // });
+    
+    // // Only use as fallback if needed
+    // element.scrollIntoView({
+    //   inline: "end",
+    //   // block: "end",
+    //   behavior: "smooth"
+    // });
+      
+    onScrollCheck();
+
+    if (window.MathJax) window.MathJax.typeset();
+  }, 10);
+}
+
+function refreshNoteOverlayShadowMask() {
+  let allNoteContainers = document.querySelectorAll(".page.NoteContainer");
+
+  if (allNoteContainers.length <= 2) {
+    // skip shadow mask if only two notes are shown (incl. RootNote)
+    return;
+  }
+
+  if (allNoteContainers.length >= 3) {
+    let noteArray = Array.from(allNoteContainers);
+
+    noteArray.forEach((noteContainer) => {
+      // apply shadow mask to all notes
+      noteContainer.classList.add("Overlay");
+    });
+
+    // onScrollCheck();
+  }
+}
+
+// Function to show the obscured label and hide the page title
+function showObscuredHidePageTitle(note) {
+  note.querySelectorAll(".ObscuredLabel").forEach((el) => (el.style.display = "block"));
+  note.querySelectorAll(".content-page-header-title").forEach((el) => (el.style.display = "none"));
+}
+
+// Function to hide the obscured label and show the page title
+function hideObscuredShowPageTitle(note) {
+  note.querySelectorAll(".ObscuredLabel").forEach((el) => (el.style.display = "none"));
+  note.querySelectorAll(".content-page-header-title").forEach((el) => (el.style.display = "block"));
 }
 
 /**
@@ -144,19 +229,16 @@ function insertNote(href, text, level) {
  * level.
  * @param {string} href - The note URL.
  * @param {number} level - The note hierarchy stack level.
- * @returns 
  */
 function fetchNote(href, level) {
-  console.log("Fetching note:", href);
-
-  if (pages.indexOf(href) > -1) return;
+  if (pages.includes(href)) return;
   level = Number(level) || pages.length;
 
-  const request = new Request(href);
-  fetch(request)
+  fetch(href)
     .then((response) => response.text())
     .then((text) => {
       insertNote(href, text, level);
+      onScrollCheck();
     });
 }
 
@@ -168,51 +250,53 @@ function fetchNote(href, level) {
 function initializePage(page, level) {
   console.log("Initializing page at level:", level);
 
-  level = level || pages.length;
-  links = Array.prototype.slice.call(page.querySelectorAll("a"));
+  if (level === 1) {
+    page.classList.add("NoteContainer");
+    page.style = "left: 0px; right: -585px";
+  }
 
-  links.forEach(async function(element) {
-    var rawHref = element.getAttribute("href");
+  level = level || pages.length;
+  const links = Array.from(page.querySelectorAll("a"));
+
+  links.forEach(async (element) => {
+
+    const rawHref = element.getAttribute("href");
     element.dataset.level = level;
 
-    if (rawHref && !(
-      // Skip if rawHref is remote
-      (
-        rawHref.indexOf("http://") === 0 ||
-        rawHref.indexOf("https://") === 0 ||
-        rawHref.indexOf("#") === 0 ||
+    if (
+      rawHref &&
+      !(
+        rawHref.startsWith("http://") ||
+        rawHref.startsWith("https://") ||
+        rawHref.startsWith("#") ||
         rawHref.includes(".pdf") ||
         rawHref.includes(".svg")
       )
-    )) {
-
+    ) {
       const regex_matches_basedir_level = basedir_rx;
-      if (element.href.search(regex_matches_basedir_level) != "-1") {
-        // rawHref starts with correct notation.
-      } else {
-        origUrl = URI(element.href).origin();
-        origPath = URI(element.href).path();
-        element.href = origUrl + "/notes" + origPath;
+      if (element.href.search(regex_matches_basedir_level) === -1) {
+        const origUrl = URI(element.href).origin();
+        const origPath = URI(element.href).path();
+        element.href = `${origUrl}/notes${origPath}`;
       }
     }
 
-    if (rawHref && !(
-        // Internal Links Only
-        (
-          rawHref.indexOf("http://") === 0 ||
-          rawHref.indexOf("https://") === 0 ||
-          rawHref.indexOf("#") === 0 ||
-          rawHref.includes(".pdf") ||
-          rawHref.includes(".svg")
-        )
-    )) {
-      
-      var prefetchLink = element.href;
+    if (
+      rawHref &&
+      !(
+        rawHref.startsWith("http://") ||
+        rawHref.startsWith("https://") ||
+        rawHref.startsWith("#") ||
+        rawHref.includes(".pdf") ||
+        rawHref.includes(".svg")
+      )
+    ) {
+      const prefetchLink = element.href;
 
       async function myFetch() {
-        let response = await fetch(prefetchLink);
-        let text = await response.text();
-        let ct = await response.headers.get("content-type");
+        const response = await fetch(prefetchLink);
+        const text = await response.text();
+        const ct = await response.headers.get("content-type");
 
         if (ct.includes("text/html")) {
           // Click to open
@@ -220,57 +304,57 @@ function initializePage(page, level) {
             if (!e.ctrlKey && !e.metaKey) {
               e.preventDefault();
               insertNote(element.getAttribute("href"), text, this.dataset.level);
-              hidePreview();
+              // hidePreview();
             }
           });
 
           // Hover to see preview
-          element.addEventListener("mouseenter", function(e) {
+          element.addEventListener("mouseenter", () => {
             showPreview(text, element);
           });
-          element.addEventListener("mouseleave", function(e) {
-            hidePreview();
-          });
+          element.addEventListener("mouseleave", hidePreview);
         }
         updateLinkStatuses();
       }
-      return myFetch();
+      await myFetch();
     }
   });
+
+  onScrollCheck();
 }
 
 /* Setup global preview container */
-const previewContainer1 = document.createElement('div');
-previewContainer1.classList.add('preview-container');
+const previewContainer1 = document.createElement("div");
+previewContainer1.classList.add("preview-container");
 
-const previewContainer2 = document.createElement('div');
-previewContainer1.appendChild(previewContainer2)
-previewContainer2.classList.add('preview-container-2')
+const previewContainer2 = document.createElement("div");
+previewContainer1.appendChild(previewContainer2);
+previewContainer2.classList.add("preview-container-2");
 
-const previewContainerArrow = document.createElement('div');
-previewContainerArrow.classList.add('preview-container-arrow');
+const previewContainerArrow = document.createElement("div");
+previewContainerArrow.classList.add("preview-container-arrow");
 previewContainer1.appendChild(previewContainerArrow);
 
-const previewContainer3 = document.createElement('div');
-previewContainer2.appendChild(previewContainer3)
-previewContainer3.classList.add('preview-container-3')
+const previewContainer3 = document.createElement("div");
+previewContainer2.appendChild(previewContainer3);
+previewContainer3.classList.add("preview-container-3");
 
-const previewContainer4 = document.createElement('div');
-previewContainer3.appendChild(previewContainer4)
-previewContainer4.classList.add('preview-container-4')
-document.getElementsByTagName('body')[0].appendChild(previewContainer1);
+const previewContainer4 = document.createElement("div");
+previewContainer3.appendChild(previewContainer4);
+previewContainer4.classList.add("preview-container-4");
+document.body.appendChild(previewContainer1);
 
 /**
  * Show preview of a linked note on mouse hover. Position content anchor
- * to the given element. 
+ * to the given element.
  * @param {string} previewHtml - HTML content of the preview.
  * @param {HTMLElement} anchorElement - The link triggering the preview.
  */
 function showPreview(previewHtml, anchorElement) {
-  let fragment = document.createElement("template");
+  const fragment = document.createElement("template");
   fragment.innerHTML = previewHtml;
 
-  let element = fragment.content.querySelector(".page");
+  const element = fragment.content.querySelector(".page");
   previewContainer4.appendChild(element);
 
   const previewContainer1Style = getComputedStyle(previewContainer1);
@@ -278,21 +362,30 @@ function showPreview(previewHtml, anchorElement) {
   const previewContainer4Style = getComputedStyle(previewContainer4);
 
   // Read css properties
-  const previewContainerWidth = parseInt(previewContainer1Style.getPropertyValue('--preview-width'), 10);
-  const previewContainerHeight = parseInt(previewContainer1Style.getPropertyValue('--preview-max-height'), 10);
-  const marginLeft = parseFloat(previewContainer3Style.getPropertyValue('margin-left'), 10);
-  const marginTop = parseFloat(previewContainer3Style.getPropertyValue('margin-top'), 10);
-  const scale = parseFloat(previewContainer4Style.getPropertyValue('--preview-scale'));
-  const arrowBaseWidth = parseInt(previewContainer4Style.getPropertyValue('--arrowBaseWidth'), 10);
-  const arrowLength = parseInt(previewContainer4Style.getPropertyValue('--arrowLength'), 10);
+  const previewContainerWidth = parseInt(previewContainer1Style.getPropertyValue("--preview-width"), 10);
+  const previewContainerHeight = parseInt(previewContainer1Style.getPropertyValue("--preview-max-height"), 10);
+  const marginLeft = parseFloat(previewContainer3Style.getPropertyValue("margin-left"), 10);
+  const marginTop = parseFloat(previewContainer3Style.getPropertyValue("margin-top"), 10);
+  const scale = parseFloat(previewContainer4Style.getPropertyValue("--preview-scale"));
+  const arrowBaseWidth = parseInt(previewContainer4Style.getPropertyValue("--arrowBaseWidth"), 10);
+  const arrowLength = parseInt(previewContainer4Style.getPropertyValue("--arrowLength"), 10);
 
-  const { x, y, direction, arrowTop } = calculatePreviewElementPosition(previewContainerWidth, previewContainerHeight, marginLeft, marginTop, scale, arrowBaseWidth, arrowLength, anchorElement);
-  previewContainer1.style['transform'] = `translate3d(${x}px, ${y}px, 0)`;
-  previewContainerArrow.classList.remove('left', 'right');
+  const { x, y, direction, arrowTop } = calculatePreviewElementPosition(
+    previewContainerWidth,
+    previewContainerHeight,
+    marginLeft,
+    marginTop,
+    scale,
+    arrowBaseWidth,
+    arrowLength,
+    anchorElement
+  );
+  previewContainer1.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  previewContainerArrow.classList.remove("left", "right");
   previewContainerArrow.classList.add(direction);
-  previewContainerArrow.style['top'] = `${arrowTop}px`;
+  previewContainerArrow.style.top = `${arrowTop}px`;
 
-  previewContainer1.classList.add('active');
+  previewContainer1.classList.add("active");
 }
 
 /**
@@ -305,31 +398,53 @@ function showPreview(previewHtml, anchorElement) {
  * @param {number} arrowLength
  * @param {HTMLElement} anchorElement
  */
-function calculatePreviewElementPosition(width, height, marginLeft, marginTop, scale, arrowBaseWidth, arrowLength, anchorElement) {
-
-  const previewContainerWidth = (width + (marginLeft / scale)) * scale;
-  const previewContainerHeight = (height + (marginTop / scale));
+function calculatePreviewElementPosition(
+  width,
+  height,
+  marginLeft,
+  marginTop,
+  scale,
+  arrowBaseWidth,
+  arrowLength,
+  anchorElement
+) {
+  const previewContainerWidth = (width + marginLeft / scale) * scale;
+  const previewContainerHeight = height + marginTop / scale;
   const heightOffset = -50;
 
   const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
 
-  const { x: anchorX, y: anchorY, width: anchorWidth, height: anchorHeight } = anchorElement.getBoundingClientRect();
+  const {
+    x: anchorX,
+    y: anchorY,
+    width: anchorWidth,
+    height: anchorHeight
+  } = anchorElement.getBoundingClientRect();
 
   // Initial positions
   let previewContainerX = 0;
-  let previewContainerY = Math.min(windowHeight - previewContainerHeight, anchorY + heightOffset);
-  let direction = 'left';
-  let arrowTop = anchorY - previewContainerY - arrowBaseWidth + (anchorHeight / 2);
+  let previewContainerY = Math.min(
+    windowHeight - previewContainerHeight,
+    anchorY + heightOffset
+  );
+  let direction = "left";
+  let arrowTop = anchorY - previewContainerY - arrowBaseWidth + anchorHeight / 2;
 
   // Horizontal
   if (anchorX < window.innerWidth / 2) {
     // Left side link, show preview to the right
-    previewContainerX = Math.min(windowWidth - previewContainerWidth, anchorX + anchorWidth);
-    direction = 'right';
+    previewContainerX = Math.min(
+      windowWidth - previewContainerWidth,
+      anchorX + anchorWidth
+    );
+    direction = "right";
   } else {
     // Right side link, show preview to the left
-    previewContainerX = Math.max(0, anchorX - previewContainerWidth - (arrowLength / 2));
-    direction = 'left';
+    previewContainerX = Math.max(
+      0,
+      anchorX - previewContainerWidth - arrowLength / 2
+    );
+    direction = "left";
   }
 
   return {
@@ -344,30 +459,241 @@ function calculatePreviewElementPosition(width, height, marginLeft, marginTop, s
  * Hide the preview container.
  */
 function hidePreview() {
-  previewContainer1.classList.remove('active');
-  Array.from(previewContainer4.children).map(e => previewContainer4.removeChild(e));
+  previewContainer1.classList.remove("active");
+  Array.from(previewContainer4.children).forEach((e) => previewContainer4.removeChild(e));
 }
 
-// Handle browser navigation (Back/Forward buttons)
-window.addEventListener("popstate", event => {
-  console.warn("Handling popstate event:", event);
-  // TODO: check state and pop pages if possible, rather than reloading.
-  window.location = window.location; // this reloads the page.
+/** =START Sonnet 3.5 Solution */
+
+// Function to check if element is visible in viewport with threshold
+function isVisibleInViewport(element, threshold = 40) {
+  const rect = element.getBoundingClientRect();
+  const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
+  const containerRect = scrollContainer.getBoundingClientRect();
+  
+  // Calculate what percentage of the element is visible
+  const visibleWidth = Math.min(rect.right, containerRect.right) - Math.max(rect.left, containerRect.left);
+  const percentVisible = (visibleWidth / rect.width) * 100;
+  
+  // Get all notes for z-index comparison
+  const notes = Array.from(document.querySelectorAll(".page.NoteContainer"));
+  const currentIndex = notes.indexOf(element);
+  
+  // Check if note is overlapped by notes with higher z-index
+  const isOverlapped = notes.some((otherNote, index) => {
+    if (otherNote === element || index <= currentIndex) return false;
+    const otherRect = otherNote.getBoundingClientRect();
+    return (rect.left < otherRect.right && rect.right > otherRect.left);
+  });
+  
+  return percentVisible >= threshold && !isOverlapped;
+}
+
+// Function to check visibility on horizontal scroll and show/hide obscured labels
+// The visibility thresholds are:
+// - 30% for root note
+// - 40% for middle notes
+// - 50% for last note
+function onScrollCheck() {
+  const notes = document.querySelectorAll(".page.NoteContainer.Overlay");
+  const notesArray = Array.from(notes);
+
+  // cleanup invisibles
+  notesArray.forEach((note, index) => {
+    if (!isVisibleInViewport(note, 50)) {
+      notesArray.splice(index, 1);
+    }
+  });
+
+  console.log("notesArray.length=", notesArray.length, notesArray);
+
+  if (window.innerWidth > (625 * notesArray.length + 40)) {
+    handleStackedNotes(notes, notesArray);
+    return;
+    // if (notesArray.length <= 2) {
+    //   handleStackedNotes(notes, notesArray);
+    //   return;
+    // }
+  }
+
+  handleStackedNotesWide(notes, notesArray);
+  return;
+
+
+  // ===================================================================================
+  // Special handling for 3 or fewer notes
+  if (notesArray.length <= 3) {
+    const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
+    const containerRect = scrollContainer.getBoundingClientRect();
+
+    console.log("Handling visibility for 3 or fewer notes ...");
+    
+    notesArray.forEach((note, index) => {
+      const rect = note.getBoundingClientRect();
+      const isFirstNote = index === 0;
+      const isLastNote = index === notesArray.length - 1;
+
+      // Special handling for first (root) note when there are 3 or fewer notes
+      if (isFirstNote) {
+        const rootNoteVisible = isVisibleInViewport(note, 30) && 
+                              rect.left >= containerRect.left;
+        if (rootNoteVisible) {
+          hideObscuredShowPageTitle(note);
+        } else {
+          // showObscuredHidePageTitle(note);
+        }
+        return;
+      }
+      
+      // Special handling for last note when there are 3 or fewer notes
+      if (isLastNote) {
+        const lastNoteVisible = isVisibleInViewport(note, 50) && 
+                              rect.right <= containerRect.right;
+        if (lastNoteVisible) {
+          hideObscuredShowPageTitle(note);
+        } else {
+          // showObscuredHidePageTitle(note);
+        }
+        return;
+      }
+
+      // Handle middle notes when there are 3 or fewer notes
+      const isVisible = isVisibleInViewport(note, 40);
+      if (isVisible && rect.right <= containerRect.right && rect.left >= containerRect.left) {
+        hideObscuredShowPageTitle(note);
+        return;
+      } else {
+        // showObscuredHidePageTitle(note);
+        return;
+      }
+
+      // Check if note is within container bounds
+      const isWithinBounds = rect.left >= containerRect.left && 
+                           rect.right <= containerRect.right;
+      
+      if (isWithinBounds && isVisibleInViewport(note, 10)) {
+        hideObscuredShowPageTitle(note);
+      } else {
+        // showObscuredHidePageTitle(note);
+      }
+    });
+    
+    // Force a reflow to ensure proper visibility
+    requestAnimationFrame(() => {
+      notesArray.forEach(note => {
+        const isVisible = isVisibleInViewport(note, 40);
+        if (isVisible) {
+          hideObscuredShowPageTitle(note);
+        }
+      });
+    });
+    
+    return;
+  }
+  // ===================================================================================  END of "Special handling for 3 or fewer notes"
+
+
+
+  // ===================================================================================
+  // Handle cases with more than 3 notes
+  const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
+  const containerRect = scrollContainer.getBoundingClientRect();
+
+  console.log("Handling visibility for more than 3 notes ...");
+
+  notesArray.forEach((note, index) => {
+    const rect = note.getBoundingClientRect();
+    const isFirstNote = index === 0;
+    const isLastNote = index === notesArray.length - 1;
+
+    // Special handling for first (root) note
+    if (isFirstNote) {
+      const rootNoteVisible = isVisibleInViewport(note, 60) && 
+                            rect.left >= containerRect.left;
+      if (rootNoteVisible) {
+        hideObscuredShowPageTitle(note);
+      } else {
+        showObscuredHidePageTitle(note);
+      }
+      return;
+    }
+
+    // Special handling for last note
+    if (isLastNote) {
+      const lastNoteVisible = isVisibleInViewport(note, 50) && 
+                            rect.right <= containerRect.right;
+      if (lastNoteVisible) {
+        hideObscuredShowPageTitle(note);
+      } else {
+        showObscuredHidePageTitle(note);
+      }
+      return;
+    }
+
+    // Handle middle notes
+    const isVisible = isVisibleInViewport(note, 40);
+    if (isVisible && rect.right <= containerRect.right && rect.left >= containerRect.left) {
+      hideObscuredShowPageTitle(note);
+    } else {
+      showObscuredHidePageTitle(note);
+    }
+  });
+  // ===================================================================================
+
+}
+
+// Function to check viewport on window resize
+function onWindowResize() {
+  onScrollCheck();
+}
+
+// Update event listeners
+window.addEventListener('resize', onWindowResize);
+window.addEventListener('scroll', onWindowResize);
+window.addEventListener('scrollend', onWindowResize);
+
+document.querySelector(".NoteColumnsScrollingContainer").addEventListener("scrollend", function() {
+  const container = this;
+  // requestAnimationFrame(() => {
+    onScrollCheck();
+  // });
 });
 
-// On page load, initialize first page and fetch stacked notes
-window.onload = function() {
+document.querySelector(".NotePageRoot").addEventListener("scroll", function () {
+  const container = this;
+  // requestAnimationFrame(() => {
+    onScrollCheck();
+  // });
+});
+
+onScrollCheck();
+/** =END of Sonnet 3.5 Solution */
+
+// Handle browser navigation (Back/Forward buttons)
+window.addEventListener("popstate", (event) => {
+  console.warn("Handling popstate event:", event);
+  // TODO: check state and pop pages if possible, rather than reloading.
+  window.location.reload();
+});
+
+// Run on page load to check initial visibility
+window.onload = function () {
   initializePage(document.querySelector(".page"), 1);
 
-  let stacks = [];
-  uri = URI(window.location);
+  const elInitialRootNote = document.querySelector(".InitialRootNote");
+  if (elInitialRootNote) {
+    elInitialRootNote.style.width = `${InitialNoteCoolumnsContainerWidth}px`;
+  }
+
+  const uri = URI(window.location);
   if (uri.hasQuery("stackedNotes")) {
-    stacks = uri.query(true).stackedNotes;
+    let stacks = uri.query(true).stackedNotes;
     if (!Array.isArray(stacks)) {
       stacks = [stacks];
     }
-    for (let i = 0; i < stacks.length; i++) {
-      fetchNote(stacks[i], i + 1);
-    }
+    stacks.forEach((stack, i) => {
+      fetchNote(stack, i + 1);
+      onScrollCheck();
+    });
   }
 };

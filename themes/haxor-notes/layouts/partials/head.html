@@ -7,7 +7,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 />
-<meta name="apple-mobile-web-app-capable" content="yes" />
+{{/*  <meta name="apple-mobile-web-app-capable" content="yes" />  */}}
 
 {{ if not (or (in (.Site.BaseURL | string) "127.0.0.1") (in (.Site.BaseURL | string) "localhost")) }}
     <!-- This template code only runs when the website
@@ -31,7 +31,7 @@
 {{ else }}
 {{ end }}
 
-<link href="/favicon.png" rel="icon" type="image/x-icon" />
+<link href="https://deviltux.thedev.id/notes/favicon.png" rel="icon" type="image/x-icon" />
 
 {{ $IndexCss := resources.Get "/css/index.scss" | resources.ToCSS (dict
 "outputStyle" "compressed") | fingerprint }}
