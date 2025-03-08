@@ -29,10 +29,16 @@
 * [Hugo Quiz Shortcode](https://github.com/bonartm/hugo-quiz)
 * [Hugo "Ko-fi" Shortcodes to Monetize Blog](https://gagor.pro/2024/03/monetize-your-blog-with-ko-fi-shortcodes-for-hugo-sites/), see [this](https://github.com/tgagor/hugo-shortcode-kofi) for repo
 
-### Inspiration
+### Digital Garden Inspiration
 
 * [RemWiki Digital Garden](https://x.com/muhajirdev/status/1616419800993124352)
+* [Andy's Notes](https://notes.andymatuschak.org) which is one of the mainstream digital garden creators and the one who started this movement
 * [Aravind's Notes](https://notes.aravindballa.com) based on [his Gatsby theme](https://github.com/aravindballa/gatsby-theme-andy) via [GitHub](https://github.com/aravindballa/notes.aravindballa.com)
+* [Mathieu's Notes](https://mathieudutour.github.io/gatsby-digital-garden/) based on his [set of packages](https://github.com/mathieudutour/gatsby-digital-garden) to create digital garden
+* [Ethan's Notes](https://notes.ethancpost.com) uses [his own system](https://github.com/maker2413/Notes) which is explained in [one of his note](https://notes.ethancpost.com/how_this_website_is_made.html)
+* [Jethro's Notes](braindump.jethro.dev), using Hugo and his [Cortex Theme](https://github.com/jethrokuan/cortex), and originally inspired by [Azlen's Notes](https://notes.azlen.me)
+* [MaggieAppleton/digital-gardeners](https://github.com/MaggieAppleton/digital-gardeners) contain list of digital gardens and other solutions
+* Other [`digital-garden`](https://github.com/topics/digital-garden) GitHub repositories based on this topic
 
 ### Tips & Tricks
 

@@ -69,7 +69,7 @@ function stackNote(href, level) {
 
   window.history.pushState(state, "", uri.href());
   console.log("Browser History updated with state:", state);
-
+  
   // Force visibility check after note insertion
   requestAnimationFrame(() => {
     onScrollCheck();
@@ -143,6 +143,8 @@ function insertNote(href, text, level) {
 
   container.appendChild(element);
   stackNote(href, level);
+
+  handleExternalLinks();
 
   setTimeout(() => {
     refreshNoteOverlayShadowMask(); // Set "Overlay" class to previous note
@@ -332,7 +334,8 @@ function initializePage(page, level) {
       await myFetch();
     }
   });
-
+  handleExternalLinks();
+  
   onScrollCheck();
 }
 
@@ -576,8 +579,10 @@ document.querySelector(".NotePageRoot").addEventListener("scroll", function () {
 // Handle browser navigation (Back/Forward buttons)
 window.addEventListener("popstate", (event) => {
   console.warn("Handling popstate event:", event);
-  // TODO: check state and pop pages if possible, rather than reloading.
-  window.location.reload();
+  if (window.location.pathname.includes("stackedNotes")) {
+    // TODO: check state and pop pages if possible, rather than reloading.
+    window.location.reload();
+  }
 });
 
 // Run on page load to check initial visibility

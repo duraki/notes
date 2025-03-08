@@ -1,3 +1,37 @@
+// Define the handler function
+function handleExternalLinks() {
+  document.querySelectorAll('a[href]').forEach(link => {
+    // Skip if already processed
+    if (link.dataset.processed) return;
+    
+    const isInternal = (
+      link.href.startsWith('javascript:') ||
+      (link.href.startsWith('/') && !link.href.startsWith('//')) ||
+      link.href.includes('//deviltux.thedev.id') ||
+      link.href.includes('//notes.durakiconsulting.com') ||
+      link.href.includes('//localhost') ||
+      link.href.includes('//127.0.0.1') ||
+      link.href.includes('//0.0.0.0') ||
+      link.href.includes('//duraki.github.io') ||
+      link.href.startsWith('#')
+    );
+
+    if (!isInternal && !link.hasAttribute('target')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+    
+    // Mark as processed to avoid duplicate handlers
+    link.dataset.processed = 'true';
+  });
+}
+
+// Initial setup on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+  console.warn("Setting up external links handler");
+  handleExternalLinks();
+});
+
 // Function to get the view percentage width of an element
 function getViewPercentageWidth(element) {
   const rect = element.getBoundingClientRect();

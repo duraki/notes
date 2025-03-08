@@ -16,6 +16,8 @@ I sincerely hope these notes will help you build yourself, extend your views, an
 
 You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts). Besides, my {{< aref  href="works-for-me/" title="✨ works for me" >}} page is open for public.
 
+<p style="display: contents;">The following link indicators are used for all <div class="indicator"><a class="internal-note-indicator">Internal Notes<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div>, while links leading to <div class="indicator"><a class="external-resource-indicator">External Website/Resource<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div> are rendered as such.</p>
+
 ---
 
 ## List of Topics {{< sup_clean " ~" "#" >}}

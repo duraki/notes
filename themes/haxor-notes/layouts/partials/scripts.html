@@ -13,3 +13,8 @@
 {{ $pageJS := resources.Get "./js/page.js" }}
 <script src="{{ $pageJS.Permalink }}" type="text/javascript"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  handleExternalLinks();
+});
+</script>
