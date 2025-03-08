@@ -215,7 +215,7 @@ function refreshNoteOverlayShadowMask() {
 // Function to show the obscured label and hide the page title
 function showObscuredHidePageTitle(note) {
   note.querySelectorAll(".ObscuredLabel").forEach((el) => (el.style.display = "block"));
-  note.querySelectorAll(".content-page-header-title").forEach((el) => (el.style.display = "none"));
+  // note.querySelectorAll(".content-page-header-title").forEach((el) => (el.style.display = "none"));
 }
 
 // Function to hide the obscured label and show the page title
@@ -259,6 +259,19 @@ function initializePage(page, level) {
   const links = Array.from(page.querySelectorAll("a"));
 
   links.forEach(async (element) => {
+    // Add note stacking event handler pause flag to all links
+    element.addEventListener("mouseenter", () => {
+      window.pauseNoteStacking = true;
+    });
+    // see 'stackedNotesHandler.js' for more details
+    element.addEventListener("mouseleave", () => {
+      window.pauseNoteStacking = false;
+      // Force a check after mouse leaves
+      requestAnimationFrame(() => {
+        onScrollCheck();
+      });
+    });
+
 
     const rawHref = element.getAttribute("href");
     element.dataset.level = level;
@@ -489,157 +502,48 @@ function isVisibleInViewport(element, threshold = 40) {
   return percentVisible >= threshold && !isOverlapped;
 }
 
+function getTotalObscuredLabelWidth() {
+  const obscuredLabels = document.querySelectorAll('.ObscuredLabel[style*="display: block"]');
+  return Array.from(obscuredLabels).reduce((total, label) => {
+    const width = label.getBoundingClientRect().width;
+    return total + width;
+  }, 0);
+}
+
 // Function to check visibility on horizontal scroll and show/hide obscured labels
 // The visibility thresholds are:
 // - 30% for root note
 // - 40% for middle notes
 // - 50% for last note
 function onScrollCheck() {
-  const notes = document.querySelectorAll(".page.NoteContainer.Overlay");
+  // Pause flag check on global vars defined in stackedNoteHandler.js which is used
+  // to track hover state and return early if hovering over backlinks
+  if (window.pauseNoteStacking) return;
+
+  browserWindowWidth = window.innerWidth; // get browser window width in pixels
+
+  // Subtract the width of visible ObscuredLabels from the browser window width
+  const totalObscuredWidth = getTotalObscuredLabelWidth();
+  const adjustedWindowWidth = browserWindowWidth - totalObscuredWidth;
+  // Calculate number of notes that can fit in the adjusted browser window width
+  numberOfNotesThatCanFit = Math.floor(adjustedWindowWidth / 625);
+
+  const notes = document.querySelectorAll(".page.NoteContainer");
   const notesArray = Array.from(notes);
 
-  // cleanup invisibles
-  notesArray.forEach((note, index) => {
-    if (!isVisibleInViewport(note, 50)) {
-      notesArray.splice(index, 1);
-    }
-  });
 
-  console.log("notesArray.length=", notesArray.length, notesArray);
-
-  if (window.innerWidth > (625 * notesArray.length + 40)) {
+  if (notesArray.length <= numberOfNotesThatCanFit + 1) {
+    // if the number of notes that can fit in the browser window is greater than or equal to the number of notes in the array
+    // then handle notes as stacked notes
     handleStackedNotes(notes, notesArray);
-    return;
-    // if (notesArray.length <= 2) {
-    //   handleStackedNotes(notes, notesArray);
-    //   return;
-    // }
+  } else {
+    // otherwise, handle notes as  wide notes
+    handleStackedNotesWide(notes, notesArray);
   }
 
-  handleStackedNotesWide(notes, notesArray);
+  animationFrame(notesArray);
+
   return;
-
-
-  // ===================================================================================
-  // Special handling for 3 or fewer notes
-  if (notesArray.length <= 3) {
-    const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
-    const containerRect = scrollContainer.getBoundingClientRect();
-
-    console.log("Handling visibility for 3 or fewer notes ...");
-    
-    notesArray.forEach((note, index) => {
-      const rect = note.getBoundingClientRect();
-      const isFirstNote = index === 0;
-      const isLastNote = index === notesArray.length - 1;
-
-      // Special handling for first (root) note when there are 3 or fewer notes
-      if (isFirstNote) {
-        const rootNoteVisible = isVisibleInViewport(note, 30) && 
-                              rect.left >= containerRect.left;
-        if (rootNoteVisible) {
-          hideObscuredShowPageTitle(note);
-        } else {
-          // showObscuredHidePageTitle(note);
-        }
-        return;
-      }
-      
-      // Special handling for last note when there are 3 or fewer notes
-      if (isLastNote) {
-        const lastNoteVisible = isVisibleInViewport(note, 50) && 
-                              rect.right <= containerRect.right;
-        if (lastNoteVisible) {
-          hideObscuredShowPageTitle(note);
-        } else {
-          // showObscuredHidePageTitle(note);
-        }
-        return;
-      }
-
-      // Handle middle notes when there are 3 or fewer notes
-      const isVisible = isVisibleInViewport(note, 40);
-      if (isVisible && rect.right <= containerRect.right && rect.left >= containerRect.left) {
-        hideObscuredShowPageTitle(note);
-        return;
-      } else {
-        // showObscuredHidePageTitle(note);
-        return;
-      }
-
-      // Check if note is within container bounds
-      const isWithinBounds = rect.left >= containerRect.left && 
-                           rect.right <= containerRect.right;
-      
-      if (isWithinBounds && isVisibleInViewport(note, 10)) {
-        hideObscuredShowPageTitle(note);
-      } else {
-        // showObscuredHidePageTitle(note);
-      }
-    });
-    
-    // Force a reflow to ensure proper visibility
-    requestAnimationFrame(() => {
-      notesArray.forEach(note => {
-        const isVisible = isVisibleInViewport(note, 40);
-        if (isVisible) {
-          hideObscuredShowPageTitle(note);
-        }
-      });
-    });
-    
-    return;
-  }
-  // ===================================================================================  END of "Special handling for 3 or fewer notes"
-
-
-
-  // ===================================================================================
-  // Handle cases with more than 3 notes
-  const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
-  const containerRect = scrollContainer.getBoundingClientRect();
-
-  console.log("Handling visibility for more than 3 notes ...");
-
-  notesArray.forEach((note, index) => {
-    const rect = note.getBoundingClientRect();
-    const isFirstNote = index === 0;
-    const isLastNote = index === notesArray.length - 1;
-
-    // Special handling for first (root) note
-    if (isFirstNote) {
-      const rootNoteVisible = isVisibleInViewport(note, 60) && 
-                            rect.left >= containerRect.left;
-      if (rootNoteVisible) {
-        hideObscuredShowPageTitle(note);
-      } else {
-        showObscuredHidePageTitle(note);
-      }
-      return;
-    }
-
-    // Special handling for last note
-    if (isLastNote) {
-      const lastNoteVisible = isVisibleInViewport(note, 50) && 
-                            rect.right <= containerRect.right;
-      if (lastNoteVisible) {
-        hideObscuredShowPageTitle(note);
-      } else {
-        showObscuredHidePageTitle(note);
-      }
-      return;
-    }
-
-    // Handle middle notes
-    const isVisible = isVisibleInViewport(note, 40);
-    if (isVisible && rect.right <= containerRect.right && rect.left >= containerRect.left) {
-      hideObscuredShowPageTitle(note);
-    } else {
-      showObscuredHidePageTitle(note);
-    }
-  });
-  // ===================================================================================
-
 }
 
 // Function to check viewport on window resize
@@ -666,7 +570,7 @@ document.querySelector(".NotePageRoot").addEventListener("scroll", function () {
   // });
 });
 
-onScrollCheck();
+// onScrollCheck();
 /** =END of Sonnet 3.5 Solution */
 
 // Handle browser navigation (Back/Forward buttons)
@@ -696,4 +600,35 @@ window.onload = function () {
       onScrollCheck();
     });
   }
+
 };
+
+// Global link handler for any dynamically added links in the document
+// Used to track and handle note stacking and navigation mechanisms when 
+// paused or resumed.
+document.addEventListener('DOMContentLoaded', () => {
+  const addPauseBehavior = (mutations) => {
+    mutations.forEach((mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (node.nodeName === 'A') {
+          node.addEventListener('mouseenter', () => {
+            window.pauseNoteStacking = true;
+          });
+
+          node.addEventListener('mouseleave', () => {
+            window.pauseNoteStacking = false;
+            requestAnimationFrame(() => {
+              onScrollCheck();
+            });
+          });
+        }
+      });
+    });
+  };
+
+  const observer = new MutationObserver(addPauseBehavior);
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+})

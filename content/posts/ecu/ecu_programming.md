@@ -10,7 +10,7 @@ The hardware cables is a cable that contain a microcontroller (MCU) that handles
 * **BMW** req. INPA/EDIABAS cable *(preferably with K+DCAN switch)*
 * **Volvo** req. VADIS cable
 
-### [Binary ECU File Format](/ecu-file-formats)
+### Binary ECU File Format [{{< sup_a "ECU File Formats" "/ecu-file-formats" >}}](/ecu-file-formats)
 
 The file format is a hexadecimal binary file which contains either full or partial (tune) dump. Read more about [ECU File Formats](/ecu-file-formats) on separate note.
 

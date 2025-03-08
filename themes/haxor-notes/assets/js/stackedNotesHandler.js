@@ -1,5 +1,12 @@
+// Defn. pause flags which are used to prevent the handler from running when the user 
+// is interacting with the note backlinks or the note itself (@see. 'backlinks.html')
+let pauseNoteStacking = false;
+window.pauseNoteStacking = false;
+
 // Handling for 3 or fewer notes
 function handleStackedNotes(notes, notesArray) {
+    if (window.pauseNoteStacking) return;
+
     console.log('handleStackedNotes');
     notesArray.forEach(note => hideObscuredShowPageTitle(note));
     animationFrame(notesArray);
@@ -7,6 +14,8 @@ function handleStackedNotes(notes, notesArray) {
 
 // Handling for more than 3 notes
 function handleStackedNotesWide(notes, notesArray) {
+    if (window.pauseNoteStacking) return;
+
     console.log('handleStackedNotesWide');
     
     const scrollContainer = document.querySelector(".NoteColumnsScrollingContainer");
@@ -19,7 +28,7 @@ function handleStackedNotesWide(notes, notesArray) {
         
         // Handling for first (root) note
         if (isFirstNote) {
-            const rootNoteVisible = isVisibleInViewport(note, 10) &&
+            const rootNoteVisible = isVisibleInViewport(note, 30) &&
                 rect.left >= containerRect.left;
         
             if (rootNoteVisible) {
@@ -34,7 +43,7 @@ function handleStackedNotesWide(notes, notesArray) {
 
         // Handling for last note
         if (isLastNote) {
-            const lastNoteVisible = isVisibleInViewport(note, 50) &&
+            const lastNoteVisible = isVisibleInViewport(note, 30) &&
                 rect.right <= containerRect.right;
             
             if (lastNoteVisible) {
@@ -48,14 +57,14 @@ function handleStackedNotesWide(notes, notesArray) {
         }
 
         // Handling for notes in between
-        const isVisible = isVisibleInViewport(note, 40);
+        const isVisible = isVisibleInViewport(note, 35);
         if (isVisible && rect.right <= containerRect.right && rect.left >= containerRect.left) {
             hideObscuredShowPageTitle(note);
         } else {
             showObscuredHidePageTitle(note);
         }
 
-        // animationFrame(notesArray);
+        animationFrame(notesArray);
         // return;
     });
 }

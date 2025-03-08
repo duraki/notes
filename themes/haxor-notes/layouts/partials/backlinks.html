@@ -14,7 +14,9 @@
 {{ if gt (len $backlinks) 0 }}                                                  {{/* if sizeof $backlinks != 0 */}}
   <div class="bl-section">
     <h4>Links to this note</h4>
-    <div class="backlinks">
+    <div class="backlinks" 
+      onmouseenter="window.pauseNoteStacking = true;"
+      onmouseleave="window.pauseNoteStacking = false;">
       {{ range $backlinks }}                                                    {{/* go through each $backlinks slice */}}
         <a href="{{ .RelPermalink }}" class="backlink-anchor">
           <div class="backlink">
