@@ -60,6 +60,7 @@ title: "Upgrade+Wishlist"
   - [Stinger HEIGHT10 UN1810](https://stingerelectronics.com/products/heigh10)
   - [Stinger ELEV8 UN1880](https://stingerelectronics.com/products/elev8)
   - [BOSS BE10ACP-C Audio Systems](https://www.crutchfield.com/S-w4K1oaGwJfJ/p_104BE10ACC/Boss-BE10ACP-C.html)
+  - [Door Bin/Cup Holder for BMW E34](https://renditioncustom.com/products/bmw-door-cup-holder?variant=44722318901536)
 
 ### Upgrade: Dash Camera
 

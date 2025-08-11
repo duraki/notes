@@ -30,6 +30,7 @@ Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shif
 * [BMW E34 DIY Parking Sensors Installation](http://www.bimmerboard.com/forums/posts/747559)
 * [BMW E34/E32 Replacing switch bulbs with LEDs](https://www.evansweb.info/2003/01/18/replacing-switch-bulbs-with-leds/)
 * [BMW E32 Electric Read Blind Repair](https://www.evansweb.info/2003/01/18/electric-rear-blind-repair/)
+* [BMW E34 Instrument Cluster Capacitors Replacement](https://web.archive.org/web/20070911031103/http://home.comcast.net/~fongman1/repairpages/instrumentclusterrepair.html), see also [Winston's Archive](https://web.archive.org/web/20070821105018/http://home.comcast.net/~fongman1/)
 
 **Mechanical**
 

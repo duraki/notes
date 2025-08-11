@@ -26,7 +26,7 @@ The "EWS I" system consisted of the following major components:
 - DME Engine Speed Signal (Beginning 6/94 Production)
 - DWA (E31)
 
-**Principle of Operation:** The EWS *Starter Immobilization Relay** receives it's inputs from the iginition switch, GM (or DWA), BC, Trans Range Switch, and the DME (after 6/94 MY.). The relay will prevent enginge start if:
+**Principle of Operation:** The EWS *Starter Immobilization Relay* receives it's inputs from the iginition switch, GM (or DWA), BC, Trans Range Switch, and the DME (after 6/94 MY.). The relay will prevent enginge start if:
 
 1. The vehicle is locked from the outside, the GM receives the "HIGH" signal from the door lock switch, and sends a "HIGH" signal to the EWS
 2. The BC code function is set
@@ -39,9 +39,7 @@ The ignition and injection functions of the DME are disabled, and the KL50 start
 {{< notice >}}
 Important Errata
 {{</ notice >}}
-{{< callout emoji="🔑" text="*Starter Immobilization Relays* are different for *manual* and *automatic* vehicles. Make sure use correct
-relay during installation. The *Starter Immobilization Relay* is not on the 'Diagnostic Link', conventional troubleshooting techniques
-using the **DISplus**, a *DVOM* and the correct *ETM* are necessary." >}}
+{{< callout emoji="🔑" text="*Starter Immobilization Relays* are different for *manual* and *automatic* vehicles. Make sure use correct relay during installation. The *Starter Immobilization Relay* is not on the 'Diagnostic Link', conventional troubleshooting techniques using the **DISplus**, a *DVOM* and the correct *ETM* are necessary." >}}
 
 {{< notice >}}
 Loss of Input Signals
@@ -105,7 +103,7 @@ Major components of the EWS II systems are:
 {{< notice >}}
 Important Errata
 {{</ notice >}}
-{{< callout emoji="🔑" text="A 'barred' key (ie. a vehicle key that allows unlocking of the vehicle doors) will not be able to start the engine; it only allows the vehicle to be unlocked or locked." >}}
+{{< callout emoji="🔑" text="A `barred` key (ie. a vehicle key that allows unlocking of the vehicle doors) will not be able to start the engine; it only allows the vehicle to be unlocked or locked." >}}
 
 **EWS II System Components:** This section describes the common system components implemented in the whole EWS II control module.
 
