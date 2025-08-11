@@ -33,6 +33,19 @@
 
 <link href="https://deviltux.thedev.id/notes/favicon.png" rel="icon" type="image/x-icon" />
 
+<!-- jquery is a nanogallery2 requirement -->
+{{/*  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  */}}
+{{ $jqueryJS := resources.Get "./js/jquery.slim.min.js" }}
+<script src="{{ $jqueryJS.Permalink }}" type="text/javascript"></script>
+{{ $ng2JS := resources.Get "./lib/ng2/jquery.nanogallery2.core.min.js" }}
+<script src="{{ $ng2JS.Permalink }}" type="text/javascript"></script>
+
+{{ $ng2Woff := resources.Get "./lib/ng2/nanogallery2.woff.min.css" }}
+<link rel="stylesheet" href="{{ $ng2Woff.Permalink }}" />
+
+{{ $ng2CSS := resources.Get "./lib/ng2/nanogallery2.min.css" }}
+<link rel="stylesheet" href="{{ $ng2CSS.Permalink }}" />
+
 {{ $IndexCss := resources.Get "/css/index.scss" | resources.ToCSS (dict
 "outputStyle" "compressed") | fingerprint }}
 <link rel="stylesheet" href="{{ $IndexCss.RelPermalink }}" />
