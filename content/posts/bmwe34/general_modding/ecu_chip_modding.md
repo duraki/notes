@@ -3,6 +3,57 @@ title: "BMW E34 DME ECU Chip Modding"
 url: /bmw/modding/ecu
 ---
 
+## How ECU Works
+
+The [ECU](/ecu-foundations) (in BMW vehicles, known as "*DME*") basically reads loads of environmental information of the vehicle system and subsystems; for exacmple - the amount and the temperature of the air intake, temperature of the coolant, the position of the throttle (ie. via the TPS - *Throttle Position Sensor*), and on. These parameters and value information of different sensors received by the ECU are then used by the **engine injectors** and the **spark plugs**.
+
+The parameters of the ECU tells the **Engine Injectors** "*for how long to stay open*" (allowing a fuel intake amounts to happen in a *balanced* and *optimised* manner). In tuning ops, this is called as the **fuelling**.
+
+The parameters of the ECU tells the **Spark Plugs** "*when to fire (ie. to initiate a spark 🎆)*", and this is usually what we refer to **timing**.
+
+The ECU then measures the "*burn*" coming out of the vehicle exhaust (using the lambda sensor). The exause will provide information about "*how well does the engine burn*". This is usually referred by the tuning community as the engine either running **rich**, or **lean**.
+
+On a simplistic level, the ECU effectively just controls the amount of the fuel that is spat into the cyllinder, and when to ignite the spark, based on the throttle position.
+
+---
+
+For the old ECU like the DME provided in the BMW E34 model series, there are only a limited amount of adjustments the ECU is capable of making, making it lacking much behind the todays ECU *tuning* systems. Modern technology and the ECU in today vehicle production vehicles is far more advanced, albeit, the systematic approach of the ECU functionallity, as-is, is similar to that described above.
+
+## What is an ECU Map
+
+Inside the ECU, there is something usually referenced as an ECU "map". This ECU "map" have been programmbed by the BMW engineers during the manufacturing process, using the typical, optimised, and balanced **`fuel//timing`** values for each point in the rev (RPM) range, for each of the throttle position.
+
+When the throttle is fully open (WOT), assuimg the the car is at the preferred engine working temperature, the ECU generally ignores the other sensors and spits a specific amount of fuel inside the engine, and times the spark 🎆 as a suitable point. This is effectively what is done when most cars are mapped on a *dyno*.
+
+The BMW E34 series uses the "static" maps - that is - the map is fixed in the ROM (Read-only Memory) Chip, sometimes referred as EEPROM (Erasable Programmable Read-only Memory), located inside the ECU, sitting on the ECU's [PCB](/hw/pcb) (Printed Circuit Board). The DME can be configured with small, highly specific adjustments, based on what it's external sensors are telling it (ie. *'MAF' sensor* - Air Intake; *'Lambda' sensor* - Exhaust, etc.) but generally it's quite fixed on "whats possible".
+
+**The Aftermarket Chips**
+The aftermarket (ie. *Dinan/Dyslvia/Sueprchip/EAT* etc.) chips for BMW E34 series provides a replacement for the static map that the BMW engineers developed, using the another map, hence the results of the aftermarket chip installation might vary in the amount of fule spat in the engine, and the timing of the spark plugs 🎆, and when possible - and depending on the aftermarket chip "map" - uses other sensors that can provide better final results.  
+
+**Usual' Terminology**
+The hackers/modders creating these new ECU/EEPROM *tunes* and *maps*, usually talks about "changing the amount of time the injector *opens for* at a particular RPM", or you may hear the tuner "re-programmed the EEPROM/ROM chip with different values", and so on.
+
+**ECU Mode of Operations**
+Depending on the tuning methodology or lets say, mode of operation of the ECU, there is an "**Open Loop**", and the "**Closed Loop**" tunes.
+
+1. **Open Loop**: This type of ECU mode is activated on wide open throttle only. Open Loop running means that the ECU ignores all ti's external sensors, and just checks for the "fuel intake/spark ignition" combinations, telling the tuned map to effectively do:
+   - `@ 1000rpm/injector 2ms ~> spark 0%`
+   - `@ 2000rpm/injector 3ms ~> spark 1%`
+   - `@ 1000rpm/injector 4ms ~> spark 2%`
+   - `@ ...` and so on and so forth
+2. **Closed Loop**: This type of ECU mode of operation is used for all non-wide open throttle openings. Basically, it means that the ECU will monitor the engine, and provide the actual "fuel/spark" values, based on the monitored value. Simply said, the closed loop system of operation adjusts the values found in the internal/integrated ECU map depending on the MAF/Lambda/... sensors, and provide those to effectively do:
+   - `@ 1000rpm/injector 2ms/spark 0% ~> adjust temp/air/exhaust values`
+   - `@ 2000rpm/injector 3ms/spark 1% ~> adjust temp/air/exhaust values`
+   - `@ 3000rpm/injector 4ms/spark 2% ~> adjust temp/air/exhaust values`
+
+It's possible to reprogram the stock BMW E34 EEPROM/ROM using appropriate software and the ROM Burning Hardware device (ie. XGecu T48) or similar.
+
+In terms of *initial adaptation*, the ECU is turned "ON" after a power loss (vehicle not used); therefore in that state, the ECU/DME has lost all of its sensors value/register memory, except for the static map inside the EEPROM which is described above.
+
+It's possible that some DME may learn various bits and bytes about the way the engine is running, and the way it should operate, adjusting itself to a specific requirements, either by the tuner or the end-user. This is possible except on WOT, in which case will revert back to the fixed, "main map" - this is why when your MAF or Lambda sensor is broken, the car should still work fine on WOT, which is why it's recommended to test these sensors when similar issues arise, as explained [here](https://www.m5board.com/threads/software-questions-ecu-chips-reflash-adaptation-what-does-this-all-mean.126450/), or take a look at [Mark D'Sylvias post history](https://www.m5board.com/members/markd.4075/) just to name an example.
+
+The self-adaptation of the ECU integrated system is doing this in small amount of bits (ie. *informations*) received by the sensors and other data it passes thru, and the self-learning/self-adaptation does it very quickly, and that is the reason why in a matter of few hundred the engine idel goes from terribly shaky, to only "shaky a bit", once the ECU has figured out what is going on again.  
+
 ## General DME Information
 
 The DME/[ECU](/ecu-foundations) (Digital Motor Electronics) is a computer with internal pre-programmed and programmable computer chips that controls the key functions of the vehicle engine's operation while maintaining optimum reliability and maximum performance as well as minimizing fuel consumption and emissions that holds vehicle ECU. Some of the things written into ECU are: VIN (Vehicle Identification Number), Immobilizer Data (EWS), Software and so on.

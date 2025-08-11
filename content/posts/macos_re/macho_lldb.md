@@ -9,6 +9,7 @@ title: "lldb for MacOS"
 * [chisel](https://github.com/facebook/chisel) is a collection of LLDB commands to assist debugging iOS apps.
 * [swift_po](https://github.com/kastiglione/swift_po) substitutes `po` command for Swift, with edge cases avoidance.
 * [lldb-helpers](https://github.com/kastiglione/lldb-helpers) is a collection of helpers for more precise breakpoints.
+* [lldb-quicklook](https://github.com/ryanolsonk/LLDB-QuickLook) is a set of command snippets to open images, views, and more using QuickLook.
 
 ## Cheatsheet
 
@@ -129,6 +130,23 @@ Cast an address to object:
 
 # => then you can work with $pin as usual – access properties, call methods, etc.
 ```
+
+Debugging JSON Data in LLDB:
+
+```
+# add below snippet in ~/.lldbinit
+#
+command regex json 's/(.+)/expr let input = %1; print(String(data: try! JSONSerialization.data(withJSONObject: (input is String ? try! JSONSerialization.jsonObject(with: (input as! String).data(using: .utf8)!, options: []) : (input is Data ? (try! JSONSerialization.jsonObject(with: input as! Data, options: [])) : input as! Any)), options: [.prettyPrinted]), encoding: .utf8)!)/'
+
+# to use it within lldb, simply ~
+(lldb) json <data>
+{
+  "example_key": "some value",
+  "another_key": "xxxxxxxxxx"
+}
+```
+
+Instead of `po`, you can now use the new `json` command to pretty print the JSON data, or a JSON serializable type (`NSDictionary`, `NSArray`, etc.).
 
 ### Multiplatform (ObjC + Swift)
 

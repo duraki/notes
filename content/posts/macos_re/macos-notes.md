@@ -2,6 +2,195 @@
 title: "MacOS Notes"
 ---
 
+Reference to a [macOS Tweak](/macos-tweaks) note if you want to check how I tweak my system environment based on details and workflow as described in my [Works for Me](https://deviltux.thedev.id/notes/works-for-me/) (ie. `/uses`) page. For other macOS configuration settings and relevant details, unrelated to my typical hacking notes, please take a look below.
+
+Additonally, take a look at [this macOS command-line index](https://git.herrbischoff.com/awesome-macos-command-line/about/) which contains a lot of useful resources (there is also [cli-app-index](https://git.herrbischoff.com/awesome-command-line-apps/about/) mostly __*nix__ related).
+
+**Use Windows SMB Share as a Time Machine Backup**
+
+I have a highly modded "Thinkpad T430" with a lot of storage available on disposal. It has "*Microsoft Windows 10*" installed as main bootable OS, for various tasks and needs that I need on Windows environments (ie. automotive software, security engagements on Desktop app. clients, etc.). Since I'm daily driving my Apple Mac M1 (*that only has 512GB* of storage), I wanted to use this Thinkpad T430 laptop as my time machine backup location. Steps to do this are described below, originally found on [this article](https://www.makeuseof.com/tag/turn-nas-windows-share-time-machine-backup/), also check [Apple Website - How to back up your Mac](https://support.apple.com/en-us/102307):
+
+1. In Windows 10, right-click on the HDD in File Explorer, and select "Properties"
+2. Go to the "Sharing" tab, click "Advanced Sharing", and check "Share this folder"
+   - Set the "Share Name" in the popup window, click "Add", then click "Apply" -> "OK"
+   - In the "Sharing" tab, you should now see `\\[hostname]\[share_name]` as a *Network Path* of the Share
+3. In MacOS, open Finder, then use `CMD+K` shortcut to connect to server
+4. Enter the `SMB` path of your Windows 10, alongside its' IPv4, ie: `smb://192.168.1.x` and click "Connect"
+   - Hint: Set the fixed IPv4 for your Windows 10 from Control Panel, so you can avoid DHCP IPv4 renewals
+   - Once connected, the SMB location should be visible in the Finder's sidebar
+   - Right-click on the SMB in the Finder's sidebar and go into corresponding "Share Name"
+   - Create a new directory in this Windows Share, for example "`MACOS_BACKUP`" (can be done either from Windows 10, or from your MacOS)
+   - Open this created directory from MacOS, then right click on path location of the Finder, and select `Copy 'MACOS_BACKUP' as Pathname`
+   - The copied pathname should look something like: `/Volumes/SHARENAME/MACOS_BACKUP`
+5. Open Terminal in MacOS and: 
+   - Type `cd` to enter directory: `cd /Volumes/SHARENAME/MACOS_BACKUP` (paste the copied path of the mounted share folder)
+   - Create a Time Machine disk in that folder using: `hdiutil create -size 512g -type SPARSEBUNDLE -fs "HFS+J" TimeMachine.sparsebundle`
+     - Replace `512G` with your default Mac storage, since I have M1 w/ 512GB thats what I've set it to
+     - The "`HFS+J`" flag indicates that this TimeMachine disk will be created using "MacOS Journaled (Non-encrypted)" disk type
+     - Optionally, you may replace the name of the disk image filename with something else instead of `TimeMachine.sparsebundle`
+     - Once the `hdiutil` command output that the creation is completed (`created: /Volumes/.../TimeMachine.sparsebundle`), mount this `*.sparsebundle` from Finder by double-clicking it
+     - Optionally, rename the mounted disk by right-clicking on it from Finder sidebar, then "Rename", and set it to for example "`TimeMachineCapsule`"
+6. Tell Time Machine to use this virtual drive for backups using Terminal:
+    - Use `tmuitl` command: `sudo tmutil setdestination /Volumes/TimeMachineCapsule.sparsebundle`
+    - Use the actual path of your mounted `*.sparsebundle`
+7. Open MacOS "System Preferences", click on "General", and then open the "Time Machine" settings
+8. The newly added virtual drive destination should be visible
+   - Right-click on the virtual drive, click the "Backup device to Time Machine right now"
+   - Optionally, click on "Options..." in the Time Machine settings, and set prefered mode for "Backup Frequency" (ie. Manually, Automatically etc.)
+   - Optionally, in the "Options" you can set which folders and apps to exclude from the Time Machine backup
+
+{{< notice >}}
+Tips & Tricks
+{{</ notice >}}
+{{< callout emoji="💻" text="The initial backup will take a while. It's recommended to plug the Mac directly to the router via an ethernet cable, instead of using WiFi, and the same can be said for the Windows machine that acts as a Time Machine capsule. A MacOS software such is Caffeine or Amphetamine can be used to keep the Mac awake until the backup is completed." >}}
+
+As long as the image is mounted, Time Machine will keep backing up to it. If you restart the Mac, hovever, we will need to open this disk image again before the backups can start. To minimise the efforts needed for this, a quick AppleScript automation can be created, which will mount the drive automatically. Open the *Script Editor* app. in MacOS, click "Create New File", and use the following AppleScript:
+
+```
+try
+	mount volume "smb://192.168.1.x/"
+on error
+	return
+end try
+
+do shell script "hdiutil attach -mountpoint /Volumes/TimeMachineCapsule/ /Volumes/SHARENAME/MACOS_BACKUP/TimeMachine.sparsebundle"
+```
+
+Test the result and save this script if it works anywhere on your MacOS, for example in `~/.config/MountVirtWin10TimeMachine.scpt` folder. Now from "System Preferences" on MacOS, search for "Login Items & Extensions", and add the the application you just made to your "Startup Items" section; this allows it to run the script automatically when you log-in to your MacOS.
+
+More details on MacOS Time Machines `.sparsebundle` files can be found on the following URL: [`TimeMachine Sparsebundle via ~null.53bits.co.uk`](https://null.53bits.co.uk/page/timemachine-sparsebundle).
+
+**Avoiding and disabling `.DS_Store` files in macOS**
+
+Start by removing all `.DS_Store` files from the current directory or from the `/` (__root__) directory. This can also be any kind of shared (SMB) file server directory:
+
+```
+# Remove all .DS_Store from the current directory
+$ find ./ -name ".DS_Store" -exec rm {} \;
+
+# Remove all .DS_Store from the root directory
+$ find / -name ".DS_Store" -exec rm {} \;
+
+# Remove all .DS_Store from an SMB share/directory
+$ find smb://x.x.x.x/<share>/example_directory -name ".DS_Store" -exec rm {} \;
+```
+
+Once the `.DS_Store` file removal is completed, use the following command to make sure new `.DS_Store` files are not written automatically by the system:
+
+```
+$ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+```
+
+**Show macOS Network Interfaces**
+
+Network Interface details can be queried either via typical `ifconfig`, or what I prefer to usually use (showing a prettier, *one-line-per-interface* output):
+
+```
+$ netstat -bi
+# Name       Mtu   Network       Address            Ipkts Ierrs     Ibytes    Opkts Oerrs     Obytes  Coll
+# lo0        16384 <Link#1>                        247863     0  245148028   247863     0  245148028     0
+# lo0        16384 127           localhost         247863     -  245148028   247863     -  245148028     -
+# ...
+```
+
+**Show macOS IP/Network routes definition**
+
+To show all network addressing `routes` with FQDN included, use below command line:
+
+```
+$ netstat -nr
+
+# Routing tables
+#
+# Internet:
+# Destination        Gateway            Flags               Netif Expire
+# default            192.168.0.1        UGScg               en7
+# default            192.168.1.1        UGScIg              en0
+# ...                ...                ...                 ...
+#             (shows IPv4 network addressing routes)
+
+# Internet6:
+# Destination                             Gateway                                 Flags               Netif Expire
+# default                                 fe80::%utun0                            UGcIg               utun0
+# default                                 fe80::%utun1                            UGcIg               utun1
+# ...                                     xxxx::%<tunif                           ...                 ...
+#             (shows IPv6 network addressing routes)
+```
+
+To show all network addressing `routes` **without** FQDN included, use the same command without `-n` argument, as shown below:
+
+```
+$ netstat -r
+
+# Routing tables
+#
+# Internet:
+# Destination        Gateway            Flags               Netif Expire
+# default            modem.corp.durakic UGScg               en7
+# default            192.168.1.1        UGScIg              en0
+# ...                ...                ...                 ...
+#             (shows IPv4 network addressing routes)
+
+# Internet6:
+# Destination        Gateway            Flags               Netif Expire
+# default            fe80::%utun0       UGcIg               utun0
+# default            fe80::%utun1       UGcIg               utun1
+# ...                xxxx::%<tunif      ...                 ...
+#             (shows IPv6 network addressing routes)
+```
+
+**Show macOS active network connections** (based on given protocol)
+
+Below command allows you to show active network connections on macOS for a given protocol:
+
+```
+$ netstat -p <protocol>   # where protocol is <any> of
+                          # cat /etc/protocols
+
+$ netstat -p tcp          # exmaple for 'tcp' protocol
+#
+# Active Internet connections
+# Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+# tcp4       0      0  xxx.168.0.xx.xxxxx     xx.xxx.xxx.xx.https    ESTABLISHED
+# tcp4       0      0  xxx.168.0.xx.xxxxx     xxxxxxxx-in-xxy..https ESTABLISHED
+# ...      ...    ...  ...                    ...                    ...
+
+$ netstat -p udp          # example for 'udp' protocol
+#
+# Active Internet connections
+# Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+# udp4       0      0  *.*                    *.*
+# udp4       0      0  *.*                    *.*
+# ...      ...    ...  ...                    ...
+```
+
+**List Open Files on macOS alongside their Connected Destination**
+
+The command [`lsof`](http://en.wikipedia.org/wiki/Lsof) is used to '*List Open Files*'. Using a simple `grep`, it's possible to filter their destination, which will show you which files are connected to which destinations:
+
+```
+$ [sudo] /usr/sbin/lsof -i -P | grep ESTABLISHED
+# lghub_upd   567           root   11u  IPv4 0xc3ac610176fc3a2d      0t0    TCP localhost:9100->localhost:49431 (ESTABLISHED)
+# rapportd    690        xxxxxxx   14u  IPv6 0x374c318c196dd3d2      0t0    TCP hostname.local:49156->other-hostname.local:49704 (ESTABLISHED)
+# identitys   710        xxxxxxx   56u  IPv6 0x9c95f2b22703317c      0t0    TCP hostname.local:1024->[xxxx:xx::xxxx:xxxx:xxxx:xxxx]:1024 (ESTABLISHED)
+# ...
+```
+
+**Monitor Real-time Network Traffic on macOS**
+
+To monitor a real-time network traffic for a given network interface on macOS, one can use the `iftop` command-line utility. The [`iftop`](http://www.ex-parrot.com/pdw/iftop/) utility can be used to show bandwidth usage on all or specific network interface, alongisde hostnames, ports, host pair, and so on.
+
+```
+# install 'iftop' CLI utlity via brew
+$ brew instlal iftop
+
+# run 'iftop' utility with 'sudo' rights
+$ sudo iftop
+
+# specific interface to use with 'iftop' using
+$ sudo iftop -i en7
+```
+
 **Move macOS Desktop/Spaces with Keyboard Shortcut**
 
 Using `Control+Left` or `Control+Right` keyboard shortcut, we can move over macOS spaces either while in maximised full screen view or in default desktop/app view.
@@ -28,7 +217,7 @@ reload() {
 }
 ```
 
-**Printing and Related**
+**Printers and Related**
 
 Clear printing queue:
 
@@ -68,6 +257,62 @@ Speeding up "Quick Look" animation:
 
 ```
 $ defaults write -g QLPanelAnimationDuration -float 0.1
+```
+
+Get battery percentage:
+
+```
+$ pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f1 -d';'
+```
+
+Terminal color Test:
+
+```
+$ fg=""
+bg=""
+for i in {0..255}; do
+    a=$(printf "\\x1b[38;5;%sm%3d\\e[0m " "$i" "$i")
+    b=$(printf "\\x1b[48;5;%sm%3d\\e[0m " "$i" "$i")
+    fg+="$a"
+    bg+="$b"
+    if (( "$i" % 5 ==0 )); then
+        echo -e "$fg\\t\\t$bg"
+        fg=""
+        bg=""
+    else
+        fg+="  "
+        bg+="  "
+    fi
+done
+```
+
+Bash alias function to extract any compressed file:
+
+```
+# append the following in ~/.config/functions file
+
+#!/usr/bin/env bash
+# Extract archives - use: extract <file>
+# Credits to http://dotfiles.org/~pseup/.bashrc
+
+if [ -f "$1" ] ; then
+    case "$1" in
+        *.tar.bz2) tar xjf "$1" ;;
+        *.tar.gz) tar xzf "$1" ;;
+        *.bz2) bunzip2 "$1" ;;
+        *.rar) rar x "$1" ;;
+        *.gz) gunzip "$1" ;;
+        *.tar) tar xf "$1" ;;
+        *.tbz2) tar xjf "$1" ;;
+        *.tgz) tar xzf "$1" ;;
+        *.zip) unzip "$1" ;;
+        *.Z) uncompress "$1" ;;
+        *.7z) 7z x "$1" ;;
+        *) echo "'$1' cannot be extracted via extract()" ;;
+    esac
+else
+    echo "'$1' is not a valid file"
+fi
 ```
 
 Allow last installed app. from unidentified developer to be allowed:
@@ -292,6 +537,193 @@ $ brew install ccat
 $ cat -n ~/INPUT.txt | ccat
 ```
 
+**Completely remove Microsoft forced Auto-update Utility**
+
+There is annoying feature when you have Microsoft Word (Office) installed from official channel which requires subscription, that pops-up an error "Microsoft Autoupdater is disabled" if you removed it previously from the MacOS System Settings autorun/login items. This results in a non-working Microsoft Office software until you finish updating the Office bundle, which may take a while and render your time unusable (eh, *shitty microsoft*).
+
+The shell script shown below tries to bypass this forced auto-updater that is bundled by the Microsoft. Use with caution, after all, it removed the agent/xpc mods and configs from your MacOS host, which can create some new problems. My advise is to ditch Microsoft all together in your work/business environment because it's prone as a potential attack vector against non-literate IT employees. Since I'm a consultant, I write a lot of penetration testing reports, and therefore I'm required to have it most of the time.
+
+*Note:* Running this script also stops auto-updating of all Microsoft Office pkgs from your MacOS, so you will have to update the Office apps manually when new version is released. P.S. There is an alternative 'GUI' version which provides more features called [Office Reset](https://office-reset.com) for MacOS, but I have not tested it myself (also see: [ms-auto-update via `brew`](https://formulae.brew.sh/cask/microsoft-auto-update))
+
+Start by creating a new file in `~/.config/bin` directory, and paste the shell content. Make sure to set the script as an executable. To run it, you must invoke `sudo` or alternative *su* privileged account.
+
+```sh
+$ touch ~/.config/bin/remove-microsoft-autoupdate
+$ chmod +x ~/.config/bin/remove-microsoft-autoupdate
+$ vim ~/.config/bin/remove-microsoft-autoupdate       # script is shown below
+```
+
+Running the script will output its result in the *termtty*:
+
+```sh
+$ sudo ~/.config/bin/remove-microsoft-autoupdate      # run the script to do the magic
+# 
+# Microsoft AutoUpdate Remover
+# ==================================
+# Check Microsoft Update components? y
+# 
+# Microsoft Update Components Check List:
+# No  | File                                                                   | Status     | Size
+# ----+----------------------------------------------------------------------+------------+--------
+# 1   | /Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app | [Exists]   |  11M
+# 2   | ...
+# 
+# Remove all existing Microsoft Update components? y
+# Removing components...
+# 
+# No  | File                                                                   | Status     | Size
+# ----+----------------------------------------------------------------------+------------+--------
+# 1   | /Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app | REMOVED
+# 2   | ...
+# 
+# Successfully removed: 4
+# Operation completed!
+```
+
+The shell script tries to remove all of its Microsoft autoupdate agents which eventually makes Word/Excel/Office running successfully (that is, without annoying updater pop-ups).
+
+```bash
+#!/bin/zsh
+
+# Original Repo: https://github.com/mrsarac/microsoft-update-remover
+
+# Check for root privileges
+check_root() {
+    if [ "$(id -u)" != "0" ]; then
+        echo "This script requires root privileges."
+        echo "Please run with 'sudo':"
+        echo "sudo $0"
+        exit 1
+    fi
+}
+
+# Display file size in a human-readable format
+get_size() {
+    if [ -f "$1" ]; then
+        size=$(du -h "$1" 2>/dev/null | cut -f1)
+        echo "$size"
+    elif [ -d "$1" ]; then
+        size=$(du -sh "$1" 2>/dev/null | cut -f1)
+        echo "$size"
+    else
+        echo "-"
+    fi
+}
+
+# Show table header
+show_table_header() {
+    printf "%-3s | %-70s | %-10s | %s\n" "No" "File" "Status" "Size"
+    printf "%s\n" "----+----------------------------------------------------------------------+------------+--------"
+}
+
+# Display all removable items in a table format
+show_items() {
+    echo "\nMicrosoft Update Components Check List:"
+    
+    show_table_header
+    
+    found_count=0
+    i=1
+    
+    for file in "${files_to_remove[@]}"; do
+        file_status=""
+        file_size=""
+        if [[ -e "$file" ]]; then
+            file_status="[Exists]"
+        else
+            file_status="[Not Found]"
+        fi
+        file_size=$(get_size "$file")
+        
+        printf "%-3d | %-70s | %-10s | %s\n" "$i" "$file" "$file_status" "$file_size"
+        
+        if [[ "$file_status" == *"Exists"* ]]; then
+            ((found_count++))
+        fi
+        ((i++))
+    done
+    
+    echo "\nSummary:"
+    echo "Total components: ${#files_to_remove[@]}"
+    echo "Existing components: ${found_count}"
+}
+
+# Remove selected items
+remove_items() {
+    local success=0
+    local failed=0
+    
+    echo "\nRemoving components...\n"
+    
+    show_table_header
+    
+    local i=1
+    for file in "${files_to_remove[@]}"; do
+        printf "%-3d | %-70s | " "$i" "$file"
+        if sudo rm -rf "$file" 2>/dev/null; then
+            printf "REMOVED\n"
+            ((success++))
+        else
+            printf "ERROR\n"
+            ((failed++))
+        fi
+        ((i++))
+    done
+    
+    echo "\nResult:"
+    echo "Successfully removed: $success"
+    [ $failed -gt 0 ] && echo "Failed: $failed"
+}
+
+# Main function
+main() {
+    # Check for root privileges
+    check_root
+    
+    # List of removable files
+    files_to_remove=(
+        "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
+        "/Library/LaunchAgents/com.microsoft.update.agent.plist"
+        "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
+        "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+    )
+    
+    # Header
+    echo "\nMicrosoft AutoUpdate Remover"
+    echo "=================================="
+    
+    # File check prompt
+    echo "\nCheck Microsoft Update components? (y/n)"
+    read -r response
+    if [[ ! "$response" =~ ^[YyEe]$ ]]; then
+        echo "\nOperation cancelled."
+        exit 0
+    fi
+    
+    # Show items
+    show_items
+    
+    # Deletion confirmation
+    echo "\nRemove all existing Microsoft Update components? (y/n)"
+    read -r response
+    if [[ ! "$response" =~ ^[YyEe]$ ]]; then
+        echo "\nOperation cancelled."
+        exit 0
+    fi
+    
+    # Remove selected items
+    remove_items
+    
+    echo "\nOperation completed!"
+    echo "\nNote: If you want to update Microsoft Office in the future,"
+    echo "you can manually download updates from Microsoft's website:"
+    echo "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+}
+
+# Run the script
+main
+```
+
 **Remove an Application from Launchpad**
 
 Sometimes MacOS Launchpad gets overflown with number of applications that are visible in the view. There is a way to remove/hide an application by working directly with MacOS's Internal databases.
@@ -467,3 +899,7 @@ end
 
 * [mac-cleanup-py](https://github.com/mac-cleanup/mac-cleanup-py) - Python cleanup script for macOS
 
+**Other Resources**
+
+* [Active Directory DC (Domain Controller) on macOS](https://null.53bits.co.uk/page/which-ad-dc)
+* [Github: TIL (Today I Learned) macOS CLI Command Utilities](https://github.com/jbranchaud/til/blob/master/README.md#mac)

@@ -121,6 +121,10 @@ The RS-232-C uses standardised levels for its signal, except for `RI` line. The 
 |             | **If RTS = +12V && Terminal 15 = 12V**: The device is switched-off and automatically restarted after approx. 5.5sec |
 |             | **If RTS = +12V && Terminal 15 = 0V**: The device is switched-off permanently. Requires 12V provided to KI.15 to switch on again. |
 
+### Alternative Solutions
+
+It has been confirmed that the diagnostic device called "[Snap-on Solus](https://www.snapontools.com.au/solus-plus/)" manufactured by [Snap-on Tools (Australia) Pty Ltd](snapontools.com.au) can be used to read out diagnostic data from BMW E30 devices over the OBD-1, which supposedly works on BMW E34 models as well. Worth mentioning is that the price of the Snap-on Solus diagnostic hardware is quite pricey, and you need to look for European *car coverage* version of it. Since I have not tested this diagnostic tool myself, I can't guarantee you will be able to read all the diagnostics similar to what the ADS interface can provide, but [this video](https://www.youtube.com/watch?v=1bRQkQjGQgE) on Youtube clearly shows that it can be used to read out [DME/ECU](/ecu-foundations) data of a BMW E30 (MY. 1988), as well as offering additional options.
+
 ---
 
 {{< details "External References" >}}

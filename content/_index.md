@@ -16,7 +16,7 @@ I sincerely hope these notes will help you build yourself, extend your views, an
 
 You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts). Besides, my {{< aref  href="works-for-me/" title="✨ works for me" >}} page is open for public.
 
-<p style="display: contents;">The following link indicators are used for all <div class="indicator"><a class="internal-note-indicator">Internal Notes<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div>, while links leading to <div class="indicator"><a class="external-resource-indicator">External Website/Resource<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div> are rendered as such.</p>
+<p style="display: contents;">The following link indicators are used for all <div class="indicator"><a class="internal-note-indicator"> Internal Notes<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div>, while links leading to <div class="indicator"><a class="external-resource-indicator">External Website/Resource<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div> are rendered as such.</p>
 
 ---
 
@@ -155,7 +155,13 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Running WinNT Apps on MacOS](/running-winnt-apps-on-macos)
     * [WinDbg Cheatsheets](/windbg-cheatsheets)
 
-### Development
+### SCADA/ICS/OT Cybersecurity {{< sup_a "~ scada/ics" "/scada" >}}
+
+* [SCADA](/scada)
+  * [SCADA/ICS/OT Common Protocols](/scada/protocols)
+  * [Identifying SCADA Networks](/scada/osint)
+
+### Development & Design
 
 **.files**
 
@@ -177,6 +183,11 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * [Bash](/bash-in-simple-words)
 
 **btw**, I use GMMK 60% keyboard, [here are the default shortcuts](/gmmk-60-keyboard).
+
+**design**
+
+The details of UI/UX design environment is described in corresponding [Design](/design) notes, which includes details about my prefered design toolkits and plugins.
+
 
 ### Misc
 

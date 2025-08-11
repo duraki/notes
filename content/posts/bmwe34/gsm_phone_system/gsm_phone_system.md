@@ -31,6 +31,23 @@ More GSM Phone Versions are linked in images below:
 - [FS. Euro Motorola GSM Phone for E34](https://i.imgur.com/Qa8mcOI.jpeg)
 - [CPT8000 Motorola GSM Mobile Phone for E34](https://i.imgur.com/rm3Oa6D.jpeg)
 
+The BMW E34 is prewired to work with a highly sophisticated Motorola/factory phone system that is integrated with both the instrument cluster dash display, the OBC, and the stalk controls.
+
+The power supply to the integrated BMW E34 GSM Phone is provided via the modular connector, which is located under the rear center console section of the car. The pinout of the `8-pin` modular connector is:
+
+```
+1       LGnd
+2       +9.5
+3       TData
+4       CData
+5       RData
+6       AGnd
+7       TX - Hi
+8       RX - Hi
+```
+
+Disregard the other connectors for the interface box, speakers, and microphone ([source](http://www.unofficialbmw.com/e34/interior/e34_cell_phone_prewired.html)).
+
 ---
 
 ### Custom Standalone GSM Board
@@ -66,3 +83,6 @@ Please visit the separate GitHub project titled [Thesis on Reverse Engineering G
 * [BimmerForums.com Custom Standalone GSM Board](https://www.bimmerforums.com/forum/showthread.php?2415184-OEM-BMW-car-phone-modified-to-work-with-todays-networks&p=30346382#post30346382)
 * [Drive.RU Regular Phone Part #1](https://www.drive2.ru/l/645179680357360795/), and also [Part #2](https://www.drive2.ru/l/645180504991090987/)
 * [BMW Autotelefon (GSM) Operating Instructions](https://www.induleo.com/e34/autotelefon.pdf)
+* [Fun with cheap SIP VoIP Hardware](https://blog.thelifeofkenneth.com/2011/05/fun-with-cheap-sip-voip-hardware.html)
+* [Sniffing Pager Network Traffic](https://blog.thelifeofkenneth.com/2012/02/sniffing-pager-network-traffic-hardware.html)
+* [BMW E34 8-pin Modular Connector under Rear Center Console](http://www.unofficialbmw.com/e34/interior/e34_cell_phone_prewired.html)

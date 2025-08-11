@@ -34,6 +34,8 @@ title: "Upgrade+Wishlist"
 - [BC Racing Coilovers / BR Series](https://racegerman.com/collections/e34-all-products/products/bmw-e34-bc-racing-coilovers-br-series)
 - [H&R Sport Lowering Springs](https://racegerman.com/collections/e34-all-products/products/e34-h-r-sport-lowering-springs)
 - [Billet Alu Coolant Cap](https://racegerman.com/collections/e34-all-products/products/billet-aluminum-coolant-cap)
+- [SSS 'Seven Speed Shop' Performance Billet BMW E34 Oil Cap](https://www.7speedshop.com/products/7-speed-shop-billet-bmw-oil-cap-e30-e23-e24-e28-e32-e34?_pos=10&_sid=3c295ef95&_ss=r)
+- [SSS 'Seven Speed Shop' Lion Horn Button for Sport Steering Wheel](https://www.7speedshop.com/products/seven-speed-shop-lion-horn-button?_pos=28&_sid=3c295ef95&_ss=r)
 
 ### Upgrade: Style/Interior
 
@@ -156,3 +158,10 @@ Self upgrade alternatives:
 - [BMW E34 Cold Air Intake Headlight Cover #2](https://cults3d.com/en/3d-model/gadget/bmw-e34-cold-intake-air-intake)
 - [BMW E34 Dashboard Intrument Panel Rings](https://cults3d.com/en/3d-model/tool/rings-in-the-dashboard-instrument-panel-bmw-e32-e34-3d-print-model)
 - [BMW E34 Clock Desk Casing](https://www.thingiverse.com/thing:4087995)
+
+---
+
+### Upgrade: Misc
+
+- [BMW E34 Custom Vehicle Reveal/Covering Sheet](https://www.bavrest.com/instrument-clusters.html)
+- [BMW E34 Cluster Glass Transparent Sillicone Glue Adhesive](https://www.myclassicparts.com/product/cluster-glass-transparent-silicone-glue/)

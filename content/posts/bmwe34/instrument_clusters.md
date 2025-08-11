@@ -151,7 +151,7 @@ Helpful Tools:
 
 **References**
 
-* [BMW E34 IS Maintenance & Rapairs](http://www.exx.se/maintenance/instrument_cluster_e34/index.shtml)
+* [EXX.se: BMW E34 IS Maintenance & Rapairs](https://www.exx.se/maintenance/instrument_cluster_e34/index.shtml)
 * [BMW E34 Instrument Cluster Types 🇩🇪](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/KI/KI.htm)
 * [Convert Low to High IS 🇩🇪](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Low_High_Umbau/Low_High.htm), or [Internal Notes](/cluster-conversion)
 * [Fixing Fuel Gauge](http://bmwe32.masscom.net/maxf_website/gauge.htm)
@@ -171,3 +171,4 @@ Helpful Tools:
 * [Converting Warning Lights to LED on the Instrument Cluster](http://alpinakozou.web.fc2.com/file/costomize2008/20080812.html)
 * [Instrument Cluster - Meter Check and Display Language Change](https://dd.jpn.org/BMW_HP/20060521/index.shtml)
 * [Adding the "///M" badge in the Instrument Cluster](https://dd.jpn.org/BMW_HP/20070210/index.shtml)
+* [Fixing E32/E344 Instrument Cluster Gagues due to blown resistor](http://web.archive.org/web/20130127180338/http://www.bimmerboard.com/forums/posts/467642)

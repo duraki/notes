@@ -10,11 +10,11 @@ This is Bavarian (*BMW E34 Series 5 focused*) learning materials and resources, 
 * [AC & DC Signals](/ac-and-dc-signals)
 * [AC Voltage Signals](/ac-voltage-signals)
 * [DC Voltage Signals](/dc-voltage-signals)
-  - Analog
+  - Analog [{{< sup_clean "Analog Signal" >}}](/electronics/analog-signal)
 	* [NTC Sensors](/ntc-sensors)
 	* [PTC Sensors](/ptc-sensors)
 	* [Potentiometers](/potentiometers)
-  - Digital
+  - Digital [{{< sup_clean "Digital Signal" >}}](/electronics/digital-signal)
 	* [B+ Signal](/switched-b-high-signals)
 	* [B- Signal](/switched-b-low-signals)
 	* [Square Wave Signals](/modulated-square-wave-signals)
@@ -71,6 +71,8 @@ This is Bavarian (*BMW E34 Series 5 focused*) learning materials and resources, 
 	{{< hrsep >}}
     * [E34 Headlights Switch Wiring](/headlight-switch-connector-pinouts)
     * [E34 Misc. Wiring](/e34-misc-wiring)
+	{{< hrsep >}}
+	* [E34 OBC - On-board Computer](/bmw/e34/obc)
 * See Also
 	* [BMW Acronyms](/bmw-acronyms)
 	* [DIN 72552](/din)

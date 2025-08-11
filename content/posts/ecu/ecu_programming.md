@@ -16,6 +16,8 @@ The file format is a hexadecimal binary file which contains either full or parti
 
 ### Immobiliser - EWS Bypass
 
+For BMW related EWS/Imobiliser notes and write-ups, reference to [BMW EWS Implementation](/bmw/ews) notes.
+
 **Internal**: Assuming the donor ECU is the same part #id as the original ECU, the VIN and other keys are stored in the Body Control Module (BCM). The programmer should use "Parameter reset" feature (if supported by flashing device). This feature matches the synchronisation code between the EWS (Immobiliser) inside the BCM and the PCM (ECU). Without these two, matching the PCM would not allow the Start-Stop command on the vehicle, ignition fire, or fuel consumption.
 
 **External**: The average aftermarket alarm car alarm or car immobiliser is usually designed to interrupt the starter, and cut off Ignition, Crank and Fuel.

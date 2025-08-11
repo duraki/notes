@@ -17,6 +17,10 @@ To start the process of the PCB Reverse Engineering, for any of above methods - 
 
 This table will contain a list of components with its designators, as shown on the actual PCB. Designators are small labels usually printed on the PCB, for each of the component. The package for the specific component will contain package for a specific component, and the marking of the component is shown usually on top of the component such is IC or MCU - usually indicating a part number. When looking for designators, the labels can indicate what kind of component it is: **T**/**Q** prefix indicates a *Transistor*, whereas **R** designator indicates a resistor.
 
+**Introduction**
+
+Before you start with any type of hardware hacking, be sure to introduce yourself to [Electronic Components](/electronics/components), as well as notes on [PCB](/electronics/pcb), the use of [microcontrollers](/electronics/mcu) (MCU) such is [Arduino](/electronics/arduino) and practice the very basics until you feel more comfortable to do any type of reverse engineering. The use of [Logic Gates](hw/logic-gates) is always common in various electrical schemas and consumers electronic.
+
 **Signal Analysis**
 
 * [Logic Analyzer](/hw/logic-analyzer)
@@ -26,6 +30,7 @@ This table will contain a list of components with its designators, as shown on t
 **Common Hardware Debug Interfaces**
 
 * [EEPROM](/eeprom)
+* [DP9](/electronics/dp9) & [RS232](/electronics/rs232)
 * [UART](/uart-interface) (4 pins)
 * [JTAG](/jtag-interface)
   - ARM JTAG - 20 Pins
@@ -33,6 +38,7 @@ This table will contain a list of components with its designators, as shown on t
   - MIPS EJTAG - 14 pins
   - Toshiba MIPS JTAG - 20 pins
   - Standard JTAG - 12 pins
+* [RFID](/hw/rfid-interfaace)
 * I2C
 * SPI
 * [Other common](https://www.mattmillman.com/info/crimpconnectors/) WTB (Wire-to-Board), WTW (Wire-to-Wire), and Crimp Connectors
@@ -81,7 +87,11 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
   - *A comprehensive look at embedded systems in vehicles, covering hardware design and software reverse engineering.*
 - "
 
-**References**
+**Online Tools**
+
+- [Altium365 Electronic Design Viewer](https://www.altium365.com/viewer/)
+
+**Misc. References**
 
 - [Embedded Systems](https://en.wikipedia.org/wiki/Embedded_system)
 - [ASIC (Application-specific Integrated Circuit)](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)
@@ -93,6 +103,8 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 - [System on a Chip (SoC)](https://en.wikipedia.org/wiki/System_on_a_chip)
 - [What is 'Bus Pirate' and how its used](https://www.bigmessowires.com/2013/11/19/what-is-the-bus-pirate/)
 - [List of Tools & Test Equipment](https://old.reddit.com/r/PrintedCircuitBoard/wiki/tools)
+- [Upgrading the RAM in a WRT54Gv2](https://blog.thelifeofkenneth.com/2010/09/upgrading-ram-in-wrt54gv2.html), [Failed WRT54G Upgrade](https://blog.thelifeofkenneth.com/2012/02/another-failed-wrt54g-upgrade.html), [Enabling QoS on WRT54G*](https://blog.thelifeofkenneth.com/2012/04/enabling-qos-on-wrt54gl-tomato.html)
+- [Teardown of HP ProCurve 2824 Ethernet Switch](https://blog.thelifeofkenneth.com/2013/02/tear-down-of-hp-procurve-2824-ethernet.html)
 
 **Other Links**
 
@@ -102,3 +114,13 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 - [DIY - Wiring in a Headunit (With Bluetooth Modification)](https://www.bimmerforums.com/forum/showthread.php?2195008-DIY-Wiring-in-a-Headunit-(With-Bluetooth-Modification))
 - [Display data from ECU to LCD](https://web.archive.org/web/20150815092259/http://www.bimmerforums.com/forum/showthread.php?2134697-Display-data-from-ECU-to-LCD)
 - [Tapping into the BMW 750iL's Phone Keypad](https://i-code.net/tapping-into-the-bmw-750il-phone-keypad/)
+
+**Protocols and Interfaces**
+
+- [Series: Serial Communication Protocols - Part 1: Intro](https://resources.altium.com/p/serial-communications-protocols-introduction)
+- [Series: Serial Communication Protocols - Part 2: UART](https://resources.altium.com/p/serial-communications-protocols-part-two-uart)
+- [Series: Serial Communication Protocols - Part 3: RS-232](https://resources.altium.com/p/serial-communications-protocols-part-three-rs-232)
+- [Series: Serial Communication Protocols - Part 4: RS-485](https://resources.altium.com/p/serial-communications-protocols-rs-485)
+- [Series: Serial Communication Protocols - Part 5: SPI](https://resources.altium.com/p/serial-communications-protocols-part-5-spi)
+- {{< hrsep >}}
+- [DIY ATMEL ISP Breakout Board](https://www.ermicro.com/blog/?p=2348)

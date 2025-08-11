@@ -44,6 +44,8 @@ The **Pulse Width** of a signal **is the length of time a pulse is running**. Ve
 
 In above example, a period of a full cycle equals to pulse width multipled by twice; (since a cycle has a high cycle, and low cycle) - ON/OFF state.
 
+Blog post titled [Introduction to PWM - Pulse Width Modulation](https://extremeelectronics.co.in/avr-tutorials/introduction-to-pwm-pulse-width-modulation/) provides easy to understand information how is PWM used to generate analgue signals to a digital device such is MCU. Alternatively, read the blog post [Generating PWM Signal using AVR Timers - Part I](https://extremeelectronics.co.in/avr-tutorials/pwm-signal-generation-by-using-avr-timers/), and [Generating PWM Signal using AVR Timers - Part II](https://extremeelectronics.co.in/avr-tutorials/pwm-signal-generation-by-using-avr-timers-part-ii/) to understand how PWM generation is implemented in microcontrollers.
+
 ### Duty Cycle
 
 The Duty Cycle of a [Square Wave](/modulated-square-wave-signals) **is the ratio of ON time to OFF time** for one single cycle. Duty cycle is expressed in percentage (%).
