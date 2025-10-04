@@ -16,7 +16,7 @@ I sincerely hope these notes will help you build yourself, extend your views, an
 
 You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortcodes0hbhb), or see the [full list of notes](/posts). Besides, my {{< aref  href="works-for-me/" title="✨ works for me" >}} page is open for public.
 
-<p style="display: contents;">The following link indicators are used for all <div class="indicator"><a class="internal-note-indicator"> Internal Notes<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div>, while links leading to <div class="indicator"><a class="external-resource-indicator">External Website/Resource<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div> are rendered as such.</p>
+<p style="display: contents;">The following link indicators are used for all <div class="indicator"><a class="internal-note-indicator">&nbsp;&nbsp;Internal Notes<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div>, while links leading to <div class="indicator"><a class="external-resource-indicator">External Website/Resource<p>This is just an example of link indicators, clicking the link won't do anything.</p></a></div> are rendered as such.</p>
 
 ---
 
@@ -34,7 +34,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
   * [ECU File Formats](/ecu-file-formats)
   * [ECU Calibration](/ecu-calibration)
   * [ECU Compromise](/how-to-compromise-ecu)
-* [Vehicle Graybox Security Testing](/vehicle-graybox-security-testing)
+* [Automotive Security Testing](/automotive/security-testing)
 * [Vehicle Hacking Environment](/vehicle-hacking-environment)
 {{< hrsep >}}
 * [BMW E34 Learning Material](/bmw-ag-e34-learning-materials) {{< sup_a "~ BMW" "#" >}}
@@ -48,6 +48,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Honda Accord TypeS Learning Material](/honda-accord-types-learning-materials) {{< sup_a "~ Honda" "#" >}}
 {{< hrsep >}}
 * [Hardware Hacking](/hardware-hacking)
+    * [Documenting Procedures](/hw/docs)
     * [Logic Analyzer](/hw/logic-analyzer)
       * [DSLogic Plus](/hw/dslogic-logic-analyzer)
     * [Hardware Engagement Fieldkit](/offsec-hardware-fieldkit)
@@ -61,6 +62,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Source Code Auditing](/source-code-audit)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
     * [Web Tricks and Tips](/web-tricks-and-tips)
+    * [Java Deserialization Attacks](/web/java/deserialization)
 * [Web Fuzzing](/web-fuzzing-techniques)
     * [Javascript Deobfuscation](/javascript-deobfuscation)
 * [SQL Injection Payloads](/sqli-payloads)
@@ -87,6 +89,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 ### Reverse Engineering {{< sup_a "Toolset" "/posts/tools" >}}
 
 * [Tricks and Tips](/reverse-engineering-tricks-and-tips)
+    * [Decoding binary data dumps](/re/binary-file-decoding-and-reverse-engineering)
 * [Network Reverse Engineering](/network-reverse-engineering)
 * [Byteman Cheatsheets](/byteman)
 * [Byteman Scripts](/byteman-scripts)
@@ -205,7 +208,7 @@ The details of UI/UX design environment is described in corresponding [Design](/
 * [Uplink (game) Modding](/modding-uplink-by-introversion)
 * [How to write Notes](/how-to-write-notes)
 * [Troubleshoot](/troubleshoot)
-* [~ ideas](/~-ideas)
+* [~ ideas](/~-ideas), and [~ misc % random](/misc/random)
 
 ---
 

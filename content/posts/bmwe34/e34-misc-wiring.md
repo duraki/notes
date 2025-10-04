@@ -153,3 +153,7 @@ Speakers wire connection is as the following:
 {{< details "Archived References" >}}
 Refer to [BMW Radiostecker (pdf) (ext) (archive)](https://web.archive.org/web/20170828182529/http://www.treffseiten.de/bmw/info/tipp-pdf/bmw_radiostecker.pdf) for wire color (extended table). For CD Changer, refer to [this forum archive](https://web.archive.org/web/20041214001051/https://www.auto-treff.com/bmw/vb/showthread.php?s=&threadid=63422), as well as [Becker TrafficPro <> BMW Pinout](https://web.archive.org/web/20090715084931/http://www.auto-treff.com/bmw/vb/showthread.php?s=&threadid=52963).
 {{< /details >}}
+
+**References**
+
+* [BMW Series 5: 1994: 525i (E34) L6-2494cc 2.5L DOHC (*M50TU*)](https://charm.li/BMW/1994/525i%20%28E34%29%20L6-2494cc%202.5L%20DOHC%20%28M50%20TU%29/) - Car repair manual and wiring diagram, also check [all service manuals for each vehicle manufacturer](https://charm.li/)

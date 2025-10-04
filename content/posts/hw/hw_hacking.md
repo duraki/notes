@@ -105,6 +105,8 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 - [List of Tools & Test Equipment](https://old.reddit.com/r/PrintedCircuitBoard/wiki/tools)
 - [Upgrading the RAM in a WRT54Gv2](https://blog.thelifeofkenneth.com/2010/09/upgrading-ram-in-wrt54gv2.html), [Failed WRT54G Upgrade](https://blog.thelifeofkenneth.com/2012/02/another-failed-wrt54g-upgrade.html), [Enabling QoS on WRT54G*](https://blog.thelifeofkenneth.com/2012/04/enabling-qos-on-wrt54gl-tomato.html)
 - [Teardown of HP ProCurve 2824 Ethernet Switch](https://blog.thelifeofkenneth.com/2013/02/tear-down-of-hp-procurve-2824-ethernet.html)
+- [Electrical Engineering *(Free Course)*](https://www.khanacademy.org/science/electrical-engineering) on KhanAkademy
+- [Ultimate Electronics Book: Practical Circuit Design and Analysis 📕](https://ultimateelectronicsbook.com/)
 
 **Other Links**
 

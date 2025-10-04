@@ -3,6 +3,16 @@ title: General Modding Resources
 url: /bmw/modding/general
 ---
 
+## Performance Modding Potential (E34)
+
+* Change the rear diff to a shorter gear
+* Engine re-mapping via DME/ECU chip/piggy-back system
+* Airflow upgrade, ie. larger MAF, big bore throttle body
+* High-flow injectors upgrade
+* Adjustable fuel rate (airflow/fuel ratio) via DME/ECU re-mapping
+* Unrestricted exhaust system, upgrading exhaust design for a better airflow
+* Using an exhaust system silencer (tail end), specific for the engine model
+
 ### References
 
 * [Voltmeter in windshild central mirror](https://www.drive2.ru/l/575970646069084334/)

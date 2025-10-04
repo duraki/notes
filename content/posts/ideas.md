@@ -15,3 +15,18 @@ title: "~ ideas"
 * Another extension which would be appreciated for PortSwiger's toolset is a Request/Response Header Tree implementation. User is able to "collapse" or "expand" Header keys in some views, or all of them, while editing or viewing message. It will show +/-~what you see on inspector, although more tidy. It would look similar to this:
 
 ![](/posts/images/burp_example_idea.png)
+
+## OS//Operating Systems
+
+* **Desktop**
+  - [Citadel - Nextgen Subgraph OS](https://subgraph.com/)
+  - [Linux Tails](https://tails.net/), [Whonix](https://www.whonix.org/)
+  - [ParrotSec OS](https://www.parrotsec.org/) - An offsec/cyber-oriented Linux Distro, alt. to *Kali Linux*
+* **Mobile**
+  - [GrapheneOS](https://grapheneos.org/), see [device support](https://grapheneos.org/faq#supported-devices)
+  - [Island Sandbox Environment](https://island.oasisfeng.com/)
+  - [Orbot](https://support.torproject.org/glossary/orbot/) is a free Tor Internet Browsing app
+
+---
+
+See also a very randomous [misc_](/misc/random) notes that contains some other findings.

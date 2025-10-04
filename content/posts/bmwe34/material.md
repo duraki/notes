@@ -34,6 +34,7 @@ This is Bavarian (*BMW E34 Series 5 focused*) learning materials and resources, 
 * Production Details
     * [General Modding](/bmw/modding/general)
 	  - [ECU Chip Modding](/bmw/modding/ecu)
+    	  - [DME/ECU MS40.1 Tuning](/bmw/e34ms40)
 	  - [Steering Wheel Button Panel](/bmw/modding/steeringwheel)
 	  - [RPM Shift LED](/bmw/shifter/led)
    	  - [Misc BMW E34 Tutorials](/bmw/misc/tutorials)

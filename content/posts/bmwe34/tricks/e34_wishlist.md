@@ -44,9 +44,17 @@ title: "Upgrade+Wishlist"
 - [Deluxe E34 Shifter Plate](https://racegerman.com/collections/e34-all-products/products/deluxe-e34-shifter-surround)
 - [BMW ALPINA Leather Bucket Seats](http://www.the-highwaystar.com/parts/entry-981.html)
 - **Single-DIN Head/Radio Units**
+  - [CJ INDUSTRIES Adjustable Pro Single DIN 10" Wireless CarPlay/Android Display](https://www.cjindustriesaustralia.com/collections/universal-units/products/cj-industries-adjustable-pro-single-din-10-inch-wireless-carplay-android-auto)
+  - [Blaupunkt Frankfurt RCM 82 DAB](https://caraudiosecurity.com/blaupunkt-frankfurt-rcm-82-dab-retro-classic-bluetooth-dab-usb-sd-car-stereo)
+    - [OLX.ba: RCM 82 (Neispravan)](https://olx.ba/artikal/50529502/blaupunkt-frankfurt-rcm-82/) ~50.00 BAM
+    - [OLX.ba: RCM 82 (Nov)](https://olx.ba/artikal/27992651) ~749.00 BAM
+  - [Blaupunkt Bremen SQR 46](https://www.cen.uk/collections/retro-radios/products/blaupunkt-bremen-sqr-46-retro-car-stereo-80s-classic-bluetooth-dab-usb-sd-aux-1)
+  - [Power Acoustik CP-71W Single DIN Car Stereo 6.5” Apple/Android Auto](https://poweracoustik.com/products/cp-71w), @see it [*installed in e34*](https://www.bimmerforums.com/forum/showthread.php?2488779-The-Orient-Express-aka-Danny-s-540i6-Thread/page5)
   - [Clarion FZ102E](https://www.clarion.com/xe/en/products-personal/audio/FZ102E/)
   - [iLX-F905D Alpine Halo9](https://www.alpine.co.uk/p/Products/SingleView/ilx-f905d)
   - [iLX-F409 Alpine Halo9](https://www.crutchfield.com/S-epQGUVTntkv/p_500ILXF409/Alpine-Halo9-iLX-F409.html)
+  - [Pioneer DEH-S320BT](https://www.cen.uk/collections/single-din/products/pioneer-deh-s320bt-cd-radio-bluetooth-spotify-usb-aux-android-devices-car-stereo)
+  - [Pioneer SPH-10BT Car Stereo Smartphone Holder](https://www.cen.uk/collections/single-din/products/pioneer-sph-10bt-car-stereo-smartphone-holder-single-din-bluetooth-usb-spotify)
   - [Pioneer DMH-WT8600NEX](https://www.pioneerelectronics.com/PUSA/Car/NEX/DMH-WT8600NEX)
   - [Pioneer DMH-WT3800NEX](https://www.pioneerelectronics.ca/POCEN/Car/Digital+Media+Receivers/DMH-WT3800NEX)
   - [Pioneer AVH-3500NEX](https://www.pioneerelectronics.com/PUSA/Car/DVD+Receivers/AVH-3500NEX)
@@ -57,10 +65,13 @@ title: "Upgrade+Wishlist"
   - [Kenwood KDC-BT510U](https://www.kenwood.eu/car/receivers/all/KDC-BT510U?view=details)
   - [SAL VB 2300 w/ Bluetooth](https://www.electronic.ba/p/auto-radio-player-bluetooth-fm-usb-micro-sd-aux-daljinski-sal-vb-2300), for an old-school look
   - [Sony XAV-AX8000 Digital Media Receiver](https://www.sony.com/lr/electronics/in-car-receivers-players/xav-ax8000)
+  - [Sony XAV-AX8150 8.95" Apple CarPlay Android Auto](https://www.cen.uk/collections/single-din/products/sony-xav-ax8150-8-95-apple-carplay-android-auto-dab-hdmi-bluetooth-car-stereo)
   - [Stinger HEIGHT10 UN1810](https://stingerelectronics.com/products/heigh10)
   - [Stinger ELEV8 UN1880](https://stingerelectronics.com/products/elev8)
   - [BOSS BE10ACP-C Audio Systems](https://www.crutchfield.com/S-w4K1oaGwJfJ/p_104BE10ACC/Boss-BE10ACP-C.html)
   - [Door Bin/Cup Holder for BMW E34](https://renditioncustom.com/products/bmw-door-cup-holder?variant=44722318901536)
+
+Check [this video](https://www.youtube.com/watch?v=PHfO0Gu2lks) for instruction on how to install a Single-DIN CarPlay display in a BMW E34 Series 5.
 
 ### Upgrade: Dash Camera
 
@@ -74,6 +85,8 @@ EUR,
 ~80 EUR
 
 ### Upgrade: DME/ECU Chip Tuning
+
+Get the overview plan and program in technical details as explained in [E34 MS40.1 ECU/DME Tuning](/bmw/e34ms40) using EEPROM dump, map-tune, and reflash or produce new EEPROM mem block data and also [BMW E34 DME ECU Chip Modding](/bmw/modding/ecu) overview summary and ECU/DME hardware reverse engineering sampling process and procedures.
 
 Tuning Parts:
 

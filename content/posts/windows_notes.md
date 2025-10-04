@@ -53,6 +53,11 @@ Resource:
 * [AltTabTer](https://www.ntwind.com/software/alttabter.html) - An alternative and better Alt-Tab dialog replacement (~ $20 💰)
 * [PureText](https://stevemiller.net/puretext/) - Similar to PurePaste for MacOS
 * [Carnac](http://code52.org/carnac/) - Show pressed key from keyboard on a screen
+* [WPD](https://wpd.app/) - A small privacy dashboard built for Windows
+* [WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker) is an OSS that blocks spying and tracking on Windows OS
+* [O&O ShutUp10++](https://www.oo-software.com/en/shutup10) - Built for Win10/11 it allows controling MS telemetry, copilot and other configs
+* [simplewall](https://simplewall.en.lo4d.com/windows) - Provides real-time protection for connected devices and blocks app connections
+* [MicroSIP for Windows](https://www.microsip.org/) - Portable SIP softphone for VoIP which is OSS, based on PJSIP stack
 
 ### Tutorials
 
@@ -68,4 +73,3 @@ Resource:
 * [hexdump for VSCode](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-hexdump) - Hexdump Utility for `DATA` files
 * [GitHistory for VSCode](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory) - Show Git history timeline
 * [CodeSnap](https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap) - Take beautiful screenshots of your code in VS Code
-* 

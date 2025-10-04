@@ -62,6 +62,16 @@ The DME collects data every second such as engine speed, air intake volume, air 
 
 The electrical system is also monitored by the DME. Information received from input sensors enables the DME to gauge the condition and level of the engine’s battery as well as the electrical consumption of the car. It uses this information to manage the power and maintain the optimum battery level to prevent a flat battery or any damage.
 
+Take a look at the [differencial ratio table map](https://www.e34.de/e34/difftabelle.htm) for BMW E34 M20/M40/M50 models for more information and reference - and [check this link](https://www.e34.de/e34/leistung.htm) to get manufactured specs per each produced model. Since mine is a 6cyl M50 model, the information provided [here](https://www.e34.de/e34/6zyl.htm) is valuable as well.
+
+**Schematics**
+
+- [DME Schematics: BMW Motronic 1.3](https://www.e34.de/tips_tricks/motronic/m1_3.pdf)
+- [DME Schematics: BMW Motronic 3.1](https://www.e34.de/tips_tricks/motronic/m3_1.pdf)
+- [DME Schematics: BMW Bosch `0 280 001 310`](https://www.e34.de/tips_tricks/motronic/lejet.pdf)
+- [DME Schematics: BMW Motronic Siemens MS40](https://www.e34.de/tips_tricks/motronic/ms40.pdf)
+- [DME Schematics: BMW Series 5 `535i`](https://www.e34.de/tips_tricks/motronic/elmot535.pdf)
+
 ### ❤️ Custom ECU Chip via [Dsylva-Tech](https://dsylva-tech.ca) + [DC](https://durakiconsulting.com/) Collab
 
 I've inqured Mark D'Sylva, that is, his ECU Tuning Company [Dsylva-Tech](https://dsylva-tech.ca/) one day, asking for a direction on which ECU Performance Chip to buy for my [BMW E34 520i '94](/e34-repair-restoration) since I couldn't find appropriate ECU Chip model on their official website, and Mark himself responded to me a day later, notifying me they didn't have the ECU Performance chip I've asked for. The thing is, while looking up my details on my VIN, it seems that my vehicle came with factory EWS (Immobilizer) option, which looked like an important information when buying an ECU Performance Chip. Although D'Sylva had an ECU Performance Chip for M50B20TU engines for BMW E34 Series 5, he didn't create one for the E34 models that came with EWS - Immobilizer option, therefore this turned like a failed mission.
@@ -238,7 +248,9 @@ Usually, for BMW and MINI Cooper vehicles it is located In plastic box next to t
 
 ### References
 
-* [/r/ECU_Tuning](https://old.reddit.com/r/ECU_Tuning)
+* [HPAcademy.com Courses](https://www.hpacademy.com/courses/bare-minimum-tuning-knowledge/understanding-fuel-tuning/)
+* [/r/ECU_Tuning](https://old.reddit.com/r/ECU_Tuning), [Wiki](https://old.reddit.com/r/ECU_Tuning/wiki/info) pages
+* [Standalone ECUs](https://old.reddit.com/r/ECU_Tuning/wiki/standalones)
 * [/r/CarHacking](https://old.reddit.com/r/CarHacking/)
 * [/r/CarModification](https://old.reddit.com/r/carmodification/)
 * [ECU Chip on M50B25 - Removing the DME from Vehicle (*timestamp*)](https://youtu.be/e9-sKvccu4c?si=4xh7ooqLKaCGGWyY&t=80)

@@ -8,7 +8,9 @@ Auditing application source codebase for potential security vulnerabilities is a
 
 During the source code audit engagements, I'm using various specific software that ease the analysis period. Besides having the [__language-specific__](#language-specific) static code analysis tools and static code checkers/linters (with corresponding patterns) that are of great importance during the analysis period, depending on the environment the application is running or being developed on, the utility of choice differs.
 
-**Software**
+Check [this GitHub repository](https://github.com/sigp/solidity-security-blog) for optional, cryptocurrency-related (ie. *'Solidity Security'*) basis ground for testing and exploiting common smart contract vulnerabilities and known attacks.
+
+### Software
 
 **Codecrumbs:** For example, the open-source software [codecrumbs](https://github.com/Bogdan-Lyashenko/codecrumbs) can help aiding the learning phase of how the application is designed, tied to its business domain and corresponds to its functionality. It's overall great tool for exploring unknown codebase as it works by analyzing the source code and building the visual representation of the application business domain logic with its core approach. The final result is a codecrumb-comment of the codebase depending on its states, reflected by the visual client on the fly.
 

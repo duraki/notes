@@ -2,6 +2,8 @@
 
 The `~ notes` is a dedicated repository for my [digital garden](https://github.com/MaggieAppleton/digital-gardeners#what-is-digital-gardening). These notes are published via [Hugo](https://gohugo.io) and it uses custom theme which presents these notes in stacked view; meaning each note is stacked side by side, similar to [Obsidian](https://obsidian.md/), [Bangle](https://bangle.io/) and [Dendron](https://www.dendron.so/). Read these [~notes](http://notes.durakiconsulting.com) or start contributing. You can check my theme [haxor-notes](./themes/haxor-notes), included in this repository.
 
+See also [TODO](/docs/TODO.md) for future reference.
+
 ## Inspiration
 
 * Check: [docs/CREDITS](notes/docs/CREDITS.md) for shortcodes, tutorials & inspiration

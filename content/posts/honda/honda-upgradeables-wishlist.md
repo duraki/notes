@@ -57,11 +57,18 @@ See [BMW Wishlist: Dash Camera](/upgrade-wishlist#upgrade-dash-camera) for simil
 
 TBA.
 
----
+Some URLs that might aid the process in regards to **ECU Tuning/Mapping** are listed below:
+
+* https://support.moates.net/honda-compatibility/
+* https://forum.pgmfi.org/ - _(Hacking up Honda's ECU forum board)_
+* https://support.moates.net/honda-tuning-with-crome/
+* https://www.gearhead-efi.com/Fuel-Injection/forum.php - _(Gearhead EFI Formus - OG and NewSchool ECU forum board)_
+  - [Directory Listing](/#web-fuzzing-techniques) of [GH//EFI] (https://www.gearhead-efi.com/gearhead-efi/) for **OBD2**, *bins*, *x/defs*, *wirings* etc.
+  - Other info includes [BCC Lookup Tool](https://www.gearhead-efi.com/BCCFind/), [EFI Dictionary/Terminology](https://www.gearhead-efi.com/gm-ecm-pcm-conversion/efi-dictionary.html) pages
 
 ### Upgrade: Professional Audio Upgrade
 
-TBA.
+* [Honda Accord MY. 2003-2007 - Plug & Play Head Unit Car Radio w/ wireless/wired CarPlay/Android Auto](https://www.cjindustriesaustralia.com/collections/honda-head-unit-packages-with-wireless-apple-carplay-android-auto/products/honda-accord-euro-2003-2007-plug-play-head-unit-upgrade-kit-car-radio-with-wireless-wired-apple-carplay-android-auto)
 
 ---
 

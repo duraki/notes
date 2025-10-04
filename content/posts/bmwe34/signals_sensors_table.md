@@ -28,8 +28,10 @@ title: "Signals Table"
 
 * You can easily send required signal for `B/type` Switches, just by checking the Signal Type of the specific Pin.
 * For example:
-	- Pin 3, is a "Fuel Level Warning Light" on X13060. It has signal type **B-**.
-	- You can ground this pin and the light will turn on, indicating the Fuel Warning.
+  * Pin 3, is a "Fuel Level Warning Light" on X13060. It has signal type **B-**.
+  * You can ground this pin and the light will turn on, indicating the Fuel Warning.
+
+Similarly, you can use the designation '**B+**' in the same manner. The [DIN 72552](/din) standard indicates that the `B+` notation is equivalent to `battery +`, therefore, if you see a pinout with an input signal type expecting `B+`, you can pull this pin to `+12V` and this signal will be triggered.
 
 ### Signal Type ⇢ Component Using it
 
@@ -58,7 +60,6 @@ title: "Signals Table"
 
 ### Terminal Designations
 
-There is a terminal designation for almost every connection of a consumer or switch in the vehicle in order to facilitate the connection. The designation of the individual connections is defined in Germany according to DIN 72552. 
+There is a terminal designation for almost every connection of a consumer or switch in the vehicle in order to facilitate the connection. The designation of the individual connections is defined in Germany according to DIN 72552.
 
 Refer to [DIN 72552](/din) page for more details.
-

@@ -81,6 +81,23 @@ Once the `.DS_Store` file removal is completed, use the following command to mak
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
 
+**Fine-adjusting MacOS sound output volume**
+
+* When pressing special volume keys (ie. *Mute* 🔇, *Volume +* or *Volume -*) it steps by `1 bar`
+* Using any of the above special volume keys in combination with `Shift+Option` key pressed;
+  * You can adjust volume output more granually and precisely
+  * When using this combination, the volume steps by `1/4` of a bar, allowing for finer adjustments
+
+Also, this Terminal command disables the play icon on a media file thumbnail in Finder to prevent the audio or video file from playing when selecting:
+
+```
+$ defaults write com.apple.finder QLInlinePreviewMinimumSupportedSize -int 514
+```
+
+**Pasting text and removing all formattings**
+
+Its possible to paste text only and remove formatting for any text in the clipboard by using `CMD+Shift+v` key button combination, while the `CMD+v` will paste text formatted as copied.
+
 **Show macOS Network Interfaces**
 
 Network Interface details can be queried either via typical `ifconfig`, or what I prefer to usually use (showing a prettier, *one-line-per-interface* output):
@@ -245,6 +262,16 @@ Or use the following one-liner to do the same:
 
 ```sh
 sudo sh -c -- 'filename="sudo" && file="/etc/pam.d/$filename" && echo "auth sufficient pam_tid.so" | cat - $file > /tmp/$filename.tmp && mv /tmp/$filename.tmp $file'
+```
+
+Disable or enable letter accents popups when long-pressing keyboard letter:
+
+```
+# Ever wanted to send "lollllllllll", but noticed that upon long-pressing a letter you get the letter accents popup?
+defaults write -g ApplePressAndHoldEnabled -bool false      # Turn it off
+
+# To re-enable just revert the bool type to true
+defaults write -g ApplePressAndHoldEnabled -bool true       # Turn it on
 ```
 
 Programatically set macOS login window text:
@@ -898,6 +925,8 @@ end
 **Other Utils**
 
 * [mac-cleanup-py](https://github.com/mac-cleanup/mac-cleanup-py) - Python cleanup script for macOS
+* [lnav](https://lnav.org/) - log file navigator
+* [nerdlog](https://github.com/dimonomid/nerdlog) - remote-first/multi-host TUI log viewer
 
 **Other Resources**
 

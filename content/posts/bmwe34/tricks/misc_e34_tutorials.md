@@ -3,7 +3,33 @@ title: "Misc E34 Tutorials"
 url: /bmw/misc/tutorials
 ---
 
-Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shiftbmw.com/model/e34/1987-1996-e34-owners-manual/).
+Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shiftbmw.com/model/e34/1987-1996-e34-owners-manual/). There is great website to quickly find instructions on [Repair and Diagnosis](https://charm.li/BMW/1994/525i%20%28E34%29%20L6-2494cc%202.5L%20DOHC%20%28M50%20TU%29/Repair%20and%20Diagnosis/) for this model, as well as [Parts and Labor](https://charm.li/BMW/1994/525i%20%28E34%29%20L6-2494cc%202.5L%20DOHC%20%28M50%20TU%29/Parts%20and%20Labor/) in regards to different vehicle subsystems and components.
+
+**Wheel/Rim Size References**
+
+For reference, these are the **Wheels/Rim size and correct ET/OFFSET** for BMW E34 Series 5:
+
+```
+// source: http://www.alloywheelsdirect.net/information/fitting_chart/bmw
+5 Series E34 = PCD 5x120, centre bore 72.5mm and M12x1.5 bolt thread; ET 13-20
+5 Series E34 M5 = PCD 5x120, centre bore 72.5mm and M12x1.5 bolt thread
+```
+
+**Diff ratio for 520/525 M20/M50** (Manual/Automatic)
+
+For reference, these are the ideal (standard) diff. ratio for M20/M50 engines on E34 520/525 manual and automatic transmission:
+
+```
+Engine M20B20   520 12V (Manual) ~ 4.44-4.45
+Engine M20B25   525 12V (Manual) ~ 3.23-3.91
+Engine M20B25TU 520 24V (Manual) ~ 3.64
+```
+
+**Diagrams**
+
+- [BMW '5 Series E34 520i Diagram Selection](https://www.realoem.com/bmw/enUS/partgrp?id=HB62-EUR---E34-BMW-520i&mg=16)
+  - [Plastic Fuel Tank Diagram](https://www.realoem.com/bmw/enUS/showparts?id=HB62-EUR---E34-BMW-520i&diagId=16_0041)
+  - [Metal Fuel Tank Diagram](https://www.realoem.com/bmw/enUS/showparts?id=HB62-EUR---E34-BMW-520i&diagId=16_0187)
 
 **Electrical**
 
@@ -31,6 +57,15 @@ Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shif
 * [BMW E34/E32 Replacing switch bulbs with LEDs](https://www.evansweb.info/2003/01/18/replacing-switch-bulbs-with-leds/)
 * [BMW E32 Electric Read Blind Repair](https://www.evansweb.info/2003/01/18/electric-rear-blind-repair/)
 * [BMW E34 Instrument Cluster Capacitors Replacement](https://web.archive.org/web/20070911031103/http://home.comcast.net/~fongman1/repairpages/instrumentclusterrepair.html), see also [Winston's Archive](https://web.archive.org/web/20070821105018/http://home.comcast.net/~fongman1/)
+* [BMW E34 Heather Valve Adjustment](https://bmw-stuff.blogspot.com/2007/11/bmw-e34-heater-valve.html)
+* [BMW E34 O2 Sensor Introduction](https://bmw-stuff.blogspot.com/2007/11/bmw-e34-o2-sensor.html)
+* [BMW E34 Keyless Entry Remote Reprogramming](https://bmw-stuff.blogspot.com/2007/11/bmw-e34-remote-reprog.html), or [aftermarket solution](https://bmw-stuff.blogspot.com/2007/11/keyless-entry-on-bmw-e34.html)
+* [BMW E34 'LINE-IN' retrofitting on a Bavaria C Reverse RDS / Bavaria Reverse RDS](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Radioumbau/Radioumbau.htm) (🇩🇪)
+* [Bluetooth hands-free system in the E34](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Bluetooth/Bluetooth.htm) (🇩🇪)
+* [Repair options for the E34 instrument cluster](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/KI/KI_REP.htm) (🇩🇪)
+* [Bluetooth retrofitting on a Bavaria C Reverse RDS](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/RadioumbauBT/Radioumbau_BT.htm) (🇩🇪)
+* [Convert from Redesign Low IC to High IC](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Low_High_Umbau/Low_High.htm) (🇩🇪)
+* [RaspberryPi Media Center w/ touchpad in the center console](https://www.petberger.de/pet-racing/E34/UNTERLAGEN/Raspberry/Raspberry.htm) (🇩🇪)
 
 **Mechanical**
 
@@ -49,6 +84,7 @@ Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shif
 * [BMW E34: Steering Wheel Removal Guide](https://www.shiftbmw.com/model/e34/steering-wheel-removal-2/), see also [squeaking sound on steering wheel](https://www.shiftbmw.com/model/e34/squeaking-steering-wheel-11/)
 * [BMW E34: Windshild Wiper Tension](https://www.shiftbmw.com/model/e34/wiper-tensioner-2/), see also [wiper mechanism replacement](https://www.shiftbmw.com/model/e34/wiper-mechanism-replacement-2/) guide
 * [BMW E34: Front Grill removal for Headlight Access](https://web.archive.org/web/20151002090200/http://home.comcast.net/~winstonfong/repairpagessite2/frontgrillremoval.htm)
+* [Installation of TPMS (Tire Air Pressure Monitor System) on BMW E34](http://alpinakozou.web.fc2.com/file/costomize2014/20140517.html)
 
 **Styling/Cosmetics**
 
@@ -58,3 +94,18 @@ Check the BMW E34 (MY. 1987-1996) Owner's Manual on [this link](https://www.shif
 * [BMW E34: Door handle, trim, and gasket replacement](https://www.shiftbmw.com/model/e34/door-handle-trim-and-gasket-replacement/)
 * [BMW E34: Front Bumper & Grill Removal](https://www.shiftbmw.com/model/e34/e34-front-grill-and-bumper-removal/)
 * [BMW E34: Side mirrors disassembly](https://www.shiftbmw.com/model/e34/side-view-mirror-disassembly-2/)
+* [Painting Your Calipers on BMW E34](https://bmw-stuff.blogspot.com/2007/11/painting-your-calipers-on-bmw-e34.html)
+* [Steering wheel thinner quick-release solution](http://alpinakozou.web.fc2.com/file/costomize2013/20130615.html), [installation process](http://alpinakozou.web.fc2.com/file/costomize2013/20130602.html)
+* [Installing/fixing seat armrest](http://alpinakozou.web.fc2.com/file/costomize2011/20110815.html)
+* [ALPINA Digital Cockpit Gauges Aftermarket Installation](http://alpinakozou.web.fc2.com/file/costomize2011/20110710.html)
+* [Replacing all interior lights with LEDs](http://alpinakozou.web.fc2.com/file/costomize2009/20090718.html), also [check this](http://alpinakozou.web.fc2.com/file/costomize2008/20080221.html)
+* [OBC Light converted to LEDs](http://alpinakozou.web.fc2.com/file/costomize2008/20080727.html)
+* [Installation of LED Door Lock Pins](http://alpinakozou.web.fc2.com/file/costomize2008/20080705.html)
+* [Installation of four additional gauges on E34](http://alpinakozou.web.fc2.com/file/costomize2008/20080516.html)
+* [Plastidip Wheel Rims Coloring (w/o) removal](http://www.bmwclubmalaysia.com/forums/threads/diy-plastidip-rims.35090/)
+* [Budget-friendly DIY Colored Instrument Cluster Backplate for E30](http://www.bmwclubmalaysia.com/forums/threads/budget-diy-colored-meter-dial-for-e30.7905/)
+
+**Other//Misc**
+
+* Pelicanparts.com: [1994 BMW 525i Sedan](https://www.pelicanparts.com/cat/v_bmw-1994-525i-sedan-e34)
+* RealOEM.com: [BMW E34 M50 MY.94](https://www.realoem.com/bmw/enUS/select?product=P&archive=1&series=E34&body=Lim&model=520i&market=EUR&prod=19941100&engine=M50&steering=L&trans=M)

@@ -5,7 +5,7 @@ url: /bmw/clusters/vehicle-speed
 
 ### Controlling KM/H Vehicle Speed on Instrument Cluster
 
-The vehicle speed indicates how fast does a vehicle travel, with `km/h` (EUR) designation labels. It's possible to wire the instrument cluster interface pinouts against the Arduino PWM GPIOs and manipulate the signal of the tachometer (km/h) needle on the cluster itself. To do so, you will need to wire up the cluster mandatory pins as explained in [BMW E34 Cluster Wiring Diagram](/e34-cluster-wiring-diagram), and attach Arduino Uno R3 to the Host OS with the following firmware:
+The vehicle speed indicates how fast does a vehicle travel, with `km/h` (EUR) designation labels. It's possible to wire the instrument cluster interface pinouts against the Arduino [PWM](https://www.instructables.com/How-to-use-Pulse-Width-Modulation/) GPIOs and manipulate the signal of the tachometer (km/h) needle on the cluster itself. To do so, you will need to wire up the cluster mandatory pins as explained in [BMW E34 Cluster Wiring Diagram](/e34-cluster-wiring-diagram), and attach Arduino Uno R3 to the Host OS with the following firmware:
 
 ```
 /**
