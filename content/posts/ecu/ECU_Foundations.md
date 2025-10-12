@@ -2,7 +2,11 @@
 title: "ECU Foundations"
 ---
 
-## Intoducing the Engine Control Unit (ECU)
+## Intro
+
+For reference, take a look at [ECU Compromise](/how-to-compromise-ecu) note detailing the process taken by the adversary attacker or offensive security researcher when ECU target needs to be compromised; alongside the [vehicle hacking foundations](/automotive-hacking) notes.
+
+## About ECU/PCM systems
 
 The Engine Control Unit (ECU, also called *Powertrain Control Module* or *PCM*), which is a key player in virtually every system involved in running the vehicle. In an automotive sense, the ECU is the "all-knowing", powerful "entity" that makes it go. The ECU is the most powerful computer on modern vehicles. It uses a variety of **sensors** to monitor and control most of the engine functions, including the **electrical, fuel** and **emissions control systems**. Among other tasks, the ECU controls the **fuel injectors** on fuel-injected engines, fires the **spark plugs**; and controls **valve timing**, the **fuel/air mixture**, **battery charging**, and even the cooling **fan**. By continually measuring and monitoring these reading in conjuction with a series of "maps" or programs, the ECU ensures that the engine is operating correctly. It's the key to the diagnostics that pinpoint problems and is primarily responsible for managing the fuel efficiency and performance of the vehicle. If the ECU malfunctions, it usually needs to be replaced.
 
