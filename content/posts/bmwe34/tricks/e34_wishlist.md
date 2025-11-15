@@ -36,6 +36,7 @@ title: "Upgrade+Wishlist"
 - [Billet Alu Coolant Cap](https://racegerman.com/collections/e34-all-products/products/billet-aluminum-coolant-cap)
 - [SSS 'Seven Speed Shop' Performance Billet BMW E34 Oil Cap](https://www.7speedshop.com/products/7-speed-shop-billet-bmw-oil-cap-e30-e23-e24-e28-e32-e34?_pos=10&_sid=3c295ef95&_ss=r)
 - [SSS 'Seven Speed Shop' Lion Horn Button for Sport Steering Wheel](https://www.7speedshop.com/products/seven-speed-shop-lion-horn-button?_pos=28&_sid=3c295ef95&_ss=r)
+- [TA Technix Sport Suspension Kit `60/40mm`](https://www.tatechnix.de/tatechnix/gx/suspension-technology/sport-suspension-kit/bmw-138586/5er-139703/sedan-164238/e34-146930/ta-technix-sport-suspension-suitable-for-bmw-5-series-sedan-type-e34-60-40mm.html) lowering shocks & springs combo
 
 ### Upgrade: Style/Interior
 

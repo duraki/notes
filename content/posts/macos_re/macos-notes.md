@@ -6,6 +6,80 @@ Reference to a [macOS Tweak](/macos-tweaks) note if you want to check how I twea
 
 Additonally, take a look at [this macOS command-line index](https://git.herrbischoff.com/awesome-macos-command-line/about/) which contains a lot of useful resources (there is also [cli-app-index](https://git.herrbischoff.com/awesome-command-line-apps/about/) mostly __*nix__ related).
 
+**Find the culprit of large System Storage usage on MacOS**
+
+Typically, using the MacOS with its limited disk storage would result in hefty large "System Data" usage, when viewing the "Storage" pane inside the "System Settings" MacOS app.
+
+![](/images/macos-system-storage-large-usage-infopane.png)
+
+As you can see, the "`System Data`" storage takes `200+ GB` which is **absolutely abnormal**. The size of the system data increases proportionally due to the usage of the MacOS and its applications.
+
+To fix this, start in Terminal using the following to check directory sizes from users `$HOME` directory:
+
+```
+$ cd && du -m -d 1 -x 2>/dev/null
+1621	./.config
+6976	./Projects
+8472	./Pictures
+...
+2691	./Desktop
+103516	./Library
+16315	./utils
+1023	./.minikube
+2204	./.cargo
+1155	./.android
+...
+208872	.
+```
+
+Similarly, using the `/` (*root*) directory, run the `du` command again to calculate overall system storage size usage and print it out:
+
+```
+$ sudo su       # gain the sudo privs
+
+# tty drops with sudo privs 
+sh-3.2# cd /
+sh-3.2# du -m -d 1 -x 2>/dev/null
+2116	./usr
+23774	./Library
+447012	./System
+14335	./private
+208875	./Users
+31123	./Applications
+58211	./opt
+...
+785551	.
+```
+
+After quick analysis, we can see that the `$HOME/Library`, `/System` and `/Users` uses most of the of the disk data. To find the actual culprit of the System Data usage do the following:
+
+1. Open the Finder app on MacOS
+2. Click in the menubar `Go -> Library` or use `CMD+Shift+L` keyboard shortcut
+3. Use keyboard shortcut `CMD+2` inside the *Library* directory to show column view
+4. Use keyboard shortcut `CMD+J` to open "View options" and check the "Calculate all sizes" ✅
+5. Close "View options" and click on the "Size" column in Finder column view
+6. This will sort the directories in descending order by their usage size
+
+Inside it, find and delete directories that are not needed, are old, or have been taking a large size of your Macbook. For example, I've found that **"Group Containers"** directory, **"Caches"**, and **"Application Support"** directory contains a large files that are either leftovers of removed/uninstalled applications, temporary log or cache files and similar.
+
+![](/images/macos-system-storage-large-usage-library-directory.png)
+
+Finally, make sure to regularly clean-up Homebrews using the command (you can even setup a `crontab` to do it automatically):
+
+```
+$ brew cleanup
+# ....
+# ==> This operation has freed approximately 1.6GB of disk space.
+```
+
+Last but not least, right-click on the MacOS Trashbin and click "Empty Trash" to remove all deleted directories/files fully.
+
+Other stuff to try are shown below:
+
+1. **Clear system cache:** Go to Finder > Go > Go to Folder, then type in "~/Library/Caches" and hit enter. Select all the folders inside the Caches folder and delete them.
+2. **Clear system logs:** Go to Finder > Go > Go to Folder, then type in "/var/log" and hit enter. Select all the files inside the Log folder and delete them.
+3. **Remove unused language files:** Go to Finder > Go > Go to Folder, then type in "/Library/Languages" and hit enter. Delete all the language folders you don't need.
+
 **Use Windows SMB Share as a Time Machine Backup**
 
 I have a highly modded "Thinkpad T430" with a lot of storage available on disposal. It has "*Microsoft Windows 10*" installed as main bootable OS, for various tasks and needs that I need on Windows environments (ie. automotive software, security engagements on Desktop app. clients, etc.). Since I'm daily driving my Apple Mac M1 (*that only has 512GB* of storage), I wanted to use this Thinkpad T430 laptop as my time machine backup location. Steps to do this are described below, originally found on [this article](https://www.makeuseof.com/tag/turn-nas-windows-share-time-machine-backup/), also check [Apple Website - How to back up your Mac](https://support.apple.com/en-us/102307):
@@ -563,6 +637,29 @@ $ brew install ccat
 
 $ cat -n ~/INPUT.txt | ccat
 ```
+
+**View someones WhatsApp status (story) without them knowing**
+
+This little handy trick is what I've discovered during one of the specific OSINT engagement where the valuable intel was to be extracted out of the WhatsApp status story, uploaded by the target. It is well known that the user who is posting (ie. _uploading_) their story status on WhatsApp app. must have you in their contact list to be able to see it, therefore the device that we had on hand was the only one with the phone number and WhatsApp registration ID equivalent to the targeted persona on the other line, whom he had a phone number of our registered device and WhatsApp number in their contacts. Albeit, the operation required highly stealth approach during the intel extraction, requiring us to view the WhatsApp story uploads without them knowing.
+
+To do this, we fired up a new virtual MacOS Sonoma (Guest VM) and downlaoded the WhatsApp app. for MacOS desktop. Next, the procedure was to transfer/register the  account we had during the engagement on our newly brought Guest VM, having it set and usable within the downloaded WhatsApp desktop app. Once the WhatsApp was registered and ready to be used via the MacOS desktop version, its required to fully quit the app and start it again to refresh the status story downloads in the background.
+
+The following steps was then taken to extract full resolution picture of the uploaded story by our target:
+
+* Fully close WhatsApp desktop app again (*ie.* using `CMD+Q`)
+* Open the AppCleaner app on MacOS and find WhatsApp app
+* Investigate the bundled container and other used directories
+* One of the directory caught our attention named `group.net.whatsapp.WhatsApp.shared`
+* The path of the directory was `$USER/Library/Group Containers/group.net.whatsapp.WhatsApp.shared`
+* Inside that folder, there was a subpath dir `[...]/group.net.whatsapp.WhatsApp.shared/Message/Media/`
+* Upon opening this directory, we observed the following folders:
+  * Folder named: `38165016781@status` - *Used for caching the story/status uploads*
+  * Folder named: `38165016781@s.whatsapp.net` - *Used for caching media shared in the chat*
+* This folder used the phone num. as the prefix, alongside the `@status` and `@s.whatsapp.net` suffix
+  * Meaning, the example phone num. `38165016781` would indicate a user behind `+381 (065) 016 781`
+* Upon visiting the `[38165016781]@status` folder, list all dir/files in it
+* **A full resolution of the WhatsApp story status** *shall* be found in the `.jpg` format inthere  
+* This method does not require opening the WhatsApp app or changing any privacy settings to your account
 
 **Completely remove Microsoft forced Auto-update Utility**
 

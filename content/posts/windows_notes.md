@@ -34,6 +34,7 @@ Resource:
 ### Tweaking
 
 * [macOS Cursors for WindowsNT](https://github.com/antiden/macOS-cursors-for-Windows)
+* [Windows AutoWall](https://github.com/SegoCode/AutoWall)
 * [Sort of 'QuickLook' for WindowsNT](https://github.com/QL-Win/QuickLook)
 * [NanoZip - Modern 7-Zip alternative](https://github.com/M2Team/NanaZip)
 * [Flow.Launcher](https://github.com/Flow-Launcher/Flow.Launcher) Windows "Spotlight-*inspired*" Laucnher

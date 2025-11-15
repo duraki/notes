@@ -21,6 +21,12 @@ The [ECM/PCM](https://charm.li/Honda/2004/Accord%20L4-2.4L/Repair%20and%20Diagno
     * [Honda Accord: Upgradeables](/honda/upgrade-wishlist)
     * [Honda Accord: Tools & Equipment](/honda/tools-equipment)
 
+### Tips and Tricks
+
+Reference to Honda Accord's Gen7 [Tips & Tricks](/honda/tips-and-tricks) note for more information. These information have been gathered and collected collectively by their original authors, and me, a mere hacker trying doing good deeds, providing my valuable time to keep it all at one place and also share it with the web visitors.
+
+
+
 ### Honda Accord Types & Models
 
 Use the expandable section below to display relevant information about version types and models, their differences, and general information about the Honda Accord (JDM/International) versions, and the equivalent Acura TSX (North America).
