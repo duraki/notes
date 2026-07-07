@@ -87,7 +87,7 @@ Most SCADA systems are still provisioned with their default passwords from the m
 
 - [How to enum/recon and exploit SCADA using `nmap`](https://hackers-arise.com/scada-hacking-finding-and-enumerating-scada-sites-with-nmap-and-nmap-scripts/)
 - [Monitoring SCADA industry sites with Splunk](https://hackers-arise.com/scada-hacking-monitoring-scada-sites-with-splunk/)
-- [Using Metasploit SCADA modules during Cybersecurity Assessment](https://hackers-arise.com/scada-hacking-metasploit-scada-modules/)
+- [Using Metasploit SCADA modules](https://hackers-arise.com/scada-hacking-metasploit-scada-modules/)
 - Part #1: [Conducting Risk Assessment on SCADA](https://hackers-arise.com/scada-hacking-scada-ics-risk-assessment-and-management-part-1/)
 - Part #2: [Conducting Risk Assessment on SCADA](https://hackers-arise.com/scada-hacking-scada-risk-assessment-with-cset/)
 - [Hacking a Secure Industrial (OT) Remote Access Gateway](https://blog.syss.com/posts/hacking-a-secure-industrial-remote-access-gateway/)

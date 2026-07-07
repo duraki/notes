@@ -195,15 +195,15 @@ tools:
         between each and also detach from specific sessions which may contain long
         running tasks."
 
-  - name: "Nova"
-    link: "http://nova.app"
+  - name: "Zed"
+    link: "http://zed.dev"
     description:
-      - "Usually I prefer **NeoVim** but lately I've been using **Nova** from
-        Panic as my main IDE and development editor of choice. It is quite
+      - "Usually I prefer **NeoVim** but lately I've been using **Zed** after
+        ditching Nova as IDE and development editor of choice. It is quite
         robust and works natively on MacOS, plus you get handy of extensions
         that you may use for different type of projects and specificiations.
-        Unlike other similar alternative, Nova is not too expensive (100$ USD)
-        and it works out of the box for most projects."
+        Unlike my previous choice of Nova, Zed is totally free and it works
+        out of the box for most projects."
 
   - name: "NeoVim"
     # link: "https://iterm.com"
