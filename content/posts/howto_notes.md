@@ -1,5 +1,6 @@
 ---
 title: "How to write Notes"
+url: "/how-to-write-notes"
 ---
 
 * Use Markdown for everything, stand-alone deployment

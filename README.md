@@ -1,5 +1,11 @@
 <p align="center"><b>~ notes</b></p>
 
+<hr />
+
+<p align="center"><img src="./assets/images/notes.png" alt="notes" /></p>
+
+<hr />
+
 The `~ notes` is a dedicated repository for my [digital garden](https://github.com/MaggieAppleton/digital-gardeners#what-is-digital-gardening). These notes are published via [Hugo](https://gohugo.io) and it uses custom theme which presents these notes in stacked view; meaning each note is stacked side by side, similar to [Obsidian](https://obsidian.md/), [Bangle](https://bangle.io/) and [Dendron](https://www.dendron.so/). Read these [~notes](http://notes.durakiconsulting.com) or start contributing. You can check my theme [haxor-notes](./themes/haxor-notes), included in this repository.
 
 See also [TODO](/docs/TODO.md) for future reference.
@@ -19,6 +25,11 @@ First install [Hugo](https://gohugo.io) and try printing version information. Th
 ```
 $ brew install hugo
 $ hugo version # => hugo v0.98.0+extended darwin/amd64
+
+# alt. use the build env scripts provided in [`.github/.deps/`](/.github/.deps) directory
+$ make deps
+# => installs hugo v0.98.0 darwin/amd64 using Homebrew build from source formula
+# =>   $ brew install --formula --build-from-source .github/.deps/hugo_0.98.0.rb
 ```
 
 ## Quick Usage

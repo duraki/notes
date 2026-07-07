@@ -37,9 +37,14 @@ Having a good matching patterns that provides the linting and/or static analysis
 
 Lets say you have a C/C++ codebase that you want to audit. The matching pattern for a static code analysis software could search for `memcpy`, where the tested codebase calls it with a buffer size provided somewhere else alongside the codebase, through the user provided input on the `buffer` size. It's important to keep updating and adding new matching patterns for different languages you've preivously engaged on, since you might discover new "__triggering__" functions that is exploitable, or some other attack surface not typicaly found via default lists. It's best to keep this matching patterns `git`-__tracked__ somewhere on your GitHub, therefore having the list by hand whenever you need it.
 
+### Automated Tools
+
+* [owasp/noir](https://github.com/owasp-noir/noir) - OWASP's `noir` bridges the gap between SAST and DAST by analyzing source code to generate accurate, authenticated endpoint inventories. It detects what others miss: shadow APIs, deprecated endpoints, and hidden routes. Noir uses the source code to deliver a comprehensive attack surface inventory, making it great for a whitebox penetration testing, eliminating blind spots across the system and all that while allowing integration with other tools (ie. DAST/SAST).
+* [nuclei-sourcecode-analysis-templates](https://github.com/KaanBicaklar/nuclei-MonaCodeScanner)
+
 ### Language Specific
 
-For **PHP/x.xx** Server-Side Scripting Language, additional notes are available in [PHP Source Code Analysis](/php-source-code-analysis) and [PHP Filesystem Functions](/php-filesystem-functions).
+For **PHP/x.xx** Server-Side Scripting Language, additional notes are available in [PHP Source Code Analysis](/php-source-code-analysis) and [PHP Filesystem Functions](/php-filesystem-functions). There is also OOS tool [phan](https://github.com/phan/phan) which is a static analyzer for PHP. It prefers to avoid false-positives and attempts to prove incorrectness rather than correctness.
 
 ---
 

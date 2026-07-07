@@ -26,6 +26,7 @@ Before you start with any type of hardware hacking, be sure to introduce yoursel
 * [Logic Analyzer](/hw/logic-analyzer)
   * [DSLogic+ Logic Analyzer](/hw/dslogic-logic-analyzer)
 * [Oscilloscope](/hw/oscilloscope) *~TODO*
+* [Voltage Injection](/hw/fault-injection)
 
 **Common Hardware Debug Interfaces**
 
@@ -41,6 +42,7 @@ Before you start with any type of hardware hacking, be sure to introduce yoursel
 * [RFID](/hw/rfid-interfaace)
 * I2C
 * SPI
+  * [Hardware Hacking: Interfacing with an SPI](https://riverloopsecurity.com/blog/2020/02/hw-101-spi/)
 * [Other common](https://www.mattmillman.com/info/crimpconnectors/) WTB (Wire-to-Board), WTW (Wire-to-Wire), and Crimp Connectors
 * [DuPont Connectors](https://www.mattmillman.com/info/crimpconnectors/dupont-and-dupont-connectors/)
 * [Common JST Connector Types](https://www.mattmillman.com/info/crimpconnectors/common-jst-connector-types/)
@@ -90,6 +92,7 @@ Things I carry during on-site hardware engagements *(aka the "Fieldkit") are als
 **Online Tools**
 
 - [Altium365 Electronic Design Viewer](https://www.altium365.com/viewer/)
+- [Splice: Harness, Wiring and Connector Online Designer](https://splice-cad.com/app)
 
 **Misc. References**
 

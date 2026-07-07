@@ -171,6 +171,7 @@ $ rcodesign x509-oids 	# => to print OIDs for x.509 certs
 
 ### Resources
 
+* [macOS App Management vulnerability illustrated](https://lapcatsoftware.com/articles/2023/8/3.html), [2](https://lapcatsoftware.com/articles/2023/8/2.html)
 * [MacOS Frida Setup](https://naehrdine.blogspot.com/2022/11/macos-frida-setup.html)
 * [Jailbreak any IPA and run it on Apple M1/M2 macOS w/o decrypting](https://github.com/RootHide/FairFree)
 * [MacOS Open Source](https://developer.apple.com/opensource/)

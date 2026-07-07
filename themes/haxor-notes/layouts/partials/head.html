@@ -7,6 +7,18 @@
   name="viewport"
   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 />
+
+{{/* 
+    @see: https://gohugo.io/content-management/mathematics/#step-3 
+
+    The example above loads the partial template if you have set the math parameter in front matter to true. 
+    If you have not set the math parameter in front matter, the conditional statement falls back to the math 
+    parameter in your site configuration.
+*/}}
+{{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+{{ end }}
+
 {{/*  <meta name="apple-mobile-web-app-capable" content="yes" />  */}}
 
 {{ if not (or (in (.Site.BaseURL | string) "127.0.0.1") (in (.Site.BaseURL | string) "localhost")) }}

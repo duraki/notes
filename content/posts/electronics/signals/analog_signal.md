@@ -24,3 +24,4 @@ Reference to [Visualize ADC data on PC via USART](https://extremeelectronics.co.
 ### Other Resources
 
 * [SerialCouple - Thermocouple ADC](https://blog.thelifeofkenneth.com/2011/06/serialcouple-thermocouple-adc.html): A device that converts thermocouple temperature input into a digital value
+* [LTSpice Simulation Software](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)

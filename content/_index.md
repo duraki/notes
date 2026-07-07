@@ -1,6 +1,6 @@
 +++
 title = "duraki notes"
-lastmod = 2022-04-29
+lastmod = 2026-06-07
 type = "index"
 +++
 
@@ -59,6 +59,8 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 ### Classical Penetration Testing
 
 * [OSINT](/osint)
+  * [Satellite Navigation](/osint/satnav), [{{< sup_clean "SATNav//OSINT" >}}](/osint#satnav)
+  * [ICS//OT//SCADA](/scada/osint), [{{< sup_clean "~ %xref" >}}](#scadaicsot-cybersecurity-hahahugoshortcode-s18-hbhb)
 * [Source Code Auditing](/source-code-audit)
 * [Web Pentest Oneliners](/web-penetration-testing-oneliners)
     * [Web Tricks and Tips](/web-tricks-and-tips)
@@ -85,6 +87,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
     * [Metasploit Framework](/metasploit-framework)
     * [Server Anywhere](/server-anywhere)
     * [Netcat Tricks](/netcat-tricks)
+    * [Phishing Attacks & SocialEng](/phishing-attacks)
 
 ### Reverse Engineering {{< sup_a "Toolset" "/posts/tools" >}}
 
@@ -94,6 +97,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 * [Byteman Cheatsheets](/byteman)
 * [Byteman Scripts](/byteman-scripts)
 * [Encryption and Cryptography](/encryption-and-cryptography)
+    * [Crypto Blockchain Analysis](/crypto-blockchain)
 * [Demangling C++ files using Frida](/c-plus-plus-demangler)
 * [Objective-C Reverse Eng.](/objective-c-re) {{< sup_a "~ iOS/macOS" "#" >}}
     * [ObjC Class Decompilation](/objc-decompile)
@@ -166,6 +170,15 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
 
 ### Development & Design
 
+* _Language-specific_
+  * [C Programming Language](/dev/c)
+  * [Objective-C](/objective-c-re#development-tips)
+  * [Bash _`(POSIX)`_ Scripting](/dev/bash)
+  * [React Native](/reactnative-simple-app)
+* _Toolkit-specific_
+  * [Byteman Scripting](/byteman-script) {{< sup_clean "_Proto Pseudosyntax_" "#" >}}
+  * [Frida Scripting](/ios-frida-scripting) {{< sup_clean "_Javascript_" "#" >}}
+
 **.files**
 
 My `.dotfiles` are available [on my GitHub](https://github.com/duraki/dotfiles). At the time of writing, this repository is private due to confidential information. Please refer to {{< aref  href="works-for-me/" title="✨ works for me" >}} page to get details about my running environment.
@@ -183,14 +196,12 @@ Mockup for my minimal blog and notes publishing app called `art` (visible in [bl
 * todo: `vim.init`, `tmux`, `iterm`, `osx`
 * todo: `gmmk + key remap`
 * todo: `photos/ physical`
-* [Bash](/bash-in-simple-words)
 
-**btw**, I use GMMK 60% keyboard, [here are the default shortcuts](/gmmk-60-keyboard).
+**btw**, I use GMMK 60% keyboard, [here are the default shortcuts](/gmmk-60-keyboard), but there is also [`works-for-me`](/works-for-me/) page _(ie. details of my dotfiles/local setup)_ showcasing my favorite tools, apps, systems and configurations.
 
 **design**
 
 The details of UI/UX design environment is described in corresponding [Design](/design) notes, which includes details about my prefered design toolkits and plugins.
-
 
 ### Misc
 

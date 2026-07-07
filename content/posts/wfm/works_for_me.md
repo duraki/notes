@@ -142,25 +142,25 @@ tools:
         Gen)](https://support.apple.com/kb/SP844) when I'm on the move."
       - "For keyboard I use [White Glorious GMMK
         60%](https://www.gloriousgaming.com/products/the-glorious-gmmk-compact-pre-built), although its not
-        strange to find me using other mechanical keyboards that I own; sometimes I opt for my _84-keys_ 
+        strange to find me using other mechanical keyboards that I own; sometimes I opt for my _84-keys_
         Satechi SM3 keyboard in a light gray/white variant, while other times I prefer Redragon or even
         Razor Blackwidow v3 which I prefer while gaming. During the office work, I love my [Logitech MX Masters
-        3](https://www.logitech.com/en-us/products/mice/mx-master-3s.html) and its best purchase choice 
+        3](https://www.logitech.com/en-us/products/mice/mx-master-3s.html) and its best purchase choice
         I've made. Still, I do prefer using my [Logitech G502 Hero](https://www.logitechg.com/en-my/products/gaming-mice/g502-hero-gaming-mouse.html) wired mouse when I play games or do in-office/lab
         work."
       - "My daily laptop is a MacBook Pro (Retina, 14' inch), late '21 model
         with Apple M1 CPU, 16GB of RAM and 1TB of solid storage. I vividly work on
         my electric desk setup I've assembled and constructed myself, and usually have
-        AirPods Pro 3 with me." 
-      - "Besides, I daily use my beloved Thinkpad T430 running Microsoft Windows 10 x64 
+        AirPods Pro 3 with me."
+      - "Besides, I daily use my beloved Thinkpad T430 running Microsoft Windows 10 x64
         especially when doing any automotive hacking research or I have to delve into electronics
-        and specific software available only on WindowsNT. I also love using my older machine; my 
+        and specific software available only on WindowsNT. I also love using my older machine; my
         Apple Macbook Air (13' inch), late '15 model - running Linux CachyOS, allowing me to streamline
         any GNU/Linux bare-metal required work or project."
       - "When I'm on the move, I prefer using my 12.9 iPad Pro (5th Gen) with
-        [Magic Keyboard Folio](https://www.apple.com/shop/product/MQDP3LL/A/magic-keyboard-folio-for-ipad-10th-generation-us-english), in combination 
-        with my [iPhone 16 Pro](https://www.apple.com/eg/iphone-16-pro/), alongside 
-        my [Apple Watch Ultra](https://www.apple.com/apple-watch-ultra/) which I 
+        [Magic Keyboard Folio](https://www.apple.com/shop/product/MQDP3LL/A/magic-keyboard-folio-for-ipad-10th-generation-us-english), in combination
+        with my [iPhone 16 Pro](https://www.apple.com/eg/iphone-16-pro/), alongside
+        my [Apple Watch Ultra](https://www.apple.com/apple-watch-ultra/) which I
         absolutely love to bring during my holiday trips and other business travels."
 
   ######################################################################
@@ -212,8 +212,8 @@ tools:
         `tmux` environment. I have custom color scheme that looks beautiful and
         matches my iTerm theme. I'm sucker for [LunarVim](http://lunarvim.org),
         which I used extensively to configure my NeoVim instance. I rarely use
-        NeoVim nowadays, except to quickly edit some files. Lately, I've been 
-        forcing myself to use [hx]() which I'm still trying to map exactly to 
+        NeoVim nowadays, except to quickly edit some files. Lately, I've been
+        forcing myself to use [hx]() which I'm still trying to map exactly to
         my NeoVim kb configs."
     image: "https://i.imgur.com/4TBbmCx.png"
     imageAlt: "NeoVim w/ custom LunarVim - Startup"
@@ -226,7 +226,7 @@ tools:
   - name: "Apple Mail"
     description:
       - "I've been using **Airmail Business** for a long time, but have once again
-         switched back to default Apple's Mail. For some reason, I figured out it 
+         switched back to default Apple's Mail. For some reason, I figured out it
          works wonders once it's been correctly setup with multiple eMail addresses,
          relevant mailboxes, signatures, and so on."
 
@@ -243,6 +243,12 @@ tools:
     description:
       - "The only UI editing software that I trust, and have been using for
         years. Highly recommended for all UI/UX designers."
+  - name: "Origami Studio 3"
+    link: "https://www.origami.design"
+    description:
+      - "Origami Studio 3 is a powerful UI/UX design tool that allows you to
+        create and edit UI components using a drag-and-drop interface, available for MacOS
+        for free."
   - name: "Shapr3D"
     link: "http://shapr3d.com"
     description:
@@ -301,6 +307,12 @@ tools:
     description:
       - "Cute and small calendar living in your macOS menubar, good for glancing
         over your meetings and events."
+  - name: "Deskflow"
+    link: "https://github.com/deskflow/deskflow"
+    description:
+      - "Deskflow is an open-source alternative to proprietary mouse and keyboard
+        sharing software that can be used as a KVM and allowing you to share your
+        KBM with other Macs/Windows/Linux devices."
   - name: "Syncalicious"
     description:
       - "I've just started using this utility but I absolutely love the way it
@@ -322,8 +334,8 @@ tools:
     link: "https://2fas.com/auth/"
     description:
       - "I highly recommend 2FAS Auth which is defacto [open-source two-factor
-         authenticator](https://github.com/twofas) mobile app, easy to use, works offline, private, secure 
-         and with system extensions available for all major browsers. Truly, 
+         authenticator](https://github.com/twofas) mobile app, easy to use, works offline, private, secure
+         and with system extensions available for all major browsers. Truly,
          one of a kind privacy-oriented 2FA that totally sets it apart from other
          alternatives (ie. ~Google Authenticator~, etc ...)"
   - name: "Atomic Wallet"
@@ -371,18 +383,18 @@ tools:
         WhatsYourSign, Bananafish's Dumper, Charles Proxy, defaults edit, FileFreeze,
         LaunchControl, Prefs Editor, ResForge"
       - "Penetration Testing: Burp Suite Professional, Kali Linux, WiFi Explorer, `@see .dotfiles`"
-      - "Electrical Engineering: Cuprum, DSView, Fritzing, KiCAD, Arduino IDE, EOBD Facile, 
+      - "Electrical Engineering: Cuprum, DSView, Fritzing, KiCAD, Arduino IDE, EOBD Facile,
          FidoCadJ, gEDA-GAF, LibrePCB, MiniPro GUI, [WireWiz](https://github.com/wireviz/WireViz)"
-      - "VX & Virtualization: Kegworks Winery, OrbStack, RustDesk, ServerCat, UTM, 
+      - "VX & Virtualization: Kegworks Winery, OrbStack, RustDesk, ServerCat, UTM,
          VirtualBuddy//VirtualBuddyGuest, virtualOS, VMWare Fusion, WinDiskWriter, Multipass"
       - "Development: Visual Studio Code, XCode, JetBrains GoLand, SnippetsLab,
         SwiftUI Recipes, GitHub Desktop, Postgres.app, AssetCreator, Swift Playground"
-      - "Graphics & UI: ColorSet, Sketch, BeeRef, Shapr3D, Free Ruler, GodSVG, 
+      - "Graphics & UI: ColorSet, Sketch, BeeRef, Shapr3D, Free Ruler, GodSVG,
          KitIconGenerator, MacSVG, Palette Genius, Red Lines Tools, Redacted, Wings3D"
       - "Writing & Editing: Anytype, Haystack Editor, Heynote, Microsoft Office,
          Nova, Obsidian"
       - "Photos & Videos: ImageOptim, IINA, VN Video Editor, FlowVision, ScreenToLayers"
-      - "General & Messaging: NetNewsWire, Trust Wallet, WhatsApp, 
+      - "General & Messaging: NetNewsWire, Trust Wallet, WhatsApp,
          Mattermost, Signal, Stempel, Table Tool, Ente Auth, [Telephone Pro](https://www.64characters.com/)"
       - "Utilities: Amphetamine, [Accents](//mahdi.jp/apps/accents), Manila,
          ItsyCal, DockDoor, Disk-O, CleanShot X, Command X, Karabiner,
@@ -390,17 +402,17 @@ tools:
          Image2Icon, Vanilla, AppCleaner, MonitorControl, Mos, Week Number"
       - "File System & Trasnfer: Android File Transfer, Cyberduck, Rayon, Syncthing,
          Downie, Folx, Mounty, AltServer, FAF (Find Any File), idevice_pair, LocalSend"
-      - "Extensions: **XCode** Comment Wrapper, Copilot for XCode, SwiftFormat<br /> 
-        **Safari** JSON Peep, CookieBlocker, AdGuard, AirPlayable, HighlightJSON, Hush, 
-        ImageFinder, Oldr, OneTab, Shiori, SingleFile, Wappalzyer, Wipr, Nightshift, 
-        [Sprinkles](https://getsprinkles.app/), Synology Image Assistant Extension, 
+      - "Extensions: **XCode** Comment Wrapper, Copilot for XCode, SwiftFormat<br />
+        **Safari** JSON Peep, CookieBlocker, AdGuard, AirPlayable, HighlightJSON, Hush,
+        ImageFinder, Oldr, OneTab, Shiori, SingleFile, Wappalzyer, Wipr, Nightshift,
+        [Sprinkles](https://getsprinkles.app/), Synology Image Assistant Extension,
         uBlock Origin Lite, Userscripts, Vinegar, VisBug, Wayback Machine, wBlock, 2FAS"
-      - "Drivers & QuickLookup: Logi Options+, Logitech G HUB, Brother Printer, Synology Drive Client, 
-         Synology Image Assistant, QLMarkdown, QLReceipt, PlaygroundQuickLookQL, ProvisionQL, 
+      - "Drivers & QuickLookup: Logi Options+, Logitech G HUB, Brother Printer, Synology Drive Client,
+         Synology Image Assistant, QLMarkdown, QLReceipt, PlaygroundQuickLookQL, ProvisionQL,
          QLCARFiles, QLImageSize, QLStephen, QLQuickLookJSON, QLQuickNFO, QLStringsFile, WebpQuickLook"
-      - "Notable Mentions: Archify, CamPhotoApp, CenterMouse, Console (by XS-Labs), 
-         CrystalFetch, DiskView, Exposition, Hot (by XS-Labs), MenuBarUSB, Scaler Bandwidth, 
-         ShareMouse, Startup Manager (by Systweak), [Superintendent](https://superintendent.app/), WakeMinder, 
+      - "Notable Mentions: Archify, CamPhotoApp, CenterMouse, Console (by XS-Labs),
+         CrystalFetch, DiskView, Exposition, Hot (by XS-Labs), MenuBarUSB, Scaler Bandwidth,
+         ShareMouse, Startup Manager (by Systweak), [Superintendent](https://superintendent.app/), WakeMinder,
          EnvPane.prefPane, macFUSE.prefPane"
 
   ######################################################################
@@ -428,9 +440,9 @@ tools:
         FreeBSD and other `*BSD` distributions."
   - name: "Hackaday.com"
     link: "https://hackaday.com"
-    description: 
-      - "Hackaday serves up fresh hacks every day from around the Internet. It 
-        mostly writes and publishes stories about Electronics, Electrical Engineering, 
+    description:
+      - "Hackaday serves up fresh hacks every day from around the Internet. It
+        mostly writes and publishes stories about Electronics, Electrical Engineering,
         and Hacking creativity & thinkering, mostly specific to hardware."
 # Add <as many other> [tools/section/subsection/list_title] here.
 # ...

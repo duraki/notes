@@ -4,11 +4,11 @@ toc: false
 preserveTOC: false
 ---
 
-#### Handy Command-Line Apps.
+#### Handy Command-Line Apps
 
 Most of the 3rd party general Command Line apps. for Apple macOS system are in [MacOS Notes > Handy CLI Apps.](/macos-notes). Refer to that page to see details.
 
-#### RevEng Command-Line Apps.
+#### RevEng Command-Line Apps
 
 * [mirage/conan](https://github.com/mirage/conan) - file type detection, a successor of Unix `file` command
 * [jthack/hacks/b64d](https://github.com/jthack/hacks/tree/master/b64d) - find and decode base64-encoded strings in a file
@@ -27,7 +27,7 @@ Most of the 3rd party general Command Line apps. for Apple macOS system are in [
 * [WinDbg](/windbg-cheatsheets)
 * [Safari](/safari-devconsole-internals)
 
-##### Misc.
+##### Misc  
 
 * [DHS](https://objective-see.org/products/dhs.html)
 * [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)

@@ -3,7 +3,7 @@ title: "Printed Circuit Boards"
 url: "/electronics/pcb"
 ---
 
-Almost all electronic devices are made and composed of several [electrical components](/electronics/components), such is [Transistors](), [Diodes](), [Capacitors](), [Resistors](), [Switches](), [Buttons](), [Connectors]() and other. All these components are connected according to a circuit schematics. A **Printed Circuit Board** (PCB) helps holding all these components of the device in a single place, as a complete unit. At the same time, the PCBs provide required electrical connection between pins or terminals of the components.
+Almost all electronic devices are made and composed of several [electrical components](/electronics/components), such is [Transistors](/electronics/components#transistors), [Diodes](/electronics/components#diodes), [Capacitors](/electronics/components#capacitors), [Resistors](/electronics/components#resistors), [LEDs](/electronics/components#led], [Switches](), [Buttons](), [Connectors]() and other. All these components are connected according to a circuit schematics. A **Printed Circuit Board** (PCB) helps holding all these components of the device in a single place, as a complete unit. At the same time, the PCBs provide required electrical connection between pins or terminals of the components.
 
 ### Types of PCB
 
@@ -44,3 +44,6 @@ The types of glue used depends on the hardware and the printed circuit board, as
 * [PCB Soldermask Colors: Which PCB color to choose](https://andybrown.me.uk/2015/01/05/pcb-colours/)
 * [Quick prototype: Circuit wiring on a general-purpose protoboard](https://www.ermicro.com/blog/?p=1940)
 * [Quick prototype: Making a PCB using the Toner Transfer method](https://www.ermicro.com/blog/?p=1526)
+* [Proteus PCB Software](https://www.labcenter.com/pcb/), [VSM Circuit Simulation Software](https://www.labcenter.com/simulation/)
+* [QUCS - Circuit Simulator](https://qucs.sourceforge.net/screenshots.html)
+* [Stamping braille on a PCBs](https://jg.sn.sg/braille/)

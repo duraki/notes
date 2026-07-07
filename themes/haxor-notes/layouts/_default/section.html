@@ -1,16 +1,61 @@
-{{ define "main" }}
-<div class="grid-container">
-    <div class="grid">
-        <div class="page">
-            <div class="content">
-                <h4>Table of Contents <sup><sup><i>({{.Title}})</i></sup></sup></h4>
-                {{ range .Pages }}
-                <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-                {{ end }}
+{{/* Defines the Table of Contents section in the theme layout for Hugo pages to render it inside the page content as a note. */}}
 
-                {{ .Content }}
+{{ define "main" }}
+
+<style type="text/css">
+  div, body {
+    /*overflow: hidden !important;*/
+    max-width: 100% !important;
+  }
+
+  details, pre {
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+  }
+</style>
+
+
+<div class="grid-container NoteColumnsScrollingContainer" style="overflow-x: hidden;">
+  <div class="grid NoteColumnsContainer stacked-notes" style="overflow-x: hidden;">
+    <div class="page NoteContainer" data-level="2" style="overflow-x: hidden;">
+
+      <div class="PresentedNote jsx-1649199117">
+        <div class="jsx-2479918432 NoteContainer" style="min-height: 1555px !important;">
+
+          <div class="jsx-2479918432 PrimaryNote">
+            <div class="content jsx-732926425">
+             <h4 class="content-page-header-title">
+              Table of Contents <sup><sup><i> ⏣ ({{.Title}})</i></sup></sup>
+             </h4>
+
+                 {{ range .Pages }}
+                   {{ if .Title }}
+                    <!--{{/* skips all pages without a title */}}-->
+
+                    <li style="margin-inline-start: 35px !important; list-style: square;"><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+
+                   {{ end }}
+                 {{ end }}
+
+
+
             </div>
+          </div>
+
+          {{ partial "backlinks.html" . }}
+
         </div>
+      </div>
+
+
+      <div class="jsx-3179990917 ObscuredLabel jsx-1649199117" style="display: none; position: sticky;">All Listings <sup style="color: darkslategray !important;"><sup><i>({{.Title}})</i></sup></sup></div>
+
     </div>
+  </div>
 </div>
+
+
+{{ $urijs := resources.Get "js/URI.js" }}
+<script src="{{$urijs.Permalink}}" type="text/javascript"></script>
+
 {{ end }}

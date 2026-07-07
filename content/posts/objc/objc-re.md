@@ -42,6 +42,8 @@ Taking all above into consideration, Apple-based apps. written in ObjC are quite
 
 ## Development Tips
 
+The development notes for other languages are available on the [notes index](/) page in Development {{< sup_a "⚑ dev" "/#development--design" >}} section.
+
 **ObjC Literals**
 
 A "literal" refers to any value which can be written out directly in source code - therefore `1337` is an Integer literal, and `"~SMOKING~KILLS~"` is a String literal, so is a `x` a Char literal.

@@ -9,6 +9,7 @@ Typically extension:
 - `*.bin`
 - `*.cod`
 - `*.dtf`
+- `*.dbc`
 
 Common size of the dumps:
 
@@ -31,3 +32,7 @@ Using hex editors is an old-school choice, and should be used only by experience
 Software List:
 
 - RomRaider [web](https://www.romraider.com) - [GitHub](https://github.com/RomRaider/RomRaider)
+
+## Tuning via defined `CAN Directories` using Cabana (`*.dbc` files)
+
+The [Cabana](https://github.com/commaai/openpilot/tree/master/tools/cabana#readme) is a tool developed to view raw CAN data. One use for this is creating and editing [CAN Dictionaries](http://socialledge.com/sjsu/index.php/DBC_Format) (DBC files), and the tool provides direct integration with [commaai/opendbc](https://github.com/commaai/opendbc) (a collection of DBC files), allowing you to load the DBC files direct from source, and save to your fork. 

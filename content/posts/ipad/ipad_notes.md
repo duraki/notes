@@ -34,3 +34,7 @@ title: "iPad Notes"
 * Gangstar Vegas
 * GRID Autosport
 * Minecraft
+
+## Resources
+
+* [Disable `Pull-to-Refresh` in Safari on iPad](https://justinharter.com/disable-safaris-pull-to-refresh-on-ipad-perfect-for-external-mouse-trackpads/)

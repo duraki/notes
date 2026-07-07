@@ -14,3 +14,9 @@ title: "Reverse Engineering Tricks and Tips"
 * Decompile JAR and attack via Frida, [Byteman](/byteman) or any other dynamic instrumentation toolkit
 * Use dotPeek to identify and process attack surface for anything .NET based
 * Use [bingrep](https://github.com/m4b/bingrep) to search for strings through binaries in all OSs/Arches (`brew install bingrep`)
+
+## iOS / Android
+
+Reference to [Android](/android-reverse-engineering) and [iOS](/ios-reverse-engineering) pages for more brief tips and tricks related to mobile application reverse engineering.
+
+* [Looking into WebViews in iOS](https://www.zellic.io/blog/webview-security/#what-are-webviews-good-for)

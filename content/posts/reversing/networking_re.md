@@ -218,3 +218,9 @@ $ netstat -a -c | grep -i example.com
 * [dwarf_NetworkRequests](https://github.com/iGio90/NetworkRequests) - dwarf script to collect network requests, no need to unpin, hooks on low level functions
 * [netzob](https://github.com/netzob/netzob) - Netzob: Protocol Reverse Engineering, Modeling and Fuzzing
 * [tapioca](https://github.com/CERTCC/tapioca) - CERT Tapioca for MITM network analysis
+
+### Resources
+
+* [Mitmproxy for fun and profit: Interception and analysis of application traffic](https://www.synacktiv.com/en/publications/mitmproxy-for-fun-and-profit-interception-and-analysis-of-application-traffic)
+* [PCAPAN: A PCAP Analysis Helper](https://www.synacktiv.com/en/publications/pcapan-a-pcap-analysis-helper)
+* [Fooling Go's X.509 Certificate Verification](https://danielmangum.com/posts/fooling-go-x509-certificate-verification/)

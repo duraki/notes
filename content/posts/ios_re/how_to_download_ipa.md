@@ -139,7 +139,7 @@ $ ipatool-dl search "Moonshot" --format json | jq '.apps'
 
 # Lets try to download the app.
 $ ipatool-dl download -b "money.moonshot.app" --purchase
-# downloading 0% |                                                    | ( 0/ 1 B) 
+# downloading 0% |                                                    | ( 0/ 1 B)
 # 3:30PM ERR error="failed to purchase item with param 'STDQ': failed to purchase app" success=false
 ```
 
@@ -149,7 +149,7 @@ To workaround this bug, we must first initiate the *purchase* from the AppStore 
 
 {{< imgcap title="AppStore - Purchase License (1)" src="/posts/images/appstore_iphoneapp_numbering.png" >}}
 
-Click the **Get** button only once, which will then change itself to **Install** button. 
+Click the **Get** button only once, which will then change itself to **Install** button.
 
 {{< imgcap title="AppStore - Purchase License (2)" src="/posts/images/appstore_getlicense.gif" >}}
 
@@ -187,6 +187,8 @@ $ uninstall-app /Applications/AppName.app
 
 * [Apple AppStore Webpage](https://www.apple.com/app-store/)
 * [Search in AppStore via `fnd.io`](https://www.fnd.io)
+* [Legacystore.app](https://legacystore.app) hosts a collection of legacy iOS apps, [foss](https://github.com/samhenrigold/jangle)
+* [ipa-archive](https://github.com/relikd/ipa-archive) from `archive.org` (aka _The Grand IPA Archive_)
 * IPA Online Hosted Libraries:
   * [iosvizor.com](https://iosvizor.com)
   * [ipauniverse.com](https://www.ipauniverse.com)

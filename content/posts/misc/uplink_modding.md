@@ -2,7 +2,12 @@
 title: "Modding Uplink by Introversion"
 ---
 
-Are you a modder? Do you want to learn how to make game modes and game hacks? You are at the right place. We will take Uplink as an example and explore various things, based on recollection of the source code. The source codes is visible at [this link]().
+Are you a modder? Do you want to learn how to make game modes and game hacks? You are at the right place. We will take Uplink as an example and explore various things, based on recollection of the source code. The source codes is visible at [this link](https://github.com/vb6mmorpg/uplink-source-code).
+
+Interesting URLs from `Introversion` (Publisher/Developer):
+
+- `https://devwiki.introversion.co.uk`
+- `https://devwiki.introversion.co.uk/uplink/index.php` (_Requires Login_)[1](https://login.introversion.co.uk/?group=16633&;back=http%3a%2f%2fdevwiki.introversion.co.uk%2fuplink%2findex.php)
 
 ## Changing the Uplink default Font Size for HDPI
 
@@ -27,7 +32,7 @@ void Init_Fonts	()
 
 The above fixes the first call of GciLoadTrueTypeFont() function, and changing the default `mov ecx, 0x9` to `mov ecx, 0xa` (10). Produce a new binary and run it from MacOS application directory. Voi-la! 🎉
 
-**References**: [uplink/src/uplink.cpp](https://github.com/gene9/uplink-source-code/blob/master/uplink/src/uplink.cpp#L1175-L1178)
+**References**: [uplink/src/uplink.cpp](https://github.com/vb6mmorpg/uplink-source-code/blob/master/uplink/src/uplink.cpp#L1175-L1178)
 
 ## Definitions
 
@@ -36,7 +41,7 @@ Some interesting definitions have been identified.
 **Game World and Mapped Data**
 
 ```
-Taken from: `https://github.com/gene9/uplink-source-code/blob/master/uplink/src/game/data/data.h`
+Taken from: `https://github.com/vb6mmorpg/uplink-source-code/blob/master/uplink/src/game/data/data.h`
 
 #define		WORLD_START_DATE				0, 0, 0, 24, 2, 2010	
 #define		GAME_START_DATE					0, 0, 0, 24, 3, 2010	// ;)
@@ -66,7 +71,7 @@ Taken from: `https://github.com/gene9/uplink-source-code/blob/master/uplink/src/
 **Global App Defines**
 
 ```
-Taken from: `https://github.com/gene9/uplink-source-code/blob/master/uplink/src/app/globals_defines.h`
+Taken from: `https://github.com/vb6mmorpg/uplink-source-code/blob/master/uplink/src/app/globals_defines.h`
 
 #define		ALPHA				0.85f							// Alpha value used for interface
 #define		ALPHA_DISABLED		0.5								// Alpha value for disabled buttons
@@ -76,7 +81,7 @@ Taken from: `https://github.com/gene9/uplink-source-code/blob/master/uplink/src/
 **Game Data, Titles, World Map Gateways, SW/HW Upgrades**
 
 ```
-Taken from: `https://github.com/gene9/uplink-source-code/blob/master/uplink/src/game/data/data.cpp`
+Taken from: `https://github.com/vb6mmorpg/uplink-source-code/blob/master/uplink/src/game/data/data.cpp`
 
 UPLINKRATING []
 NEUROMANCERRATING []
@@ -84,4 +89,16 @@ PHYSICALGATEWAYLOCATIONS []
 SOFTWARE_UPGRADES []
 ```
 
+## Other Moddings
 
+This section contains other modding details or additions that could be implemented in the future. These includes: adding new local gateway locations (ie. when *registering agent*) that represents Uplink Corporation office(s), 
+
+
+**Adding a new local gateway location** (ie. _Uplink Corporation_ office)
+
+![](https://i.imgur.com/uM0GEHc.png)
+
+### Resources
+
+* [Exploiting 'American Conquest' game: Identifing multiple stack-overflows](https://www.synacktiv.com/en/publications/exploiting-american-conquest)
+* [Exploring Counter Strike: Global Offensive](https://www.synacktiv.com/en/publications/exploring-counter-strike-global-offensive-attack-surface) attack surface

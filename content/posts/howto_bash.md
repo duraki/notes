@@ -1,5 +1,6 @@
 ---
 title: "Bash in simple words"
+url: "/dev/bash"
 ---
 
 Although in some cases it's better to use a systems language like C or Go, Bash is an ideal systems language for smaller POSIX-oriented tools or command line tasks. Why you may ask?
@@ -49,7 +50,7 @@ The first statement is a Unix/Linux portable way of finding the location of the 
 * Use `printf` instead of `echo`
 * In `if/do/?`-expressions, put `then`, `do` on the same line
 * Skip `[[ ... ]]` if you can test for exit code instead
-* Use `.sh` or `.bash` extension if file is meant to be included, but never on the executable script 
+* Use `.sh` or `.bash` extension if file is meant to be included, but never on the executable script
 * Complex one-lines such is `sed`, `ruby`, `awk` goes into its own function with descriptive name
 * Good idea to include `[[ "$TRACE" ]] && set -x`
 * Use subcommands for necessary different "modes"
@@ -102,10 +103,10 @@ fi
 ```
 # Author:     Halis Duraki <h@durakiconsulting.com>
 # License:    durakiconsulting (c) <year> all rights reserved
-# Usage:      
+# Usage:
 #             $ shexc
 
-#!/bin/sh 
+#!/bin/sh
 set -euo pipefail
 
 log() {

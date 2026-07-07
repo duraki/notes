@@ -192,3 +192,4 @@ $ tio /dev/tty.usbserial-0001 --baudrate 115200 --databits 8 --parity none --sto
 * [Router Analysis: UART Discovery and SPI Flash Extraction](https://wrongbaud.github.io/posts/router-teardown/)
 * [Dumping and accessing Serial Port on TP-Link Archer AX10](https://github.com/gscamelo/TP-Link-Archer-AX10-V1/blob/main/README.md)
 * [MacOS and Serial TTY's](https://pbxbook.com/other/mac-tty.html)
+* [Hardware Hacking: Getting a root shell via UART](https://riverloopsecurity.com/blog/2020/01/hw-101-uart/)

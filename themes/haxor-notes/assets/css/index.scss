@@ -11,7 +11,7 @@
   /* exclude hash only links */
   [href^="#"],
   /* exclude javascript only links */
-  [href^="javascript:" i],  
+  [href^="javascript:" i],
   /* exclude relative but not double slash only links */
   [href^="/"]:not([href^="//"]),
   /* domains to exclude */
@@ -40,7 +40,7 @@
   /* exclude hash only links */
   [href^="#"],
   /* exclude javascript only links */
-  [href^="javascript:" i],  
+  [href^="javascript:" i],
   /* exclude relative but not double slash only links */
   [href^="/"]:not([href^="//"]),
   /* domains to exclude */
@@ -129,7 +129,7 @@
   }
 
   .NoteContainer:first-of-type {
-    border-left: none; 
+    border-left: none;
   }
 
   .NoteContainer {

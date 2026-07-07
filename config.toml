@@ -12,6 +12,13 @@ enableRobotsTXT = true
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files @see: https://stackoverflow.com/a/61292855
 
+[markup]
+  [markup.highlight]
+    style = "xcode"
+    noClasses = true
+    wrapperClass = ""
+
+
 [permalinks]
 posts = '/:title'
 
@@ -35,6 +42,7 @@ posts = '/:title'
     X-Content-Type-Options = 'nosniff'
     X-Frame-Options = 'DENY'
     X-XSS-Protection = '1; mode=block'
+    Host = 'localhost'
 
 
 [[redirects]]   # relevant for hugo server only
