@@ -176,7 +176,7 @@ You can start exploring from the [List of Topics](#list-of-topics-hahahugoshortc
   * [Bash _`(POSIX)`_ Scripting](/dev/bash)
   * [React Native](/reactnative-simple-app)
 * _Toolkit-specific_
-  * [Byteman Scripting](/byteman-script) {{< sup_clean "_Proto Pseudosyntax_" "#" >}}
+  * [Byteman Scripting](/byteman-scripts) {{< sup_clean "_Proto Pseudosyntax_" "#" >}}
   * [Frida Scripting](/ios-frida-scripting) {{< sup_clean "_Javascript_" "#" >}}
 
 **.files**
