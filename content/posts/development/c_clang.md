@@ -5,6 +5,18 @@ url: /dev/c
 
 The C is a programming language with low-level access to memory and processor instructions alongside the support for system-level programming. It is commonly used for developing operating systems, embedded systems, and performance-critical applications. The high-level abstractions provided by C make it a versatile language for system programming and is therefore used extensively in system-level development and writing compilers for all other languages.
 
+## Coding Style
+
+I'll will just leave this drawing here, published by Paul Haeberli in Sept '94. It's now a collection of [GRAFICA Obscura](https://www.graficaobscura.com/) publications. This drawing shows the preferred form for C source code (seen in Linux kernel development and many other projects). You may download and print this using <a target="_blank" href="/files/sgi-c-code-style_guide-eps.zip">PostScript</a> (`sgi-c-code-style_guide-eps.zip`).
+
+{{< imgcap title="SGI Source Compliance Requirements - published by Paul H. in 1994" src="/images/ccode.gif" >}}
+
+Oh, btw, there is something I want to tell you. I bet you like the font from above image? Yes?
+
+{{< details "💫 Interesting Fact" >}}
+This typeface was designed by Amie Slate using the program "paintfont" developed by Seth Teller and Paul Haeberli. It has an unusual retro-grade slant that could be used in paragraphs set at a 45 degree angle. Check her [graficaobscura.com](https://www.graficaobscura.com/sgitype/page005.html) publication page for more details.
+{{< /details >}}
+
 ## Variable Types
 
 The C programming language supports several variable types, including:

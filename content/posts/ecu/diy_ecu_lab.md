@@ -3,7 +3,7 @@ title: "Developing a Training ECU"
 url: "/ecu/diy-training-ecu"
 ---
 
-This note describe how to create a low-cost training [ECU](/ecu-foundation) (Electornic Control Unit) that can be attacked, without damagning a real car.
+This note describe how to create a low-cost training [ECU](/ecu-foundations) (Electornic Control Unit) that can be attacked, without damagning a real car.
 
 ---
 
@@ -13,5 +13,5 @@ Albeit it's from 2018, there is [PASTA: Portable Automotive Security Testbed](ht
 
 ---
 
-**Other Resources**  
+**Other Resources**
 * [Recovering an ECU Firmware using Disassembler and Branches](https://blog.quarkslab.com/recovering-an-ecu-firmware-using-disassembler-and-branches.html)

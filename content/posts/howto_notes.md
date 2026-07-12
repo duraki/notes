@@ -9,11 +9,11 @@ url: "/how-to-write-notes"
 	* Note: correct syntax is `{{`<..>`}}` (no spaces between `{}` & `<>`)
 * Clear and consistent, easy to implement new features
 
-### Including Images
+**Including Images**
 
 To include images, copy the image to `/content/posts/images/*`. Then when you want to include it, use either of:
 
-``` 
+```
 # => like this
 ![Image Caption](/posts/images/image-of-choice.png)
 
@@ -23,7 +23,7 @@ To include images, copy the image to `/content/posts/images/*`. Then when you wa
 
 The folder `images` in `content/posts` is created to index those files/images in the final build or deploy, and therefore removes the overhead of the Hugo processing. Some more [documentation](https://gohugo.io/content-management/image-processing/) on Hugo website.
 
-### Including Files
+**Including Files**
 
 To include files of any type, ready to be downloaded, copy the file to `/content/posts/files/*`. Then include it in your post as instructed below:
 
@@ -32,8 +32,6 @@ To include files of any type, ready to be downloaded, copy the file to `/content
 ```
 
 The folder `/content/posts/files` is used to serve and index those files in the final build/deploy.
-
-### Markdown
 
 **Styled Blocks**
 
@@ -102,7 +100,7 @@ go { linenos=table,hl_lines=[8,"15-17"],linenostart=199 }
 {{ < ref /blog > }}
 ```
 
-### Shortcodes
+**Shortcodes**
 
 **Callout with Emoji including Caption**
 
@@ -235,6 +233,6 @@ This is an example of keyboard shortcut: {{<kbd>}}⎇{{</kbd>}}.
 
 [More shortcodes](https://gohugo.io/content-management/shortcodes/) on official website.
 
-### Deploy
+**Deploy**
 
 Check details of `README.md` to learn how to deploy **~notes** on local and remote machines.
